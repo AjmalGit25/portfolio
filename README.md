@@ -1,5 +1,7 @@
-## Ajmal Hussain's Portfolio
+# Ajmal Hussain's Portfolio
 My Github Portfolio to showcase my valuable skills, experience, education, and more.
+
+---
 
 # React + Vite
 
