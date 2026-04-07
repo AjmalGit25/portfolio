@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function Typewriter() {
-  const words = ["fast", "secure", "responsive"];
+  const words = ["fast", "secure", "responsive", "reliable"];
 
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
@@ -38,12 +38,12 @@ export default function Typewriter() {
   }, [text, isDeleting, index]);
 
   return (
-    <h1 className="text-2xl">
+    <h3 className="text-white text-3xl font-bold">
       We build{" "}
-      <span className="text-blue-500 font-bold">
+      <span className="text-blue-500 ">
         {text}
       </span>{" "}
       websites.
-    </h1>
+    </h3>
   );
 }

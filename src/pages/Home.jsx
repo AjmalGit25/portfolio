@@ -1,4 +1,6 @@
 import { RiMenuUnfoldLine } from "react-icons/ri";
+import Typewriter from "../components/Typewriter";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -12,7 +14,7 @@ function Home() {
       <main className='flex flex-col md:flex-row items-center justify-center gap-15 mt-5'>
 
         {/* Section 1: Name */}
-        <section className='flex-2 w-full'>
+        <section className='flex-2 w-full space-y-6'>
           {/* Lead Heading */}
           <div
             className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60'>
@@ -34,9 +36,25 @@ function Home() {
           <p className='text-lg text-gray-300 mt-10'>
             I am a Full Stack Software Developer in Ahmedabad, India, with modern technologies — React, Node.js, and MongoDB. I enjoy building real-world web applications and solving complex problems using clean and efficient code.
           </p>
-          
+
           {/* Auto-typing effect */}
-          
+          <Typewriter />
+
+          {/* Hire & Projects*/}
+          <div className="inline-flex text-[.7em] md:text-sm items-center gap-5 text-center uppercase tracking-[.3em] mt-5">
+            <Link>
+              <span className="text  bg-blue-300 py-2 px-4 rounded-full hover:bg-blue-400 transition-colors duration-200">Hire Me &rarr;</span>
+            </Link>
+
+            <Link to="/projects">
+              ✨ <span className="text-white/60 hover:text-white transition-colors duration-200">View Projects</span>
+            </Link>
+          </div>
+
+          {/* Tech Stack */}
+          <p className="mt-6 max-w-xl text-[11px] uppercase tracking-[0.3em] text-white/50">
+            React • Next.js • Node.js • Express • MongoDB • TypeScript • AWS • Docker • Problem Solving
+          </p>
 
         </section>
 
