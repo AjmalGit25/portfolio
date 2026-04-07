@@ -34,9 +34,10 @@ function Home() {
           <p className='text-lg text-gray-300 mt-10'>
             I am a Full Stack Software Developer in Ahmedabad, India, with modern technologies — React, Node.js, and MongoDB. I enjoy building real-world web applications and solving complex problems using clean and efficient code.
           </p>
-          <p className='text-lg text-gray-300 mt-4'>
-            I am a Full Stack Software Developer in Ahmedabad, India, with modern technologies — React, Node.js, and MongoDB. I enjoy building real-world web applications and solving complex problems using clean and efficient code.
-          </p>
+          
+          {/* Auto-typing effect */}
+          
+
         </section>
 
         {/* Section 2: Image */}

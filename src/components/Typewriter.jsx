@@ -1,0 +1,49 @@
+import { useState, useEffect } from "react";
+
+export default function Typewriter() {
+  const words = ["fast", "secure", "responsive"];
+
+  const [text, setText] = useState("");
+  const [index, setIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentWord = words[index];
+
+    let timeout;
+
+    if (!isDeleting) {
+      // Typing
+      timeout = setTimeout(() => {
+        setText(currentWord.slice(0, text.length + 1));
+      }, 100);
+      
+      if (text === currentWord) {
+        // Pause before deleting
+        timeout = setTimeout(() => setIsDeleting(true), 1000);
+      }
+    } else {
+      // Deleting
+      timeout = setTimeout(() => {
+        setText(currentWord.slice(0, text.length - 1));
+      }, 50);
+
+      if (text === "") {
+        setIsDeleting(false);
+        setIndex((prev) => (prev + 1) % words.length);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, index]);
+
+  return (
+    <h1 className="text-2xl">
+      We build{" "}
+      <span className="text-blue-500 font-bold">
+        {text}
+      </span>{" "}
+      websites.
+    </h1>
+  );
+}

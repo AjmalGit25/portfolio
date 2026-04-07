@@ -6,16 +6,16 @@ import {
 import './App.css';
 
 import App from './App.jsx';
-import Home from './components/Home.jsx';
-import About from './components/About.jsx';
-import Skills from './components/Skills.jsx';
-import Experience from './components/Experience.jsx';
-import Education from './components/Education.jsx';
-import Projects from './components/Projects.jsx';
-import Github from './components/Github.jsx';
-import Achievements from './components/Achievements.jsx';
-import Contact from './components/Contact.jsx';
-import NotFound from './components/NotFound.jsx';
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
+import Skills from './pages/Skills.jsx';
+import Experience from './pages/Experience.jsx';
+import Education from './pages/Education.jsx';
+import Projects from './pages/Projects.jsx';
+import Github from './pages/Github.jsx';
+import Achievements from './pages/Achievements.jsx';
+import Contact from './pages/Contact.jsx';
+import NotFound from './pages/NotFound.jsx';
 
 const router = createBrowserRouter([
   {
