@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 function App() {
   // Use App.jsx as Layout   ✅ BEST PRACTICE
   return (
-    <div className='bg-linear-to-l from-blue-900 to-blue-950 min-h-screen'>
+    <div className='bg-linear-to-l from-blue-900 to-blue-950 min-h-screen min-w-screen'>
       <div className="flex">
         <Sidebar />
 
