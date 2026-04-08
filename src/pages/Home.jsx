@@ -4,24 +4,25 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50'>
+    <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 px-2'>
 
       {/* Menu Toggle */}
       <button className="sm:hidden bg-blue-500 text-white p-2 rounded-md">
         <RiMenuUnfoldLine />
       </button>
 
+      {/* Lead Heading */}
+      <div
+        className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60 mt-10'>
+        <span className='h-px w-8 bg-blue-500'></span>
+        Software Developer • Full Stack
+        <span className='h-px w-8 bg-blue-500'></span>
+      </div>
+
       <main className='flex flex-col md:flex-row items-center justify-center gap-15 mt-5'>
 
         {/* Section 1: Name */}
         <section className='flex-2 w-full space-y-6'>
-          {/* Lead Heading */}
-          <div
-            className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60'>
-            <span className='h-px w-8 bg-blue-500'></span>
-            Software Developer • Full Stack
-            <span className='h-px w-8 bg-blue-500'></span>
-          </div>
 
           <h1 className='text-4xl font-black leading-[0.85] sm:text-5xl xl:text-7xl mt-6'>
             <span className='text-white'>Md Ajmal Hussain</span>
@@ -60,11 +61,28 @@ function Home() {
 
         {/* Section 2: Image */}
         <section className='flex-1'>
-          <div className='flex items-center justify-center'>
+          <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-2xl overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300'
               src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1775594936/ChatGPT_Image_Dec_26_2025_04_58_37_AM_h3ngz6.png" alt="Ajmal's pic" />
+
+            {/* Tag on Pic */}
+            <div className="absolute flex gap-3 p-2 border rounded-2xl bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
+              <div className="flex items-center justify-center p-4 rounded-full bg-blue-300/15">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                  className="text-white h-5 w-5">
+                  <path d="m16 18 6-6-6-6"></path>
+                  <path d="m8 6-6 6 6 6"></path>
+                </svg>
+              </div>
+
+              <div>
+                <div className="text-white">Full Stack Developer</div>
+                <div className="text-white/50 text-[0.75em]">React • Node.js • JavaScript</div>
+              </div>
+            </div>
           </div>
+
         </section>
 
       </main>
