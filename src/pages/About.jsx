@@ -93,8 +93,8 @@ function About() {
         <section className="flex-1">
           <div className='flex items-center justify-center relative'>
             <img
-              className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300'
-              src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1775594936/ChatGPT_Image_Dec_26_2025_04_58_37_AM_h3ngz6.png" alt="Ajmal's pic"
+              className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
+              src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1775770575/Ajm_blue2_a7ib6a.jpg" alt="Ajmal's pic"
             />
 
             {/* Tag on Pic */}
@@ -190,13 +190,13 @@ function About() {
           <h4 className="font-bold text-xl md:text-left text-center">Connect With Me</h4>
           <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white/80">
 
-            <Link to={"https://github.com/ajmalhussain92"} target="_blank" 
+            <Link to={"https://github.com/ajmalhussain92"} target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <FaGithub className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors" >GitHub</span>
             </Link>
 
-            <Link to={"https://leetcode.com/u/DaliusAjmal"} target="_blank" 
+            <Link to={"https://leetcode.com/u/DaliusAjmal"} target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <SiLeetcode className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors" >Leetcode</span>
@@ -208,7 +208,7 @@ function About() {
               <span className="group-hover:text-blue-500 duration-300 transition-colors" >Twitter</span>
             </Link>
 
-            <Link to={"https://linkedin.com/in/ajmal-hussain92/"} target="_blank" 
+            <Link to={"https://linkedin.com/in/ajmal-hussain92/"} target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <FaLinkedin className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors" >LinkedIn</span>
