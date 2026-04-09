@@ -7,7 +7,7 @@ function Home() {
     <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 px-2'>
 
       {/* Menu Toggle */}
-      <button className="sm:hidden bg-blue-500 text-white p-2 rounded-md">
+      <button className="fixed w-15 sm:hidden bg-blue-500 text-white p-2 rounded-md">
         <RiMenuUnfoldLine />
       </button>
 

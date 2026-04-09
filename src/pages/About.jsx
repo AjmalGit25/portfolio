@@ -10,7 +10,7 @@ function About() {
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 px-2">
       {/* Menu Toggle */}
-      <button className="fixed sm:hidden bg-blue-500 text-white p-2 rounded-md">
+      <button className="fixed w-15 sm:hidden bg-blue-500 text-white p-2 rounded-md">
         <RiMenuUnfoldLine />
       </button>
 
@@ -25,7 +25,7 @@ function About() {
         {/* Section 1: About Me */}
         <section className="flex-2">
           <div>
-            <h1 className='text-5xl uppercase font-bold text-white mt-5 mb-10 sm:text-7xl'>
+            <h1 className='text-5xl sm:text-7xl uppercase font-bold text-white mt-5 mb-10'>
               About <span className='text-blue-500'>Me</span>
             </h1>
 
