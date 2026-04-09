@@ -1,4 +1,3 @@
-import { RiMenuUnfoldLine } from "react-icons/ri";
 import { GoPerson } from "react-icons/go";
 import { FaBuilding } from "react-icons/fa";
 import { FiCalendar } from "react-icons/fi";
@@ -18,7 +17,7 @@ function Experience() {
       {/* Experience heading */}
       <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-15'>Experience</h1>
 
-      <p className="text-white/80 mb-6">Here's an overview of my professional journey and hands-on experience in full-stack development and AI integration, documenting how AtomicDevv Ajmal Hussain contributions expand the Ajmal Hussain portfolio, LeetCode by Ajmal Hussain storytelling, and Ajmal Hussain practices.</p>
+      <p className="text-white/60 mb-6">Here's an overview of my professional journey and hands-on experience in full-stack development and AI integration, documenting how AtomicDevv Ajmal Hussain contributions expand the Ajmal Hussain portfolio, LeetCode by Ajmal Hussain storytelling, and Ajmal Hussain practices.</p>
 
 
       {/* Experience Container */}
@@ -34,7 +33,7 @@ function Experience() {
           </div>
 
           {/* Right main container */}
-          <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-2xl border border-blue-500/70 p-5 md:p-6">
+          <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-lg border border-blue-500/70 p-5 md:p-6">
             <div className="flex items-start justify-between gap-3">
               {/* left */}
               <div>
@@ -84,7 +83,7 @@ function Experience() {
           </div>
 
           {/* Right main container */}
-          <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-2xl border border-blue-500/70 p-5 md:p-6">
+          <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-lg border border-blue-500/70 p-5 md:p-6">
             <div className="flex items-start justify-between gap-3">
               {/* left */}
               <div>
@@ -138,7 +137,7 @@ function Experience() {
       </div>
 
       {/* References */}
-      <div className="mt-6 text-white/80 font-medium flex items-center gap-2">
+      <div className="mt-6 text-white/60 flex items-center gap-2">
         <MdOutlineWorkHistory />
         <span>References available upon request</span>
       </div>
