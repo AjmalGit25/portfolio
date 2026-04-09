@@ -13,26 +13,55 @@ import { HiCode } from "react-icons/hi";
 
 import { NavLink, Link } from "react-router-dom";
 
-function Sidebar() {
+function Sidebar({ mobileOpen, onClose }) {
   return (
-    <aside className="fixed left-5 top-5 bottom-5 z-20 w-fit hidden sm:block">
-
-      {/* Visible Sidebar */}
-      <div className="h-full w-fit rounded-lg bg-transparent backdrop-blur-lg border border-blue-500 p-2 flex flex-col min-">
-
-        {/* Menu */}
-        <div className="flex items-center gap-4 mb-6 max-lg:justify-center max-lg:mt-3">
-          <h1 className='flex items-center gap-2 font-bold text-4xl text-white mt-2 mb-4'>
-            <HiMenuAlt2 />
-            <span className="hidden lg:block">Menu</span>
-          </h1>
+    <>
+      {mobileOpen && (
+        <div onClick={onClose} className="fixed inset-0 z-40 sm:hidden flex flex-col items-center justify-center bg-blue-950/50 backdrop-blur-md">
+          <div onClick={e => e.stopPropagation()} className="flex flex-col items-center gap-3">
+            {[
+              { to: "/", label: "Home" },
+              { to: "/about", label: "About" },
+              { to: "/skills", label: "Skills" },
+              { to: "/experience", label: "Experience" },
+              { to: "/education", label: "Education" },
+              { to: "/projects", label: "Projects" },
+              { to: "/github", label: "GitHub" },
+              { to: "/achievements", label: "Achievements" },
+              { to: "/contact", label: "Contact" },
+            ].map(({ to, label }, i) => (
+              <NavLink key={to} to={to} end={to === "/"} onClick={onClose}
+                style={{ animationDelay: `${i * 0.07}s` }}
+                className={({ isActive }) =>
+                  `nav-slide-up text-2xl font-semibold px-8 py-2 rounded-lg w-48 text-center transition-colors duration-300 ${isActive ? "text-blue-500" : "text-white/80"
+                  }`
+                }>
+                {label}
+              </NavLink>
+            ))}
+          </div>
         </div>
+      )}
 
-        {/* Vertical scroller */}
-        <div className="flex-1 overflow-y-auto pr-2 -mr-2 w-fit">
-          <ul className="text-white/80 flex flex-col gap-y-3">
 
-{[{ to: "/", icon: <BiHome />, label: "Home" },
+      <aside className="fixed left-5 top-5 bottom-5 z-20 w-fit hidden sm:block">
+
+        {/* Visible Sidebar */}
+        <div className="h-full w-fit rounded-lg bg-transparent backdrop-blur-lg border border-blue-500 p-2 flex flex-col min-">
+
+          {/* Menu */}
+          <div className="flex items-center gap-4 mb-6 max-lg:justify-center max-lg:mt-3">
+            <h1 className='flex items-center gap-2 font-bold text-4xl text-white mt-2 mb-4'>
+              <HiMenuAlt2 />
+              <span className="hidden lg:block">Menu</span>
+            </h1>
+          </div>
+
+          {/* Vertical scroller */}
+          <div className="flex-1 overflow-y-auto pr-2 -mr-2 w-fit">
+            <ul className="text-white/80 flex flex-col gap-y-3">
+
+              {[{ to: "/", icon: <BiHome />, label: "Home" },
               { to: "/about", icon: <RiContactsLine />, label: "About" },
               { to: "/skills", icon: <HiCode />, label: "Skills" },
               { to: "/experience", icon: <MdWorkOutline />, label: "Experience" },
@@ -41,46 +70,46 @@ function Sidebar() {
               { to: "/github", icon: <LuGithub />, label: "GitHub" },
               { to: "/achievements", icon: <FiAward />, label: "Achievements" },
               { to: "/contact", icon: <MdChatBubbleOutline />, label: "Contact" },
-            ].map(({ to, icon, label }) => (
-              <NavLink key={to} to={to} end={to === "/"}
-                className={({ isActive }) =>
-                  `relative flex items-center gap-3 px-4 py-2 rounded-md transition-colors duration-200 ${
-                    isActive ? "bg-blue-900 text-white" : "text-white/80 hover:bg-blue-900"
-                  }`
-                }>
-                {({ isActive }) => (
-                  <>
-                    {icon}
-                    <span className="hidden lg:block">{label}</span>
-                    {isActive && (
-                      <span className="absolute right-2 h-1.5 w-1.5 rounded-full bg-blue-400" />
-                    )}
-                  </>
-                )}
-              </NavLink>
-            ))}
-          </ul>
-        </div>
-
-
-        {/* Github, LinkedIn, Instagram */}
-        <div className="mt-auto mb-2 pt-4 border-t border-blue-400/70">
-          <div className="flex items-center justify-center gap-4 max-lg:flex-col max-lg:px-3 py-2">
-            <Link to={"https://github.com/ajmalhussain92"} target="_blank" className="text-blue-300 hover:text-blue-100">
-              <LuGithub />
-            </Link>
-            <Link to={"https://linkedin.com/in/ajmal-hussain92/"} target="_blank" className="text-blue-300 hover:text-blue-100">
-              <FiLinkedin />
-            </Link>
-            <Link to={"https://instagram.com"} target="_blank"
-              className="text-blue-300 hover:text-blue-100">
-              <FiInstagram />
-            </Link>
+              ].map(({ to, icon, label }) => (
+                <NavLink key={to} to={to} end={to === "/"}
+                  className={({ isActive }) =>
+                    `relative flex items-center gap-3 px-4 py-2 rounded-md transition-colors duration-300 ${isActive ? "bg-blue-900 text-white" : "text-white/80 hover:bg-blue-900"
+                    }`
+                  }>
+                  {({ isActive }) => (
+                    <>
+                      {icon}
+                      <span className="hidden lg:block">{label}</span>
+                      {isActive && (
+                        <span className="absolute right-2 h-1.5 w-1.5 rounded-full bg-blue-400" />
+                      )}
+                    </>
+                  )}
+                </NavLink>
+              ))}
+            </ul>
           </div>
-        </div>
 
-      </div>
-    </aside>
+
+          {/* Github, LinkedIn, Instagram */}
+          <div className="mt-auto mb-2 pt-4 border-t border-blue-400/70">
+            <div className="flex items-center justify-center gap-4 max-lg:flex-col max-lg:px-3 py-2">
+              <Link to={"https://github.com/ajmalhussain92"} target="_blank" className="text-blue-300 hover:text-blue-100">
+                <LuGithub />
+              </Link>
+              <Link to={"https://linkedin.com/in/ajmal-hussain92/"} target="_blank" className="text-blue-300 hover:text-blue-100">
+                <FiLinkedin />
+              </Link>
+              <Link to={"https://instagram.com"} target="_blank"
+                className="text-blue-300 hover:text-blue-100">
+                <FiInstagram />
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+    </>
   );
 }
 
