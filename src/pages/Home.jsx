@@ -55,10 +55,10 @@ function Home() {
         </section>
 
         {/* Section 2: Image */}
-        <section className='flex-1 border'>
+        <section className='flex-1'>
           <div className='flex items-center justify-center relative'>
             <img
-              className='border border-blue-300 rounded-2xl overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300'
+              className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300'
               src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1775594936/ChatGPT_Image_Dec_26_2025_04_58_37_AM_h3ngz6.png" alt="Ajmal's pic" />
 
             {/* Tag on Pic */}

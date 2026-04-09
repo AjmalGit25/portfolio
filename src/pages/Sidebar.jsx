@@ -1,5 +1,4 @@
 import { BiHome } from "react-icons/bi";
-import { RiMenuUnfoldLine } from "react-icons/ri";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { RiContactsLine } from "react-icons/ri";
 import { MdWorkOutline } from "react-icons/md";
@@ -12,7 +11,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { FiInstagram } from "react-icons/fi";
 import { HiCode } from "react-icons/hi";
 
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function Sidebar() {
   return (
@@ -33,59 +32,33 @@ function Sidebar() {
         <div className="flex-1 overflow-y-auto pr-2 -mr-2 w-fit">
           <ul className="text-white/80 flex flex-col gap-y-3">
 
-            <Link to={"/"}
-              className="flex items-center gap-3 px-4 py-2 rounded-md hover:bg-blue-900 transition-colors duration-200">
-              <BiHome />
-              <span className="hidden lg:block">Home</span>
-            </Link>
-
-            <Link to={"/about"}
-              className="flex items-center gap-3 px-4 py-2 rounded-md hover:bg-blue-900 transition-colors duration-200">
-              <RiContactsLine />
-              <span className="hidden lg:block">About</span>
-            </Link>
-
-            <Link to={"/skills"}
-              className="flex items-center gap-3 px-4 py-2 rounded-md hover:bg-blue-900 transition-colors duration-200">
-              <HiCode />
-              <span className="hidden lg:block">Skills</span>
-            </Link>
-
-            <Link to={"/experience"}
-              className="flex items-center gap-3 px-4 py-2 rounded-md hover:bg-blue-900 transition-colors duration-200">
-              <MdWorkOutline />
-              <span className="hidden lg:block">Experience</span>
-            </Link>
-
-            <Link to={"/education"}
-              className="flex items-center gap-3 px-4 py-2 rounded-md hover:bg-blue-900 transition-colors duration-200">
-              <PiBookOpenTextBold />
-              <span className="hidden lg:block">Education</span>
-            </Link>
-
-            <Link to={"/projects"}
-              className="flex items-center gap-3 px-4 py-2 rounded-md hover:bg-blue-900 transition-colors duration-200">
-              <GrProjects />
-              <span className="hidden lg:block">Projects</span>
-            </Link>
-
-            <Link to={"/github"}
-              className="flex items-center gap-3 px-4 py-2 rounded-md hover:bg-blue-900 transition-colors duration-200">
-              <LuGithub />
-              <span className="hidden lg:block">GitHub</span>
-            </Link>
-
-            <Link to={"/achievements"}
-              className="flex items-center gap-3 px-4 py-2 rounded-md hover:bg-blue-900 transition-colors duration-200">
-              <FiAward />
-              <span className="hidden lg:block">Achievements</span>
-            </Link>
-
-            <Link to={"/contact"}
-              className="flex items-center gap-3 px-4 py-2 rounded-md hover:bg-blue-900 transition-colors duration-200">
-              <MdChatBubbleOutline />
-              <span className="hidden lg:block">Contact</span>
-            </Link>
+{[{ to: "/", icon: <BiHome />, label: "Home" },
+              { to: "/about", icon: <RiContactsLine />, label: "About" },
+              { to: "/skills", icon: <HiCode />, label: "Skills" },
+              { to: "/experience", icon: <MdWorkOutline />, label: "Experience" },
+              { to: "/education", icon: <PiBookOpenTextBold />, label: "Education" },
+              { to: "/projects", icon: <GrProjects />, label: "Projects" },
+              { to: "/github", icon: <LuGithub />, label: "GitHub" },
+              { to: "/achievements", icon: <FiAward />, label: "Achievements" },
+              { to: "/contact", icon: <MdChatBubbleOutline />, label: "Contact" },
+            ].map(({ to, icon, label }) => (
+              <NavLink key={to} to={to} end={to === "/"}
+                className={({ isActive }) =>
+                  `relative flex items-center gap-3 px-4 py-2 rounded-md transition-colors duration-200 ${
+                    isActive ? "bg-blue-900 text-white" : "text-white/80 hover:bg-blue-900"
+                  }`
+                }>
+                {({ isActive }) => (
+                  <>
+                    {icon}
+                    <span className="hidden lg:block">{label}</span>
+                    {isActive && (
+                      <span className="absolute right-2 h-1.5 w-1.5 rounded-full bg-blue-400" />
+                    )}
+                  </>
+                )}
+              </NavLink>
+            ))}
           </ul>
         </div>
 
