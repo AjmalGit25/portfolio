@@ -1,15 +1,9 @@
-import { RiMenuUnfoldLine } from "react-icons/ri";
 import Typewriter from "../components/Typewriter";
 import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 px-2'>
-
-      {/* Menu Toggle */}
-      <button className="fixed w-15 sm:hidden bg-blue-500 text-white p-2 rounded-md">
-        <RiMenuUnfoldLine />
-      </button>
 
       {/* Lead Heading */}
       <div
@@ -19,7 +13,8 @@ function Home() {
         <span className='h-px w-8 bg-blue-500'></span>
       </div>
 
-      <main className='flex flex-col md:flex-row items-center justify-center gap-15 mt-5'>
+
+      <main className='flex flex-col lg:flex-row items-center justify-center gap-15 mt-5'>
 
         {/* Section 1: Name */}
         <section className='flex-2 w-full space-y-6'>
@@ -60,7 +55,7 @@ function Home() {
         </section>
 
         {/* Section 2: Image */}
-        <section className='flex-1'>
+        <section className='flex-1 border'>
           <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-2xl overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300'

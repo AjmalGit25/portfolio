@@ -9,10 +9,6 @@ import { Link } from "react-router-dom";
 function About() {
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 px-2">
-      {/* Menu Toggle */}
-      <button className="fixed w-15 sm:hidden bg-blue-500 text-white p-2 rounded-md">
-        <RiMenuUnfoldLine />
-      </button>
 
       {/* Lead Heading */}
       <div className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60 mt-10'>

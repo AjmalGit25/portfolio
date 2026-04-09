@@ -1,4 +1,5 @@
 import { BiHome } from "react-icons/bi";
+import { RiMenuUnfoldLine } from "react-icons/ri";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { RiContactsLine } from "react-icons/ri";
 import { MdWorkOutline } from "react-icons/md";
@@ -15,16 +16,21 @@ import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <aside className="fixed top-0 left-0 h-170 border border-blue-500 p-2 m-5 rounded-lg bg-transparent backdrop-blur-lg hidden sm:block">
+    <aside className="fixed left-5 top-5 bottom-5 z-20 w-fit hidden sm:block">
 
-      <div className="flex flex-col items-center gap-y-2">
+      {/* Visible Sidebar */}
+      <div className="h-full w-fit rounded-lg bg-transparent backdrop-blur-lg border border-blue-500 p-2 flex flex-col min-">
 
-        <div className="mb-20 mt-2">
-          <h1 className='flex items-center gap-2 font-bold text-4xl text-white mb-4'>
+        {/* Menu */}
+        <div className="flex items-center gap-4 mb-6 max-lg:justify-center max-lg:mt-3">
+          <h1 className='flex items-center gap-2 font-bold text-4xl text-white mt-2 mb-4'>
             <HiMenuAlt2 />
             <span className="hidden lg:block">Menu</span>
           </h1>
+        </div>
 
+        {/* Vertical scroller */}
+        <div className="flex-1 overflow-y-auto pr-2 -mr-2 w-fit">
           <ul className="text-white/80 flex flex-col gap-y-3">
 
             <Link to={"/"}
@@ -83,26 +89,26 @@ function Sidebar() {
           </ul>
         </div>
 
-        {/* A small line, thin line like lead */}
-        <div className="w-full border-b border-blue-500 mb-3"></div>
 
         {/* Github, LinkedIn, Instagram */}
-        <div className="flex justify-center gap-4 max-lg:flex-col max-lg:px-4">
-          <Link to={"https://github.com/ajmalhussain92"} target="_blank" className="text-blue-300 hover:text-blue-100">
-            <LuGithub />
-          </Link>
-          <Link to={"https://linkedin.com/in/ajmal-hussain92/"} target="_blank" className="text-blue-300 hover:text-blue-100">
-            <FiLinkedin />
-          </Link>
-          <Link to={"https://instagram.com"} target="_blank"
-            className="text-blue-300 hover:text-blue-100">
-            <FiInstagram />
-          </Link>
+        <div className="mt-auto mb-2 pt-4 border-t border-blue-400/70">
+          <div className="flex items-center justify-center gap-4 max-lg:flex-col max-lg:px-3 py-2">
+            <Link to={"https://github.com/ajmalhussain92"} target="_blank" className="text-blue-300 hover:text-blue-100">
+              <LuGithub />
+            </Link>
+            <Link to={"https://linkedin.com/in/ajmal-hussain92/"} target="_blank" className="text-blue-300 hover:text-blue-100">
+              <FiLinkedin />
+            </Link>
+            <Link to={"https://instagram.com"} target="_blank"
+              className="text-blue-300 hover:text-blue-100">
+              <FiInstagram />
+            </Link>
+          </div>
         </div>
 
       </div>
     </aside>
-  )
+  );
 }
 
 export default Sidebar

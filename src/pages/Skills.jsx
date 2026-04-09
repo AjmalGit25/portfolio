@@ -8,10 +8,6 @@ import { BsBarChartFill, BsDiagram3Fill } from "react-icons/bs";
 function Skills() {
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 px-2">
-      {/* Menu Toggle */}
-      <button className="fixed w-15 sm:hidden bg-blue-500 text-white p-2 rounded-md">
-        <RiMenuUnfoldLine />
-      </button>
 
       {/* Dash */}
       <div
@@ -224,7 +220,7 @@ function Skills() {
 
 
         {/* Exploring */}
-        <div className="inline-flex items-center gap-2">
+        <div className="inline-flex items-center gap-2 mt-6">
           <div className='h-1 w-8 bg-linear-to-l from-blue-700 to-blue-300 rounded-full'></div>
           <h3 className="text-white font-bold text-2xl">Exploring</h3>
         </div>
@@ -261,7 +257,7 @@ function Skills() {
       </div>
 
     </div>
-  )
+  );
 }
 
 export default Skills;
