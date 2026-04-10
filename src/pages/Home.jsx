@@ -59,7 +59,7 @@ function Home() {
           <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
-              src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1775770577/ajm_blue5_g40yqw.jpg" alt="Ajmal's pic" />
+              src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1775594936/ChatGPT_Image_Dec_26_2025_04_58_37_AM_h3ngz6.png" alt="Ajmal's pic" />
 
             {/* Tag on Pic */}
             <div className="absolute flex gap-3 p-2 border rounded-2xl bg-transparent backdrop-blur-sm border-blue-300 bottom-5">

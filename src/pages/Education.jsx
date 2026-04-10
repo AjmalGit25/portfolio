@@ -14,13 +14,13 @@ function Education() {
       </div>
 
       {/* Education heading */}
-      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-15'>Education</h1>
+      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Education</h1>
 
-      <p className="text-white/60 mb-6">A snapshot of my academic background and activities supporting my growth as a developer, underpinning the Ajmal Hussain identity that drives the Ajmal Hussain portfolio, and LeetCode by Ajmal Hussain outcomes. </p>
+      <p className="max-w-3xl text-white/60 mb-6">A snapshot of my academic background and activities supporting my growth as a developer, underpinning the Ajmal Hussain identity that drives the Ajmal Hussain portfolio, and LeetCode by Ajmal Hussain outcomes. </p>
 
 
       {/* Education Container */}
-      <div className="mt-10 grid gap-8">
+      <div className="max-w-5xl mt-10 grid gap-8">
 
         {/* Education 1 */}
         <div className="relative pl-10 md:pl-12 transition-transform duration-300 ease-out hover:-translate-y-1">
@@ -34,7 +34,7 @@ function Education() {
           {/* Right main container */}
           <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-lg border border-blue-500/70 p-5 md:p-6">
             {/* Heading */}
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+            <div className="flex items-start justify-between gap-3">
               {/* left */}
               <div>
                 <h3 className="text-sm md:text-2xl text-white font-bold flex items-center gap-1.5">
@@ -81,7 +81,7 @@ function Education() {
           {/* Right main container */}
           <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-lg border border-blue-500/70 p-5 md:p-6">
             {/* Heading */}
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+            <div className="flex items-start justify-between gap-3">
               {/* left */}
               <div>
                 <h3 className="text-sm md:text-2xl text-white font-bold flex items-center gap-1.5">
@@ -128,7 +128,7 @@ function Education() {
           {/* Right main container */}
           <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-lg border border-blue-500/70 p-5 md:p-6">
             {/* Heading */}
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+            <div className="flex items-start justify-between gap-3">
               {/* left */}
               <div>
                 <h3 className="text-sm md:text-2xl text-white font-bold flex items-center gap-1.5">

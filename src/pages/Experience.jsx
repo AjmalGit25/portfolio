@@ -15,13 +15,13 @@ function Experience() {
       </div>
 
       {/* Experience heading */}
-      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-15'>Experience</h1>
+      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Experience</h1>
 
-      <p className="text-white/60 mb-6">Here's an overview of my professional journey and hands-on experience in full-stack development and AI integration, documenting how AtomicDevv Ajmal Hussain contributions expand the Ajmal Hussain portfolio, LeetCode by Ajmal Hussain storytelling, and Ajmal Hussain practices.</p>
+      <p className="max-w-3xl text-white/60 mb-6">Here's an overview of my professional journey and hands-on experience in full-stack development and AI integration, documenting how AtomicDevv Ajmal Hussain contributions expand the Ajmal Hussain portfolio, LeetCode by Ajmal Hussain storytelling, and Ajmal Hussain practices.</p>
 
 
       {/* Experience Container */}
-      <div className="mt-10 grid gap-8">
+      <div className="max-w-5xl mt-10 grid gap-8">
 
         {/* Experience 1 */}
         <div className="relative pl-10 md:pl-12 transition-transform duration-300 ease-out hover:-translate-y-1">
@@ -48,7 +48,7 @@ function Experience() {
               </div>
 
               {/* right */}
-              <span className="text-[11px] px-3 py-1 rounded-full border border-white/15 text-white/80 bg-white/5 backdrop-blur">Intenship</span>
+              <span className="text-[11px] px-3 py-1 rounded-full border border-blue-500/50 text-white/80 bg-blue-900/50 backdrop-blur">Intenship</span>
             </div>
 
             {/* Text container */}
@@ -98,7 +98,7 @@ function Experience() {
               </div>
 
               {/* right */}
-              <span className="text-[11px] px-3 py-1 rounded-full border border-white/15 text-white/80 bg-white/5 backdrop-blur">Intenship</span>
+              <span className="text-[11px] px-3 py-1 rounded-full border border-blue-500/50 text-white/80 bg-blue-900/50 backdrop-blur">Intenship</span>
             </div>
 
             {/* Text container */}
