@@ -1,5 +1,4 @@
-import { RiMenuUnfoldLine } from "react-icons/ri";
-import { SiReact, SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiCplusplus, SiGit, SiGithub, SiVercel, SiPostman, SiFigma, SiPython, SiPhp, SiDocker, SiRedux } from "react-icons/si";
+import { SiReact, SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiCplusplus, SiGit, SiGithub, SiVercel, SiPostman, SiFigma, SiPython, SiPhp, SiDocker, SiRedux, SiMysql } from "react-icons/si";
 import { FaNodeJs, FaLinux, FaJava } from "react-icons/fa";
 import { GrOracle } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
@@ -97,6 +96,15 @@ function Skills() {
             <div className="relative z-10 flex flex-col items-center justify-center text-center">
               <GrOracle className="h-10 w-10 text-orange-600" />
               <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">Oracle</span>
+            </div>
+          </div>
+
+          {/* MySQL */}
+          <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(63, 152, 255, 0.125) 0%, transparent 70%)" }}></div>
+            <div className="relative z-10 flex flex-col items-center justify-center text-center">
+              <SiMysql className="h-10 w-10 text-sky-600" />
+              <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">MySQL</span>
             </div>
           </div>
         </section>

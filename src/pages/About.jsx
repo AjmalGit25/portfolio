@@ -52,6 +52,7 @@ function About() {
                 <li><strong>Backend:</strong> Node.js, Express, MongoDB, Oracle, MySQL</li>
                 <li><strong>DevOps:</strong> Docker, AWS, CI/CD, Git</li>
                 <li><strong>Tools:</strong> Figma, Postman, VS Code</li>
+                <li><strong>Languages:</strong> C++, JavaScript</li>
               </ul>
             </div>
 
@@ -94,7 +95,7 @@ function About() {
           <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
-              src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1769898357/Ajma222_emdj1p.jpg" alt="Ajmal's pic"
+              src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1775770575/Ajm_blue2_a7ib6a.jpg" alt="Ajmal's pic"
             />
 
             {/* Tag on Pic */}
