@@ -48,8 +48,8 @@ function About() {
                 Technical Expertise
               </h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/80">
-                <li><strong>Frontend:</strong> React.js, Next.js, TypeScript, Tailwind CSS</li>
-                <li><strong>Backend:</strong> Node.js, Express, MongoDB, PostgreSQL</li>
+                <li><strong>Frontend:</strong> React.js, Next.js, JavaScript, Tailwind CSS</li>
+                <li><strong>Backend:</strong> Node.js, Express, MongoDB, Oracle, MySQL</li>
                 <li><strong>DevOps:</strong> Docker, AWS, CI/CD, Git</li>
                 <li><strong>Tools:</strong> Figma, Postman, VS Code</li>
               </ul>
@@ -147,7 +147,7 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-blue-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Total</span>
             </div>
-            <div class="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">80</div>
+            <div class="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">85</div>
             <div class="text-[0.65rem] md:text-xs text-blue-500">Problems</div>
           </div>
 
@@ -157,7 +157,7 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-green-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Easy</span>
             </div>
-            <div class="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">66</div>
+            <div class="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">70</div>
             <div class="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
@@ -167,7 +167,7 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-amber-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Medium</span>
             </div>
-            <div class="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">13</div>
+            <div class="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">15</div>
             <div class="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
@@ -217,7 +217,7 @@ function About() {
             <Link to={"https://instagram.com"} target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <AiFillInstagram className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors" >Instagram</span>
+              <span className="group-hover:text-blue-500 duration-300 transition-colors">Instagram</span>
             </Link>
 
           </div>
