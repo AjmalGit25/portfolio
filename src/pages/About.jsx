@@ -21,7 +21,7 @@ function About() {
         {/* Section 1: About Me */}
         <section className="flex-2">
           <div>
-            <h1 className='text-5xl sm:text-7xl uppercase font-bold text-white mt-5 mb-10'>
+            <h1 className='text-5xl sm:text-7xl uppercase font-extrabold text-white mt-5 mb-10'>
               About <span className='text-blue-500'>Me</span>
             </h1>
 

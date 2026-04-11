@@ -48,7 +48,7 @@ function Experience() {
               </div>
 
               {/* right */}
-              <span className="text-[11px] px-3 py-1 rounded-full border border-blue-500/50 text-white/80 bg-blue-900/50 backdrop-blur">Intenship</span>
+              <span className="text-[11px] px-3 py-1 rounded-full border border-blue-500/50 text-white/80 bg-blue-900/50 backdrop-blur">Internship</span>
             </div>
 
             {/* Text container */}
@@ -98,7 +98,7 @@ function Experience() {
               </div>
 
               {/* right */}
-              <span className="text-[11px] px-3 py-1 rounded-full border border-blue-500/50 text-white/80 bg-blue-900/50 backdrop-blur">Intenship</span>
+              <span className="text-[11px] px-3 py-1 rounded-full border border-blue-500/50 text-white/80 bg-blue-900/50 backdrop-blur">Internship</span>
             </div>
 
             {/* Text container */}
