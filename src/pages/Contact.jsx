@@ -41,11 +41,11 @@ function Contact() {
           {/* Container: Email, Phone, Location */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {/* Email */}
-            <a href="mailto:ajmalashrafi2016@gmail.com"
+            <a href="mailto:reach.ajmal.dev@gmail.com"
               className="flex flex-col p-5 border border-blue-500/30 rounded-lg bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 duration-300 space-y-2">
               <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg"><HiOutlineMail /></span>
               <span className="text-white font-bold">Email</span>
-              <span className="text-white/60">ajmalashrafi2016@gmail.com</span>
+              <span className="text-white/60">reach.ajmal.dev@gmail.com</span>
             </a>
             {/* Phone */}
             <a href="tel:+919955578303"
@@ -133,7 +133,7 @@ function Contact() {
               {/* Send Button */}
               <button className="flex items-center gap-3 bg-blue-500 font-medium p-2 px-4 rounded-lg shadow-lg hover:translate-x-1 hover:shadow-blue-500/50 transition duration-300">
                 <span className="text-white">Send Message</span>
-                <TbSend className="animate-bounce mt-1 text-white"/>
+                <TbSend className="animate-bounce mt-1 text-white" />
               </button>
             </form>
           </div>
