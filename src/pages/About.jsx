@@ -1,4 +1,3 @@
-import { RiMenuUnfoldLine } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
 import { BiRun } from "react-icons/bi";
 import { FaGithub, FaTwitter } from "react-icons/fa";
@@ -19,7 +18,7 @@ function About() {
 
       <main className="flex flex-col lg:flex-row items-center justify-center gap-15 mt-5">
         {/* Section 1: About Me */}
-        <section className="flex-2">
+        <section className="w-full">
           <div>
             <h1 className='text-5xl sm:text-7xl uppercase font-extrabold text-white mt-5 mb-10'>
               About <span className='text-blue-500'>Me</span>
@@ -91,7 +90,7 @@ function About() {
         </section>
 
         {/* Section 2: Image */}
-        <section className="flex-1">
+        <section className="w-full">
           <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
@@ -99,7 +98,7 @@ function About() {
             />
 
             {/* Tag on Pic */}
-            <div className="absolute flex gap-3 p-2 border rounded-2xl bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
+            <div className="absolute flex gap-3 p-2 px-3 border rounded-2xl bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
               <div className="flex items-center justify-center p-4 rounded-full bg-blue-300/15">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
                   className="text-white h-5 w-5">
@@ -226,7 +225,7 @@ function About() {
       </div>
 
     </div>
-  )
+  );
 }
 
 export default About;

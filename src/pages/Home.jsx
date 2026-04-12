@@ -82,7 +82,7 @@ function Home() {
 
       </main>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
