@@ -17,7 +17,7 @@ function Home() {
       <main className='flex flex-col lg:flex-row items-center justify-center gap-15 mt-5'>
 
         {/* Section 1: Name */}
-        <section className='flex-2 w-full space-y-6'>
+        <section className='space-y-6'>
 
           <h1 className='text-4xl font-black leading-[0.85] sm:text-5xl xl:text-7xl mt-6'>
             <span className='text-white'>Md Ajmal Hussain</span>
@@ -55,16 +55,16 @@ function Home() {
         </section>
 
         {/* Section 2: Image */}
-        <section className='flex-1'>
+        <section className='shrink-0'>
           <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
               src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1775594936/ChatGPT_Image_Dec_26_2025_04_58_37_AM_h3ngz6.png" alt="Ajmal's pic" />
 
             {/* Tag on Pic */}
-            <div className="absolute flex gap-3 p-2 border rounded-2xl bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
+            <div className="absolute flex gap-3 p-2 border rounded-lg bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
               <div className="flex items-center justify-center p-4 rounded-full bg-blue-300/15">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
                   className="text-white h-5 w-5">
                   <path d="m16 18 6-6-6-6"></path>
                   <path d="m8 6-6 6 6 6"></path>

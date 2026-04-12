@@ -40,7 +40,7 @@ function About() {
             {/* Technical Expertise */}
             <div className="space-y-4">
               <h3 className="mt-10 text-xl font-bold flex items-center gap-2 text-blue-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code w-5 h-5" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code w-5 h-5" aria-hidden="true">
                   <path d="m16 18 6-6-6-6"></path>
                   <path d="m8 6-6 6 6 6"></path>
                 </svg>
@@ -61,7 +61,7 @@ function About() {
             {/* FAQ */}
             <div className="space-y-4">
               <h2 className="text-white text-2xl font-bold flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" className="text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-blue-500">
                   <circle cx="12" cy="12" r="10"></circle>
                   <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
                   <path d="M12 17h.01"></path>
@@ -98,9 +98,9 @@ function About() {
             />
 
             {/* Tag on Pic */}
-            <div className="absolute flex gap-3 p-2 px-3 border rounded-2xl bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
+            <div className="absolute flex gap-3 p-2 px-3 border rounded-lg bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
               <div className="flex items-center justify-center p-4 rounded-full bg-blue-300/15">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
                   className="text-white h-5 w-5">
                   <path d="m16 18 6-6-6-6"></path>
                   <path d="m8 6-6 6 6 6"></path>
@@ -147,8 +147,8 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-blue-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Total</span>
             </div>
-            <div class="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">85</div>
-            <div class="text-[0.65rem] md:text-xs text-blue-500">Problems</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">85</div>
+            <div className="text-[0.65rem] md:text-xs text-blue-500">Problems</div>
           </div>
 
           {/* Easy */}
@@ -157,8 +157,8 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-green-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Easy</span>
             </div>
-            <div class="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">70</div>
-            <div class="text-[0.65rem] md:text-xs text-white/60">Solved</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">70</div>
+            <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
           {/* Medium */}
@@ -167,8 +167,8 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-amber-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Medium</span>
             </div>
-            <div class="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">15</div>
-            <div class="text-[0.65rem] md:text-xs text-white/60">Solved</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">15</div>
+            <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
           {/* Hard */}
@@ -177,8 +177,8 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-red-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Hard</span>
             </div>
-            <div class="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">0</div>
-            <div class="text-[0.65rem] md:text-xs text-white/60">Solved</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">0</div>
+            <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
         </div>
@@ -208,7 +208,7 @@ function About() {
               <span className="group-hover:text-blue-500 duration-300 transition-colors" >Twitter</span>
             </Link>
 
-            <Link to={"https://linkedin.com/in/ajmal-hussain92/"} target="_blank"
+            <Link to={"https://linkedin.com/in/ajmal-hussain92"} target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <FaLinkedin className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors" >LinkedIn</span>
