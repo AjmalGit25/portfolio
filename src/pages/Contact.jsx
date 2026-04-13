@@ -105,33 +105,39 @@ function Contact() {
               </p>
             </div>
 
-            <form className="w-full space-y-4 mb-2" action="">
+            {/* Form */}
+            <form className="w-full space-y-4 mb-2" action="https://formspree.io/f/xkokwyvp" method="POST">
               {/* Name & Email */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-6">
                 <div className="space-y-2">
                   <label htmlFor="fullName" className="text-white/70 block">Your Name</label>
-                  <input type="text" placeholder="John Doe" className="border border-blue-500/30 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition-colors duration-300 placeholder:text-white/40 caret-white text-white" />
+                  <input type="text" placeholder="John Doe" name="fullName"
+                    className="border border-blue-500/30 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition-colors duration-300 placeholder:text-white/40 caret-white text-white" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-white/70 block">Email Address</label>
-                  <input type="text" placeholder="john@example.com" className="border border-blue-500/30 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition-colors duration-300 placeholder:text-white/40 caret-white text-white" />
+                  <input type="email" placeholder="john@example.com" name="email"
+                    className="border border-blue-500/30 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition-colors duration-300 placeholder:text-white/40 caret-white text-white" />
                 </div>
               </div>
 
               {/* Subject */}
               <div className="space-y-2">
-                <label htmlFor="firstName" className="text-white/70 block">Subject</label>
-                <input type="text" placeholder="How can I help you?" className="border border-blue-500/30 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition-colors duration-300 placeholder:text-white/40 caret-white text-white" />
+                <label htmlFor="subject" className="text-white/70 block">Subject</label>
+                <input type="text" placeholder="How can I help you?" name="subject"
+                  className="border border-blue-500/30 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition-colors duration-300 placeholder:text-white/40 caret-white text-white" />
               </div>
 
               {/* Your Message */}
               <div className="space-y-2">
-                <label htmlFor="firstName" className="text-white/70 block">Your Message</label>
-                <textarea type="text" placeholder="Tell me about your project..." className="border border-blue-500/30 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition-colors duration-300 placeholder:text-white/40 caret-white text-white" />
+                <label htmlFor="message" className="text-white/70 block">Your Message</label>
+                <textarea placeholder="Tell me about your project..." name="message"
+                  className="border border-blue-500/30 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition-colors duration-300 placeholder:text-white/40 caret-white text-white" />
               </div>
 
               {/* Send Button */}
-              <button className="flex items-center gap-3 bg-blue-500 font-medium p-2 px-4 rounded-lg shadow-lg hover:translate-x-1 hover:shadow-blue-500/50 transition duration-300">
+              <button type="submit"
+                className="flex items-center gap-3 bg-blue-500 font-medium p-2 px-4 rounded-lg shadow-lg hover:translate-x-1 hover:shadow-blue-500/50 transition duration-300">
                 <span className="text-white">Send Message</span>
                 <TbSend className="animate-bounce mt-1 text-white" />
               </button>
