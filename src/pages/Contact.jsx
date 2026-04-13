@@ -85,7 +85,7 @@ function Contact() {
               className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
               <FaTwitter />
             </a>
-            <a href="https:/ajmal-hussain.vercel.app" target="_blank"
+            <a href="https://ajmal-hussain.vercel.app" target="_blank"
               className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
               <LuGlobe />
             </a>
