@@ -34,7 +34,7 @@ function About() {
 
               <p>I believe in continuous learning and consistency. Whether it’s building projects, exploring new tools, or understanding core concepts deeply, I always aim to grow as a developer.</p>
 
-              <p>My <b className="text-blue-500">goal</b> is to become a skilled software developer, contribute to impactful projects, and secure a strong position in the tech industry.</p>
+              <p>My <b>goal</b> is to become a skilled software developer, contribute to impactful projects, and secure a strong position in the tech industry.</p>
             </div>
 
             {/* Technical Expertise */}
@@ -77,7 +77,7 @@ function About() {
 
                 <div>
                   <h4 className="font-bold text-xl">Is Ajmal Hussain available for freelance or full-time roles?</h4>
-                  <p className="text-white/70">Yes, Ajmal Hussain is available for Full Stack Developer roles and freelance software development projects. You can contact him via the contact page.</p>
+                  <p className="text-white/70">Yes, Ajmal Hussain is available for Full Stack Developer roles and freelance software development projects. You can contact him via the <Link to="/contact" className="text-blue-500 font-medium hover:underline">contact</Link> page.</p>
                 </div>
 
                 <div>
@@ -94,7 +94,7 @@ function About() {
           <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
-              src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1775770575/Ajm_blue2_a7ib6a.jpg" alt="Ajmal's pic"
+              src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1775770575/ajm_blue4_ng6zy3.jpg" alt="Ajmal's pic"
             />
 
             {/* Tag on Pic */}
@@ -129,7 +129,7 @@ function About() {
 
           <div className="flex-2">
             <h1 className="text-4xl font-bold">LeetCode <span className="text-amber-500">Profile</span></h1>
-            <p className="text-white/80">DaliusAjmal • Global Rank: <span className="text-amber-500">539,776</span></p>
+            <p className="text-white/80">AjmalAlgo • Global Rank: <span className="text-amber-500">539,776</span></p>
           </div>
 
           <div className="inline-flex items-center gap-2 border border-blue-500 bg-blue-500/30 p-2 text-amber-500 font-medium rounded-full w-37">

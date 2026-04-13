@@ -53,20 +53,28 @@ function Experience() {
 
             {/* Text container */}
             <div className="text-sm text-white/80 mt-4 space-y-4">
-              <p>Worked as a Full Stack Web Developer intern, contributing to my first Full Stack Website development using React, Express, and MongoDB. </p>
+              <p>Worked as a Full Stack Web Developer intern, where I developed my first end-to-end web application using <b>React, Node.js, Express, and MongoDB.</b> </p>
 
               <ul className="space-y-2">
                 <li className="flex items-start gap-2.5">
                   <SiTicktick className="text-green-500 shrink-0 mt-1" />
-                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, deleniti temporibus assumenda quo fuga amet pariatur officiis! Ex dolorem blanditiis modi tenetur quas recusandae molestiae, ea ipsum quod, rerum totam?</span>
+                  <span>Designed and implemented a scalable backend architecture following the <b>MVC (Model-View-Controller)</b> pattern.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <SiTicktick className="text-green-500 shrink-0 mt-1" />
-                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, deleniti temporibus assumenda quo fuga amet pariatur officiis! Ex dolorem blanditiis modi tenetur quas recusandae molestiae, ea ipsum quod, rerum totam?</span>
+                  <span>Developed RESTful APIs for efficient data handling and seamless communication between frontend and backend.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <SiTicktick className="text-green-500 shrink-0 mt-1" />
-                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, deleniti temporibus assumenda quo fuga amet pariatur officiis! Ex dolorem blanditiis modi tenetur quas recusandae molestiae, ea ipsum quod, rerum totam?</span>
+                  <span>Built a responsive and user-friendly frontend using React, ensuring smooth user experience across devices.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <SiTicktick className="text-green-500 shrink-0 mt-1" />
+                  <span>Integrated frontend and backend by separating concerns, improving maintainability and scalability of the application.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <SiTicktick className="text-green-500 shrink-0 mt-1" />
+                  <span>Gained hands-on experience in full stack development, debugging, and real-world project structuring.</span>
                 </li>
               </ul>
             </div>
