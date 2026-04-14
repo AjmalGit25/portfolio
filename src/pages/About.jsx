@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 px-2">
+    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-2">
 
       {/* Lead Heading */}
       <div className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60 mt-10'>

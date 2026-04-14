@@ -8,7 +8,7 @@ import { TbSend } from "react-icons/tb";
 
 function Contact() {
   return (
-    <div className='max-w-6xl sm:ml-20 md:ml-20 lg:ml-50 px-2'>
+    <div className='max-w-6xl sm:ml-20 md:ml-20 lg:ml-50 p-2'>
 
       {/* Lead Heading */}
       <div

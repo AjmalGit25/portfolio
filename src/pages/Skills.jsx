@@ -1,12 +1,12 @@
-import { SiReact, SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiCplusplus, SiGit, SiGithub, SiVercel, SiPostman, SiFigma, SiPython, SiPhp, SiDocker, SiRedux, SiMysql } from "react-icons/si";
-import { FaNodeJs, FaLinux, FaJava } from "react-icons/fa";
+import { SiReact, SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiCplusplus, SiGit, SiGithub, SiVercel, SiPostman, SiFigma, SiPython, SiPhp, SiDocker, SiRedux, SiMysql, SiNextdotjs, SiRedis, SiFirebase } from "react-icons/si";
+import { FaNodeJs, FaLinux, FaJava, FaAws } from "react-icons/fa";
 import { GrOracle } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
 import { BsBarChartFill, BsDiagram3Fill } from "react-icons/bs";
 
 function Skills() {
   return (
-    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 px-2">
+    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-2">
 
       {/* Dash */}
       <div
@@ -191,7 +191,7 @@ function Skills() {
 
           {/* Figma */}
           <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
-            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(227, 98, 151, 0.125) 0%, transparent 70%)" }}></div>
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(255, 122, 255, 0.125) 0%, transparent 70%)" }}></div>
             <div className="relative z-10 flex flex-col items-center justify-center text-center">
               <SiFigma className="h-10 w-10 text-violet-500 group-hover:scale-110 duration-200" />
               <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">Figma</span>
@@ -236,7 +236,7 @@ function Skills() {
 
           {/* php */}
           <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
-            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(227, 98, 151, 0.125) 0%, transparent 70%)" }}></div>
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(255, 122, 255, 0.125) 0%, transparent 70%)" }}></div>
             <div className="relative z-10 flex flex-col items-center justify-center text-center">
               <SiPhp className="h-10 w-10 text-violet-500 group-hover:scale-110 duration-200" />
               <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">PHP</span>
@@ -245,7 +245,7 @@ function Skills() {
 
           {/* Linux */}
           <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
-            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(57, 122, 251, 0.125) 0%, transparent 70%)" }}></div>
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(0, 0, 0, 0.125) 0%, transparent 70%)" }}></div>
             <div className="relative z-10 flex flex-col items-center justify-center text-center">
               <FaLinux className="h-10 w-10 text-black group-hover:scale-110 duration-200" />
               <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">Linux</span>
@@ -281,7 +281,7 @@ function Skills() {
 
           {/* System Design */}
           <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
-            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(57, 122, 251, 0.125) 0%, transparent 70%)" }}></div>
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(57, 255, 55, 0.125) 0%, transparent 70%)" }}></div>
             <div className="relative z-10 flex flex-col items-center justify-center text-center">
               <BsDiagram3Fill className="h-10 w-10 text-green-400 group-hover:scale-110 duration-200" />
               <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">System Design</span>
@@ -290,13 +290,48 @@ function Skills() {
 
           {/* Redux */}
           <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
-            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(57, 122, 251, 0.125) 0%, transparent 70%)" }}></div>
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(255, 122, 255, 0.125) 0%, transparent 70%)" }}></div>
             <div className="relative z-10 flex flex-col items-center justify-center text-center">
               <SiRedux className="h-10 w-10 text-violet-500 group-hover:scale-110 duration-200" />
               <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">Redux</span>
             </div>
           </div>
 
+          {/* Next.js */}
+          <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(220, 222, 221, 0.125) 0%, transparent 70%)" }}></div>
+            <div className="relative z-10 flex flex-col items-center justify-center text-center">
+              <SiNextdotjs className="h-10 w-10 text-white group-hover:scale-110 duration-200" />
+              <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">Next.js</span>
+            </div>
+          </div>
+
+          {/* Redis */}
+          <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(255, 28, 28, 0.125) 0%, transparent 70%)" }}></div>
+            <div className="relative z-10 flex flex-col items-center justify-center text-center">
+              <SiRedis className="h-10 w-10 text-red-500 group-hover:scale-110 duration-200" />
+              <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">Redis</span>
+            </div>
+          </div>
+
+          {/* Firebase */}
+          <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(200, 200, 28, 0.125) 0%, transparent 70%)" }}></div>
+            <div className="relative z-10 flex flex-col items-center justify-center text-center">
+              <SiFirebase className="h-10 w-10 text-yellow-500 group-hover:scale-110 duration-200" />
+              <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">Firebase</span>
+            </div>
+          </div>
+
+          {/* AWS */}
+          <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(200, 200, 28, 0.125) 0%, transparent 70%)" }}></div>
+            <div className="relative z-10 flex flex-col items-center justify-center text-center">
+              <FaAws className="h-10 w-10 text-amber-500 group-hover:scale-110 duration-200" />
+              <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">AWS</span>
+            </div>
+          </div>
 
         </section>
       </div>
