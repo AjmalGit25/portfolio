@@ -14,7 +14,7 @@ function Home() {
       </div>
 
 
-      <main className='flex flex-col lg:flex-row items-center justify-center gap-15 mt-5'>
+      <main className='flex flex-col lg:flex-row items-center justify-center gap-15 mt-3'>
 
         {/* Section 1: Name */}
         <section className='space-y-6'>
@@ -29,7 +29,7 @@ function Home() {
             <span className='text-blue-500'>Web Applications</span>
           </h1>
 
-          <p className='text-lg text-gray-300 mt-10'>
+          <p className='text-lg text-white/80 mt-10'>
             I am a Full Stack Software Developer in Ahmedabad, India, with modern technologies — React, Node.js, and MongoDB. I enjoy building real-world web applications and solving complex problems using clean and efficient code.
           </p>
 

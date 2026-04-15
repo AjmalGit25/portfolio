@@ -16,7 +16,7 @@ function About() {
         <span className='h-px w-8 bg-blue-500'></span>
       </div>
 
-      <main className="flex flex-col lg:flex-row items-center justify-center gap-15 mt-5">
+      <main className="flex flex-col lg:flex-row items-center justify-center gap-15 mt-3">
         {/* Section 1: About Me */}
         <section className="w-full">
           <div>
