@@ -190,35 +190,35 @@ function About() {
           <h4 className="font-bold text-xl md:text-left text-center">Connect With Me</h4>
           <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white/80">
 
-            <Link to={"https://github.com/ajmalhussain92"} target="_blank"
+            <a href="https://github.com/ajmalhussain92" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <FaGithub className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors" >GitHub</span>
-            </Link>
+            </a>
 
-            <Link to={"https://leetcode.com/u/DaliusAjmal"} target="_blank"
+            <a href="https://leetcode.com/u/AjmalAlgo" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <SiLeetcode className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors" >Leetcode</span>
-            </Link>
+            </a>
 
-            <Link to={"https://twitter.com"} target="_blank"
+            <a href="https://twitter.com" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <FaTwitter className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors" >Twitter</span>
-            </Link>
+            </a>
 
-            <Link to={"https://linkedin.com/in/ajmal-hussain92"} target="_blank"
+            <a href="https://linkedin.com/in/ajmal-hussain92" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <FaLinkedin className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors" >LinkedIn</span>
-            </Link>
+            </a>
 
-            <Link to={"https://instagram.com"} target="_blank"
+            <a href="https://instagram.com" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <AiFillInstagram className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors">Instagram</span>
-            </Link>
+            </a>
 
           </div>
         </div>

@@ -91,15 +91,15 @@ function Sidebar({ mobileOpen, onClose }) {
           {/* Github, LinkedIn, Leetcode */}
           <div className="mt-auto mb-2 pt-4 border-t border-blue-400/70">
             <div className="flex items-center justify-center gap-6 max-lg:flex-col max-lg:px-3 py-2">
-              <Link to={"https://github.com/ajmalhussain92"} target="_blank" className="text-blue-300 hover:text-blue-100">
+              <a href="https://github.com/ajmalhussain92" target="_blank" className="text-blue-300 hover:text-blue-100">
                 <LuGithub />
-              </Link>
-              <Link to={"https://linkedin.com/in/ajmal-hussain92/"} target="_blank" className="text-blue-300 hover:text-blue-100">
+              </a>
+              <a href="https://linkedin.com/in/ajmal-hussain92/" target="_blank" className="text-blue-300 hover:text-blue-100">
                 <FiLinkedin />
-              </Link>
-              <Link to={"https://leetcode.com/u/DaliusAjmal"} target="_blank" className="text-blue-300 hover:text-blue-100">
+              </a>
+              <a href="https://leetcode.com/u/AjmalAlgo" target="_blank" className="text-blue-300 hover:text-blue-100">
                 <SiLeetcode />
-              </Link>
+              </a>
             </div>
           </div>
 
