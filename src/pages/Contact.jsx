@@ -97,7 +97,7 @@ function Contact() {
           <div className="border border-blue-500/30 rounded-lg p-5 hover:border-blue-500/70 hover:bg-blue-700/10">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">
-                <span className="text-white/80">Let's </span>
+                <span className="text-white">Let's </span>
                 <span className="text-blue-500">Work Together</span>
               </h3>
               <p className="text-white/70">

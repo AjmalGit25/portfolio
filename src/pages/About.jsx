@@ -142,17 +142,17 @@ function About() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
 
           {/* Total */}
-          <div className="border border-blue-500/40 bg-blue-700/20 rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-5 hover:border-blue-500/80 transition-all duration-300 group">
+          <div className="border border-blue-500/40 bg-blue-700/20 rounded-lg p-3 md:p-4 lg:p-5 hover:border-blue-500/80 transition-all duration-300 group">
             <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-blue-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Total</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">85</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">90</div>
             <div className="text-[0.65rem] md:text-xs text-blue-500">Problems</div>
           </div>
 
           {/* Easy */}
-          <div className="border border-white/10 bg-blue-800/10 rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-5 hover:border-green-500/50 hover:bg-green-500/10 transition-all duration-300 group">
+          <div className="border border-white/10 bg-blue-800/10 rounded-lg p-3 md:p-4 lg:p-5 hover:border-green-500/50 hover:bg-green-500/10 transition-all duration-300 group">
             <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-green-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Easy</span>
@@ -162,17 +162,17 @@ function About() {
           </div>
 
           {/* Medium */}
-          <div className="border border-white/10 bg-blue-800/10 rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-5 hover:border-yellow-500/50 hover:bg-yellow-500/10 transition-all duration-300 group">
+          <div className="border border-white/10 bg-blue-800/10 rounded-lg p-3 md:p-4 lg:p-5 hover:border-yellow-500/50 hover:bg-yellow-500/10 transition-all duration-300 group">
             <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-amber-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Medium</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">15</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">20</div>
             <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
           {/* Hard */}
-          <div className="border border-white/10 bg-blue-800/10 rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-5 hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300 group">
+          <div className="border border-white/10 bg-blue-800/10 rounded-lg p-3 md:p-4 lg:p-5 hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300 group">
             <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-red-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Hard</span>
@@ -190,7 +190,7 @@ function About() {
           <h4 className="font-bold text-xl md:text-left text-center">Connect With Me</h4>
           <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white/80">
 
-            <a href="https://github.com/ajmalhussain92" target="_blank"
+            <a href="https://github.com/AjmalGit23" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <FaGithub className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors" >GitHub</span>
