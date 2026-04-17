@@ -28,7 +28,7 @@ function Sidebar({ mobileOpen, onClose }) {
               { to: "/contact", label: "Contact" },
             ].map(({ to, label }, i) => (
               <NavLink key={to} to={to} end={to === "/"} onClick={onClose}
-                style={{ animationDelay: `${i * 0.07}s` }}
+                style={{ animationDelay: `${i * 0.1}s` }}
                 className={({ isActive }) =>
                   `nav-slide-up text-2xl font-bold px-8 py-2 text-center transition-colors duration-300 ${isActive ? "text-blue-500" : "text-white"
                   }`

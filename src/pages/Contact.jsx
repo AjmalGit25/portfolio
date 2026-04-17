@@ -94,7 +94,7 @@ function Contact() {
 
         {/* Section 2: Contact Form container */}
         <section className='w-full'>
-          <div className="border border-blue-500/30 rounded-lg p-5 hover:border-blue-500/70 hover:bg-blue-700/10">
+          <div className="border border-blue-500/30 rounded-lg p-5 hover:border-blue-500/70">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">
                 <span className="text-white">Let's </span>
