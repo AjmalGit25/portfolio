@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       { path: "github", element: <Github /> },
       { path: "achievements", element: <Achievements /> },
       { path: "contact", element: <Contact /> },
-      { path: "*", element: <NotFound /> }
+      { path: "*", element: <NotFound /> }                // Handles unknown routes inside React
     ]
   },
 ]);
