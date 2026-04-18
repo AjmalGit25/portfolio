@@ -17,8 +17,8 @@ function Skills() {
       {/* Skills heading */}
       <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-15'>Skills</h1>
 
+      {/* Stacks Container */}
       <div className="space-y-4 max-w-5xl">
-
         {/* Core Stack */}
         <div className="inline-flex items-center gap-2">
           <div className='h-1 w-8 bg-linear-to-l from-blue-700 to-blue-300 rounded-full'></div>

@@ -24,7 +24,6 @@ function Contact() {
         <span className="text-blue-500">TOUCH</span>
       </h1>
 
-
       <main className='flex flex-col min-[1300px]:flex-row gap-15'>
         {/* Section 1: Email, Phone, Location */}
         <section className='w-full space-y-6'>
@@ -94,7 +93,7 @@ function Contact() {
 
         {/* Section 2: Contact Form container */}
         <section className='w-full'>
-          <div className="bg-linear-to-r from-blue-800 to-blue-900 border border-blue-500/30 rounded-lg p-5 hover:border-blue-500/70">
+          <div className="bg-blue-900/30 border border-blue-500/40 rounded-lg p-5 hover:border-blue-500/80">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">
                 <span className="text-white">Let's </span>
@@ -112,12 +111,12 @@ function Contact() {
                 <div className="space-y-2">
                   <label htmlFor="fullName" className="text-white/70 block">Your Name</label>
                   <input type="text" placeholder="John Doe" name="fullName" required
-                    className="border border-blue-500/30 bg-blue-500/10 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition-colors duration-300 placeholder:text-white/40 caret-white text-white" />
+                    className="border border-blue-500/40 bg-blue-400/10 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-white/70 block">Email Address</label>
                   <input type="email" placeholder="john@example.com" name="email" required
-                    className="border border-blue-500/30 bg-blue-500/10 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition-colors duration-300 placeholder:text-white/40 caret-white text-white" />
+                    className="border border-blue-500/40 bg-blue-400/10 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
                 </div>
               </div>
 
@@ -125,14 +124,14 @@ function Contact() {
               <div className="space-y-2">
                 <label htmlFor="subject" className="text-white/70 block">Subject</label>
                 <input type="text" placeholder="How can I help you?" name="subject" required
-                  className="border border-blue-500/30 bg-blue-500/10 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition-colors duration-300 placeholder:text-white/40 caret-white text-white" />
+                  className="border border-blue-500/40 bg-blue-400/10 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
               </div>
 
               {/* Your Message */}
               <div className="space-y-2">
                 <label htmlFor="message" className="text-white/70 block">Your Message</label>
                 <textarea placeholder="Tell me about your project..." name="message" required
-                  className="border border-blue-500/30 bg-blue-500/10 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition-colors duration-300 placeholder:text-white/40 caret-white text-white" />
+                  className="border border-blue-500/40 bg-blue-400/10 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
               </div>
 
               {/* <!-- hidden spam trap --> */}
