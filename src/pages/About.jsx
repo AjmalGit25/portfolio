@@ -123,8 +123,12 @@ function About() {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
 
-          <div className="border border-blue-500 rounded-lg bg-blue-500/50 p-5">
-            <SiLeetcode className="text-amber-500 h-10 w-10" />
+          <div className="relative">
+            <div className="border border-blue-500 rounded-full overflow-hidden">
+              <img src="/ajm_dp3.jpeg" alt="leet's pic"
+                className="h-18 w-18" />
+            </div>
+            < SiLeetcode className="text-2xl sm:text-3xl text-amber-500 absolute -bottom-1  sm:-bottom-2 right-0 border-4 border-blue-950 bg-blue-950 rounded-full" />
           </div>
 
           <div className="flex-2">
