@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ajmal-hussain.vercel.app/sitemap.xml
