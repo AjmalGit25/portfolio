@@ -17,7 +17,7 @@ function Home() {
       <main className='flex flex-col lg:flex-row items-center justify-center gap-15 mt-3'>
 
         {/* Section 1: Name */}
-        <section className='space-y-6'>
+        <section className='space-y-6 flex-2'>
 
           <h1 className='text-4xl font-black leading-[0.85] sm:text-5xl xl:text-7xl mt-6'>
             <span className='text-white'>Md Ajmal Hussain</span>
@@ -29,8 +29,8 @@ function Home() {
             <span className='text-blue-500'>Web Applications</span>
           </h1>
 
-          <p className='text-lg text-white/80 mt-10'>
-            I am a Full Stack Software Developer in Ahmedabad, India, with modern technologies — React, Node.js, and MongoDB. I enjoy building real-world web applications and solving complex problems using clean and efficient code.
+          <p className='text-base sm:text-lg text-white/80 mt-10'>
+            Hi, I'm Ajmal Hussain, a Full Stack Software Developer in Ahmedabad, India, with modern technologies — React, Node.js, and MongoDB. I enjoy building real-world web applications and solving complex problems using clean and efficient code.
           </p>
 
           {/* Auto-typing effect */}
@@ -55,14 +55,14 @@ function Home() {
         </section>
 
         {/* Section 2: Image */}
-        <section className='shrink-0'>
+        <section className='self-start mt-10 flex-1'>
           <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
-              src="/ajm_profile.png" alt="Ajmal's pic" />
+              src="/ajm_dp1.jpeg" alt="Ajmal's pic" />
 
             {/* Tag on Pic */}
-            <div className="absolute flex gap-3 p-2 border rounded-lg bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
+            <div className="absolute flex gap-3 p-2 px-3 border rounded-lg bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
               <div className="flex items-center justify-center p-4 rounded-full bg-blue-300/15">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
                   className="text-white h-5 w-5">

@@ -29,12 +29,12 @@ function About() {
             </h2>
 
             {/* Paragraph container */}
-            <div className="space-y-4 text-white/80">
-              <p>I have a strong interest in the MERN stack and love working with modern technologies like React, Node.js, and MongoDB. Alongside web development, I'm actively improving my problem-solving skills through Data Structures and Algorithms using C++.</p>
+            <div className="space-y-4 text-base sm:text-lg text-white/80">
+              <p>Hi, I'm Ajmal Hussain, having a strong interest in the MERN stack and love working with modern technologies like React, Node.js, and MongoDB. Alongside web development, I'm actively improving my problem-solving skills through Data Structures and Algorithms using C++.</p>
 
-              <p>I believe in continuous learning and consistency. Whether it’s building projects, exploring new tools, or understanding core concepts deeply, I always aim to grow as a developer.</p>
+              <p>I believe in continuous learning and consistency. Whether it's building projects, exploring new tools, or understanding core concepts deeply, I always aim to grow as a developer.</p>
 
-              <p>My <b>goal</b> is to become a skilled software developer, contribute to impactful projects, and secure a strong position in the tech industry.</p>
+              <p>My <strong className="text-blue-300">goal</strong> is to become a skilled software developer, contribute to impactful projects, and secure a strong position in the tech industry.</p>
             </div>
 
             {/* Technical Expertise */}
@@ -90,11 +90,11 @@ function About() {
         </section>
 
         {/* Section 2: Image */}
-        <section className="w-full">
+        <section className="w-full self-start mt-10">
           <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
-              src="/ajm_about.jpeg" alt="Ajmal's pic"
+              src="/ajm_dp1.jpeg" alt="Ajmal's pic"
             />
 
             {/* Tag on Pic */}
