@@ -13,13 +13,12 @@ function Home() {
         <span className='h-px w-8 bg-blue-500'></span>
       </div>
 
-
-      <main className='flex flex-col lg:flex-row items-center justify-center gap-15 mt-3'>
-
+      {/* Name & Image container */}
+      <div className='flex flex-col lg:flex-row items-center justify-center gap-15 mt-3'>
         {/* Section 1: Name */}
         <section className='space-y-6 flex-2'>
 
-          <h1 className='text-4xl font-black leading-[0.85] sm:text-5xl xl:text-7xl mt-6'>
+          <h1 className='text-4xl sm:text-5xl xl:text-7xl font-black leading-[0.85] mt-6'>
             <span className='text-white'>Md Ajmal Hussain</span>
             <br />
             <span className='text-blue-500'>Software Developer</span>
@@ -77,10 +76,8 @@ function Home() {
               </div>
             </div>
           </div>
-
         </section>
-
-      </main>
+      </div>
     </div>
   );
 }
