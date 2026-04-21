@@ -1,5 +1,5 @@
 import { SiLeetcode } from "react-icons/si";
-import { BiRun } from "react-icons/bi";
+import { BiRun, BiPlay } from "react-icons/bi";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
@@ -16,9 +16,10 @@ function About() {
         <span className='h-px w-8 bg-blue-500'></span>
       </div>
 
-      <main className="flex flex-col lg:flex-row items-center justify-center gap-15 mt-3">
+      {/* About & Image container */}
+      <div className="flex flex-col xl:flex-row items-center justify-center gap-10 mt-3">
         {/* Section 1: About Me */}
-        <section className="w-full">
+        <section className="flex-2">
           <div>
             <h1 className='text-5xl sm:text-7xl uppercase font-extrabold text-white mt-5 mb-10'>
               About <span className='text-blue-500'>Me</span>
@@ -36,61 +37,28 @@ function About() {
 
               <p>My <strong className="text-blue-300">goal</strong> is to become a skilled software developer, contribute to impactful projects, and secure a strong position in the tech industry.</p>
             </div>
-
-            {/* Technical Expertise */}
-            <div className="space-y-4">
-              <h3 className="mt-10 text-xl font-bold flex items-center gap-2 text-blue-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code w-5 h-5" aria-hidden="true">
-                  <path d="m16 18 6-6-6-6"></path>
-                  <path d="m8 6-6 6 6 6"></path>
-                </svg>
-                Technical Expertise
-              </h3>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/80">
-                <li><strong>Frontend:</strong> React.js, Next.js, JavaScript, Tailwind CSS</li>
-                <li><strong>Backend:</strong> Node.js, Express, MongoDB, Oracle, MySQL</li>
-                <li><strong>DevOps:</strong> Docker, AWS, CI/CD, Git</li>
-                <li><strong>Tools:</strong> Figma, Postman, VS Code</li>
-                <li><strong>Languages:</strong> C++, JavaScript</li>
-              </ul>
-            </div>
-
-            {/* Hr Line */}
-            <hr className="my-10 text-blue-500/50" />
-
-            {/* FAQ */}
-            <div className="space-y-4">
-              <h2 className="text-white text-2xl font-bold flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-blue-500">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                  <path d="M12 17h.01"></path>
-                </svg>
-                Frequently Asked Questions
-              </h2>
-
-              <div className="space-y-4 text-white">
-                <div>
-                  <h4 className="font-bold text-xl">What tech stack does Ajmal Hussain specialize in?</h4>
-                  <p className="text-white/70">Ajmal Hussain specializes in the MERN stack (MongoDB, Express, React, Node.js), Next.js, and scaling web applications with Docker and AWS.</p>
-                </div>
-
-                <div>
-                  <h4 className="font-bold text-xl">Is Ajmal Hussain available for freelance or full-time roles?</h4>
-                  <p className="text-white/70">Yes, Ajmal Hussain is available for Full Stack Developer roles and freelance software development projects. You can contact him via the <Link to="/contact" className="text-blue-500 font-medium hover:underline">contact</Link> page.</p>
-                </div>
-
-                <div>
-                  <h4 className="font-bold text-xl">Where is Ajmal Hussain based?</h4>
-                  <p className="text-white/70">Ajmal Hussain is a Software Developer based in Ahmedabad, Gujarat, India, working with clients globally.</p>
-                </div>
-              </div>
-            </div>
+          </div>
+          {/* Technical Expertise */}
+          <div className="space-y-4">
+            <h3 className="mt-10 text-xl font-bold flex items-center gap-2 text-blue-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code w-5 h-5" aria-hidden="true">
+                <path d="m16 18 6-6-6-6"></path>
+                <path d="m8 6-6 6 6 6"></path>
+              </svg>
+              Technical Expertise
+            </h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/80">
+              <li><strong>Frontend:</strong> React.js, Next.js, JavaScript, Tailwind CSS</li>
+              <li><strong>Backend:</strong> Node.js, Express, MongoDB, MySQL</li>
+              <li><strong>DevOps:</strong> Docker, AWS, CI/CD, Git</li>
+              <li><strong>Tools:</strong> Figma, Postman, VS Code</li>
+              <li><strong>Languages:</strong> C++, JavaScript</li>
+            </ul>
           </div>
         </section>
 
         {/* Section 2: Image */}
-        <section className="w-full self-start mt-10">
+        <section className="xl:self-start xl:mt-10 mb-5 flex-1 ">
           <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
@@ -115,7 +83,42 @@ function About() {
 
           </div>
         </section>
-      </main>
+      </div>
+
+      {/* Hr Line */}
+      <hr className="my-8 text-blue-500/50 w-full max-w-3xl" />
+
+      <div className="space-y-10 max-w-3xl">
+
+        {/* FAQ */}
+        <div className="space-y-4">
+          <h2 className="text-white text-2xl font-bold flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-blue-500">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <path d="M12 17h.01"></path>
+            </svg>
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-4 text-white">
+            <div>
+              <h4 className="font-bold text-xl">What tech stack does Ajmal Hussain specialize in?</h4>
+              <p className="text-white/70">Ajmal Hussain specializes in the MERN stack (MongoDB, Express, React, Node.js), Next.js, and scaling web applications with Docker and AWS.</p>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-xl">Is Ajmal Hussain available for freelance or full-time roles?</h4>
+              <p className="text-white/70">Yes, Ajmal Hussain is available for Full Stack Developer roles and freelance software development projects. You can contact him via the <Link to="/contact" className="text-blue-500 font-medium hover:underline">contact</Link> page.</p>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-xl">Where is Ajmal Hussain based?</h4>
+              <p className="text-white/70">Ajmal Hussain is a Software Developer based in Ahmedabad, Gujarat, India, working with clients globally.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Leetcode profile Container */}
       <div className="border border-blue-500 bg-linear-to-l from-blue-800 to-blue-950 p-5 rounded-lg mt-10 text-white w-full max-w-3xl">
