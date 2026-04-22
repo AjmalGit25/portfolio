@@ -38,6 +38,7 @@ function About() {
               <p>My <strong className="text-blue-300">goal</strong> is to become a skilled software developer, contribute to impactful projects, and secure a strong position in the tech industry.</p>
             </div>
           </div>
+
           {/* Technical Expertise */}
           <div className="space-y-4">
             <h3 className="mt-10 text-xl font-bold flex items-center gap-2 text-blue-500">
@@ -48,11 +49,21 @@ function About() {
               Technical Expertise
             </h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/80">
-              <li><strong>Frontend:</strong> React.js, Next.js, JavaScript, Tailwind CSS</li>
-              <li><strong>Backend:</strong> Node.js, Express, MongoDB, MySQL</li>
-              <li><strong>DevOps:</strong> Docker, AWS, CI/CD, Git</li>
-              <li><strong>Tools:</strong> Figma, Postman, VS Code</li>
-              <li><strong>Languages:</strong> C++, JavaScript</li>
+              <li className="flex items-start gap-1">
+                <BiPlay className="text-blue-500 mt-1 shrink-0"/>
+                <strong>Frontend:</strong> React.js, Next.js, JavaScript, Tailwind CSS</li>
+              <li className="flex items-start gap-1">
+                <BiPlay className="text-blue-500 mt-1 shrink-0"/>
+                <strong>Backend:</strong> Node.js, Express, MongoDB, MySQL</li>
+              <li className="flex items-start gap-1">
+                <BiPlay className="text-blue-500 mt-1 shrink-0"/>
+                <strong>DevOps:</strong> Docker, AWS, CI/CD, Git</li>
+              <li className="flex items-start gap-1">
+                <BiPlay className="text-blue-500 mt-1 shrink-0"/>
+                <strong>Tools:</strong> Postman, VS Code, Figma</li>
+              <li className="flex items-start gap-1">
+                <BiPlay className="text-blue-500 mt-1 shrink-0"/>
+                <strong>Languages:</strong> C++, JavaScript</li>
             </ul>
           </div>
         </section>
