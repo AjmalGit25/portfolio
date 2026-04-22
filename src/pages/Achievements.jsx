@@ -93,7 +93,7 @@ function Achievements() {
           {achievements.map((item) => (
             <div
               key={item.id}
-
+              onClick={() => setSelected(item)}
               className="relative overflow-hidden rounded-xl border border-blue-500/30 cursor-pointer aspect-[1/1.7] md:aspect-square group hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
               {/* Absolute positioned background with noise and gradient */}
               <div className="absolute inset-0">
@@ -125,7 +125,6 @@ function Achievements() {
               </div>
               {/* Hover Effects */}
               <div
-                onClick={() => setSelected(item)}
                 className="absolute inset-0 bg-linear-to-l from-blue-500 to-blue-400 text-black flex items-center justify-center -translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
                 <div className="text-center px-6 opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300 delay-100">
                   <FaMedal className="text-4xl mx-auto mb-4" />
@@ -145,9 +144,8 @@ function Achievements() {
             onClick={() => setSelected(null)}
           >
             <div
-              className="bg-blue-500/10 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-blue-500/30 scrollbar-site-themel relative"
               onClick={(e) => e.stopPropagation()}
-            >
+              className="bg-blue-500/10 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-blue-500/30 scrollbar-site-themel relative">
               <button className="absolute right-6 top-6 z-10 p-2.5 rounded-full bg-blue-500/20 hover:bg-blue-500/30 transition-all backdrop-blur-md border border-blue-500/30" onClick={() => setSelected(null)}>
                 <RxCross1 className="text-blue-400" />
               </button>
