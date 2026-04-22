@@ -10,18 +10,23 @@ function App() {
     <div className='bg-linear-to-l from-blue-800 to-blue-950 min-h-screen min-w-screen'>
       <div className="flex">
 
-        {/* Sidebar Menu Toggle Button */}
+        {/* Menu Toggle Button for Mobile devices */}
         <button
+          // functional state update
           onClick={() => setMobileOpen(prev => !prev)}
           className="fixed -left-2 top-3 z-50 sm:hidden bg-blue-500 text-white py-2 px-2 pl-4 rounded-md inline-flex items-center gap-2">
-          {mobileOpen ? <RiMenuFoldLine /> : <RiMenuUnfoldLine />} 
+          {mobileOpen ? <RiMenuFoldLine /> : <RiMenuUnfoldLine />}
           <span className="h-3 w-3 bg-blue-300 rounded-full animate-ping"></span>
           <span className="h-2 w-2 bg-blue-700 -ml-4.5 rounded-full"></span>
           <span className="h-px w-5 bg-blue-700 -ml-2"></span>
           <span className="text-sm">menu</span>
         </button>
 
-        <Sidebar mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
+        {/* Sidebar for Desktop */}
+        <Sidebar
+          isMobileOpen={mobileOpen}
+          onClose={() => setMobileOpen(false)}
+        />
 
         <div className="flex-1 p-4">
           <Outlet />

@@ -1,14 +1,281 @@
-import React from 'react'
+import React from "react";
+import { LuGraduationCap } from "react-icons/lu";
+import { PiMedal, PiMedalFill } from "react-icons/pi";
+import { FaMedal } from "react-icons/fa6";
+
 
 function Achievements() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-sm">
-      <div className='flex items-center gap-3'>
-        <span className='animate-pulse text-lg'>🏗️</span>
-        <span className='h-8 w-0 text-blue-500 border-l'></span>
-        <h3 className='text-white/70'>This project is under development...</h3>
+    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-2">
+      {/* Dash */}
+      <div
+        className='inline-flex mt-10'>
+        <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
       </div>
-      <p className='absolute bottom-10 text-xs text-blue-500/50'>© {new Date().getFullYear()} Ajmal H. All rights reserved.</p>
+
+      {/* Education heading */}
+      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Achievements</h1>
+
+      <p className="max-w-3xl text-white/60 mb-15">A curated collection of professional certifications and academic honors demonstrating technical mastery and a commitment to continuous growth. </p>
+
+      {/* Cards container */}
+      <div className="max-w-5xl">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-10">
+
+          {/* Card 1 - C++ */}
+          <div className="relative overflow-hidden rounded-xl border border-blue-500/30 cursor-pointer aspect-[1/1.7] md:aspect-square group hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
+            {/* Absolute positioned background with noise and gradient */}
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-linear-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+              <div className="absolute inset-0 bg-noise opacity-10"></div>
+              <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")", backgroundSize: "200px 200px" }}>
+              </div>
+            </div>
+            {/* Contents */}
+            <div className="relative h-full flex flex-col items-center justify-center text-center p-5 gap-4">
+              <div className="flex flex-col items-center justify-center gap-2">
+                <div className="h-14 w-14 bg-linear-to-l from-blue-500 to-blue-400 rounded-lg flex items-center justify-center">
+                  <LuGraduationCap className="text-2xl" />
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-white leading-tight line-clamp-2 px-2">C++ Certificate</h3>
+                <p className="text-sm md:text-sm text-white/70 font-medium whitespace-nowrap overflow-hidden text-ellipsis px-2">SimpliLearn</p>
+                <p className="text-xs text-white/60 line-clamp-2 px-2">Certificate for completing Advanced C++ programming course from SimpliLearn SkillUp.</p>
+              </div>
+              {/* Year */}
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-blue-500 border border-blue-500/50 bg-blue-500/20 rounded-full">
+                <PiMedalFill className="text-blue-500" />
+                <span>2025</span>
+              </div>
+            </div>
+            {/* Hover Effects */}
+            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px)" }}>
+            </div>
+            <div className="absolute inset-0" style={{ background: "radial-gradient(circle, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.3) 100%)" }}>
+            </div>
+            <div className="absolute inset-0 bg-linear-to-l from-blue-500 to-blue-400 text-black flex items-center justify-center -translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+              <div className="text-center px-6 opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300 delay-100">
+                <FaMedal className="text-4xl mx-auto mb-4" />
+                <h3 className="text-xl font-black mb-2">C++ Certificate</h3>
+                <p className="text-sm font-bold uppercase tracking-widest opacity-80 mb-1">SimpliLearn</p>
+                <p className="text-xs font-medium opacity-60">View Details</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2 - DSA */}
+          <div className="relative overflow-hidden rounded-xl border border-blue-500/30 cursor-pointer aspect-[1/1.7] md:aspect-square group hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
+            {/* Absolute positioned background with noise and gradient */}
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-linear-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+              <div className="absolute inset-0 bg-noise opacity-10"></div>
+              <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")", backgroundSize: "200px 200px" }}>
+              </div>
+            </div>
+            {/* Contents */}
+            <div className="relative h-full flex flex-col items-center justify-center text-center p-5 gap-4">
+              <div className="flex flex-col items-center justify-center gap-2">
+                <div className="h-14 w-14 bg-linear-to-l from-blue-500 to-blue-400 rounded-lg flex items-center justify-center">
+                  <LuGraduationCap className="text-2xl" />
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-white leading-tight line-clamp-2 px-2">DSA with C++</h3>
+                <p className="text-sm md:text-sm text-white/70 font-medium whitespace-nowrap overflow-hidden text-ellipsis px-2">ChaiCode</p>
+                <p className="text-xs text-white/60 line-clamp-2 px-2">Excellence Certificate for mastering DSA with C++ course from ChaiCode platform.</p>
+              </div>
+              {/* Year */}
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-blue-500 border border-blue-500/50 bg-blue-500/20 rounded-full">
+                <PiMedalFill className="text-blue-500" />
+                <span>2026</span>
+              </div>
+            </div>
+            {/* Hover Effects */}
+            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px)" }}>
+            </div>
+            <div className="absolute inset-0" style={{ background: "radial-gradient(circle, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.3) 100%)" }}>
+            </div>
+            <div className="absolute inset-0 bg-linear-to-l from-blue-500 to-blue-400 text-black flex items-center justify-center -translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+              <div className="text-center px-6 opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300 delay-100">
+                <FaMedal className="text-4xl mx-auto mb-4" />
+                <h3 className="text-xl font-black mb-2">DSA with C++</h3>
+                <p className="text-sm font-bold uppercase tracking-widest opacity-80 mb-1">ChaiCode</p>
+                <p className="text-xs font-medium opacity-60">View Details</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3 - Internship C++ */}
+          <div className="relative overflow-hidden rounded-xl border border-blue-500/30 cursor-pointer aspect-[1/1.7] md:aspect-square group hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
+            {/* Absolute positioned background with noise and gradient */}
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-linear-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+              <div className="absolute inset-0 bg-noise opacity-10"></div>
+              <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")", backgroundSize: "200px 200px" }}>
+              </div>
+            </div>
+            {/* Contents */}
+            <div className="relative h-full flex flex-col items-center justify-center text-center p-5 gap-4">
+              <div className="flex flex-col items-center justify-center gap-2">
+                <div className="h-14 w-14 bg-linear-to-l from-blue-500 to-blue-400 rounded-lg flex items-center justify-center">
+                  <LuGraduationCap className="text-2xl" />
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-white leading-tight line-clamp-2 px-2">C++ CodVeda Internship</h3>
+                <p className="text-sm md:text-sm text-white/70 font-medium whitespace-nowrap overflow-hidden text-ellipsis px-2">CodVeda</p>
+                <p className="text-xs text-white/60 line-clamp-2 px-2">Successfully completed the C++ internship program at CodVeda gaining practical coding hands-on experience.</p>
+              </div>
+              {/* Year */}
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-blue-500 border border-blue-500/50 bg-blue-500/20 rounded-full">
+                <PiMedalFill className="text-blue-500" />
+                <span>2026</span>
+              </div>
+            </div>
+            {/* Hover Effects */}
+            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px)" }}>
+            </div>
+            <div className="absolute inset-0" style={{ background: "radial-gradient(circle, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.3) 100%)" }}>
+            </div>
+            <div className="absolute inset-0 bg-linear-to-l from-blue-500 to-blue-400 text-black flex items-center justify-center -translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+              <div className="text-center px-6 opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300 delay-100">
+                <FaMedal className="text-4xl mx-auto mb-4" />
+                <h3 className="text-xl font-black mb-2">C++ CodVeda Internship</h3>
+                <p className="text-sm font-bold uppercase tracking-widest opacity-80 mb-1">CodVeda</p>
+                <p className="text-xs font-medium opacity-60">View Details</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 4 - Internship Full-Stack */}
+          <div className="relative overflow-hidden rounded-xl border border-blue-500/30 cursor-pointer aspect-[1/1.7] md:aspect-square group hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
+            {/* Absolute positioned background with noise and gradient */}
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-linear-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+              <div className="absolute inset-0 bg-noise opacity-10"></div>
+              <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")", backgroundSize: "200px 200px" }}>
+              </div>
+            </div>
+            {/* Contents */}
+            <div className="relative h-full flex flex-col items-center justify-center text-center p-5 gap-4">
+              <div className="flex flex-col items-center justify-center gap-2">
+                <div className="h-14 w-14 bg-linear-to-l from-blue-500 to-blue-400 rounded-lg flex items-center justify-center">
+                  <LuGraduationCap className="text-2xl" />
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-white leading-tight line-clamp-2 px-2">Full Stack Internship</h3>
+                <p className="text-sm md:text-sm text-white/70 font-medium whitespace-nowrap overflow-hidden text-ellipsis px-2">EduSkills</p>
+                <p className="text-xs text-white/60 line-clamp-2 px-2">Successfully completed internship program at EduSkills gaining practical hands-on experience.</p>
+              </div>
+              {/* Year */}
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-blue-500 border border-blue-500/50 bg-blue-500/20 rounded-full">
+                <PiMedalFill className="text-blue-500" />
+                <span>2025</span>
+              </div>
+            </div>
+            {/* Hover Effects */}
+            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px)" }}>
+            </div>
+            <div className="absolute inset-0" style={{ background: "radial-gradient(circle, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.3) 100%)" }}>
+            </div>
+            <div className="absolute inset-0 bg-linear-to-l from-blue-500 to-blue-400 text-black flex items-center justify-center -translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+              <div className="text-center px-6 opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300 delay-100">
+                <FaMedal className="text-4xl mx-auto mb-4" />
+                <h3 className="text-xl font-black mb-2">Full Stack Internship</h3>
+                <p className="text-sm font-bold uppercase tracking-widest opacity-80 mb-1">EduSkills</p>
+                <p className="text-xs font-medium opacity-60">View Details</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 5 - Figma UI-UX */}
+          <div className="relative overflow-hidden rounded-xl border border-blue-500/30 cursor-pointer aspect-[1/1.7] md:aspect-square group hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
+            {/* Absolute positioned background with noise and gradient */}
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-linear-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+              <div className="absolute inset-0 bg-noise opacity-10"></div>
+              <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")", backgroundSize: "200px 200px" }}>
+              </div>
+            </div>
+            {/* Contents */}
+            <div className="relative h-full flex flex-col items-center justify-center text-center p-5 gap-4">
+              <div className="flex flex-col items-center justify-center gap-2">
+                <div className="h-14 w-14 bg-linear-to-l from-blue-500 to-blue-400 rounded-lg flex items-center justify-center">
+                  <LuGraduationCap className="text-2xl" />
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-white leading-tight line-clamp-2 px-2">Figma UI-UX Certificate</h3>
+                <p className="text-sm md:text-sm text-white/70 font-medium whitespace-nowrap overflow-hidden text-ellipsis px-2">Udemy</p>
+                <p className="text-xs text-white/60 line-clamp-2 px-2">Successfully completed UI/UX Designing course using Figma at Udemy.</p>
+              </div>
+              {/* Year */}
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-blue-500 border border-blue-500/50 bg-blue-500/20 rounded-full">
+                <PiMedalFill className="text-blue-500" />
+                <span>2026</span>
+              </div>
+            </div>
+            {/* Hover Effects */}
+            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px)" }}>
+            </div>
+            <div className="absolute inset-0" style={{ background: "radial-gradient(circle, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.3) 100%)" }}>
+            </div>
+            <div className="absolute inset-0 bg-linear-to-l from-blue-500 to-blue-400 text-black flex items-center justify-center -translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+              <div className="text-center px-6 opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300 delay-100">
+                <FaMedal className="text-4xl mx-auto mb-4" />
+                <h3 className="text-xl font-black mb-2">Figma UI-UX Certificate</h3>
+                <p className="text-sm font-bold uppercase tracking-widest opacity-80 mb-1">Udemy</p>
+                <p className="text-xs font-medium opacity-60">View Details</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 6 - Power BI */}
+          <div className="relative overflow-hidden rounded-xl border border-blue-500/30 cursor-pointer aspect-[1/1.7] md:aspect-square group hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
+            {/* Absolute positioned background with noise and gradient */}
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-linear-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+              <div className="absolute inset-0 bg-noise opacity-10"></div>
+              <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")", backgroundSize: "200px 200px" }}>
+              </div>
+            </div>
+            {/* Contents */}
+            <div className="relative h-full flex flex-col items-center justify-center text-center p-5 gap-4">
+              <div className="flex flex-col items-center justify-center gap-2">
+                <div className="h-14 w-14 bg-linear-to-l from-blue-500 to-blue-400 rounded-lg flex items-center justify-center">
+                  <LuGraduationCap className="text-2xl" />
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-white leading-tight line-clamp-2 px-2">Power BI Certificate</h3>
+                <p className="text-sm md:text-sm text-white/70 font-medium whitespace-nowrap overflow-hidden text-ellipsis px-2">Rai University</p>
+                <p className="text-xs text-white/60 line-clamp-2 px-2">Successfully completed the Data Analytics using Power Bi course organized by Rai University.</p>
+              </div>
+              {/* Year */}
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-blue-500 border border-blue-500/50 bg-blue-500/20 rounded-full">
+                <PiMedalFill className="text-blue-500" />
+                <span>2025</span>
+              </div>
+            </div>
+            {/* Hover Effects */}
+            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px)" }}>
+            </div>
+            <div className="absolute inset-0" style={{ background: "radial-gradient(circle, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.3) 100%)" }}>
+            </div>
+            <div className="absolute inset-0 bg-linear-to-l from-blue-500 to-blue-400 text-black flex items-center justify-center -translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+              <div className="text-center px-6 opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300 delay-100">
+                <FaMedal className="text-4xl mx-auto mb-4" />
+                <h3 className="text-xl font-black mb-2">Power BI Certificate</h3>
+                <p className="text-sm font-bold uppercase tracking-widest opacity-80 mb-1">Rai University</p>
+                <p className="text-xs font-medium opacity-60">View Details</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Recognition */}
+      <div className="flex items-center gap-4 text-white/40 mt-15 w-fit cursor-default group">
+        {/* logo */}
+        <div className="border rounded-full w-10 h-10 flex items-center justify-center group-hover:text-blue-500 group-hover:border-blue-500/70 transition-colors duration-300">
+          <FaMedal className="text-lg " />
+        </div>
+        {/* Paragraph */}
+        <div className="uppercase flex flex-col tracking-widest">
+          <span className="text-sm font-bold text-white/60">Recognition</span>
+          <span className="text-xs">Verified digital credentials available</span>
+        </div>
+      </div>
     </div>
   );
 }
