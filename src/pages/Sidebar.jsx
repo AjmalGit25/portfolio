@@ -15,7 +15,7 @@ function Sidebar({ isMobileOpen, onClose }) {
     // Mobile Menu Overlay for Mobile devices
     <>
       {isMobileOpen && (
-        <div onClick={onClose} className="fixed inset-0 z-40 sm:hidden flex flex-col items-center justify-center bg-blue-950/50 backdrop-blur-md">
+        <div onClick={onClose} className="fixed inset-0 z-30 sm:hidden flex flex-col items-center justify-center bg-blue-950/50 backdrop-blur-md">
           <div onClick={e => e.stopPropagation()} className="flex flex-col items-center gap-3">
             {[
               { to: "/", label: "Home" },
@@ -42,7 +42,7 @@ function Sidebar({ isMobileOpen, onClose }) {
       )}
 
       {/* Persistent Sidebar for Desktop */}
-      <aside className="fixed left-5 top-5 bottom-5 z-20 w-fit hidden sm:block">
+      <aside className="fixed left-5 top-5 bottom-5 z-30 w-fit hidden sm:block">
         {/* Visible Sidebar */}
         <div className="h-full w-fit rounded-lg bg-transparent backdrop-blur-lg border border-blue-500 p-2 flex flex-col">
 

@@ -2,8 +2,11 @@ import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
 import { PiMedal, PiMedalFill } from "react-icons/pi";
 import { FaMedal } from "react-icons/fa6";
+import { RxCross1 } from "react-icons/rx";
+import { FiExternalLink } from "react-icons/fi";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 
 function Achievements() {
   const [selected, setSelected] = useState(null);
@@ -15,7 +18,8 @@ function Achievements() {
       platform: "SimpliLearn",
       description: "Certificate for completing Advanced C++ programming course from SimpliLearn SkillUp.",
       year: "2024",
-      image: "/cert1.png",
+      image: "/cert1.jpeg",
+      verifyUrl: "https://simpli-web.app.link/e/zlR6DLdpx2b"
     },
     {
       id: 2,
@@ -23,7 +27,8 @@ function Achievements() {
       platform: "ChaiCode",
       description: "Excellence Certificate for mastering DSA with C++ course from ChaiCode platform.",
       year: "2025",
-      image: "/cert2.png",
+      image: "/cert2.jpeg",
+      verifyUrl: "https://courses.chaicode.com/learn/certificate/11786731-230407"
     },
     {
       id: 3,
@@ -31,7 +36,8 @@ function Achievements() {
       platform: "CodVeda",
       description: "Successfully completed the C++ internship program at CodVeda gaining practical coding hands-on experience.",
       year: "2026",
-      image: "/cert3.png",
+      image: "/cert3.jpeg",
+      verifyUrl: "https://courses.codveda.com/courses"
     },
     {
       id: 4,
@@ -39,7 +45,8 @@ function Achievements() {
       platform: "EduSkills",
       description: "Successfully completed Full Stack MERN internship program at EduSkills knowing the real-world application.",
       year: "2025",
-      image: "/cert4.png",
+      image: "/cert4.jpeg",
+      verifyUrl: "https://aictecert.eduskillsfoundation.org/pages/home/verify.php?cert=f225da8b7ab644a26f9f23d33495d8b0"
     },
     {
       id: 5,
@@ -47,17 +54,23 @@ function Achievements() {
       platform: "Udemy",
       description: "Completed UI/UX Designing course using Figma at Udemy.",
       year: "2026",
-      image: "/cert5.png",
+      image: "/cert5.jpeg",
+      verifyUrl: "https://www.udemy.com/certificate/UC-46cb0def-5b95-47be-9269-b8647293db09/"
     },
     {
       id: 6,
-      title: "Power BI Certificatie",
+      title: "Power BI Certificate",
       platform: "Rai University",
       description: "Successfully completed the Data Analytics using Power Bi course organized by Rai University.",
       year: "2025",
-      image: "/cert6.png",
+      image: "/cert6.jpeg",
     }
   ];
+
+  // Prevent background scrolling when modal is open
+  useEffect(() => {
+    document.body.style.overflow = selected ? "hidden" : "auto";
+  }, [selected]);
 
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-2">
@@ -124,23 +137,52 @@ function Achievements() {
             </div>
           ))}
         </div>
-      </div>
 
-      {/* 🟪 Modal Overlay (PLACE HERE) */}
-      {selected && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-md"
-          onClick={() => setSelected(null)}
-        >
+        {/* 🟪 Modal Overlay */}
+        {selected && (
           <div
-            className="bg-white p-6 rounded-xl"
-            onClick={(e) => e.stopPropagation()}
+            className="fixed inset-0 z-20 flex items-center justify-center bg-black/90 backdrop-blur-md p-2 overflow-y-auto scrollbar-hidden"
+            onClick={() => setSelected(null)}
           >
-            <h2>{selected.title}</h2>
-            <button onClick={() => setSelected(null)}>Close</button>
+            <div
+              className="bg-blue-500/10 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-blue-500/30 scrollbar-site-themel relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button className="absolute right-6 top-6 z-10 p-2.5 rounded-full bg-blue-500/20 hover:bg-blue-500/30 transition-all backdrop-blur-md border border-blue-500/30" onClick={() => setSelected(null)}>
+                <RxCross1 className="text-blue-400" />
+              </button>
+
+              {/* Image */}
+              <div className="relative w-full aspect-16/11 bg-neutral-900 flex items-center justify-center">
+                <img className="" src={selected.image} alt={selected.title} />
+              </div>
+
+              {/* Texts */}
+              <div className="space-y-6 p-5 sm:p-8">
+                <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium text-blue-500 border border-blue-500/50 bg-blue-500/20 rounded-full">
+                  <PiMedalFill />
+                  <span>{selected.year}</span>
+                </div>
+                <h2 className="text-3xl sm:text-5xl font-extrabold text-white">{selected.title}</h2>
+                <div className="text-xl text-blue-500 font-bold flex flex-wrap items-center gap-2 mb-10">
+                  <LuGraduationCap />
+                  <span>{selected.platform}</span>
+                </div>
+                <p className="text-xs uppercase font-thin text-white/40 tracking-[0.4em]">Credentials Insights</p>
+                <p className="text-white/60 font-medium italic">{selected.description}</p>
+                {/* Verify Certificate */}
+                <a
+                  href={selected.verifyUrl}
+                  target="_blank"
+                  className="flex items-center gap-4 justify-center text-black font-extrabold uppercase tracking-wider p-5 bg-blue-400 rounded-lg hover:bg-white shadow-lg hover:shadow-blue-500/30 transition-all duration-100 delay-100 md:w-fit">
+                  <span>Verify Certificate</span>
+                  <FiExternalLink />
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       {/* Recognition */}
       < div className="flex items-center gap-4 text-white/40 mt-15 w-fit cursor-default group" >
