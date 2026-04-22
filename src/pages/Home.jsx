@@ -14,7 +14,7 @@ function Home() {
       </div>
 
       {/* Name & Image container */}
-      <div className='flex flex-col lg:flex-row items-center justify-center gap-15 mt-3'>
+      <div className='flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-15 mt-3'>
         {/* Section 1: Name */}
         <section className='space-y-6 flex-2'>
 
@@ -54,7 +54,7 @@ function Home() {
         </section>
 
         {/* Section 2: Image */}
-        <section className='self-start mt-10 flex-1'>
+        <section className='lg:self-start mt-10 flex-1'>
           <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
