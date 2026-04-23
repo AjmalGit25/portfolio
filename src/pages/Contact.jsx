@@ -64,7 +64,7 @@ function Contact() {
 
           {/* Social Links */}
           <div className="flex flex-wrap gap-3 mt-8">
-            <a href="https://github.com/ajmalhussain92" target="_blank"
+            <a href="https://github.com/AjmalGit23" target="_blank"
               className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
               <FaGithub />
             </a>
@@ -72,11 +72,11 @@ function Contact() {
               className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
               <FiLinkedin />
             </a>
-            <a href="https://github.com/ajmalhussain92" target="_blank"
+            <a href="https://instagram.com/" target="_blank"
               className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
               <FaInstagram />
             </a>
-            <a href="https://leetcode.com/u/DaliusAjmal" target="_blank"
+            <a href="https://leetcode.com/u/AjmalAlgo" target="_blank"
               className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
               <SiLeetcode />
             </a>
