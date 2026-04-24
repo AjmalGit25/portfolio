@@ -29,7 +29,11 @@ function Home() {
           </h1>
 
           <p className='text-base sm:text-lg text-white/80 mt-10'>
-            Hi, I'm Ajmal Hussain, a Full Stack Software Developer in Ahmedabad, India, with modern technologies — React, Node.js, and MongoDB. I enjoy building real-world web applications and solving complex problems using clean and efficient code.
+            Hi, I'm Ajmal Hussain — a Full Stack Software Developer based in Ahmedabad, India.
+
+            I specialize in building modern web applications using React, Node.js, MongoDB, and Tailwind CSS. I focus on creating clean, scalable, and user-friendly solutions while following best development practices.
+
+            Alongside development, I actively strengthen my problem-solving skills through Data Structures and Algorithms using C++.
           </p>
 
           {/* Auto-typing effect */}
