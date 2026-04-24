@@ -184,7 +184,7 @@ function Achievements() {
                   <LuGraduationCap />
                   <span>{selected.platform}</span>
                 </div>
-                <p className="text-xs uppercase font-thin text-white/40 tracking-[0.4em]">Credentials Insights</p>
+                <p className="text-xs uppercase font-thin text-white/40 tracking-[0.4em]">Credential Insights</p>
                 <p className="text-white/60 font-medium italic">{selected.description}</p>
                 {/* Verify Certificate */}
                 <a
