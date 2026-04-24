@@ -214,7 +214,7 @@ function About() {
           <h4 className="font-bold text-xl md:text-left text-center">Connect With Me</h4>
           <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white/80">
 
-            <a href="https://github.com/AjmalGit23" target="_blank"
+            <a href="https://github.com/AjmalGit25" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <FaGithub className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors" >GitHub</span>

@@ -64,7 +64,7 @@ function Contact() {
 
           {/* Social Links */}
           <div className="flex flex-wrap gap-3 mt-8">
-            <a href="https://github.com/AjmalGit23" target="_blank"
+            <a href="https://github.com/AjmalGit25" target="_blank"
               className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
               <FaGithub />
             </a>

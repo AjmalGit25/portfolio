@@ -31,7 +31,7 @@ function Github() {
               {/* Name */}
               <div className='flex items-center gap-3'>
                 <h3 className='text-lg sm:text-2xl font-bold uppercase'>Md Ajmal Hussain</h3>
-                <span className='text-white/60'>@AjmalGit23</span>
+                <span className='text-white/60'>@AjmalGit25</span>
               </div>
 
               {/* Info */}
@@ -46,7 +46,7 @@ function Github() {
                 </a >
                 <div className="flex items-center gap-1">
                   <FiCalendar />
-                  <span>Joined March 29, 2023</span>
+                  <span>Joined March 29, 2025</span>
                 </div>
               </div>
             </div>
@@ -54,7 +54,7 @@ function Github() {
           </div>
 
           {/* Link */}
-          <a href="https://github.com/AjmalGit23" target="_blank"
+          <a href="https://github.com/AjmalGit25" target="_blank"
             className="flex items-center justify-center gap-2 p-2 bg-white text-black rounded-lg whitespace-nowrap hover:bg-white/90">
             <FaGithub />
             <span>Visit Profile</span>
@@ -74,11 +74,11 @@ function Github() {
         <div>
           <picture>
             <source
-              srcset="https://streak-stats.demolab.com/?user=AjmalGit23&currStreakNum=2FD3EB&fire=pink&sideLabels=F00&date_format=&theme=algolia&border_radius=10&border=0066ff&card_width=500" />
+              srcset="https://streak-stats.demolab.com/?user=AjmalGit25&currStreakNum=2FD3EB&fire=pink&sideLabels=F00&date_format=&theme=algolia&border_radius=10&border=0066ff&card_width=500" />
             <source
-              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit23&show_icons=true"
+              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true"
             />
-            <img src="https://github-readme-stats.vercel.app/api?username=AjmalGit23&show_icons=true" />
+            <img src="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true" />
           </picture>
         </div>
 
@@ -86,13 +86,13 @@ function Github() {
         <div>
           <picture>
             <source
-              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit23&show_icons=true&theme=algolia&border_radius=10&border_color=0066ff&card_width=500"
+              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true&theme=algolia&border_radius=10&border_color=0066ff&card_width=500"
 
             />
             <source
-              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit23&show_icons=true"
+              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true"
             />
-            <img src="https://github-readme-stats.vercel.app/api?username=AjmalGit23&show_icons=true" />
+            <img src="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true" />
           </picture>
         </div>
       </div>
@@ -111,46 +111,46 @@ function Github() {
         <div >
           <picture>
             <source
-              srcset="https://github-readme-stats.vercel.app/api/pin/?username=AjmalGit23&repo=DSA-with-C-plus"
+              srcset="https://github-readme-stats.vercel.app/api/pin/?username=AjmalGit25&repo=DSA-with-C-plus"
 
             />
             <source
-              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit23&show_icons=true"
+              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true"
             />
-            <img src="https://github-readme-stats.vercel.app/api?username=AjmalGit23&show_icons=true" />
+            <img src="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true" />
           </picture>
         </div>
 
         <div>
           <picture >
             <source
-              srcset="https://github-readme-stats.vercel.app/api/pin/?username=AjmalGit23&repo=MERN-Stack" />
+              srcset="https://github-readme-stats.vercel.app/api/pin/?username=AjmalGit25&repo=MERN-Stack" />
             <source
-              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit23&show_icons=true"
+              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true"
             />
-            <img src="https://github-readme-stats.vercel.app/api?username=AjmalGit23&show_icons=true" />
+            <img src="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true" />
           </picture>
         </div>
 
         <div>
           <picture>
             <source
-              srcset="https://github-readme-stats.vercel.app/api/pin/?username=AjmalGit23&repo=C-C-Plus-Internship-CodVeda-" />
+              srcset="https://github-readme-stats.vercel.app/api/pin/?username=AjmalGit25&repo=C-C-Plus-Internship-CodVeda-" />
             <source
-              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit23&show_icons=true"
+              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true"
             />
-            <img src="https://github-readme-stats.vercel.app/api?username=AjmalGit23&show_icons=true" />
+            <img src="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true" />
           </picture>
         </div>
 
         <div>
           <picture>
             <source
-              srcset="https://github-readme-stats.vercel.app/api/pin/?username=AjmalGit23&repo=TicTacToe-Game" />
+              srcset="https://github-readme-stats.vercel.app/api/pin/?username=AjmalGit25&repo=TicTacToe-Game" />
             <source
-              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit23&show_icons=true"
+              srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true"
             />
-            <img src="https://github-readme-stats.vercel.app/api?username=AjmalGit23&show_icons=true" />
+            <img src="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true" />
           </picture>
         </div>
       </div>

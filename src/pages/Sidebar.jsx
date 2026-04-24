@@ -91,7 +91,7 @@ function Sidebar({ isMobileOpen, onClose }) {
           {/* Github, LinkedIn, Leetcode */}
           <div className="mt-auto mb-2 pt-4 border-t border-blue-400/70">
             <div className="flex items-center justify-center gap-6 max-lg:flex-col max-lg:px-3 py-2">
-              <a href="https://github.com/AjmalGit23" target="_blank" className="text-blue-300 hover:text-blue-100">
+              <a href="https://github.com/AjmalGit25" target="_blank" className="text-blue-300 hover:text-blue-100">
                 <LuGithub />
               </a>
               <a href="https://linkedin.com/in/ajmal-hussain92/" target="_blank" className="text-blue-300 hover:text-blue-100">
