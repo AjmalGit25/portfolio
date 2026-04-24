@@ -17,7 +17,7 @@ function Achievements() {
       title: "C++ Certificate",
       platform: "SimpliLearn",
       description: "Certificate for completing Advanced C++ programming course from SimpliLearn SkillUp.",
-      year: "2024",
+      year: "2025",
       image: "/cert1.jpeg",
       verifyUrl: "https://simpli-web.app.link/e/zlR6DLdpx2b"
     },
@@ -26,7 +26,7 @@ function Achievements() {
       title: "DSA with C++",
       platform: "ChaiCode",
       description: "Excellence Certificate for mastering DSA with C++ course from ChaiCode platform.",
-      year: "2025",
+      year: "2026",
       image: "/cert2.jpeg",
       verifyUrl: "https://courses.chaicode.com/learn/certificate/11786731-230407"
     },
@@ -64,7 +64,25 @@ function Achievements() {
       description: "Successfully completed the Data Analytics using Power Bi course organized by Rai University.",
       year: "2025",
       image: "/cert6.jpeg",
-    }
+    },
+    {
+      id: 7,
+      title: "Effective Communication Certificate",
+      platform: "Skill India",
+      description: "Certificate of Participation in Effective Communication course offered by NSDC through Skill India Digital.",
+      year: "2023",
+      image: "/cert7.jpeg",
+      verifyUrl: "https://courses.skillindiadigital.gov.in/api/custom_api/view_certificate/705deb3d412745c3b4d3ac2aacb54959"
+    },
+    {
+      id: 8,
+      title: "Kali Linux Basics Certificate",
+      platform: "SimpliLearn",
+      description: "Certificate for completing Kali Linux Basics course from SimpliLearn SkillUp.",
+      year: "2025",
+      image: "/cert8.jpeg",
+      verifyUrl: "https://simpli-web.app.link/e/k3pxOFDAB2b"
+    },
   ];
 
   // Prevent background scrolling when modal is open
