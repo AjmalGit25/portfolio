@@ -31,11 +31,17 @@ function About() {
 
             {/* Paragraph container */}
             <div className="space-y-4 text-base sm:text-lg text-white/80">
-              <p>Hi, I'm Ajmal Hussain, having a strong interest in the MERN stack and love working with modern technologies like React, Node.js, and MongoDB. Alongside web development, I'm actively improving my problem-solving skills through Data Structures and Algorithms using C++.</p>
 
-              <p>I believe in continuous learning and consistency. Whether it's building projects, exploring new tools, or understanding core concepts deeply, I always aim to grow as a developer.</p>
+              <p>I am a Computer Science Engineering student with a strong interest in Full Stack Web Development and Software Engineering.</p>
 
-              <p>My <strong className="text-blue-300">goal</strong> is to become a skilled software developer, contribute to impactful projects, and secure a strong position in the tech industry.</p>
+              <p>I have hands-on experience in building applications using the MERN stack (MongoDB, Express.js, React, Node.js), along with modern tools like Tailwind CSS.</p>
+
+              <p>Alongside development, I actively improve my problem-solving skills through Data Structures and Algorithms using C++, which helps me write efficient and optimized code.</p>
+
+              <p>I believe in consistency and continuous learning. I regularly build projects, explore new technologies, and deepen my understanding of core computer science concepts.</p>
+
+              <p>My <strong className="text-blue-300">goal</strong> is to become a skilled software developer, contribute to impactful projects, and grow within the tech industry.</p>
+
             </div>
           </div>
 
@@ -50,19 +56,19 @@ function About() {
             </h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/80">
               <li className="flex items-start gap-1">
-                <BiPlay className="text-blue-500 mt-1 shrink-0"/>
+                <BiPlay className="text-blue-500 mt-1 shrink-0" />
                 <strong>Frontend:</strong> React.js, Next.js, JavaScript, Tailwind CSS</li>
               <li className="flex items-start gap-1">
-                <BiPlay className="text-blue-500 mt-1 shrink-0"/>
+                <BiPlay className="text-blue-500 mt-1 shrink-0" />
                 <strong>Backend:</strong> Node.js, Express, MongoDB, MySQL</li>
               <li className="flex items-start gap-1">
-                <BiPlay className="text-blue-500 mt-1 shrink-0"/>
+                <BiPlay className="text-blue-500 mt-1 shrink-0" />
                 <strong>DevOps:</strong> Docker, AWS, CI/CD, Git</li>
               <li className="flex items-start gap-1">
-                <BiPlay className="text-blue-500 mt-1 shrink-0"/>
+                <BiPlay className="text-blue-500 mt-1 shrink-0" />
                 <strong>Tools:</strong> Postman, VS Code, Figma</li>
               <li className="flex items-start gap-1">
-                <BiPlay className="text-blue-500 mt-1 shrink-0"/>
+                <BiPlay className="text-blue-500 mt-1 shrink-0" />
                 <strong>Languages:</strong> C++, JavaScript</li>
             </ul>
           </div>
