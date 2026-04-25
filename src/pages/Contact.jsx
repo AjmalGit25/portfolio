@@ -54,7 +54,7 @@ function Contact() {
               <span className="text-white/60">+91 9955578303</span>
             </a>
             {/* Location */}
-            <a href="https://www.google.com/maps?q=Ahmedabad" target="_blank"
+            <a href="https://www.google.com/maps?q=Ahmedabad" target="_blank" rel="noopener noreferrer"
               className="flex flex-col p-5 border border-blue-500/30 rounded-lg bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 duration-300 space-y-2">
               <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg"><GrLocation /></span>
               <span className="text-white font-bold">Location</span>
