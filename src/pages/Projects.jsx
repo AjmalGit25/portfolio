@@ -17,7 +17,7 @@ function Projects() {
         <p className="max-w-3xl text-white/60 mb-6">Explore my work primarily focuses on building responsive and user-friendly web applications using technologies like React, Vite, and Tailwind CSS </p>
 
         {/* Project's filter */}
-        <div className='text-sky-700'>Filter</div>
+        <div className='text-sky-700'>Final Exam is going on. After exam, my ideas' projects will be there. <i className='text-green-400 font-thin animate-pulse'>إن شاء الله</i></div>
 
         {/* Project's container */}
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 text-green-700'>Projects coming soon...</div>
@@ -26,4 +26,4 @@ function Projects() {
   )
 }
 
-export default Projects
+export default Projects;
