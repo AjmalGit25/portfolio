@@ -164,7 +164,7 @@ function Achievements() {
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="bg-blue-500/10 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-blue-500/30 scrollbar-site-themel relative">
+              className="bg-blue-500/10 rounded-lg w-lg md:w-xl lg:w-2xl xl:w-4xl max-h-[90vh] overflow-y-auto border border-blue-500/30 scrollbar-site-themel relative">
               <button className="absolute right-6 top-6 z-10 p-2.5 rounded-full bg-blue-500/20 hover:bg-blue-500/30 transition-all backdrop-blur-md border border-blue-500/30" onClick={() => setSelected(null)}>
                 <RxCross1 className="text-blue-400" />
               </button>
