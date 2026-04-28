@@ -84,6 +84,15 @@ function Achievements() {
       image: "/cert8.jpeg",
       verifyUrl: "https://simpli-web.app.link/e/k3pxOFDAB2b"
     },
+    {
+      id: 9,
+      title: "Generative AI Certificate",
+      platform: "SheKunj",
+      description: "Successfully completed the Generative AI Course from SheKunj.",
+      year: "2025",
+      image: "/cert9.jpeg",
+      verifyUrl: "https://www.shekunj.com/certificate-detail/14132"
+    },
   ];
 
   // Prevent background scrolling when modal is open
