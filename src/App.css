@@ -9,3 +9,28 @@
   opacity: 0;
   animation: slideUp 0.4s ease forwards;
 }
+
+/* Horizontal scrollbar height */
+::-webkit-scrollbar {
+  height: 10px;   /* for horizontal */
+  width: 10px;    /* for vertical */
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Thumb (the moving part) */
+::-webkit-scrollbar-thumb {
+  background: #01b3ff;  /* your color */
+  border-radius: 10px;
+
+   border: 2px solid black;   /* 👈 creates padding space */
+   background-clip: content-box;    /* 👈 keeps color inside */
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #01b3ffb4;
+}
