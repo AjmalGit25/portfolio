@@ -3,9 +3,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 import './App.css';
 
 import App from './App.jsx';
+
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Skills from './pages/Skills.jsx';

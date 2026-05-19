@@ -16,14 +16,17 @@ function Projects() {
 
         <p className="max-w-3xl text-white/60 mb-6">Explore my work primarily focuses on building responsive and user-friendly web applications using technologies like React, Vite, and Tailwind CSS </p>
 
-        {/* Project's filter */}
-        <div className='text-sky-700'>Final Exam is going on. After exam, my ideas' projects will be there. <i className='text-green-400 font-thin animate-pulse'>إن شاء الله</i></div>
-
         {/* Project's container */}
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 text-green-700'>Projects coming soon...</div>
+
+        <div>
+          <img src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1779223899/WhatsApp_Image_2026-05-20_at_01.01.35_l6c85n.jpg" alt="ajmal pic"
+            className="object-cover border rounded-2xl opacity-25" />
+        </div>
+
       </div>
     </div>
-  )
+  );
 }
 
 export default Projects;

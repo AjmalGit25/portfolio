@@ -28,6 +28,7 @@ function App() {
           onClose={() => setMobileOpen(false)}
         />
 
+        {/* Render child pages */}
         <div className="flex-1 p-4">
           <Outlet />
         </div>
