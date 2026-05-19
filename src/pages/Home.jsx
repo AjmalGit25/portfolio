@@ -62,7 +62,7 @@ function Home() {
           <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
-              src="/ajm_dp1.jpeg" alt="Ajmal's pic" />
+              src="dp92.jpeg" alt="Ajmal's pic" />
 
             {/* Tag on Pic */}
             <div className="absolute flex gap-3 p-2 px-3 border rounded-lg bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
