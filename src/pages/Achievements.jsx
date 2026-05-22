@@ -95,7 +95,7 @@ function Achievements() {
     },
     {
       id: 10,
-      title: "Certificate of Accomplishment",
+      title: "SQL (Basic) Certificate",
       platform: "HackerRank",
       description: "Successfully passed the HackerRank skill certification test.",
       year: "2026",
