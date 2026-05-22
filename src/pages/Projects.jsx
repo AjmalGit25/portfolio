@@ -21,7 +21,7 @@ function Projects() {
 
         <div>
           <img src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1779223899/WhatsApp_Image_2026-05-20_at_01.01.35_l6c85n.jpg" alt="ajmal pic"
-            className="object-cover border rounded-2xl opacity-25" />
+            className="object-cover border border-blue-400 rounded-2xl opacity-25" />
         </div>
 
       </div>

@@ -93,6 +93,15 @@ function Achievements() {
       image: "/cert9.jpeg",
       verifyUrl: "https://www.shekunj.com/certificate-detail/14132"
     },
+    {
+      id: 10,
+      title: "Certificate of Accomplishment",
+      platform: "HackerRank",
+      description: "Successfully passed the HackerRank skill certification test.",
+      year: "2026",
+      image: "/cert10.jpeg",
+      verifyUrl: "https://www.hackerrank.com/certificates/1e10106502b0"
+    },
   ];
 
   // Prevent background scrolling when modal is open
