@@ -40,10 +40,6 @@ function Github() {
                   < GrLocation />
                   <span>Ahmedabad, Gujarat</span>
                 </div>
-                <a href="https://ajmal-hussain.vercel.app" target="blank" className="flex items-center gap-1 hover:text-white">
-                  <LuGlobe />
-                  <span>Website</span>
-                </a >
                 <div className="flex items-center gap-1">
                   <FiCalendar />
                   <span>Joined March 29, 2025</span>
