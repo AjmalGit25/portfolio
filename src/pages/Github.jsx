@@ -1,10 +1,38 @@
 import { GrLocation } from "react-icons/gr";
 import { LuPhone, LuGlobe } from "react-icons/lu";
-import { FiCalendar } from "react-icons/fi";
+import { FiCalendar, FiExternalLink } from "react-icons/fi";
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 
+import { useEffect, useState } from "react";
+
 function Github() {
-  
+  const [repos, setRepos] = useState([]);
+
+  // useEffect(() => {
+  //   fetch("https://api.github.com/repos/AjmalGit25/Repository-Name")
+  //     .then((res) => res.json())
+  //     .then((data) => setRepos([data])) // Wrap in array to maintain consistency with expected data structure
+  //     .catch((err) => console.error(err));
+  // }, []);
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/AjmalGit25/repos")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+
+        // Ensure data is an array
+        if (Array.isArray(data)) {
+          setRepos(data);
+        } else {
+          console.error("GitHub API Error:", data);
+          setRepos([]);
+        }
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+  if (!repos) return <p>Loading...</p>;
 
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-2">
@@ -77,9 +105,9 @@ function Github() {
       <div className="mt-5 w-full max-w-5xl">
         <picture>
           <source
-            srcset="https://streak-stats.demolab.com/?user=AjmalGit25&currStreakNum=00ff66&currStreakLabel=00ff66&fire=orange&ring=11aaff&sideLabels=11aaff&sideNums=white&stroke=white&dates=white&theme=cobalt&border_radius=10&border=0066ff&card_width=500" />
+            srcSet="https://streak-stats.demolab.com/?user=AjmalGit25&currStreakNum=00ff66&currStreakLabel=00ff66&fire=orange&ring=11aaff&sideLabels=11aaff&sideNums=white&stroke=white&dates=white&theme=cobalt&border_radius=10&border=0066ff&card_width=500" />
           <source
-            srcset="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true"
+            srcSet="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true"
           />
           <img src="https://github-readme-stats.vercel.app/api?username=AjmalGit25&show_icons=true" />
         </picture>
@@ -93,7 +121,43 @@ function Github() {
         </div>
         <p className="text-white/60 text-sm sm:text-base">Showing public repositories.</p>
       </div>
-    </div>
+
+      {/* GitHub Top Repo container */}
+      <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl">
+        {repos.map((repo) => (
+          <div className="border border-blue-500/40 text-white p-3 md:p-5 rounded-lg aspect-3/2 relative hover:border-blue-500/80 hover:shadow-lg hover:-translate-y-2 transition-transform duration-300 delay-200"
+            key={repo.id}>
+            <div className="flex flex-col flex-wrap justify-between gap-5 h-full">
+              {/* Upper part - Repo Name and Description */}
+              <div>
+                <h3 className="text-lg font-bold line-clamp-1">{repo.name}</h3>
+                <p className="text-white/60 text-sm mt-1 line-clamp-3">{repo.description || "No description available"}</p>
+              </div>
+
+              {/* Lower part - Languages and Stars */}
+              <div>
+                <div className="flex flex-wrap gap-5 text-[10px] font-bold">
+                  <div className="bg-blue-500/40 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
+                    <span className="text-white">{repo.language || 'N/A'}</span>
+                  </div>
+                  <div className="bg-blue-500/40 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
+                    <span className="text-yellow-400">★</span>
+                    <span className="text-yellow-400">{repo.stargazers_count}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Repo Link (absolute | top-6, right-6) */}
+            <div className="absolute top-6 right-6">
+              <a href={repo.html_url} target="_blank" rel="noopener noreferrer"
+                className="text-blue-500 hover:text-white transition-colors duration-300"><FiExternalLink /></a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div >
   );
 }
 
