@@ -153,7 +153,7 @@ function About() {
 
           <div className="flex-2">
             <h1 className="text-4xl font-bold">LeetCode <span className="text-amber-500">Profile</span></h1>
-            <p className="text-white/80">AjmalAlgo • Global Rank: <span className="text-amber-500">539,776</span></p>
+            <p className="text-white/80">AjmalAlgo • Global Rank: <span className="text-amber-500">545,776</span></p>
           </div>
 
           <div className="inline-flex items-center gap-2 border border-blue-500 bg-blue-500/30 p-2 text-amber-500 font-medium rounded-full w-37">
@@ -171,7 +171,7 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-blue-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Total</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">100</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">110</div>
             <div className="text-[0.65rem] md:text-xs text-blue-500">Problems</div>
           </div>
 
@@ -191,7 +191,7 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-amber-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Medium</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">28</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">38</div>
             <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
