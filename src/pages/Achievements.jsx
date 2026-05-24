@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 function Achievements() {
   const [selected, setSelected] = useState(null);
 
+  // JSON data for achievements
   const achievements = [
     {
       id: 1,
