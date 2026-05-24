@@ -5,7 +5,7 @@ import { MdWorkOutline, MdChatBubbleOutline } from "react-icons/md";
 import { PiBookOpenTextBold } from "react-icons/pi";
 import { GrProjects } from "react-icons/gr";
 import { LuGithub } from "react-icons/lu";
-import { FiAward, FiLinkedin } from "react-icons/fi";
+import { FiAward, FiLinkedin, FiInstagram } from "react-icons/fi";
 import { SiLeetcode } from "react-icons/si";
 
 import { NavLink, Link } from "react-router-dom";
@@ -97,8 +97,8 @@ function Sidebar({ isMobileOpen, onClose }) {
               <a href="https://linkedin.com/in/ajmal-hussain92/" target="_blank" className="text-blue-300 hover:text-blue-100">
                 <FiLinkedin />
               </a>
-              <a href="https://leetcode.com/u/AjmalAlgo" target="_blank" className="text-blue-300 hover:text-blue-100">
-                <SiLeetcode />
+              <a href="https://www.instagram.com/asyncajmal" target="_blank" className="text-blue-300 hover:text-blue-100">
+                <FiInstagram />
               </a>
             </div>
           </div>
