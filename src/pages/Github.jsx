@@ -34,6 +34,14 @@ function Github() {
   //     "stargazers_count": 5,
   //     "language": "JavaScript",
   //     "html_url": "https://github.com/AjmalGit25/airbnb-clone"
+  //   },
+  //   {
+  //     "id": 2,
+  //     "name": "Airbnb Clone",
+  //     "description": "Full stack Airbnb clone using MERN.  Themes: default, algolia, dark, radical, merko, github-dark-blue, tokyonight, onedark, cobalt, highcontrast, dracula, Background-color: hex code without #, css color, or gradient (in the form angle,start_color,...,end_color) Border-color: (border) hex code without #, css color, or gradient (in the form angle,start_color,...,end_color) Border-radius: (border_radius) number in pixels, Number 0 (sharp corners) to 248 (ellipse), Default is 4.5",
+  //     "stargazers_count": 5,
+  //     "language": "JavaScript",
+  //     "html_url": "https://github.com/AjmalGit25/airbnb-clone"
   //   }
   // ];
 
@@ -53,8 +61,8 @@ function Github() {
         <p className='text-white/80 text-sm sm:text-lg'>Live account overview for Ajmal Hussain with public profile details and repositories.</p>
       </div>
 
-      {/* Mini Profile container */}
-      <div className='border border-blue-500/70 text-white p-3 md:p-5 rounded-lg mt-8 max-w-5xl'>
+      {/* Mini Profile Banner (Image, Name, Github's Link) */}
+      <div className='bg-blue-950/20 shadow-sky-500/40 shadow-lg border border-blue-500/70 text-white p-3 md:p-5 rounded-lg mt-8 max-w-5xl'>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-5">
           <div className="flex flex-col sm:flex-row sm:items-center gap-3">
             {/* Github Profile Picture */}
@@ -130,7 +138,7 @@ function Github() {
       {/* GitHub Top Repo container */}
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl">
         {repos.map((repo) => (
-          <div className="border border-blue-500/40 text-white p-3 md:p-5 rounded-lg aspect-5/3 relative hover:border-blue-500/80 hover:shadow-lg hover:-translate-y-2 transition-transform duration-300 delay-200"
+          <div className="bg-blue-950/20 border border-blue-500/40 text-white p-3 md:p-5 rounded-lg aspect-5/3 relative hover:border-blue-500/80 hover:shadow-lg hover:-translate-y-2 transition-transform duration-300 delay-200"
             key={repo.id}>
             <div className="flex flex-col flex-wrap justify-between gap-0 h-full">
               {/* Upper part - Repo Name and Description */}
