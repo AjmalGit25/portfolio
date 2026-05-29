@@ -1,6 +1,6 @@
 import { SiLeetcode, SiUnstop, SiW3Schools, SiHackerrank, SiDiscord, SiWhatsapp } from "react-icons/si";
 import { BiRun, BiPlay } from "react-icons/bi";
-import { FaGithub, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLaptopCode, FaMouse, FaGlobe } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -212,7 +212,7 @@ function About() {
 
         <div className="space-y-4">
           <h4 className="font-bold text-xl md:text-left flex items-center justify-center gap-2">
-            <span className="text-[15px]">🚀</span>
+            <span><FaMouse /></span>
             <span>Tech Platforms</span>
           </h4>
 
@@ -253,7 +253,7 @@ function About() {
           <hr className="my-10 text-blue-500/50" />
 
           <h4 className="font-bold text-xl md:text-left flex items-center justify-center gap-2">
-            <span className="text-[15px]">🌐</span>
+            <span><FaGlobe /></span>
             <span>Connect With Me</span>
           </h4>
 
