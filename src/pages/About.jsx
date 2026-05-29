@@ -1,4 +1,4 @@
-import { SiLeetcode } from "react-icons/si";
+import { SiLeetcode, SiUnstop, SiW3Schools, SiHackerrank, SiDiscord, SiWhatsapp } from "react-icons/si";
 import { BiRun, BiPlay } from "react-icons/bi";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
@@ -137,7 +137,7 @@ function About() {
         </div>
       </div>
 
-      {/* Leetcode profile Container */}
+      {/* LeetCode profile Container */}
       <div className="border border-blue-500 bg-linear-to-l from-blue-800 to-blue-950 p-5 rounded-lg mt-10 text-white w-full max-w-3xl">
 
         {/* Header */}
@@ -211,9 +211,13 @@ function About() {
         <hr className="my-10 text-blue-500/50" />
 
         <div className="space-y-4">
-          <h4 className="font-bold text-xl md:text-left text-center">Connect With Me</h4>
-          <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white/80">
+          <h4 className="font-bold text-xl md:text-left flex items-center justify-center gap-2">
+            <span className="text-[15px]">🚀</span>
+            <span>Tech Platforms</span>
+          </h4>
 
+          {/* Professional/Coding Platform Links */}
+          <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white/80">
             <a href="https://github.com/AjmalGit25" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <FaGithub className="group-hover:text-blue-500 duration-300 transition-colors" />
@@ -223,15 +227,38 @@ function About() {
             <a href="https://leetcode.com/u/AjmalAlgo" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <SiLeetcode className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors" >Leetcode</span>
+              <span className="group-hover:text-blue-500 duration-300 transition-colors" >LeetCode</span>
             </a>
 
-            <a href="https://twitter.com" target="_blank"
+            <a href="https://unstop.com/u/mdhus70693" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-              <FaTwitter className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors" >Twitter</span>
+              <SiUnstop className="group-hover:text-blue-500 duration-300 transition-colors" />
+              <span className="group-hover:text-blue-500 duration-300 transition-colors" >unstop</span>
             </a>
 
+            <a href="https://www.w3profile.com/AjmalW3" target="_blank"
+              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
+              <SiW3Schools className="group-hover:text-blue-500 duration-300 transition-colors" />
+              <span className="group-hover:text-blue-500 duration-300 transition-colors">W3Schools</span>
+            </a>
+
+            <a href="https://www.hackerrank.com/profile/ajmalashrafi2016" target="_blank"
+              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
+              <SiHackerrank className="group-hover:text-blue-500 duration-300 transition-colors" />
+              <span className="group-hover:text-blue-500 duration-300 transition-colors">HackerRank</span>
+            </a>
+          </div>
+
+          {/* Hr Line */}
+          <hr className="my-10 text-blue-500/50" />
+
+          <h4 className="font-bold text-xl md:text-left flex items-center justify-center gap-2">
+            <span className="text-[15px]">🌐</span>
+            <span>Connect With Me</span>
+          </h4>
+
+          {/* Social/Contact Platform Links */}
+          <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white/80">
             <a href="https://linkedin.com/in/ajmal-hussain92" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <FaLinkedin className="group-hover:text-blue-500 duration-300 transition-colors" />
@@ -242,6 +269,18 @@ function About() {
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <AiFillInstagram className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors">Instagram</span>
+            </a>
+
+            <a href="https://discord.com/users/1341100335086833725" target="_blank"
+              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
+              <SiDiscord className="group-hover:text-blue-500 duration-300 transition-colors" />
+              <span className="group-hover:text-blue-500 duration-300 transition-colors">Discord</span>
+            </a>
+
+            <a href="https://wa.me/919955578303?text=Hello%20Ajmal" target="_blank"
+              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
+              <SiWhatsapp className="group-hover:text-blue-500 duration-300 transition-colors" />
+              <span className="group-hover:text-blue-500 duration-300 transition-colors">WhatsApp</span>
             </a>
 
           </div>
