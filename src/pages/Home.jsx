@@ -28,13 +28,19 @@ function Home() {
             <span className='text-blue-500'>Web Applications</span>
           </h1>
 
-          <p className='text-base sm:text-lg text-white/80 mt-10'>
-            Hi, I'm Ajmal Hussain — a Full Stack Software Developer based in Ahmedabad, India.
+          <div className='text-base sm:text-lg text-white/80 mt-10'>
+            <p>
+              Hi, I'm Ajmal Hussain — a Full Stack <strong>MERN</strong> Developer skilled in JavaScript & TypeScript, currently based in Ahmedabad, India.
+            </p>
 
-            I specialize in building modern web applications using React, Node.js, MongoDB, and Tailwind CSS. I focus on creating clean, scalable, and user-friendly solutions while following best development practices.
+            <p>
+              I specialize in building modern web applications using React, Node.js, MongoDB, and Tailwind CSS. I focus on creating clean, scalable, and user-friendly solutions while following best development practices.
+            </p>
 
-            Alongside development, I actively strengthen my problem-solving skills through Data Structures and Algorithms using C++.
-          </p>
+            <p>
+              Alongside development, I actively strengthen my problem-solving skills through Data Structures and Algorithms using C++.
+            </p>
+          </div>
 
           {/* Auto-typing effect */}
           <Typewriter />
@@ -52,7 +58,7 @@ function Home() {
 
           {/* Tech Stack */}
           <p className="mt-6 max-w-xl text-[11px] uppercase tracking-[0.3em] text-white/50">
-            React • Next.js • Node.js • Express • MongoDB • TypeScript • AWS • Docker • Problem Solving
+            React • Tailwind CSS • Bootstrap • Node.js • Express • MongoDB • JavaScript • TypeScript • Problem Solving
           </p>
 
         </section>
