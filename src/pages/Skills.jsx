@@ -1,4 +1,4 @@
-import { SiReact, SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiCplusplus, SiGit, SiGithub, SiVercel, SiPostman, SiFigma, SiPython, SiPhp, SiDocker, SiRedux, SiMysql, SiNextdotjs, SiRedis, SiFirebase } from "react-icons/si";
+import { SiReact, SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiTypescript, SiCplusplus, SiGit, SiGithub, SiVercel, SiPostman, SiFigma, SiPython, SiPhp, SiDocker, SiRedux, SiMysql, SiNextdotjs, SiRedis, SiFirebase } from "react-icons/si";
 import { FaNodeJs, FaLinux, FaJava, FaAws } from "react-icons/fa";
 import { GrOracle } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
@@ -126,10 +126,19 @@ function Skills() {
 
             {/* JavaScript */}
             <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
-              <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(157, 78, 11, 0.125) 0%, transparent 70%)" }}></div>
+              <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(157, 118, 11, 0.325) 0%, transparent 70%)" }}></div>
               <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center">
                 <SiJavascript className="h-10 w-10 text-yellow-500 group-hover:scale-110 duration-200" />
                 <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">JavaScript</span>
+              </div>
+            </div>
+
+            {/* TypeScript */}
+            <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
+              <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(10, 100, 200, 0.325) 0%, transparent 70%)" }}></div>
+              <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center">
+                <SiTypescript className="h-10 w-10 text-sky-500 group-hover:scale-110 duration-200" />
+                <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">TypeScript</span>
               </div>
             </div>
 
