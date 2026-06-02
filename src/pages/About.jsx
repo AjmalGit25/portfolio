@@ -248,7 +248,7 @@ function About() {
               <span className="group-hover:text-blue-500 duration-300 transition-colors">HackerRank</span>
             </a>
 
-            <a href="https://www.geeksforgeeks.org/profile/ajmalashr9iyk" target="_blank"
+            <a href="https://www.geeksforgeeks.org/profile/ajmal786" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <SiGeeksforgeeks className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors">GeeksforGeeks</span>
