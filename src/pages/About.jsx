@@ -78,12 +78,12 @@ function About() {
         <section className="xl:self-start xl:mt-10 mb-5 flex-1 ">
           <div className='flex items-center justify-center relative'>
             <img
-              className='border border-blue-300 rounded-lg overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
+              className='border border-blue-300 rounded-xl overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
               src="/ajm_dp1.jpeg" alt="Ajmal's pic"
             />
 
             {/* Tag on Pic */}
-            <div className="absolute flex gap-3 p-2 px-3 border rounded-lg bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
+            <div className="absolute flex gap-3 p-2 px-3 border rounded-xl bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
               <div className="flex items-center justify-center p-4 rounded-full bg-blue-300/15">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
                   className="text-white h-5 w-5">
@@ -138,7 +138,7 @@ function About() {
       </div>
 
       {/* LeetCode profile Container */}
-      <div className="border border-blue-500 bg-linear-to-l from-blue-800 to-blue-950 p-5 rounded-lg mt-10 text-white w-full max-w-3xl">
+      <div className="border border-blue-500 bg-linear-to-l from-blue-800 to-blue-950 p-5 rounded-xl mt-10 text-white w-full max-w-3xl">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
@@ -166,7 +166,7 @@ function About() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
 
           {/* Total */}
-          <div className="border border-blue-500/40 bg-blue-700/20 rounded-lg p-3 md:p-4 lg:p-5 hover:border-blue-500/80 transition-all duration-300 group">
+          <div className="border border-blue-500/40 bg-blue-700/20 rounded-xl p-3 md:p-4 lg:p-5 hover:border-blue-500/80 transition-all duration-300 group">
             <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-blue-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Total</span>
@@ -176,7 +176,7 @@ function About() {
           </div>
 
           {/* Easy */}
-          <div className="border border-white/10 bg-blue-800/10 rounded-lg p-3 md:p-4 lg:p-5 hover:border-green-500/50 hover:bg-green-500/10 transition-all duration-300 group">
+          <div className="border border-white/10 bg-blue-800/10 rounded-xl p-3 md:p-4 lg:p-5 hover:border-green-500/50 hover:bg-green-500/10 transition-all duration-300 group">
             <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-green-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Easy</span>
@@ -186,7 +186,7 @@ function About() {
           </div>
 
           {/* Medium */}
-          <div className="border border-white/10 bg-blue-800/10 rounded-lg p-3 md:p-4 lg:p-5 hover:border-yellow-500/50 hover:bg-yellow-500/10 transition-all duration-300 group">
+          <div className="border border-white/10 bg-blue-800/10 rounded-xl p-3 md:p-4 lg:p-5 hover:border-yellow-500/50 hover:bg-yellow-500/10 transition-all duration-300 group">
             <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-amber-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Medium</span>
@@ -196,7 +196,7 @@ function About() {
           </div>
 
           {/* Hard */}
-          <div className="border border-white/10 bg-blue-800/10 rounded-lg p-3 md:p-4 lg:p-5 hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300 group">
+          <div className="border border-white/10 bg-blue-800/10 rounded-xl p-3 md:p-4 lg:p-5 hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300 group">
             <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-red-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Hard</span>

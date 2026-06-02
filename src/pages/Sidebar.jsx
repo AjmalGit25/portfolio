@@ -44,7 +44,7 @@ function Sidebar({ isMobileOpen, onClose }) {
       {/* Persistent Sidebar for Desktop */}
       <aside className="fixed left-5 top-5 bottom-5 z-30 w-fit hidden sm:block">
         {/* Visible Sidebar */}
-        <div className="h-full w-fit rounded-lg bg-transparent backdrop-blur-lg border border-blue-500 p-2 flex flex-col">
+        <div className="h-full w-fit rounded-xl bg-transparent backdrop-blur-lg border border-blue-500 p-2 flex flex-col">
 
           {/* Menu */}
           <div className="flex items-center gap-4 mb-6 max-lg:justify-center max-lg:mt-3">

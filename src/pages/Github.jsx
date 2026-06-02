@@ -62,7 +62,7 @@ function Github() {
       </div>
 
       {/* Mini Profile Banner (Image, Name, Github's Link) */}
-      <div className='bg-blue-950/20 shadow-sky-500/40 shadow-lg border border-blue-500/70 text-white p-4 md:p-5 rounded-lg mt-8 max-w-5xl'>
+      <div className='bg-blue-950/20 shadow-sky-500/40 shadow-lg border border-blue-500/70 text-white p-4 md:p-5 rounded-xl mt-8 max-w-5xl'>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-5">
           <div className="flex flex-col sm:flex-row sm:items-center gap-3">
             {/* Github Profile Picture */}
@@ -138,9 +138,9 @@ function Github() {
       {/* GitHub Top Repo container */}
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl">
         {repos.map((repo) => (
-          <div className="bg-blue-950/20 border border-blue-500/40 text-white p-3 md:p-5 rounded-lg aspect-5/3 relative hover:border-blue-500/80 hover:shadow-lg hover:-translate-y-2 transition-transform duration-300 delay-200"
+          <article className="relative text-white bg-white/5 p-5 rounded-xl border border-blue-500/30 hover:-translate-y-1.5 hover:border-blue-500/80 transition-transform duration-300 delay-300"
             key={repo.id}>
-            <div className="flex flex-col flex-wrap justify-between gap-0 h-full">
+            <div className="flex flex-col flex-wrap justify-between gap-2 h-full">
               {/* Upper part - Repo Name and Description */}
               <div>
                 <h3 className="text-lg font-bold line-clamp-1">{repo.name}</h3>
@@ -166,12 +166,14 @@ function Github() {
               <a href={repo.html_url} target="_blank" rel="noopener noreferrer"
                 className="text-blue-500 hover:text-white transition-colors duration-300"><FiExternalLink /></a>
             </div>
-          </div>
+          </article>
         ))}
       </div>
 
     </div >
   );
 }
+
+
 
 export default Github;

@@ -143,7 +143,7 @@ function Achievements() {
               {/* Contents */}
               <div className="relative h-full flex flex-col items-center justify-center text-center p-5 gap-4">
                 <div className="flex flex-col items-center justify-center gap-2">
-                  <div className="h-14 w-14 bg-linear-to-l from-blue-500 to-blue-400 rounded-lg flex items-center justify-center">
+                  <div className="h-14 w-14 bg-linear-to-l from-blue-500 to-blue-400 rounded-xl flex items-center justify-center">
                     <LuGraduationCap className="text-2xl" />
                   </div>
                   <h3 className="text-lg md:text-xl font-bold text-white leading-tight line-clamp-2 px-2">{item.title}</h3>
@@ -183,13 +183,13 @@ function Achievements() {
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="bg-blue-500/10 rounded-lg w-lg md:w-xl lg:w-2xl xl:w-4xl max-h-[90vh] overflow-y-auto border border-blue-500/30 scrollbar-site-themel relative">
+              className="bg-blue-500/10 rounded-xl w-lg md:w-xl lg:w-2xl xl:w-4xl max-h-[90vh] overflow-y-auto border border-blue-500/30 scrollbar-site-themel relative">
               <button className="absolute right-6 top-6 z-10 p-2.5 rounded-full bg-blue-500/20 hover:bg-blue-500/30 transition-all backdrop-blur-md border border-blue-500/30" onClick={() => setSelected(null)}>
                 <RxCross1 className="text-blue-400" />
               </button>
 
               {/* Image */}
-              <div className="relative w-full aspect-16/11 bg-neutral-900 flex items-center justify-center">
+              <div className="relative w-full aspect-16/11 bg-neutral-900 flex items-center justify-center overflow-hidden">
                 <img className="" src={selected.image} alt={selected.title} />
               </div>
 
@@ -210,9 +210,9 @@ function Achievements() {
                 <a
                   href={selected.verifyUrl}
                   target="_blank"
-                  className="flex items-center gap-4 justify-center text-black font-extrabold uppercase tracking-wider p-5 bg-blue-400 rounded-lg hover:bg-white shadow-lg hover:shadow-blue-500/30 transition-all duration-100 delay-100 md:w-fit">
+                  className="group flex items-center gap-4 justify-center text-black font-extrabold uppercase tracking-wider p-5 bg-blue-400 rounded-xl hover:bg-white shadow-lg hover:shadow-blue-500/30 transition-all duration-100 delay-100 md:w-fit">
                   <span>Verify Certificate</span>
-                  <FiExternalLink />
+                  <FiExternalLink className="group-hover:translate-x-0.5 duration-200 transition-transform" />
                 </a>
               </div>
             </div>

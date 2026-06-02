@@ -33,7 +33,7 @@ function Experience() {
           </div>
 
           {/* Right main container */}
-          <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-lg border border-blue-500/70 p-5 md:p-6">
+          <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
             <div className="flex items-start justify-between gap-3">
               {/* left */}
               <div>
@@ -91,7 +91,7 @@ function Experience() {
           </div>
 
           {/* Right main container */}
-          <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-lg border border-blue-500/70 p-5 md:p-6">
+          <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
             <div className="flex items-start justify-between gap-3">
               {/* left */}
               <div>

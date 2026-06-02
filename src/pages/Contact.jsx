@@ -41,21 +41,21 @@ function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {/* Email */}
             <a href="mailto:reach.ajmal.dev@gmail.com"
-              className="flex flex-col p-5 border border-blue-500/30 rounded-lg bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 duration-300 space-y-2">
+              className="flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 duration-300 space-y-2">
               <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg"><HiOutlineMail /></span>
               <span className="text-white font-bold">Email</span>
               <span className="text-white/60">reach.ajmal.dev@gmail.com</span>
             </a>
             {/* Phone */}
             <a href="tel:+919955578303"
-              className="flex flex-col p-5 border border-blue-500/30 rounded-lg bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 duration-300 space-y-2">
+              className="flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 duration-300 space-y-2">
               <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg"><LuPhone /></span>
               <span className="text-white font-bold">Phone</span>
               <span className="text-white/60">+91 9955578303</span>
             </a>
             {/* Location */}
             <a href="https://www.google.com/maps?q=Ahmedabad" target="_blank" rel="noopener noreferrer"
-              className="flex flex-col p-5 border border-blue-500/30 rounded-lg bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 duration-300 space-y-2">
+              className="flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 duration-300 space-y-2">
               <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg"><GrLocation /></span>
               <span className="text-white font-bold">Location</span>
               <span className="text-white/60">Ahmedabad, Gujarat, India</span>
@@ -93,7 +93,7 @@ function Contact() {
 
         {/* Section 2: Contact Form container */}
         <section className='w-full'>
-          <div className="bg-blue-900/30 border border-blue-500/40 rounded-lg p-5 hover:border-blue-500/80">
+          <div className="bg-blue-900/30 border border-blue-500/40 rounded-xl p-5 hover:border-blue-500/80">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">
                 <span className="text-white">Let's </span>
@@ -111,12 +111,12 @@ function Contact() {
                 <div className="space-y-2">
                   <label htmlFor="fullName" className="text-white/70 block">Your Name</label>
                   <input type="text" placeholder="John Doe" name="fullName" required
-                    className="border border-blue-500/40 bg-blue-400/10 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
+                    className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-white/70 block">Email Address</label>
                   <input type="email" placeholder="john@example.com" name="email" required
-                    className="border border-blue-500/40 bg-blue-400/10 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
+                    className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
                 </div>
               </div>
 
@@ -124,14 +124,14 @@ function Contact() {
               <div className="space-y-2">
                 <label htmlFor="subject" className="text-white/70 block">Subject</label>
                 <input type="text" placeholder="How can I help you?" name="subject" required
-                  className="border border-blue-500/40 bg-blue-400/10 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
+                  className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
               </div>
 
               {/* Your Message */}
               <div className="space-y-2">
                 <label htmlFor="message" className="text-white/70 block">Your Message</label>
                 <textarea placeholder="Tell me about your project..." name="message" required
-                  className="border border-blue-500/40 bg-blue-400/10 rounded-lg p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
+                  className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
               </div>
 
               {/* <!-- hidden spam trap --> */}
@@ -139,7 +139,7 @@ function Contact() {
 
               {/* Send Button */}
               <button type="submit"
-                className="flex items-center gap-3 bg-blue-500 font-medium p-2 px-4 rounded-lg shadow-lg hover:translate-x-1 hover:shadow-blue-500/50 transition duration-300">
+                className="flex items-center gap-3 bg-blue-500 font-medium p-3 px-5 rounded-xl shadow-lg cursor-pointer hover:translate-x-1 hover:shadow-blue-500/60 transition duration-300">
                 <span className="text-white">Send Message</span>
                 <TbSend className="animate-bounce mt-1 text-white" />
               </button>
