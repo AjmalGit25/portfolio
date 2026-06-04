@@ -189,7 +189,7 @@ function Achievements() {
               </button>
 
               {/* Image */}
-              <div className="relative w-full aspect-16/11 bg-neutral-900 flex items-center justify-center overflow-hidden">
+              <div className="relative w-full aspect-16/11 bg-neutral-900 flex items-center justify-center">
                 <img className="" src={selected.image} alt={selected.title} />
               </div>
 
