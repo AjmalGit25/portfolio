@@ -20,7 +20,7 @@ function Projects() {
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 text-green-700'>Projects coming soon...</div>
 
         <div>
-          <img src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1779223899/WhatsApp_Image_2026-05-20_at_01.01.35_l6c85n.jpg" alt="ajmal pic"
+          <img src="project_idea.jpeg" alt="ajmal pic"
             className="object-cover border border-blue-400 rounded-2xl opacity-25" />
         </div>
 
