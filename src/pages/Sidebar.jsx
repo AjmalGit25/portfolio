@@ -10,13 +10,28 @@ import { SiLeetcode } from "react-icons/si";
 
 import { NavLink, Link } from "react-router-dom";
 
+import { useEffect } from "react";
+
 function Sidebar({ isMobileOpen, onClose }) {
+  useEffect(() => {
+    const val = isMobileOpen ? "hidden" : "unset";
+    document.body.style.overflow = val;
+    document.documentElement.style.overflow = val;
+    return () => {
+      document.body.style.overflow = "unset";
+      document.documentElement.style.overflow = "unset";
+    };
+  }, [isMobileOpen]);
+
   return (
-    // Mobile Menu Overlay for Mobile devices
+    // Mobile Menu Overlay modal for Mobile devices
     <>
       {isMobileOpen && (
-        <div onClick={onClose} className="fixed inset-0 z-30 sm:hidden flex flex-col items-center justify-center bg-blue-950/50 backdrop-blur-md">
-          <div onClick={e => e.stopPropagation()} className="flex flex-col items-center gap-3">
+        <div onClick={onClose} className="fixed inset-0 z-30 sm:hidden flex flex-col items-center justify-center bg-black/80 backdrop-blur-md">
+          <div
+            onClick={e => e.stopPropagation()}
+            className="flex flex-col items-center gap-3"
+          >
             {[
               { to: "/", label: "Home" },
               { to: "/about", label: "About" },
