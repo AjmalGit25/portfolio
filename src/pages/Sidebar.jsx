@@ -46,7 +46,7 @@ function Sidebar({ isMobileOpen, onClose }) {
               <NavLink key={to} to={to} end={to === "/"} onClick={onClose}
                 style={{ animationDelay: `${i * 0.1}s` }}
                 className={({ isActive }) =>
-                  `nav-slide-up text-2xl font-bold px-8 py-2 text-center transition-colors duration-300 ${isActive ? "text-blue-500" : "text-white"
+                  `nav-slide-up text-3xl font-bold px-8 py-2 text-center transition-colors duration-300 ${isActive ? "text-blue-500" : "text-white"
                   }`
                 }>
                 {label}
