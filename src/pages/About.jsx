@@ -218,41 +218,49 @@ function About() {
 
           {/* Professional/Coding Platform Links */}
           <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white/80">
+            {/* -----------Sample----------- */}
+            {/* <a href="https://github.com/AjmalGit25" target="_blank"
+            className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
+            <FaGithub className="group-hover:text-blue-500 duration-300 transition-colors" />
+            <span className="group-hover:text-blue-500 duration-300 transition-colors" >GitHub</span>
+          </a> */}
+
             <a href="https://github.com/AjmalGit25" target="_blank"
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-              <FaGithub className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors" >GitHub</span>
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black hover:bg-black/80">
+              <FaGithub />
+              <span className="font-semibold">GitHub</span>
             </a>
 
             <a href="https://leetcode.com/u/AjmalAlgo" target="_blank"
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-              <SiLeetcode className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors" >LeetCode</span>
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-500/80 transition-colors duration-200">
+              <SiLeetcode />
+              <span className="font-semibold" >LeetCode</span>
+            </a>
+            
+            <a href="https://www.geeksforgeeks.org/profile/ajmal786" target="_blank"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-700 hover:bg-green-700/80 transition-colors duration-200">
+              <SiGeeksforgeeks />
+              <span className="font-semibold">GeeksforGeeks</span>
             </a>
 
             <a href="https://unstop.com/u/mdhus70693" target="_blank"
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-              <SiUnstop className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors" >unstop</span>
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-500 hover:bg-blue-500/80 transition-colors duration-200">
+              <SiUnstop />
+              <span className="font-semibold">unstop</span>
             </a>
 
             <a href="https://www.w3profile.com/AjmalW3" target="_blank"
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-              <SiW3Schools className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors">W3Schools</span>
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-500 hover:bg-green-500/80 transition-colors duration-200">
+              <SiW3Schools />
+              <span className="font-semibold">W3Schools</span>
             </a>
 
             <a href="https://www.hackerrank.com/profile/ajmalashrafi2016" target="_blank"
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-              <SiHackerrank className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors">HackerRank</span>
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-600/80 transition-colors duration-200">
+              <SiHackerrank />
+              <span className="font-semibold">HackerRank</span>
             </a>
 
-            <a href="https://www.geeksforgeeks.org/profile/ajmal786" target="_blank"
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-              <SiGeeksforgeeks className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors">GeeksforGeeks</span>
-            </a>
           </div>
 
           {/* Hr Line */}
