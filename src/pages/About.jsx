@@ -171,7 +171,7 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-blue-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Total</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">115</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">120</div>
             <div className="text-[0.65rem] md:text-xs text-blue-500">Problems</div>
           </div>
 
@@ -181,7 +181,7 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-green-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Easy</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">73</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">76</div>
             <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
@@ -191,7 +191,7 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-amber-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Medium</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">42</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">44</div>
             <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
@@ -216,8 +216,8 @@ function About() {
             <span>Tech Platforms</span>
           </h4>
 
-          {/* Professional/Coding Platform Links */}
-          <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white/80">
+          {/* Professional Coding Platform Links */}
+          <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white">
             {/* -----------Sample----------- */}
             {/* <a href="https://github.com/AjmalGit25" target="_blank"
             className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
@@ -226,7 +226,7 @@ function About() {
           </a> */}
 
             <a href="https://github.com/AjmalGit25" target="_blank"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black hover:bg-black/80">
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black hover:bg-black/60">
               <FaGithub />
               <span className="font-semibold">GitHub</span>
             </a>
@@ -234,7 +234,7 @@ function About() {
             <a href="https://leetcode.com/u/AjmalAlgo" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-500/80 transition-colors duration-200">
               <SiLeetcode />
-              <span className="font-semibold" >LeetCode</span>
+              <span className="font-semibold">LeetCode</span>
             </a>
             
             <a href="https://www.geeksforgeeks.org/profile/ajmal786" target="_blank"
