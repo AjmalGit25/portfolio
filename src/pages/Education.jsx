@@ -32,7 +32,7 @@ function Education() {
           </div>
 
           {/* Right main container */}
-          <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
+          <div className="bg-linear-to-r from-blue-900 via-blue-800 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
             {/* Heading */}
             <div className="flex items-start justify-between gap-3">
               {/* left */}
@@ -79,7 +79,7 @@ function Education() {
           </div>
 
           {/* Right main container */}
-          <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
+          <div className="bg-linear-to-r from-blue-900 via-blue-800 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
             {/* Heading */}
             <div className="flex items-start justify-between gap-3">
               {/* left */}
@@ -126,7 +126,7 @@ function Education() {
           </div>
 
           {/* Right main container */}
-          <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
+          <div className="bg-linear-to-r from-blue-900 via-blue-800 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
             {/* Heading */}
             <div className="flex items-start justify-between gap-3">
               {/* left */}

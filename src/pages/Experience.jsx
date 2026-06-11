@@ -33,7 +33,7 @@ function Experience() {
           </div>
 
           {/* Right main container */}
-          <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
+          <div className="bg-linear-to-r from-blue-800 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
             <div className="flex items-start justify-between gap-3">
               {/* left */}
               <div>
@@ -91,7 +91,7 @@ function Experience() {
           </div>
 
           {/* Right main container */}
-          <div className="bg-linear-to-r from-blue-700 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
+          <div className="bg-linear-to-r from-blue-800 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
             <div className="flex items-start justify-between gap-3">
               {/* left */}
               <div>
@@ -116,15 +116,15 @@ function Experience() {
               <ul className="space-y-2">
                 <li className="flex items-start gap-2.5">
                   <SiTicktick className="text-green-500 shrink-0 mt-1" />
-                  <span>Mini-game development 🎮</span>
+                  <span>Developed Mini-games (Tic-Tac-Toe, Number Guessing Game) 🎮</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <SiTicktick className="text-green-500 shrink-0 mt-1" />
-                  <span>Basic Calculator 🧮</span>
+                  <span>Basic Calculator (Basic arithmetic operations: addition, subtraction, multiplication, division) 🧮</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <SiTicktick className="text-green-500 shrink-0 mt-1" />
-                  <span>Simple Student Management System 🧑‍🎓</span>
+                  <span>Simple Student Management System (Created a console-based program to manage student records, including adding, deleting, and displaying student information) 🧑‍🎓</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <SiTicktick className="text-green-500 shrink-0 mt-1" />
@@ -132,11 +132,11 @@ function Experience() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <SiTicktick className="text-green-500 shrink-0 mt-1" />
-                  <span>Sorting & Searching Algorithms (deep-dive into its time complexity) 📈</span>
+                  <span>Sorting & Searching Algorithms (Compared the time complexity of each algorithm) 📈</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <SiTicktick className="text-green-500 shrink-0 mt-1" />
-                  <span>Simple File System Simulation 📁</span>
+                  <span>Simple File System Simulation (Created a simple simulation of a file system to perform operations like creating, deleting, and reading files)📁</span>
                 </li>
               </ul>
             </div>
