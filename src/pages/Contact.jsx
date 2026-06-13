@@ -4,7 +4,7 @@ import { GrLocation } from "react-icons/gr";
 import { SiLeetcode } from "react-icons/si";
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 import { FiLinkedin } from "react-icons/fi";
-import { TbSend } from "react-icons/tb";
+import { RiSendPlaneFill } from "react-icons/ri";
 
 function Contact() {
   return (
@@ -41,22 +41,48 @@ function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {/* Email */}
             <a href="mailto:reach.ajmal.dev@gmail.com"
-              className="flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 duration-300 space-y-2">
-              <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg"><HiOutlineMail /></span>
+              className="group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
+
+              <div className="flex items-center justify-between">
+                <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg group-hover:text-white transition-colors duration-300"><HiOutlineMail />
+                </span>
+                <span className="hidden group-hover:inline">
+                  <RiSendPlaneFill className="text-blue-500 text-xl" />
+                </span>
+              </div>
+
               <span className="text-white font-bold">Email</span>
               <span className="text-white/60">reach.ajmal.dev@gmail.com</span>
             </a>
+
             {/* Phone */}
             <a href="tel:+919955578303"
-              className="flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 duration-300 space-y-2">
-              <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg"><LuPhone /></span>
+              className="group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
+
+              <div className="flex items-center justify-between">
+                <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg group-hover:text-white transition-colors duration-300"><LuPhone />
+                </span>
+                <span className="hidden group-hover:inline">
+                  <RiSendPlaneFill className="text-blue-500 text-xl" />
+                </span>
+              </div>
+
               <span className="text-white font-bold">Phone</span>
               <span className="text-white/60">+91 9955578303</span>
             </a>
+
             {/* Location */}
             <a href="https://www.google.com/maps?q=Ahmedabad" target="_blank" rel="noopener noreferrer"
-              className="flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 duration-300 space-y-2">
-              <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg"><GrLocation /></span>
+              className="group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
+
+              <div className="flex items-center justify-between">
+                <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg group-hover:text-white transition-colors duration-300"><GrLocation />
+                </span>
+                <span className="hidden group-hover:inline">
+                  <RiSendPlaneFill className="text-blue-500 text-xl" />
+                </span>
+              </div>
+
               <span className="text-white font-bold">Location</span>
               <span className="text-white/60">Ahmedabad, Gujarat, India</span>
             </a>
@@ -93,7 +119,7 @@ function Contact() {
 
         {/* Section 2: Contact Form container */}
         <section className='w-full'>
-          <div className="bg-blue-900/30 border border-blue-500/40 rounded-xl p-5 hover:border-blue-500/80">
+          <div className="bg-blue-900/30 border border-blue-500/40 rounded-xl p-5 hover:border-blue-500/80 transition-colors duration-200">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">
                 <span className="text-white">Let's </span>
@@ -139,9 +165,10 @@ function Contact() {
 
               {/* Send Button */}
               <button type="submit"
-                className="flex items-center gap-3 bg-blue-500 font-medium p-3 px-5 rounded-xl shadow-lg cursor-pointer hover:translate-x-1 hover:shadow-blue-500/60 transition duration-300">
+                className="flex items-center gap-3 bg-blue-500 font-medium p-3 px-5 rounded-xl shadow-md cursor-pointer hover:translate-x-1 hover:shadow-white/30 transition duration-300"
+              >
                 <span className="text-white">Send Message</span>
-                <TbSend className="animate-bounce mt-1 text-white" />
+                <RiSendPlaneFill className="text-white text-sm animate-pulse" />
               </button>
             </form>
           </div>
