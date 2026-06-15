@@ -7,7 +7,7 @@ function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <div className='bg-linear-to-l from-blue-800 to-blue-950 min-h-screen min-w-screen'>
+    <div className='bg-linear-to-l from-blue-800 to-blue-950 min-h-screen'>
       <div className="flex">
 
         {/* Menu Toggle Button for Mobile devices */}
