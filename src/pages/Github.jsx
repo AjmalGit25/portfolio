@@ -138,7 +138,7 @@ function Github() {
       {/* GitHub Top Repo container */}
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl">
         {repos.map((repo) => (
-          <article className="relative text-white bg-white/5 p-5 rounded-xl border border-blue-500/30 hover:-translate-y-1.5 hover:border-blue-500/80 transition-transform duration-300 delay-300"
+          <article className="relative text-white bg-linear-to-r from-blue-900 to-blue-950 shadow-black/50 shadow-md hover:shadow-lg p-5 rounded-xl border border-blue-500/50 hover:-translate-y-1.5 hover:border-blue-500/80 transition-transform duration-300 delay-300"
             key={repo.id}>
             <div className="flex flex-col flex-wrap justify-between gap-2 h-full">
               {/* Upper part - Repo Name and Description */}
