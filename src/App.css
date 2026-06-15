@@ -34,3 +34,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #01b3ffb4;
 }
+
+
+/* Text */
+::selection {
+  background-color: rgb(169, 231, 255); /* blue */
+  color: black;
+}
