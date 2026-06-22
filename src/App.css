@@ -1,5 +1,78 @@
 @import "tailwindcss";
 
+/* ── == Theme overrides == ── */
+
+/* Purple Theme */
+[data-theme="purple"] {
+  --tw-gradient-from: #5a309c !important;
+  --tw-gradient-to:   #2e1065 !important;
+}
+[data-theme="purple"] .bg-linear-to-l {
+  background-image: linear-gradient(to left, #341072, #14072c) !important;
+}
+[data-theme="purple"] .border-blue-500   { border-color: #8b5cf6 !important; }
+[data-theme="purple"] .border-blue-400\/70 { border-color: rgba(167,139,250,0.7) !important; }
+[data-theme="purple"] .border-blue-500\/70 { border-color: rgba(139,92,246,0.7) !important; }
+[data-theme="purple"] .border-blue-500\/50 { border-color: rgba(139,92,246,0.5) !important; }
+[data-theme="purple"] .border-blue-300   { border-color: #c4b5fd !important; }
+[data-theme="purple"] .bg-blue-500       { background-color: #7c3aed !important; }
+[data-theme="purple"] .bg-blue-400       { background-color: #7c3aed !important; }
+[data-theme="purple"] :is(.hover\:bg-blue-400):hover { background-color: #9333ea !important; }
+[data-theme="purple"] .bg-blue-900       { background-color: #3b0764 !important; }
+[data-theme="purple"] .bg-blue-950\/20   { background-color: rgba(46,16,101,.2) !important; }
+[data-theme="purple"] .shadow-sky-500\/40{ --tw-shadow-color: rgba(124,58,237,.4) !important; }
+[data-theme="purple"] .bg-blue-500\/40   { background-color: rgba(124,58,237,.4) !important; }
+[data-theme="purple"] .text-blue-300     { color: #c4b5fd !important; }
+[data-theme="purple"] .text-blue-400     { color: #a78bfa !important; }
+[data-theme="purple"] .text-blue-500     { color: #8b5cf6 !important; }
+[data-theme="purple"] .text-blue-600     { color: #7c3aed !important; }
+[data-theme="purple"] .bg-blue-300       { background-color: #c4b5fd !important; }
+[data-theme="purple"] .bg-blue-700       { background-color: #6d28d9 !important; }
+[data-theme="purple"] .hover\:bg-blue-900:hover { background-color: #3b0764 !important; }
+[data-theme="purple"] .from-blue-700     { --tw-gradient-from: #6d28d9 !important; }
+[data-theme="purple"] .to-blue-300       { --tw-gradient-to:   #c4b5fd !important; }
+[data-theme="purple"] .from-blue-900     { --tw-gradient-from: #3b0764 !important; }
+[data-theme="purple"] .to-blue-950       { --tw-gradient-to:   #2e1065 !important; }
+
+/* Emerald Theme */
+[data-theme="emerald"] {
+  --tw-gradient-from: #175d49 !important;
+  --tw-gradient-to:   #022c22 !important;
+}
+[data-theme="emerald"] .bg-linear-to-l {
+  background-image: linear-gradient(to left, #00563b, #04271e) !important;
+}
+[data-theme="emerald"] .via-blue-800   { background-color: #0c7250 !important; }
+[data-theme="emerald"] .bg-linear-to-l.from-blue-500 { 
+  background-image: linear-gradient(to left, #12b984, #09795d) !important; }
+
+[data-theme="emerald"] .border-blue-500   { border-color: #10b981 !important; }
+[data-theme="emerald"] .border-blue-400\/70 { border-color: rgba(52,211,153,0.7) !important; }
+[data-theme="emerald"] .border-blue-500\/70 { border-color: rgba(16,185,129,0.7) !important; }
+[data-theme="emerald"] .border-blue-500\/50 { border-color: rgba(16,185,129,0.5) !important; }
+[data-theme="emerald"] .border-blue-300   { border-color: #6ee7b7 !important; }
+[data-theme="emerald"] .bg-blue-500       { background-color: #059669 !important; }
+[data-theme="emerald"] .bg-blue-400       { background-color: #0ad393 !important; }
+[data-theme="emerald"] :is(.hover\:bg-blue-400):hover { background-color: #ffffff !important; }
+[data-theme="emerald"] .bg-blue-900       { background-color: #064e3b !important; }
+[data-theme="emerald"] .bg-blue-950\/20   { background-color: rgba(2,44,34,.2) !important; }
+[data-theme="emerald"] .shadow-sky-500\/40{ --tw-shadow-color: rgba(5,150,105,.4) !important; }
+[data-theme="emerald"] .hover\:shadow-sky-500\/30:hover{ --tw-shadow-color: rgba(255, 255, 255, 0.4) !important; }
+[data-theme="emerald"] .bg-blue-500\/40   { background-color: rgba(5,150,105,.4) !important; }
+[data-theme="emerald"] .text-blue-300     { color: #6ee7b7 !important; }
+[data-theme="emerald"] .text-blue-400     { color: #34d399 !important; }
+[data-theme="emerald"] .text-blue-500     { color: #10b981 !important; }
+[data-theme="emerald"] .text-blue-600     { color: #059669 !important; }
+[data-theme="emerald"] .bg-blue-300       { background-color: #6ee7b7 !important; }
+[data-theme="emerald"] .bg-blue-700       { background-color: #065f46 !important; }
+[data-theme="emerald"] .bg-blue-900\/50       { background-color: rgba(0, 119, 47, 0.4) !important; }
+[data-theme="emerald"] .hover\:bg-blue-900:hover { background-color: #064e3b !important; }
+[data-theme="emerald"] .from-blue-700     { --tw-gradient-from: #065f46 !important; }
+[data-theme="emerald"] .to-blue-300       { --tw-gradient-to:   #6ee7b7 !important; }
+[data-theme="emerald"] .from-blue-900     { --tw-gradient-from: #064e3b !important; }
+[data-theme="emerald"] .to-blue-950       { --tw-gradient-to:   #022c22 !important; }
+
+
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -16,24 +89,25 @@
   width: 10px;    /* for vertical */
 }
 
-/* Track (background) */
-::-webkit-scrollbar-track {
-  background: black;
+/* Scrollbar colors via CSS variables — set on :root so pseudo-elements can read them */
+:root {
+  --sb-track: #000000;
+  --sb-thumb: #01b3ff;
+  --sb-thumb-hover: #01b3ffb4;
 }
 
-/* Thumb (the moving part) */
+:root:has([data-theme="blue"])    { --sb-track: #000;     --sb-thumb: #01b3ff;  --sb-thumb-hover: #01b3ffb4; }
+:root:has([data-theme="purple"])  { --sb-track: #1a0030;  --sb-thumb: #9060ff;  --sb-thumb-hover: #7230e3; }
+:root:has([data-theme="emerald"]) { --sb-track: #022c22;  --sb-thumb: #09d18f;  --sb-thumb-hover: #19aa7c; }
+
+::-webkit-scrollbar-track { background: var(--sb-track); }
 ::-webkit-scrollbar-thumb {
-  background: #01b3ff;  /* your color */
+  background: var(--sb-thumb);
   border-radius: 10px;
-
-   border: 2px solid black;   /* 👈 creates padding space */
-   background-clip: content-box;    /* 👈 keeps color inside */
+  border: 2px solid var(--sb-track);
+  background-clip: content-box;
 }
-
-/* Hover effect */
-::-webkit-scrollbar-thumb:hover {
-  background: #01b3ffb4;
-}
+::-webkit-scrollbar-thumb:hover { background: var(--sb-thumb-hover); }
 
 
 /* Text */
