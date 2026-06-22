@@ -10,9 +10,37 @@ import { SiLeetcode } from "react-icons/si";
 
 import { NavLink, Link } from "react-router-dom";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useTheme, themes } from "../ThemeContext";
+import { IoColorPaletteOutline } from "react-icons/io5";
+
+function ThemePicker({ onPick }) {
+  const { theme, setTheme } = useTheme();
+  
+  return (
+    <div className="flex flex-col gap-1.5 mt-1">
+      {themes.map(t => (
+        <button key={t.id} onClick={() => { setTheme(t.id); onPick?.(); }}
+          className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors ${
+            theme === t.id ? "bg-blue-900 text-white" : "text-white/70 hover:bg-blue-900/50"
+          }`}>
+          <span className="flex gap-1">
+            {t.colors.map(c => (
+              <span key={c} style={{ background: c }}
+                className="w-3 h-3 rounded-full border border-white/20" />
+            ))}
+          </span>
+          {t.label}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 function Sidebar({ isMobileOpen, onClose }) {
+  const [themeOpen, setThemeOpen] = useState(false);
+  const [mobileThemeOpen, setMobileThemeOpen] = useState(false);
+
   useEffect(() => {
     const val = isMobileOpen ? "hidden" : "unset";
     document.body.style.overflow = val;
@@ -46,12 +74,22 @@ function Sidebar({ isMobileOpen, onClose }) {
               <NavLink key={to} to={to} end={to === "/"} onClick={onClose}
                 style={{ animationDelay: `${i * 0.1}s` }}
                 className={({ isActive }) =>
-                  `nav-slide-up text-3xl font-bold px-8 py-2 text-center transition-colors duration-300 ${isActive ? "text-blue-500" : "text-white"
+                  `nav-slide-up text-3xl font-bold px-8 py-2 text-center transition-colors duration-300 ${isActive ? "text-blue-600" : "text-white"
                   }`
                 }>
                 {label}
               </NavLink>
             ))}
+
+            {/* Change Theme */}
+            <div className="mt-4 flex flex-col items-center">
+              <button onClick={() => setMobileThemeOpen(p => !p)}
+                className="flex items-center gap-2 text-white/70 border border-blue-500/50 px-4 py-2 rounded-lg text-sm hover:bg-blue-900/40 transition-colors">
+                <IoColorPaletteOutline />
+                Change Theme
+              </button>
+              {mobileThemeOpen && <ThemePicker onPick={() => { setMobileThemeOpen(false); onClose(); }} />}
+            </div>
           </div>
         </div>
       )}
@@ -103,8 +141,18 @@ function Sidebar({ isMobileOpen, onClose }) {
           </div>
 
 
+          {/* Change Theme Button */}
+          <div className="pt-3 pb-1 border-t border-blue-400/30">
+            <button onClick={() => setThemeOpen(p => !p)}
+              className="w-full flex items-center gap-2 justify-center px-3 py-1.5 rounded-md text-sm text-white/70 hover:bg-blue-900/50 transition-colors">
+              <IoColorPaletteOutline />
+              <span className="hidden lg:block">Change Theme</span>
+            </button>
+            {themeOpen && <ThemePicker onPick={() => setThemeOpen(false)} />}
+          </div>
+
           {/* Github, LinkedIn, Leetcode */}
-          <div className="mt-auto mb-2 pt-4 border-t border-blue-400/70">
+          <div className="mb-2 pt-3 border-t border-blue-400/70">
             <div className="flex items-center justify-center gap-6 max-lg:flex-col max-lg:px-3 py-2">
               <a href="https://github.com/AjmalGit25" target="_blank" className="text-blue-300 hover:text-blue-100">
                 <LuGithub />
