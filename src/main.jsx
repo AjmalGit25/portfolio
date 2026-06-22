@@ -6,6 +6,7 @@ import {
 
 import './App.css';
 import App from './App.jsx';
+import { ThemeProvider } from './ThemeContext.jsx';
 
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
@@ -40,5 +41,7 @@ const router = createBrowserRouter([
 
 // Setup Router in main.jsx         // ✅ Modern Way (Recommended Today)
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <ThemeProvider>
+    <RouterProvider router={router} />
+  </ThemeProvider>
 );
