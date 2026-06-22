@@ -94,10 +94,19 @@
       id: 11,
       title: "Gen AI Launchpad From Beginner to Builder Certificate",
       platform: "HackerRank",
-      description: "Successfully participated in the Two Days Workshop by Innomatics Research Labs",
+      description: "Successfully participated in the Two Days Workshop by Innomatics Research Labs.",
       year: "2026",
       image: "/cert11.jpeg",
       verifyUrl: "https://www.innomatics.in"
+    },
+    {
+      id: 12,
+      title: "Node.js (Intermediate) Certificate",
+      platform: "HackerRank",
+      description: "Certificate of Accomplishment for passing Node.js Intermediate Certification test.",
+      year: "2026",
+      image: "/cert12.jpeg",
+      verifyUrl: "https://www.hackerrank.com/certificates/c463925a63ff"
     },
   ];
 
