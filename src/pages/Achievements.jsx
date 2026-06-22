@@ -7,12 +7,11 @@ import { FiExternalLink } from "react-icons/fi";
 
 import { useState, useEffect } from "react";
 
-import achievements from "../data/achievements";
+import achievements from "../data/achievements.js";
 
 
 function Achievements() {
   const [selected, setSelected] = useState(null);
-
 
   // Prevent background scrolling when modal is open
   useEffect(() => {
@@ -42,13 +41,15 @@ function Achievements() {
               key={item.id}
               onClick={() => setSelected(item)}
               className="relative overflow-hidden rounded-xl border border-blue-500/30 cursor-pointer aspect-[1/1.7] md:aspect-square group hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
-              {/* Absolute positioned background with noise and gradient */}
+
+              {/* Noisy and Gradient style Background */}
               <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-linear-to-br from-gray-950 via-gray-900 to-gray-950"></div>
                 <div className="absolute inset-0 bg-noise opacity-10"></div>
                 <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")", backgroundSize: "200px 200px" }}>
                 </div>
               </div>
+
               {/* Contents */}
               <div className="relative h-full flex flex-col items-center justify-center text-center p-5 gap-4">
                 <div className="flex flex-col items-center justify-center gap-2">
@@ -119,7 +120,7 @@ function Achievements() {
                 <a
                   href={selected.verifyUrl}
                   target="_blank"
-                  className="group flex items-center gap-4 justify-center text-black font-extrabold uppercase tracking-wider p-5 bg-blue-400 rounded-xl hover:bg-white shadow-lg hover:shadow-blue-500/30 transition-all duration-100 delay-100 md:w-fit">
+                  className="group flex items-center gap-4 justify-center text-black font-extrabold uppercase tracking-wider p-5 bg-blue-400 rounded-xl hover:bg-white shadow-lg hover:shadow-white/30 transition-all duration-100 delay-100 md:w-fit">
                   <span>Verify Certificate</span>
                   <FiExternalLink className="group-hover:translate-x-0.5 duration-200 transition-transform" />
                 </a>
