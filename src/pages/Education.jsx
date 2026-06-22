@@ -32,7 +32,7 @@ function Education() {
           </div>
 
           {/* Right main container */}
-          <div className="bg-linear-to-r from-blue-900 via-blue-800 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
+          <div className="bg-linear-to-r from-blue-900 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
             {/* Heading */}
             <div className="flex items-start justify-between gap-3">
               {/* left */}
@@ -79,14 +79,15 @@ function Education() {
           </div>
 
           {/* Right main container */}
-          <div className="bg-linear-to-r from-blue-900 via-blue-800 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
+          <div className="bg-linear-to-r from-blue-900 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
             {/* Heading */}
             <div className="flex items-start justify-between gap-3">
               {/* left */}
               <div>
                 <h3 className="text-sm md:text-2xl text-white font-bold flex items-center gap-1.5">
                   <FaUniversity />
-                  <span>Kisan College</span></h3>
+                  <span>Kisan College</span>
+                </h3>
                 <div className="text-[0.7em] md:text-sm text-white/50 flex items-center gap-1.5">
                   <FiCalendar />
                   <span>2015 - 2017</span>
@@ -94,7 +95,7 @@ function Education() {
                 <p className="mt-1 text-white/70 italic text-sm">Higher Secondary Education (12th Standard)</p>
               </div>
 
-              {/* right */}
+              {/* right - Full */}
               <span className="text-[11px] px-3 py-1 rounded-full border border-blue-500/50 text-white/80 bg-blue-900/50 self-start whitespace-nowrap">Full Time</span>
             </div>
 
@@ -126,7 +127,7 @@ function Education() {
           </div>
 
           {/* Right main container */}
-          <div className="bg-linear-to-r from-blue-900 via-blue-800 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
+          <div className="bg-linear-to-r from-blue-900 to-blue-950 rounded-xl border border-blue-500/70 p-5 md:p-6">
             {/* Heading */}
             <div className="flex items-start justify-between gap-3">
               {/* left */}
