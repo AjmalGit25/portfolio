@@ -120,24 +120,24 @@ function Github() {
         {repos.map((repo) => (
           <article className="relative group bg-linear-to-r from-blue-900 to-blue-950 shadow-black shadow-sm hover:shadow-md hover:shadow-black/50 p-5 rounded-xl border border-blue-500/50 hover:-translate-y-1.5 hover:border-blue-500/80 transition-transform duration-300 delay-300"
             key={repo.id}>
-            <div className="flex flex-col flex-wrap justify-between gap-2 h-full">
+            <div className="flex flex-col flex-wrap justify-between gap-5 h-full">
               {/* Upper part - Repo Name and Description */}
               <div>
-                <h3 className="text-white/80 text-lg font-bold line-clamp-1 group-hover:text-white">{repo.name}</h3>
+                <h3 className="text-white/80 text-lg font-bold line-clamp-1 pr-8 group-hover:text-white">{repo.name}</h3>
                 <p className="text-white/60 text-sm mt-1 line-clamp-3">{repo.description || "No description available"}</p>
               </div>
 
               {/* Lower part - Languages and Stars */}
               <div>
-                <div className="flex flex-wrap gap-5 text-[10px] font-semibold">
-                  <div className="bg-blue-500/40 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
+                <div className="flex flex-wrap gap-2 text-[10px] font-semibold">
+                  <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
                     <span className="text-white">{repo.language || 'N/A'}</span>
                   </div>
-                  <div className="bg-blue-500/40 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
+                  <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
                     <span className="text-yellow-400">★</span>
                     <span className="text-yellow-400">{repo.stargazers_count}</span>
                   </div>
-                  <div className="bg-blue-500/40 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
+                  <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
                     <span className="text-white">Last update:</span>
                     <span className="text-yellow-400">{repo.updated_at}</span>
                   </div>
