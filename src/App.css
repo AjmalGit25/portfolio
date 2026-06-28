@@ -24,6 +24,7 @@
 [data-theme="emerald"] :is(.hover\:bg-blue-400):hover { background-color: #ffffff !important; }
 [data-theme="emerald"] .bg-blue-900       { background-color: #064e3b !important; }
 [data-theme="emerald"] .bg-blue-950\/20   { background-color: rgba(2,44,34,.2) !important; }
+[data-theme="emerald"] .bg-blue-500\/20   { background-color: rgba(2,120,34,.2) !important; }
 [data-theme="emerald"] .shadow-sky-500\/40{ --tw-shadow-color: rgba(5,150,105,.4) !important; }
 [data-theme="emerald"] .hover\:shadow-sky-500\/30:hover{ --tw-shadow-color: rgba(255, 255, 255, 0.4) !important; }
 [data-theme="emerald"] .bg-blue-500\/40   { background-color: rgba(5,150,105,.4) !important; }
@@ -53,8 +54,8 @@
 
 /* Horizontal scrollbar height */
 ::-webkit-scrollbar {
-  height: 10px;   /* for horizontal */
-  width: 10px;    /* for vertical */
+  height: 8px;   /* for horizontal */
+  width: 8px;    /* for vertical */
 }
 
 /* Scrollbar colors via CSS variables — set on :root so pseudo-elements can read them */

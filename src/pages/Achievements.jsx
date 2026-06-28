@@ -71,7 +71,7 @@ function Achievements() {
               </div>
               <div className="absolute inset-0" style={{ background: "radial-gradient(circle, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.3) 100%)" }}>
               </div>
-              
+
               {/* Hover Effects - Crawler Up to Down */}
               <div
                 className="absolute inset-0 bg-linear-to-l from-blue-500 to-blue-400 text-black flex items-center justify-center -translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
@@ -89,18 +89,20 @@ function Achievements() {
         {/* 🟪 Modal Overlay */}
         {selected && (
           <div
-            className="fixed inset-0 z-20 flex items-center justify-center bg-black/90 backdrop-blur-md p-2 overflow-y-auto scrollbar-hidden"
+            className="fixed inset-0 z-20 flex items-center justify-center bg-black/90 backdrop-blur-md p-2 overflow-hidden"
             onClick={() => setSelected(null)}
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="bg-blue-500/10 rounded-xl w-lg md:w-xl lg:w-2xl xl:w-4xl max-h-[90vh] overflow-y-auto border border-blue-500/30 scrollbar-site-themel relative">
-              <button className="absolute right-6 top-6 z-10 p-2.5 rounded-full bg-blue-500/20 hover:bg-blue-500/30 transition-all backdrop-blur-md border border-blue-500/30" onClick={() => setSelected(null)}>
+              className="bg-blue-500/10 rounded-xl w-lg md:w-xl lg:w-2xl xl:w-4xl h-[75vh] sm:h-[90vh] overflow-y-auto  border border-blue-500/50 relative">
+
+              {/* Close Button */}
+              <button className="absolute right-6 top-6 z-10 p-2.5 rounded-full bg-blue-500/20 hover:bg-blue-500/30 transition-all backdrop-blur-md border border-blue-500/50" onClick={() => setSelected(null)}>
                 <RxCross1 className="text-blue-400" />
               </button>
 
               {/* Image */}
-              <div className="relative w-full aspect-16/11 bg-neutral-900 flex items-center justify-center">
+              <div className="relative w-full bg-neutral-900 flex items-center justify-center overflow-hidden">
                 <img className="" src={selected.image} alt={selected.title} />
               </div>
 
