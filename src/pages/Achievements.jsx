@@ -51,13 +51,13 @@ function Achievements() {
               </div>
 
               {/* Contents */}
-              <div className="relative h-full flex flex-col items-center justify-center text-center p-5 gap-4">
+              <div className="relative h-full flex flex-col items-center justify-center text-center p-3 gap-4">
                 <div className="flex flex-col items-center justify-center gap-2">
                   <div className="h-14 w-14 bg-linear-to-l from-blue-500 to-blue-400 rounded-xl flex items-center justify-center">
                     <LuGraduationCap className="text-2xl" />
                   </div>
                   <h3 className="text-lg md:text-xl font-bold text-white leading-tight line-clamp-2 px-2">{item.title}</h3>
-                  <p className="text-sm md:text-sm text-white/70 font-medium whitespace-nowrap overflow-hidden text-ellipsis px-2">{item.platform}</p>
+                  <p className="text-sm md:text-sm text-white/70 font-medium text-ellipsis line-clamp-1">{item.platform}</p>
                   <p className="text-xs text-white/60 line-clamp-2 px-2">{item.description}</p>
                 </div>
                 {/* Year */}
@@ -71,7 +71,8 @@ function Achievements() {
               </div>
               <div className="absolute inset-0" style={{ background: "radial-gradient(circle, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.3) 100%)" }}>
               </div>
-              {/* Hover Effects */}
+              
+              {/* Hover Effects - Crawler Up to Down */}
               <div
                 className="absolute inset-0 bg-linear-to-l from-blue-500 to-blue-400 text-black flex items-center justify-center -translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
                 <div className="text-center px-6 opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300 delay-100">
