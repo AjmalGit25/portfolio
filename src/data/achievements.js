@@ -92,8 +92,8 @@
     },
     {
       id: 11,
-      title: "Gen AI Launchpad From Beginner to Builder Certificate",
-      platform: "HackerRank",
+      title: "Gen AI Launchpad Certificate",
+      platform: "Innomatics Research Labs",
       description: "Successfully participated in the Two Days Workshop by Innomatics Research Labs.",
       year: "2026",
       image: "/cert11.jpeg",
@@ -107,6 +107,15 @@
       year: "2026",
       image: "/cert12.jpeg",
       verifyUrl: "https://www.hackerrank.com/certificates/c463925a63ff"
+    },
+    {
+      id: 13,
+      title: "VibeCriminals Hackathon Certificate",
+      platform: "VibeCriminals",
+      description: "Certificate of Participation for being a part of the VibeCriminals Hackathon with our team Twin Dragons and received the Consolation Prize 🏅 for reaching at top 7th Place.",
+      year: "2026",
+      image: "/cert13.jpeg",
+      verifyUrl: "https://vibecriminals.web.app"
     },
   ];
 
