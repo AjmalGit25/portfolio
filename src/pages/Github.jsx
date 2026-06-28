@@ -25,26 +25,6 @@ function Github() {
       .catch((err) => console.error(err));
   }, []);
 
-  // Dummy json data for Github repo
-  // const repos = [
-  //   {
-  //     "id": 1,
-  //     "name": "Airbnb Clone",
-  //     "description": "Full stack Airbnb clone using MERN.  Themes: default, algolia, dark, radical, merko, github-dark-blue, tokyonight, onedark, cobalt, highcontrast, dracula, Background-color: hex code without #, css color, or gradient (in the form angle,start_color,...,end_color) Border-color: (border) hex code without #, css color, or gradient (in the form angle,start_color,...,end_color) Border-radius: (border_radius) number in pixels, Number 0 (sharp corners) to 248 (ellipse), Default is 4.5",
-  //     "stargazers_count": 5,
-  //     "language": "JavaScript",
-  //     "html_url": "https://github.com/AjmalGit25/airbnb-clone"
-  //   },
-  //   {
-  //     "id": 2,
-  //     "name": "Airbnb Clone",
-  //     "description": "Full stack Airbnb clone using MERN.  Themes: default, algolia, dark, radical, merko, github-dark-blue, tokyonight, onedark, cobalt, highcontrast, dracula, Background-color: hex code without #, css color, or gradient (in the form angle,start_color,...,end_color) Border-color: (border) hex code without #, css color, or gradient (in the form angle,start_color,...,end_color) Border-radius: (border_radius) number in pixels, Number 0 (sharp corners) to 248 (ellipse), Default is 4.5",
-  //     "stargazers_count": 5,
-  //     "language": "JavaScript",
-  //     "html_url": "https://github.com/AjmalGit25/airbnb-clone"
-  //   }
-  // ];
-
   if (!repos) return <p>Loading...</p>;
 
   return (
@@ -138,24 +118,28 @@ function Github() {
       {/* GitHub Top Repo container */}
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl">
         {repos.map((repo) => (
-          <article className="relative text-white bg-linear-to-r from-blue-900 to-blue-950 shadow-black/50 shadow-md hover:shadow-lg p-5 rounded-xl border border-blue-500/50 hover:-translate-y-1.5 hover:border-blue-500/80 transition-transform duration-300 delay-300"
+          <article className="relative group bg-linear-to-r from-blue-900 to-blue-950 shadow-black shadow-sm hover:shadow-md hover:shadow-black/50 p-5 rounded-xl border border-blue-500/50 hover:-translate-y-1.5 hover:border-blue-500/80 transition-transform duration-300 delay-300"
             key={repo.id}>
             <div className="flex flex-col flex-wrap justify-between gap-2 h-full">
               {/* Upper part - Repo Name and Description */}
               <div>
-                <h3 className="text-lg font-bold line-clamp-1">{repo.name}</h3>
+                <h3 className="text-white/80 text-lg font-bold line-clamp-1 group-hover:text-white">{repo.name}</h3>
                 <p className="text-white/60 text-sm mt-1 line-clamp-3">{repo.description || "No description available"}</p>
               </div>
 
               {/* Lower part - Languages and Stars */}
               <div>
-                <div className="flex flex-wrap gap-5 text-[10px] font-bold">
+                <div className="flex flex-wrap gap-5 text-[10px] font-semibold">
                   <div className="bg-blue-500/40 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
                     <span className="text-white">{repo.language || 'N/A'}</span>
                   </div>
                   <div className="bg-blue-500/40 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
                     <span className="text-yellow-400">★</span>
                     <span className="text-yellow-400">{repo.stargazers_count}</span>
+                  </div>
+                  <div className="bg-blue-500/40 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
+                    <span className="text-white">Last update:</span>
+                    <span className="text-yellow-400">{repo.updated_at}</span>
                   </div>
                 </div>
               </div>
