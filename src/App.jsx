@@ -12,9 +12,8 @@ function App() {
 
         {/* Menu Toggle Button for Mobile devices */}
         <button
-          // functional state update
           onClick={() => setMobileOpen(prev => !prev)}
-          className="fixed -left-2 top-3 z-50 sm:hidden bg-blue-500 text-white py-2 px-2 pl-4 rounded-md inline-flex items-center gap-2">
+          className="fixed -left-2 top-3 z-50 sm:hidden bg-blue-500 text-white border border-blue-300 py-2 px-2 pl-4 rounded-md inline-flex items-center gap-2">
           {mobileOpen ? <RiMenuFoldLine /> : <RiMenuUnfoldLine />}
           <span className="h-3 w-3 bg-blue-300 rounded-full animate-ping"></span>
           <span className="h-2 w-2 bg-blue-700 -ml-4.5 rounded-full"></span>
