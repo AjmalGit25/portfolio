@@ -1,9 +1,10 @@
 import Typewriter from "../components/Typewriter";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer.jsx";
 
 function Home() {
   return (
-    <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-2'>
+    <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4'>
 
       {/* Lead Heading */}
       <div
@@ -88,6 +89,10 @@ function Home() {
           </div>
         </section>
       </div>
+
+      {/* Footer Text */}
+      <Footer />
+      
     </div>
   );
 }

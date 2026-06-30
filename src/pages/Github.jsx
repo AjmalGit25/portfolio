@@ -2,6 +2,7 @@ import { GrLocation } from "react-icons/gr";
 import { LuPhone, LuGlobe } from "react-icons/lu";
 import { FiCalendar, FiExternalLink } from "react-icons/fi";
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import Footer from "../components/Footer.jsx";
 
 import { useEffect, useState } from "react";
 
@@ -28,7 +29,7 @@ function Github() {
   if (!repos) return <p>Loading...</p>;
 
   return (
-    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-2">
+    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4">
       {/* Dash */}
       <div
         className='inline-flex mt-10'>
@@ -153,6 +154,9 @@ function Github() {
           </article>
         ))}
       </div>
+
+      {/* Footer Text */}
+      <Footer />
 
     </div >
   );

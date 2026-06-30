@@ -5,7 +5,7 @@ import { SiTicktick } from "react-icons/si";
 
 function Education() {
   return (
-    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-2">
+    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4">
 
       {/* Dash */}
       <div

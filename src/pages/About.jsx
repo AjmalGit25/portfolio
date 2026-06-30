@@ -4,10 +4,11 @@ import { FaGithub, FaTwitter, FaLaptopCode, FaMouse, FaGlobe } from "react-icons
 import { FaLinkedin } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer.jsx";
 
 function About() {
   return (
-    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-2">
+    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4">
 
       {/* Lead Heading */}
       <div className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60 mt-10'>
@@ -236,7 +237,7 @@ function About() {
               <SiLeetcode />
               <span className="font-semibold">LeetCode</span>
             </a>
-            
+
             <a href="https://www.geeksforgeeks.org/profile/ajmal786" target="_blank"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-700 hover:bg-green-700/80 transition-colors duration-200">
               <SiGeeksforgeeks />
@@ -300,6 +301,9 @@ function About() {
           </div>
         </div>
       </div>
+      
+      {/* Footer Text */}
+      <Footer />
 
     </div>
   );

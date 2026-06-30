@@ -3,10 +3,11 @@ import { FaNodeJs, FaLinux, FaJava, FaAws } from "react-icons/fa";
 import { GrOracle } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
 import { BsBarChartFill, BsDiagram3Fill } from "react-icons/bs";
+import Footer from "../components/Footer.jsx";
 
 function Skills() {
   return (
-    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-2">
+    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4">
 
       {/* Dash */}
       <div
@@ -161,7 +162,7 @@ function Skills() {
         </div>
 
         <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
-          
+
           {/* Git */}
           <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
             <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(237, 28, 51, 0.125) 0%, transparent 70%)" }}></div>
@@ -354,6 +355,9 @@ function Skills() {
 
         </section>
       </div>
+
+      {/* Footer Text */}
+      <Footer />
 
     </div>
   );

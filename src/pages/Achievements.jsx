@@ -19,7 +19,7 @@ function Achievements() {
   }, [selected]);
 
   return (
-    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-2">
+    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4">
       {/* Dash */}
       <div
         className='inline-flex mt-10'>
@@ -145,6 +145,7 @@ function Achievements() {
           <span className="text-xs">Verified digital credentials available</span>
         </div >
       </div >
+
     </div >
   );
 }

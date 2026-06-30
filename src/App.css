@@ -28,6 +28,8 @@
 [data-theme="emerald"] .shadow-sky-500\/40{ --tw-shadow-color: rgba(5,150,105,.4) !important; }
 [data-theme="emerald"] .hover\:shadow-sky-500\/30:hover{ --tw-shadow-color: rgba(255, 255, 255, 0.4) !important; }
 [data-theme="emerald"] .bg-blue-500\/40   { background-color: rgba(5,150,105,.4) !important; }
+[data-theme="emerald"] .bg-blue-500\/50   { background-color: rgba(5,200,105,.4) !important; }
+[data-theme="emerald"] .text-blue-200     { color: #d9fff0 !important; }
 [data-theme="emerald"] .text-blue-300     { color: #6ee7b7 !important; }
 [data-theme="emerald"] .text-blue-400     { color: #34d399 !important; }
 [data-theme="emerald"] .text-blue-500     { color: #10b981 !important; }
