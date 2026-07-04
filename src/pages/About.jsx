@@ -229,37 +229,37 @@ function About() {
             <span className="group-hover:text-blue-500 duration-300 transition-colors" >GitHub</span>
           </a> */}
 
-            <a href="https://github.com/AjmalGit25" target="_blank"
+            <a href="https://github.com/AjmalGit25" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black hover:bg-black/60">
               <FaGithub />
               <span className="font-semibold">GitHub</span>
             </a>
 
-            <a href="https://leetcode.com/u/AjmalAlgo" target="_blank"
+            <a href="https://leetcode.com/u/AjmalAlgo" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-500/80 transition-colors duration-200">
               <SiLeetcode />
               <span className="font-semibold">LeetCode</span>
             </a>
 
-            <a href="https://www.geeksforgeeks.org/profile/ajmal786" target="_blank"
+            <a href="https://www.geeksforgeeks.org/profile/ajmal786" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-700 hover:bg-green-700/80 transition-colors duration-200">
               <SiGeeksforgeeks />
               <span className="font-semibold">GeeksforGeeks</span>
             </a>
 
-            <a href="https://unstop.com/u/mdhus70693" target="_blank"
+            <a href="https://unstop.com/u/mdhus70693" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-500 hover:bg-blue-500/80 transition-colors duration-200">
               <SiUnstop />
               <span className="font-semibold">unstop</span>
             </a>
 
-            <a href="https://www.w3profile.com/AjmalW3" target="_blank"
+            <a href="https://www.w3profile.com/AjmalW3" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-500 hover:bg-green-500/80 transition-colors duration-200">
               <SiW3Schools />
               <span className="font-semibold">W3Schools</span>
             </a>
 
-            <a href="https://www.hackerrank.com/profile/ajmalashrafi2016" target="_blank"
+            <a href="https://www.hackerrank.com/profile/ajmalashrafi2016" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-600/80 transition-colors duration-200">
               <SiHackerrank />
               <span className="font-semibold">HackerRank</span>
@@ -277,25 +277,25 @@ function About() {
 
           {/* Social/Contact Platform Links */}
           <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white/80">
-            <a href="https://linkedin.com/in/ajmal-hussain92" target="_blank"
+            <a href="https://linkedin.com/in/ajmal-hussain92" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <FaLinkedin className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors" >LinkedIn</span>
             </a>
 
-            <a href="https://www.instagram.com/asyncajmal" target="_blank"
+            <a href="https://www.instagram.com/asyncajmal" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <AiFillInstagram className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors">Instagram</span>
             </a>
 
-            <a href="https://discord.com/users/1341100335086833725" target="_blank"
+            <a href="https://discord.com/users/1341100335086833725" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <SiDiscord className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors">Discord</span>
             </a>
 
-            <a href="https://wa.me/919955578303?text=Hello%20Ajmal" target="_blank"
+            <a href="https://wa.me/919955578303?text=Hi%20Ajmal!%20I%20came%20across%20your%20portfolio%20and%20was%20impressed%20by%20your%20work.%20I'd%20love%20to%20connect%20regarding%20an%20opportunity/collaboration.%20Looking%20forward%20to%20hearing%20from%20you!" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <SiWhatsapp className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors">WhatsApp</span>
