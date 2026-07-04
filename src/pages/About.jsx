@@ -1,14 +1,20 @@
 import { SiLeetcode, SiUnstop, SiW3Schools, SiHackerrank, SiDiscord, SiWhatsapp, SiGeeksforgeeks } from "react-icons/si";
 import { BiRun, BiPlay } from "react-icons/bi";
 import { FaGithub, FaTwitter, FaLaptopCode, FaMouse, FaGlobe } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaLinkedin, FaCode } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
+import { useEffect } from "react";
 
 function About() {
+  // Page starts from the top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4">
+    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6">
 
       {/* Lead Heading */}
       <div className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60 mt-10'>
@@ -49,11 +55,8 @@ function About() {
           {/* Technical Expertise */}
           <div className="space-y-4">
             <h3 className="mt-10 text-xl font-bold flex items-center gap-2 text-blue-500">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code w-5 h-5" aria-hidden="true">
-                <path d="m16 18 6-6-6-6"></path>
-                <path d="m8 6-6 6 6 6"></path>
-              </svg>
-              Technical Expertise
+              <FaCode />
+              <span>Technical Expertise</span>
             </h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/80">
               <li className="flex items-start gap-1">
@@ -301,7 +304,7 @@ function About() {
           </div>
         </div>
       </div>
-      
+
       {/* Footer Text */}
       <Footer />
 

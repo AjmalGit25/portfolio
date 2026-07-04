@@ -19,7 +19,7 @@ function Achievements() {
   }, [selected]);
 
   return (
-    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4">
+    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6">
       {/* Dash */}
       <div
         className='inline-flex mt-10'>
@@ -29,7 +29,7 @@ function Achievements() {
       {/* Education heading */}
       <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Achievements</h1>
 
-      <p className="max-w-3xl text-white/60 mb-15">A curated collection of professional certifications and academic honors demonstrating technical mastery and a commitment to continuous growth. </p>
+      <p className="max-w-3xl text-white/60 mb-10">A curated collection of professional certifications and academic honors demonstrating technical mastery and a commitment to continuous growth. </p>
 
       {/* Cards container */}
       <div className="max-w-5xl">
@@ -89,21 +89,24 @@ function Achievements() {
         {/* 🟪 Modal Overlay */}
         {selected && (
           <div
-            className="fixed inset-0 z-20 flex items-center justify-center bg-black/90 backdrop-blur-md p-2 overflow-hidden"
+            className="fixed inset-0 z-20 flex items-center justify-center bg-black/80 backdrop-blur-lg overflow-hidden p-2 border-white"
             onClick={() => setSelected(null)}
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="bg-blue-500/10 rounded-xl w-lg md:w-xl lg:w-2xl xl:w-4xl h-[75vh] sm:h-[90vh] overflow-y-auto  border border-blue-500/50 relative">
+              className="bg-blue-950/50 rounded-xl w-lg md:w-xl lg:w-2xl xl:w-4xl h-[70vh] md:h-[80vh] overflow-y-auto border border-blue-500/50 relative">
 
               {/* Close Button */}
-              <button className="absolute right-6 top-6 z-10 p-2.5 rounded-full bg-blue-500/20 hover:bg-blue-500/30 transition-all backdrop-blur-md border border-blue-500/50" onClick={() => setSelected(null)}>
+              <button
+                className="absolute right-6 top-6 z-10 p-2.5 rounded-full bg-blue-500/20 hover:bg-blue-500/30 transition-all backdrop-blur-md border border-blue-500/50"
+                onClick={() => setSelected(null)}
+              >
                 <RxCross1 className="text-blue-400" />
               </button>
 
               {/* Image */}
-              <div className="relative w-full bg-neutral-900 flex items-center justify-center overflow-hidden">
-                <img className="" src={selected.image} alt={selected.title} />
+              <div className="w-full bg-neutral-900 flex items-center justify-center overflow-hidden">
+                <img className="object-contain w-full aspect-4/3" src={selected.image} alt={selected.title} />
               </div>
 
               {/* Texts */}
@@ -138,15 +141,15 @@ function Achievements() {
         {/* logo */}
         < div className="shrink-0 border rounded-full w-10 h-10 flex items-center justify-center group-hover:text-blue-500 group-hover:border-blue-500/70 transition-colors duration-300" >
           <FaMedal className="text-lg" />
-        </div >
+        </div>
         {/* Paragraph */}
         <div className="uppercase flex flex-col tracking-widest">
           <span className="text-sm font-bold text-white/60">Recognition</span>
           <span className="text-xs">Verified digital credentials available</span>
-        </div >
-      </div >
+        </div>
+      </div>
 
-    </div >
+    </div>
   );
 }
 

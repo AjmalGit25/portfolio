@@ -52,7 +52,7 @@ function Sidebar({ isMobileOpen, onClose }) {
   }, [isMobileOpen]);
 
   return (
-    // Modal (Sidebar) for Mobile devices
+    // Modal | Sidebar Modal for Mobile devices
     <>
       {isMobileOpen && (
         <div onClick={onClose} className="fixed inset-0 z-30 sm:hidden flex flex-col items-center justify-center bg-black/80 backdrop-blur-md">

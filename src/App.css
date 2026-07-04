@@ -19,11 +19,12 @@
 [data-theme="emerald"] .border-blue-500\/70 { border-color: rgba(16,185,129,0.7) !important; }
 [data-theme="emerald"] .border-blue-500\/50 { border-color: rgba(16,185,129,0.5) !important; }
 [data-theme="emerald"] .border-blue-300   { border-color: #6ee7b7 !important; }
-[data-theme="emerald"] .bg-blue-500       { background-color: #059669 !important; }
+[data-theme="emerald"] .bg-blue-500       { background-color: #00b179 !important; }
 [data-theme="emerald"] .bg-blue-400       { background-color: #0ad393 !important; }
 [data-theme="emerald"] :is(.hover\:bg-blue-400):hover { background-color: #ffffff !important; }
 [data-theme="emerald"] .bg-blue-900       { background-color: #064e3b !important; }
 [data-theme="emerald"] .bg-blue-950\/20   { background-color: rgba(2,44,34,.2) !important; }
+[data-theme="emerald"] .bg-blue-950\/50   { background-color: rgba(3, 42, 14, 0.5) !important; }
 [data-theme="emerald"] .bg-blue-500\/20   { background-color: rgba(2,120,34,.2) !important; }
 [data-theme="emerald"] .shadow-sky-500\/40{ --tw-shadow-color: rgba(5,150,105,.4) !important; }
 [data-theme="emerald"] .hover\:shadow-sky-500\/30:hover{ --tw-shadow-color: rgba(255, 255, 255, 0.4) !important; }
