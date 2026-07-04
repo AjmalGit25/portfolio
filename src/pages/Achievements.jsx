@@ -94,42 +94,45 @@ function Achievements() {
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="bg-blue-950/50 rounded-xl w-lg md:w-xl lg:w-2xl xl:w-4xl h-[70vh] md:h-[80vh] overflow-y-auto border border-blue-500/50 relative">
+              className="bg-blue-950/50 rounded-xl w-lg md:w-xl lg:w-2xl xl:w-4xl h-[70vh] md:h-[80vh] overflow-hidden border border-blue-500/50 relative"
+            >
+              <div className="h-full overflow-y-auto">
 
-              {/* Close Button */}
-              <button
-                className="absolute right-6 top-6 z-10 p-2.5 rounded-full bg-blue-500/20 hover:bg-blue-500/30 transition-all backdrop-blur-md border border-blue-500/50"
-                onClick={() => setSelected(null)}
-              >
-                <RxCross1 className="text-blue-400" />
-              </button>
+                {/* Close Button */}
+                <button
+                  className="absolute right-6 top-6 z-10 p-2.5 rounded-full bg-blue-500/20 hover:bg-blue-500/30 transition-all backdrop-blur-md border border-blue-500/50"
+                  onClick={() => setSelected(null)}
+                >
+                  <RxCross1 className="text-blue-400" />
+                </button>
 
-              {/* Image */}
-              <div className="w-full bg-neutral-900 flex items-center justify-center overflow-hidden">
-                <img className="object-contain w-full aspect-4/3" src={selected.image} alt={selected.title} />
-              </div>
-
-              {/* Texts */}
-              <div className="space-y-6 p-5 sm:p-8">
-                <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium text-blue-500 border border-blue-500/50 bg-blue-500/20 rounded-full">
-                  <PiMedalFill />
-                  <span>{selected.year}</span>
+                {/* Image */}
+                <div className="w-full bg-neutral-900 flex items-center justify-center overflow-hidden">
+                  <img className="object-contain w-full aspect-4/3" src={selected.image} alt={selected.title} />
                 </div>
-                <h2 className="text-3xl sm:text-5xl font-extrabold text-white">{selected.title}</h2>
-                <div className="text-xl text-blue-500 font-bold flex flex-wrap items-center gap-2 mb-10">
-                  <LuGraduationCap />
-                  <span>{selected.platform}</span>
+
+                {/* Texts */}
+                <div className="space-y-6 p-5 sm:p-8">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium text-blue-500 border border-blue-500/50 bg-blue-500/20 rounded-full">
+                    <PiMedalFill />
+                    <span>{selected.year}</span>
+                  </div>
+                  <h2 className="text-3xl sm:text-5xl font-extrabold text-white">{selected.title}</h2>
+                  <div className="text-xl text-blue-500 font-bold flex flex-wrap items-center gap-2 mb-10">
+                    <LuGraduationCap />
+                    <span>{selected.platform}</span>
+                  </div>
+                  <p className="text-xs uppercase font-thin text-white/40 tracking-[0.4em]">Credential Insights</p>
+                  <p className="text-white/60 font-medium italic">{selected.description}</p>
+                  {/* Verify Certificate */}
+                  <a
+                    href={selected.verifyUrl}
+                    target="_blank"
+                    className="group flex items-center gap-4 justify-center text-black font-extrabold uppercase tracking-wider p-5 bg-blue-400 rounded-xl hover:bg-white shadow-lg hover:shadow-white/30 transition-all duration-100 delay-100 md:w-fit">
+                    <span>Verify Certificate</span>
+                    <FiExternalLink className="group-hover:translate-x-0.5 duration-200 transition-transform" />
+                  </a>
                 </div>
-                <p className="text-xs uppercase font-thin text-white/40 tracking-[0.4em]">Credential Insights</p>
-                <p className="text-white/60 font-medium italic">{selected.description}</p>
-                {/* Verify Certificate */}
-                <a
-                  href={selected.verifyUrl}
-                  target="_blank"
-                  className="group flex items-center gap-4 justify-center text-black font-extrabold uppercase tracking-wider p-5 bg-blue-400 rounded-xl hover:bg-white shadow-lg hover:shadow-white/30 transition-all duration-100 delay-100 md:w-fit">
-                  <span>Verify Certificate</span>
-                  <FiExternalLink className="group-hover:translate-x-0.5 duration-200 transition-transform" />
-                </a>
               </div>
             </div>
           </div>
