@@ -125,9 +125,9 @@ function Github() {
 
       {/* GitHub Top Repo container */}
       {loading ? (
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 mt-5">
           <div className="h-10 w-10 rounded-full border-4 border-t-transparent border-blue-500 animate-spin"></div>
-          <p className="text-white">Loading GitHub Repos ...</p>
+          <p className="text-white text-xs md:text-base">Loading GitHub Repos ...</p>
         </div>
       ) : (
         <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl">
