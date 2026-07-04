@@ -8,28 +8,35 @@ import { useEffect, useState } from "react";
 
 function Github() {
   const [repos, setRepos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/AjmalGit25/repos")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
+    const fetchRepos = async () => {
+      try {
+        const response = await fetch(
+          "https://api.github.com/users/AjmalGit25/repos"
+        );
 
-        // Ensure data is an array
+        const data = await response.json();
+
         if (Array.isArray(data)) {
           setRepos(data);
         } else {
-          console.error("GitHub API Error:", data);
+          console.error(data);
           setRepos([]);
         }
-      })
-      .catch((err) => console.error(err));
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchRepos();
   }, []);
 
-  if (!repos) return <p>Loading...</p>;
-
   return (
-    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4">
+    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6">
       {/* Dash */}
       <div
         className='inline-flex mt-10'>
@@ -77,7 +84,7 @@ function Github() {
           <a href="https://github.com/AjmalGit25" target="_blank"
             className="flex items-center justify-center gap-2 p-2 bg-white text-black rounded-lg whitespace-nowrap hover:bg-white/90">
             <FaGithub />
-            <span>Visit Profile</span>
+            <span className="font-semibold">Visit Profile</span>
           </a>
         </div>
       </div>
@@ -113,47 +120,54 @@ function Github() {
           <div className='h-1 w-8 bg-linear-to-l from-blue-700 to-blue-300 rounded-full'></div>
           <h3 className="text-white text-xl md:text-3xl font-bold">Top Repositories</h3>
         </div>
-        <p className="text-white/60 text-sm sm:text-base">Showing public repositories.</p>
+        <p className="text-white/80 text-sm sm:text-base">Showing public repositories.</p>
       </div>
 
       {/* GitHub Top Repo container */}
-      <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl">
-        {repos.map((repo) => (
-          <article className="relative group bg-linear-to-r from-blue-900 to-blue-950 shadow-black shadow-sm hover:shadow-md hover:shadow-black/50 p-5 rounded-xl border border-blue-500/50 hover:-translate-y-1.5 hover:border-blue-500/80 transition-transform duration-300 delay-300"
-            key={repo.id}>
-            <div className="flex flex-col flex-wrap justify-between gap-5 h-full">
-              {/* Upper part - Repo Name and Description */}
-              <div>
-                <h3 className="text-white/80 text-lg font-bold line-clamp-1 pr-8 group-hover:text-white">{repo.name}</h3>
-                <p className="text-white/60 text-sm mt-1 line-clamp-3">{repo.description || "No description available"}</p>
-              </div>
+      {loading ? (
+        <div className="flex flex-col items-center gap-2">
+          <div className="h-10 w-10 rounded-full border-4 border-t-transparent border-blue-500 animate-spin"></div>
+          <p className="text-white">Loading GitHub Repos ...</p>
+        </div>
+      ) : (
+        <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl">
+          {repos.map((repo) => (
+            <article className="relative group bg-linear-to-r from-blue-900 to-blue-950 shadow-black shadow-sm hover:shadow-md hover:shadow-black/50 p-5 rounded-xl border border-blue-500/50 hover:-translate-y-1.5 hover:border-blue-500/80 transition-transform duration-300 delay-300"
+              key={repo.id}>
+              <div className="flex flex-col flex-wrap justify-between gap-5 h-full">
+                {/* Upper part - Repo Name and Description */}
+                <div>
+                  <h3 className="text-white/80 text-lg font-bold line-clamp-1 pr-8 group-hover:text-white">{repo.name}</h3>
+                  <p className="text-white/60 text-sm mt-1 line-clamp-3">{repo.description || "No description available"}</p>
+                </div>
 
-              {/* Lower part - Languages and Stars */}
-              <div>
-                <div className="flex flex-wrap gap-2 text-[10px] font-semibold">
-                  <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
-                    <span className="text-white">{repo.language || 'N/A'}</span>
-                  </div>
-                  <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
-                    <span className="text-yellow-400">★</span>
-                    <span className="text-yellow-400">{repo.stargazers_count}</span>
-                  </div>
-                  <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
-                    <span className="text-white">Last update:</span>
-                    <span className="text-yellow-400">{repo.updated_at}</span>
+                {/* Lower part - Languages and Stars */}
+                <div>
+                  <div className="flex flex-wrap gap-2 text-[10px] font-semibold">
+                    <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
+                      <span className="text-white">{repo.language || 'N/A'}</span>
+                    </div>
+                    <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
+                      <span className="text-yellow-400">★</span>
+                      <span className="text-yellow-400">{repo.stargazers_count}</span>
+                    </div>
+                    <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
+                      <span className="text-white">Last update:</span>
+                      <span className="text-yellow-400">{repo.updated_at}</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Repo Link (absolute | top-6, right-6) */}
-            <div className="absolute top-6 right-6">
-              <a href={repo.html_url} target="_blank" rel="noopener noreferrer"
-                className="text-blue-500 hover:text-white transition-colors duration-300"><FiExternalLink /></a>
-            </div>
-          </article>
-        ))}
-      </div>
+              {/* Repo Link (absolute | top-6, right-6) */}
+              <div className="absolute top-6 right-6">
+                <a href={repo.html_url} target="_blank" rel="noopener noreferrer"
+                  className="text-blue-500 hover:text-white transition-colors duration-300"><FiExternalLink /></a>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
 
       {/* Footer Text */}
       <Footer />
