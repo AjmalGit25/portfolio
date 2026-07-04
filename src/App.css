@@ -176,7 +176,7 @@
 }
 
 :root:has([data-theme="emerald"]) {
-  --sb-track: #0000;
+  --sb-track: #000;
   --sb-thumb: #09d18f;
   --sb-thumb-hover: #19aa7c;
 }
