@@ -1,7 +1,7 @@
 import { HiOutlineMail } from "react-icons/hi";
 import { LuPhone, LuGlobe } from "react-icons/lu";
 import { GrLocation } from "react-icons/gr";
-import { SiLeetcode } from "react-icons/si";
+import { SiLeetcode, SiWhatsapp } from "react-icons/si";
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 import { FiLinkedin } from "react-icons/fi";
 import { RiSendPlaneFill } from "react-icons/ri";
@@ -38,7 +38,7 @@ function Contact() {
           </div>
 
           {/* Container: Email, Phone, Location */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {/* Email */}
             <a href="mailto:reach.ajmal.dev@gmail.com"
               className="group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
@@ -85,6 +85,25 @@ function Contact() {
 
               <span className="text-white font-bold">Location</span>
               <span className="text-white/60">Ahmedabad, Gujarat, India</span>
+            </a>
+
+            {/* Whatsapp */}
+            <a
+              href="https://wa.me/919955578303?text=Hi%20Ajmal!%20I%20came%20across%20your%20portfolio%20and%20was%20impressed%20by%20your%20work.%20I'd%20love%20to%20connect%20regarding%20an%20opportunity/collaboration.%20Looking%20forward%20to%20hearing%20from%20you!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
+
+              <div className="flex items-center justify-between">
+                <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg group-hover:text-white transition-colors duration-300"><SiWhatsapp />
+                </span>
+                <span className="hidden group-hover:inline">
+                  <RiSendPlaneFill className="text-blue-500 text-xl" />
+                </span>
+              </div>
+
+              <span className="text-white font-bold">WhatsApp</span>
+              <span className="text-white/60 line-clamp-1">Hi Ajmal! I came across your portfolio and was impressed by your work.</span>
             </a>
           </div>
 
