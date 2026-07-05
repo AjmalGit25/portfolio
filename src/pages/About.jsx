@@ -5,12 +5,34 @@ import { FaLinkedin, FaCode } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function About() {
   // Page starts from the top
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  const [leetcode, setLeetcode] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchLeetcode = async () => {
+      try {
+        const response = await fetch(
+          "https://alfa-leetcode-api.onrender.com/AjmalAlgo/solved"
+        );
+
+        const data = await response.json();
+        setLeetcode(data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchLeetcode();
   }, []);
 
   return (
@@ -175,7 +197,9 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-blue-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Total</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">150</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">
+              {loading ? "Loading..." : leetcode?.solvedProblem}
+            </div>
             <div className="text-[0.65rem] md:text-xs text-blue-500">Problems</div>
           </div>
 
@@ -185,7 +209,9 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-green-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Easy</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">95</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">
+              {loading ? "Loading..." : leetcode?.easySolved}
+            </div>
             <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
@@ -195,7 +221,9 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-amber-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Medium</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">54</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">
+              {loading ? "Loading..." : leetcode?.mediumSolved}
+            </div>
             <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
@@ -205,7 +233,9 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-red-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Hard</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">1</div>
+            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">
+              {loading ? "Loading..." : leetcode?.hardSolved}
+            </div>
             <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
