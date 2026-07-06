@@ -197,10 +197,21 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-blue-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Total</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">
-              {loading ? "Loading..." : leetcode?.solvedProblem}
+            <div className="flex flex-col justify-between">
+              <div className="flex items-center text-white mb-1 h-8">
+                {loading ? (
+                  <div className="flex items-center gap-2">
+                    <div className="h-3 w-3 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                    <span className="text-xs font-normal">Loading...</span>
+                  </div>
+                ) : (
+                  <span className="text-lg md:text-xl lg:text-2xl font-extrabold">
+                    {leetcode?.solvedProblem}
+                  </span>
+                )}
+              </div>
+              <div className="text-[0.65rem] md:text-xs text-blue-500">Problems</div>
             </div>
-            <div className="text-[0.65rem] md:text-xs text-blue-500">Problems</div>
           </div>
 
           {/* Easy */}
@@ -209,10 +220,21 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-green-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Easy</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">
-              {loading ? "Loading..." : leetcode?.easySolved}
+            <div className="flex flex-col justify-between">
+              <div className="flex items-center text-white mb-1 h-8">
+                {loading ? (
+                  <div className="flex items-center gap-2">
+                    <div className="h-3 w-3 border-2 border-green-500 border-t-transparent rounded-full animate-spin"></div>
+                    <span className="text-xs font-normal">Loading...</span>
+                  </div>
+                ) : (
+                  <span className="text-lg md:text-xl lg:text-2xl font-extrabold">
+                    {leetcode?.easySolved}
+                  </span>
+                )}
+              </div>
+              <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
             </div>
-            <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
           {/* Medium */}
@@ -221,10 +243,21 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-amber-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Medium</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">
-              {loading ? "Loading..." : leetcode?.mediumSolved}
+            <div className="flex flex-col justify-between">
+              <div className="flex items-center text-white mb-1 h-8">
+                {loading ? (
+                  <div className="flex items-center gap-2 h-5">
+                    <div className="h-3 w-3 border-2 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
+                    <span className="text-xs font-normal">Loading...</span>
+                  </div>
+                ) : (
+                  <span className="text-lg md:text-xl lg:text-2xl font-extrabold">
+                    {leetcode?.mediumSolved}
+                  </span>
+                )}
+              </div>
+              <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
             </div>
-            <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
           {/* Hard */}
@@ -233,10 +266,21 @@ function About() {
               <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-red-500 rounded-full"></div>
               <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Hard</span>
             </div>
-            <div className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white mb-1">
-              {loading ? "Loading..." : leetcode?.hardSolved}
+            <div className="flex flex-col justify-between">
+              <div className="flex items-center text-white mb-1 h-8">
+                {loading ? (
+                  <div className="flex items-center gap-2">
+                    <div className="h-3 w-3 border-2 border-red-500 border-t-transparent rounded-full animate-spin"></div>
+                    <span className="text-xs font-normal">Loading...</span>
+                  </div>
+                ) : (
+                  <span className="text-lg md:text-xl lg:text-2xl font-extrabold">
+                    {leetcode?.hardSolved}
+                  </span>
+                )}
+              </div>
+              <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
             </div>
-            <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
           </div>
 
         </div>
