@@ -23,7 +23,10 @@ function About() {
           "https://alfa-leetcode-api.onrender.com/AjmalAlgo/solved"
         );
 
+        
         const data = await response.json();
+        console.log("Response:", response);
+        console.log("Response data:", data);
         setLeetcode(data);
       } catch (error) {
         console.error(error);

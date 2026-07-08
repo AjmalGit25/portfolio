@@ -30,12 +30,10 @@ function Projects() {
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6">
 
-      {/* Modal Page ===================================================== */}
+      {/* Selected Page ===================================================== */}
       {selected ? (
         <div
           className="pt-15 sm:pt-5 mb-6"
-
-        // onClick={(e) => e.stopPropagation()}
         >
           <ScrollToTop />
           {/* Go Back */}
@@ -153,16 +151,16 @@ function Projects() {
                   {project.liveUrl !== "#" && (
                     <a
                       href={project.liveUrl} target="_blank"
-                      className="border border-blue-600/50 bg-blue-700 rounded-xl py-3 flex items-center justify-center gap-2 hover:bg-blue-700/80 transition-colors duration-200"
+                      className="border border-blue-600/50 bg-blue-700 rounded-xl py-3 flex items-center justify-center gap-2 group hover:bg-white  transition-colors duration-200"
                     >
-                      <FiExternalLink />
-                      <span className="text-lg font-medium text-white/80">Live Demo</span>
+                      <FiExternalLink className="group-hover:text-blue-600"/>
+                      <span className="text-lg font-medium text-white/80 group-hover:text-blue-600">Live Demo</span>
                     </a>
                   )}
 
                   <a
                     href={project.githubUrl} target="_blank"
-                    className="border border-blue-600/50 bg-blue-600/30 rounded-xl py-3 flex items-center justify-center gap-2 hover:bg-blue-600/50">
+                    className="border border-blue-600/50 bg-blue-600/30 rounded-xl py-3 flex items-center justify-center gap-2 hover:bg-blue-600/40 hover:border-blue-600 transition-colors duration-200">
                     <FaGithub />
                     <span className="text-lg font-medium text-white/80">Source Code</span>
                   </a>
