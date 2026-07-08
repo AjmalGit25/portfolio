@@ -160,7 +160,7 @@ function Projects() {
 
                   <a
                     href={project.githubUrl} target="_blank"
-                    className="border border-blue-600/50 bg-blue-600/30 rounded-xl py-3 flex items-center justify-center gap-2 hover:bg-blue-600/40 hover:border-blue-600 transition-colors duration-200">
+                    className="border border-blue-600/50 bg-linear-to-b to-blue-700 from-blue-950 rounded-xl py-3 flex items-center justify-center gap-2 hover:from-blue-800 hover:to-blue-950 hover:border-blue-600 transition-colors duration-300">
                     <FaGithub />
                     <span className="text-lg font-medium text-white/80">Source Code</span>
                   </a>
