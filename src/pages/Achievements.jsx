@@ -100,10 +100,12 @@ function Achievements() {
 
                 {/* Close Button */}
                 <button
-                  className="absolute right-6 top-6 z-10 p-2.5 rounded-full bg-blue-500/20 hover:bg-blue-500/30 transition-all backdrop-blur-md border border-blue-500/50"
+                  className="absolute right-6 top-6 z-10 h-8 w-8 rounded-full bg-blue-500/20 hover:bg-blue-500/30 backdrop-blur-md border border-blue-500/50 hover:rotate-90 duration-300 transition-all ease-in-out"
                   onClick={() => setSelected(null)}
                 >
-                  <RxCross1 className="text-blue-400" />
+                  <div className="flex items-center justify-center h-full w-full">
+                    <RxCross1 className="text-blue-400" />
+                  </div>
                 </button>
 
                 {/* Image */}
