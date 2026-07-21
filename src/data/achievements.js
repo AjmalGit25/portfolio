@@ -6,7 +6,7 @@ const achievements = [
     platform: "SimpliLearn",
     description: "Certificate for completing Advanced C++ programming course from SimpliLearn SkillUp.",
     year: "2025",
-    image: "/cert1.jpeg",
+    image: "/certificates/cert1.jpeg",
     verifyUrl: "https://simpli-web.app.link/e/zlR6DLdpx2b"
   },
   {
@@ -15,7 +15,7 @@ const achievements = [
     platform: "ChaiCode",
     description: "Excellence Certificate for mastering DSA with C++ course from ChaiCode platform.",
     year: "2026",
-    image: "/cert2.jpeg",
+    image: "/certificates/cert2.jpeg",
     verifyUrl: "https://courses.chaicode.com/learn/certificate/11786731-230407"
   },
   {
@@ -24,7 +24,7 @@ const achievements = [
     platform: "CodVeda",
     description: "Successfully completed the C++ internship program at CodVeda gaining practical coding hands-on experience.",
     year: "2026",
-    image: "/cert3.jpeg",
+    image: "/certificates/cert3.jpeg",
     verifyUrl: "https://courses.codveda.com/courses"
   },
   {
@@ -33,7 +33,7 @@ const achievements = [
     platform: "EduSkills",
     description: "Successfully completed Full Stack MERN internship program at EduSkills knowing the real-world application.",
     year: "2025",
-    image: "/cert4.jpeg",
+    image: "/certificates/cert4.jpeg",
     verifyUrl: "https://aictecert.eduskillsfoundation.org/pages/home/verify.php?cert=f225da8b7ab644a26f9f23d33495d8b0"
   },
   {
@@ -42,7 +42,7 @@ const achievements = [
     platform: "Udemy",
     description: "Completed UI/UX Designing course using Figma at Udemy.",
     year: "2026",
-    image: "/cert5.jpeg",
+    image: "/certificates/cert5.jpeg",
     verifyUrl: "https://www.udemy.com/certificate/UC-46cb0def-5b95-47be-9269-b8647293db09/"
   },
   {
@@ -51,7 +51,7 @@ const achievements = [
     platform: "Rai University",
     description: "Successfully completed the Data Analytics using Power Bi course organized by Rai University.",
     year: "2025",
-    image: "/cert6.jpeg",
+    image: "/certificates/cert6.jpeg",
     verifyUrl: "https://www.raiuniversity.edu/"
   },
   {
@@ -60,7 +60,7 @@ const achievements = [
     platform: "Skill India",
     description: "Certificate of Participation in Effective Communication course offered by NSDC through Skill India Digital.",
     year: "2023",
-    image: "/cert7.jpeg",
+    image: "/certificates/cert7.jpeg",
     verifyUrl: "https://courses.skillindiadigital.gov.in/api/custom_api/view_certificate/705deb3d412745c3b4d3ac2aacb54959"
   },
   {
@@ -69,7 +69,7 @@ const achievements = [
     platform: "SimpliLearn",
     description: "Certificate for completing Kali Linux Basics course from SimpliLearn SkillUp.",
     year: "2025",
-    image: "/cert8.jpeg",
+    image: "/certificates/cert8.jpeg",
     verifyUrl: "https://simpli-web.app.link/e/k3pxOFDAB2b"
   },
   {
@@ -78,7 +78,7 @@ const achievements = [
     platform: "SheKunj",
     description: "Successfully completed the Generative AI Course from SheKunj.",
     year: "2025",
-    image: "/cert9.jpeg",
+    image: "/certificates/cert9.jpeg",
     verifyUrl: "https://www.shekunj.com/certificate-detail/14132"
   },
   {
@@ -87,7 +87,7 @@ const achievements = [
     platform: "HackerRank",
     description: "Successfully passed the HackerRank skill certification test.",
     year: "2026",
-    image: "/cert10.jpeg",
+    image: "/certificates/cert10.jpeg",
     verifyUrl: "https://www.hackerrank.com/certificates/1e10106502b0"
   },
   {
@@ -105,7 +105,7 @@ const achievements = [
     platform: "HackerRank",
     description: "Certificate of Accomplishment for passing Node.js Intermediate Certification test.",
     year: "2026",
-    image: "/cert12.jpeg",
+    image: "/certificates/cert12.jpeg",
     verifyUrl: "https://www.hackerrank.com/certificates/c463925a63ff"
   },
   {
@@ -114,8 +114,17 @@ const achievements = [
     platform: "VibeCriminals",
     description: "Recognized with a Certificate of Participation for representing Team Twin Dragons in the VibeCriminals Hackathon, where we secured a Top 7 finish and earned the Consolation Prize.",
     year: "2026",
-    image: "/cert13.jpeg",
+    image: "/certificates/cert13.jpeg",
     verifyUrl: "https://vibecriminals.web.app"
+  },
+  {
+    id: 14,
+    title: "C++ Intermediate Certificate",
+    platform: "sololearn",
+    description: "Successfully completed the course by demonstrating theoretical and practical understanding of C++ Intermediate concepts on Sololearn.",
+    year: "2026",
+    image: "/certificates/cert14.jpg",
+    verifyUrl: "https://www.sololearn.com/certificates/CC-NLRFUEVX"
   },
 ];
 
