@@ -54,7 +54,7 @@ function Github() {
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-5">
           <div className="flex flex-col sm:flex-row sm:items-center gap-3">
             {/* Github Profile Picture */}
-            <img src="/Github's DP.jpg" alt="Github's Profile Picture"
+            <img src="/profiles/github_dp.jpeg" alt="Github's Profile Picture"
               className='w-20 h-20 rounded-full object-contain border border-blue-500/50 self-center' />
 
             {/* Name-Info container */}
