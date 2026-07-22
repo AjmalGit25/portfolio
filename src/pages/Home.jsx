@@ -31,7 +31,7 @@ function Home() {
 
           <div className='text-base sm:text-lg text-white/80 mt-10'>
             <p>
-              Hi, I'm Ajmal Hussain — a Full Stack <strong>MERN</strong> Developer skilled in JavaScript & TypeScript, currently based in Ahmedabad, India.
+              Hi, I'm Ajmal Hussain — a Full Stack <strong>MERN</strong> Developer, currently based in Ahmedabad, India.
             </p>
 
             <p>
