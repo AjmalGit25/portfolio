@@ -2,38 +2,37 @@ import { GrLocation } from "react-icons/gr";
 import { LuPhone, LuGlobe } from "react-icons/lu";
 import { FiCalendar, FiExternalLink } from "react-icons/fi";
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import { TbUsers } from "react-icons/tb";
 import Footer from "../components/Footer.jsx";
+import githubRepo from "../data/githubRepo.js";
 
 import { useEffect, useState } from "react";
 
 function Github() {
-  const [repos, setRepos] = useState([]);
+  const [user, setUser] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchRepos = async () => {
+    const fetchUser = async () => {
       try {
         const response = await fetch(
-          "https://api.github.com/users/AjmalGit25/repos"
+          "https://api.github.com/users/AjmalGit25"
         );
 
         const data = await response.json();
 
-        if (Array.isArray(data)) {
-          setRepos(data);
-        } else {
-          console.error(data);
-          setRepos([]);
-        }
+        // Store in state if needed
+        setUser(data);
       } catch (err) {
         console.error(err);
-      } finally {
+      }finally{
         setLoading(false);
       }
     };
 
-    fetchRepos();
+    fetchUser();
   }, []);
+
 
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6">
@@ -66,7 +65,7 @@ function Github() {
               </div>
 
               {/* Info (left side) */}
-              <div className="text-[13px] text-white/60 flex flex-wrap gap-3 md:justify-between">
+              <div className="text-[13px] text-white/60 flex flex-wrap gap-5 md:justify-between">
                 <div className="flex items-center gap-1">
                   <GrLocation />
                   <span>Ahmedabad, Gujarat</span>
@@ -74,6 +73,13 @@ function Github() {
                 <div className="flex items-center gap-1">
                   <FiCalendar />
                   <span>Joined March 29, 2025</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <TbUsers />
+                  <div className="flex items-center gap-1">
+                    {loading ? <><div className="h-3 w-3 rounded-full border border-white border-t-transparent animate-spin"></div></> : <strong className="text-white/80">{user.followers}</strong>}
+                    <span>Followers</span>
+                    </div>
                 </div>
               </div>
             </div>
@@ -115,59 +121,48 @@ function Github() {
       </div>
 
       {/* Top Repositories Heading */}
-      <div className="space-y-2">
+      <div className="space-y-5">
         <div className="inline-flex items-center gap-2 mt-10">
           <div className='h-1 w-8 bg-linear-to-l from-blue-700 to-blue-300 rounded-full'></div>
           <h3 className="text-white text-xl md:text-3xl font-bold">Top Repositories</h3>
         </div>
-        <p className="text-white/80 text-sm sm:text-base">Showing public repositories.</p>
+        <p className="text-white/80 text-sm sm:text-base">Showing Top 9 public repositories</p>
       </div>
 
       {/* GitHub Top Repo container */}
-      {loading ? (
-        <div className="flex flex-col items-center gap-2 mt-5">
-          <div className="h-10 w-10 rounded-full border-4 border-t-transparent border-blue-500 animate-spin"></div>
-          <p className="text-white text-xs md:text-base">Loading GitHub Repos ...</p>
-        </div>
-      ) : (
-        <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl">
-          {repos.map((repo) => (
-            <article className="relative group bg-linear-to-r from-blue-900 to-blue-950 shadow-black shadow-sm hover:shadow-md hover:shadow-black/50 p-5 rounded-xl border border-blue-500/50 hover:-translate-y-1.5 hover:border-blue-500/80 transition-transform duration-300 delay-300"
-              key={repo.id}>
-              <div className="flex flex-col flex-wrap justify-between gap-5 h-full">
-                {/* Upper part - Repo Name and Description */}
-                <div>
-                  <h3 className="text-white/80 text-lg font-bold line-clamp-1 pr-8 group-hover:text-white">{repo.name}</h3>
-                  <p className="text-white/60 text-sm mt-1 line-clamp-3">{repo.description || "No description available"}</p>
-                </div>
+      <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl">
+        {githubRepo.map((repo) => (
+          <article className="relative group bg-linear-to-r from-blue-900 to-blue-950 shadow-black shadow-sm hover:shadow-md hover:shadow-black/50 p-5 rounded-xl border border-blue-500/50 hover:-translate-y-1.5 hover:border-blue-500/80 transition-transform duration-300 delay-300"
+            key={repo.id}>
+            <div className="flex flex-col flex-wrap justify-between gap-5 h-full">
+              {/* Upper part - Repo Name and Description */}
+              <div>
+                <h3 className="text-white/80 text-lg font-bold line-clamp-1 pr-8 group-hover:text-white">{repo.title}</h3>
+                <p className="text-white/60 text-sm mt-1 line-clamp-3">{repo.description || "No description available"}</p>
+              </div>
 
-                {/* Lower part - Languages and Stars */}
-                <div>
-                  <div className="flex flex-wrap gap-2 text-[10px] font-semibold">
-                    <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
-                      <span className="text-white">{repo.language || 'N/A'}</span>
-                    </div>
-                    <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
-                      <span className="text-yellow-400">★</span>
-                      <span className="text-yellow-400">{repo.stargazers_count}</span>
-                    </div>
-                    <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
-                      <span className="text-white">Last update:</span>
-                      <span className="text-yellow-400">{repo.updated_at}</span>
-                    </div>
+              {/* Lower part - Languages and Stars */}
+              <div>
+                <div className="flex flex-wrap gap-2 text-[10px] font-semibold">
+                  <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
+                    <span className="text-white">{repo.languages || 'N/A'}</span>
+                  </div>
+                  <div className="bg-blue-500/20 border border-blue-500/50 px-2 py-1 rounded-lg flex items-center justify-center gap-1">
+                    <span className="text-yellow-400">★</span>
+                    <span className="text-yellow-400">{repo.stars}</span>
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Repo Link (absolute | top-6, right-6) */}
-              <div className="absolute top-6 right-6">
-                <a href={repo.html_url} target="_blank" rel="noopener noreferrer"
-                  className="text-blue-500 hover:text-white transition-colors duration-300"><FiExternalLink /></a>
-              </div>
-            </article>
-          ))}
-        </div>
-      )}
+            {/* Repo Link (absolute | top-6, right-6) */}
+            <div className="absolute top-6 right-6">
+              <a href={repo.url} target="_blank" rel="noopener noreferrer"
+                className="text-blue-500 hover:text-white transition-colors duration-300"><FiExternalLink /></a>
+            </div>
+          </article>
+        ))}
+      </div>
 
       {/* Footer Text */}
       <Footer />
