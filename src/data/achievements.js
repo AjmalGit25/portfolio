@@ -92,39 +92,48 @@ const achievements = [
   },
   {
     id: 11,
-    title: "Gen AI Launchpad Certificate",
-    platform: "Innomatics Research Labs",
-    description: "Successfully participated in the Two Days Workshop by Innomatics Research Labs.",
-    year: "2026",
-    image: "/certificates/cert11.jpeg",
-    verifyUrl: "https://www.innomatics.in"
-  },
-  {
-    id: 12,
-    title: "Node.js (Intermediate) Certificate",
-    platform: "HackerRank",
-    description: "Certificate of Accomplishment for passing Node.js Intermediate Certification test.",
-    year: "2026",
-    image: "/certificates/cert12.jpeg",
-    verifyUrl: "https://www.hackerrank.com/certificates/c463925a63ff"
-  },
-  {
-    id: 13,
-    title: "VibeCriminals Hackathon Certificate",
-    platform: "VibeCriminals",
-    description: "Recognized with a Certificate of Participation for representing Team Twin Dragons in the VibeCriminals Hackathon, where we secured a Top 7 finish and earned the Consolation Prize.",
-    year: "2026",
-    image: "/certificates/cert13.jpeg",
-    verifyUrl: "https://vibecriminals.web.app"
-  },
-  {
-    id: 14,
     title: "C++ Intermediate Certificate",
     platform: "sololearn",
     description: "Successfully completed the course by demonstrating theoretical and practical understanding of C++ Intermediate concepts on Sololearn.",
     year: "2026",
-    image: "/certificates/cert14.jpg",
+    image: "/certificates/cert11.jpg",
     verifyUrl: "https://www.sololearn.com/certificates/CC-NLRFUEVX"
+  },
+  {
+    id: 12,
+    title: "Gen AI Launchpad Certificate",
+    platform: "Innomatics Research Labs",
+    description: "Successfully participated in the Two Days Workshop by Innomatics Research Labs.",
+    year: "2026",
+    image: "/certificates/cert12.jpeg",
+    verifyUrl: "https://www.innomatics.in"
+  },
+  {
+    id: 13,
+    title: "Node.js (Intermediate) Certificate",
+    platform: "HackerRank",
+    description: "Certificate of Accomplishment for passing Node.js Intermediate Certification test.",
+    year: "2026",
+    image: "/certificates/cert13.jpeg",
+    verifyUrl: "https://www.hackerrank.com/certificates/c463925a63ff"
+  },
+  {
+    id: 14,
+    title: "VibeCriminals Hackathon Certificate",
+    platform: "VibeCriminals",
+    description: "Recognized with a Certificate of Participation for representing Team Twin Dragons in the VibeCriminals Hackathon, where we secured a Top 7 finish and earned the Consolation Prize.",
+    year: "2026",
+    image: "/certificates/cert14.jpeg",
+    verifyUrl: "https://vibecriminals.web.app"
+  },
+  {
+    id: 15,
+    title: "SEO with AI",
+    platform: "sololearn",
+    description: "Successfully completed the course by demonstrating theoretical and practical understanding of SEO with AI concepts on Sololearn.",
+    year: "2026",
+    image: "/certificates/cert15.jpg",
+    verifyUrl: "https://www.sololearn.com/certificates/CC-KTSWB7F3"
   },
 ];
 
