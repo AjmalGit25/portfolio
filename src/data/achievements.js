@@ -96,7 +96,7 @@ const achievements = [
     platform: "Innomatics Research Labs",
     description: "Successfully participated in the Two Days Workshop by Innomatics Research Labs.",
     year: "2026",
-    image: "/cert11.jpeg",
+    image: "/certificates/cert11.jpeg",
     verifyUrl: "https://www.innomatics.in"
   },
   {
