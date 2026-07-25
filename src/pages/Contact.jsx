@@ -138,7 +138,7 @@ function Contact() {
 
         {/* Section 2: Contact Form container */}
         <section className='w-full'>
-          <div className="bg-blue-900/30 border border-blue-500/40 rounded-xl p-5 hover:border-blue-500/80 transition-colors duration-200">
+          <div className="bg-linear-to-b from-blue-800 to-blue-700 border border-blue-500/40 rounded-xl p-5 hover:border-blue-500/80 transition-colors duration-200">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">
                 <span className="text-white">Let's </span>
@@ -166,16 +166,16 @@ function Contact() {
               </div>
 
               {/* Subject */}
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <label htmlFor="subject" className="text-white/70 block">Subject</label>
                 <input type="text" placeholder="How can I help you?" name="subject" required
                   className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
-              </div>
+              </div> */}
 
               {/* Your Message */}
               <div className="space-y-2">
                 <label htmlFor="message" className="text-white/70 block">Your Message</label>
-                <textarea placeholder="Tell me about your project..." name="message" required
+                <textarea placeholder="Your message..." name="message" rows="5" required
                   className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
               </div>
 

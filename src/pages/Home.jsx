@@ -58,7 +58,7 @@ function Home() {
           </div>
 
           {/* Tech Stack */}
-          <p className="mt-6 max-w-xl text-[11px] uppercase tracking-[0.3em] text-white/50">
+          <p className="mt-6 text-[11px] uppercase tracking-[0.3em] text-white/50">
             React • Tailwind CSS • Bootstrap • Node.js • Express • MongoDB • JavaScript • TypeScript • Problem Solving
           </p>
 
