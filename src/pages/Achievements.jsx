@@ -26,10 +26,13 @@ function Achievements() {
         <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
       </div>
 
-      {/* Education heading */}
+      {/* Achievements heading */}
       <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Achievements</h1>
 
-      <p className="max-w-3xl text-white/60 mb-10">A curated collection of professional certifications and academic honors demonstrating technical mastery and a commitment to continuous growth. </p>
+      {/* Achievements paragraph */}
+      <p className="max-w-3xl text-white/60 mb-10">
+        Here's a glimpse into my professional journey — showcasing key milestones, awards, and recognitions that highlight my expertise and dedication. A curated collection of professional certifications and academic honors demonstrating technical mastery and a commitment to continuous growth.
+      </p>
 
       {/* Cards container */}
       <div className="max-w-5xl">
