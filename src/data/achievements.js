@@ -25,7 +25,7 @@ const achievements = [
     description: "Successfully completed the C++ internship program at CodVeda gaining practical coding hands-on experience.",
     year: "2026",
     image: "/certificates/cert3.jpeg",
-    verifyUrl: "https://courses.codveda.com/courses"
+    verifyUrl: ""
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const achievements = [
     description: "Successfully completed the Data Analytics using Power Bi course organized by Rai University.",
     year: "2025",
     image: "/certificates/cert6.jpeg",
-    verifyUrl: "https://www.raiuniversity.edu/"
+    verifyUrl: ""
   },
   {
     id: 7,
@@ -106,7 +106,7 @@ const achievements = [
     description: "Successfully participated in the Two Days Workshop by Innomatics Research Labs.",
     year: "2026",
     image: "/certificates/cert12.jpeg",
-    verifyUrl: "https://www.innomatics.in"
+    verifyUrl: ""
   },
   {
     id: 13,
@@ -120,11 +120,11 @@ const achievements = [
   {
     id: 14,
     title: "VibeCriminals Hackathon Certificate",
-    platform: "VibeCriminals",
+    platform: "Hackathon",
     description: "Recognized with a Certificate of Participation for representing Team Twin Dragons in the VibeCriminals Hackathon, where we secured a Top 7 finish and earned the Consolation Prize.",
     year: "2026",
     image: "/certificates/cert14.jpeg",
-    verifyUrl: "https://vibecriminals.web.app"
+    verifyUrl: ""
   },
   {
     id: 15,
@@ -134,6 +134,15 @@ const achievements = [
     year: "2026",
     image: "/certificates/cert15.jpg",
     verifyUrl: "https://www.sololearn.com/certificates/CC-KTSWB7F3"
+  },
+  {
+    id: 16,
+    title: "",
+    platform: "Hackathon",
+    description: "Successfully participated in Craftathon 2026, the 36-hour National Hackathon organised by Gandhinagar University.",
+    year: "2026",
+    image: "/certificates/cert16.png",
+    verifyUrl: ""
   },
 ];
 

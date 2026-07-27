@@ -126,14 +126,17 @@ function Achievements() {
                   </div>
                   <p className="text-xs uppercase font-thin text-white/40 tracking-[0.4em]">Credential Insights</p>
                   <p className="text-white/60 font-medium italic">{selected.description}</p>
-                  {/* Verify Certificate */}
-                  <a
-                    href={selected.verifyUrl}
-                    target="_blank"
-                    className="group flex items-center gap-4 justify-center text-black font-extrabold uppercase tracking-wider p-5 bg-blue-400 rounded-xl hover:bg-white shadow-lg hover:shadow-white/30 transition-all duration-100 delay-100 md:w-fit">
-                    <span>Verify Certificate</span>
-                    <FiExternalLink className="group-hover:translate-x-0.5 duration-200 transition-transform" />
-                  </a>
+
+                  {/* Verify Button */}
+                  {selected.verifyUrl && (
+                    <a
+                      href={selected.verifyUrl}
+                      target="_blank"
+                      className="group flex items-center gap-4 justify-center text-black font-extrabold uppercase tracking-wider p-5 bg-blue-400 rounded-xl hover:bg-white shadow-lg hover:shadow-white/30 transition-all duration-100 delay-100 md:w-fit">
+                      <span>Verify Certificate</span>
+                      <FiExternalLink className="group-hover:translate-x-0.5 duration-200 transition-transform" />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -141,7 +144,7 @@ function Achievements() {
         )}
       </div>
 
-      {/* Recognition */}
+      {/* Recognition Text */}
       <div className="flex items-center gap-4 text-white/40 mt-15 w-fit cursor-default group">
         {/* logo */}
         < div className="shrink-0 border rounded-full w-10 h-10 flex items-center justify-center group-hover:text-blue-500 group-hover:border-blue-500/70 transition-colors duration-300" >
