@@ -8,15 +8,7 @@ import { RiSendPlaneFill } from "react-icons/ri";
 
 function Contact() {
   return (
-    <div className='max-w-6xl sm:ml-20 md:ml-20 lg:ml-50 p-4'>
-
-      {/* Lead Heading */}
-      <div
-        className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60 mt-10'>
-        <span className='h-px w-8 bg-blue-500'></span>
-        Contact Me
-        <span className='h-px w-8 bg-blue-500'></span>
-      </div>
+    <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6'>
 
       {/* Projects heading */}
       <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white my-10'>
@@ -29,8 +21,8 @@ function Contact() {
         <section className='w-full space-y-6'>
           <div className="space-y-3">
             <h3 className="text-white text-2xl font-semibold">
-              <span>Get in </span>
-              <span className="text-blue-500">Touch</span>
+              <span>Contact </span>
+              <span className="text-blue-500">Me</span>
             </h3>
             <p className="text-white/70">
               Have a question, opportunity, or idea in mind? I'm always open to meaningful conversations and exciting collaborations. Feel free to reach out through email, phone, or by filling out the contact form below. I'll make sure to respond as soon as possible and look forward to connecting with you!
@@ -138,7 +130,8 @@ function Contact() {
 
         {/* Section 2: Contact Form container */}
         <section className='w-full'>
-          <div className="bg-linear-to-b from-blue-800 to-blue-700 border border-blue-500/40 rounded-xl p-5 hover:border-blue-500/80 transition-colors duration-200">
+          <div className="relative overflow-hidden bg-blue-800/20 border border-blue-500/40 rounded-xl p-5 hover:border-blue-500/80 transition-colors duration-200">
+            
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">
                 <span className="text-white">Let's </span>
