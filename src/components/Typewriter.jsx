@@ -16,7 +16,7 @@ export default function Typewriter() {
       // Typing
       timeout = setTimeout(() => {
         setText(currentWord.slice(0, text.length + 1));
-      }, 100);
+      }, 150);
       
       if (text === currentWord) {
         // Pause before deleting
@@ -38,11 +38,12 @@ export default function Typewriter() {
   }, [text, isDeleting, index]);
 
   return (
-    <h3 className="text-white text-3xl font-bold">
+    <h3 className="text-white text-xl sm:text-2xl font-bold">
       We build{" "}
-      <span className="text-blue-500 ">
+      <span className="text-blue-500">
         {text}
       </span>{" "}
+      {/* <span className="font-thin text-lg">| </span> */}
       websites.
     </h3>
   );
