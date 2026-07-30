@@ -137,7 +137,7 @@ const achievements = [
   },
   {
     id: 16,
-    title: "",
+    title: "Craftathon 2026",
     platform: "Hackathon",
     description: "Successfully participated in Craftathon 2026, the 36-hour National Hackathon organised by Gandhinagar University.",
     year: "2026",
