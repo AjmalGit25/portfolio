@@ -3,7 +3,7 @@ import { LuPhone, LuGlobe } from "react-icons/lu";
 import { GrLocation } from "react-icons/gr";
 import { SiLeetcode, SiWhatsapp } from "react-icons/si";
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
-import { FiLinkedin } from "react-icons/fi";
+import { FiLinkedin, FiDownload } from "react-icons/fi";
 import { RiSendPlaneFill } from "react-icons/ri";
 
 function Contact() {
@@ -99,31 +99,43 @@ function Contact() {
             </a>
           </div>
 
-          {/* Social Links */}
-          <div className="flex flex-wrap gap-3 mt-8">
-            <a href="https://github.com/AjmalGit25" target="_blank"
-              className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
-              <FaGithub />
-            </a>
-            <a href="https://linkedin.com/in/ajmal-hussain92" target="_blank"
-              className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
-              <FiLinkedin />
-            </a>
-            <a href="https://www.instagram.com/asyncajmal" target="_blank"
-              className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
-              <FaInstagram />
-            </a>
-            <a href="https://leetcode.com/u/AjmalAlgo" target="_blank"
-              className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
-              <SiLeetcode />
-            </a>
-            <a href="https://twitter.com" target="_blank"
-              className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
-              <FaTwitter />
-            </a>
-            <a href="https://ajmal-hussain.vercel.app" target="_blank"
-              className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
-              <LuGlobe />
+
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-5 mt-8">
+            {/* Social Links */}
+            <div className="flex flex-wrap gap-3">
+              <a href="https://github.com/AjmalGit25" target="_blank"
+                className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
+                <FaGithub />
+              </a>
+              <a href="https://linkedin.com/in/ajmal-hussain92" target="_blank"
+                className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
+                <FiLinkedin />
+              </a>
+              <a href="https://www.instagram.com/asyncajmal" target="_blank"
+                className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
+                <FaInstagram />
+              </a>
+              <a href="https://leetcode.com/u/AjmalAlgo" target="_blank"
+                className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
+                <SiLeetcode />
+              </a>
+              <a href="https://twitter.com" target="_blank"
+                className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
+                <FaTwitter />
+              </a>
+              <a href="https://ajmal-hussain.vercel.app" target="_blank"
+                className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
+                <LuGlobe />
+              </a>
+            </div>
+
+            {/* Download Resume */}
+            <a href="/resume_ajmal.pdf" download target="_blank"
+              className="w-full sm:w-fit text-white border border-blue-300/50 rounded-full py-1 px-4 shadow-[0_0_5px_rgba(0,0,0,.8)] bg-blue-500 hover:border-blue-300 hover:text-black hover:bg-blue-300 transition-colors duration-300">
+              <div className="flex items-center justify-center gap-2">
+                <FiDownload />
+                <span>Download Resume</span>
+              </div>
             </a>
           </div>
         </section>
@@ -131,7 +143,7 @@ function Contact() {
         {/* Section 2: Contact Form container */}
         <section className='w-full'>
           <div className="relative overflow-hidden bg-blue-800/20 border border-blue-500/40 rounded-xl p-5 hover:border-blue-500/80 transition-colors duration-200">
-            
+
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">
                 <span className="text-white">Let's </span>
@@ -177,10 +189,10 @@ function Contact() {
 
               {/* Send Button */}
               <button type="submit"
-                className="flex items-center gap-3 bg-blue-500 font-medium p-3 px-5 rounded-xl shadow-md cursor-pointer hover:translate-x-1 hover:shadow-white/30 transition duration-300"
+                className="flex items-center gap-3 bg-blue-500 font-medium p-3 px-5 rounded-xl shadow-md cursor-pointer hover:bg-white  hover:shadow-[0_0_10px_rgba(155,155,155,.5)] transition-colors duration-300 group active:scale-98"
               >
-                <span className="text-white">Send Message</span>
-                <RiSendPlaneFill className="text-white text-sm animate-pulse" />
+                <span className="text-white group-hover:text-slate-800 transition-transform duration-300">Send Message</span>
+                <RiSendPlaneFill className="text-white text-sm animate-pulse group-hover:text-slate-800 group-hover:translate-x-1.5 transition-transform duration-300" size={15} />
               </button>
             </form>
           </div>
