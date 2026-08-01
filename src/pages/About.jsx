@@ -107,7 +107,7 @@ function About() {
         <section className="xl:self-start xl:mt-10 mb-5 flex-1 ">
           <div className='flex items-center justify-center relative'>
             <img
-              className='border border-blue-300 rounded-xl overflow-hidden h-100 w-auto object-cover shadow-2xl shadow-blue-300 hover:scale-102 duration-300'
+              className='border border-blue-300 rounded-xl overflow-hidden h-100 w-auto object-cover shadow-2xl hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] duration-300 transition-shadow'
               src="/profiles/about_dp.jpeg" alt="Ajmal's Picture"
             />
 
