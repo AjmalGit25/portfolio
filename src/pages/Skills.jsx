@@ -7,6 +7,7 @@ import Footer from "../components/Footer.jsx";
 import { useEffect } from "react";
 
 function Skills() {
+  // Scroll Reveal Animation
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
