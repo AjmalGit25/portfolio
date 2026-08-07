@@ -49,7 +49,7 @@ function Projects() {
       {/* Selected Project ===================================================== */}
       {selected ? (
         <div
-          className="pt-15 sm:pt-5 mb-6"
+          className="pt-15 sm:pt-5 mb-6 fade-zoom"
         >
           <ScrollToTop />
           {/* Go Back */}
