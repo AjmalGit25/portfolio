@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Footer from "../components/Footer.jsx";
 import projects from '../data/projects.js';
 import {
@@ -27,10 +27,26 @@ function Projects() {
     );
   };
 
+  // Scroll Reveal Animation
+  useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("show");
+          });
+        },
+        { threshold: 0.2 }
+      );
+  
+      document.querySelectorAll(".card-up").forEach((el) => observer.observe(el));
+  
+      return () => observer.disconnect();
+    }, [selected]);
+
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6">
 
-      {/* Selected Page ===================================================== */}
+      {/* Selected Project ===================================================== */}
       {selected ? (
         <div
           className="pt-15 sm:pt-5 mb-6"
@@ -200,7 +216,7 @@ function Projects() {
 
           <p className="max-w-3xl text-white/60 mb-10">Explore my projects focused on developing responsive, scalable, and high-performance full-stack web applications with the MERN stack, emphasizing clean UI, secure backend architecture, and seamless user experiences.</p>
 
-          {/* Project's container */}
+          {/* Project's container grid */}
           <div
             className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-10'
           >
@@ -208,7 +224,7 @@ function Projects() {
               <div
                 key={project.id}
                 onClick={() => { setSelected(true); setProject(project) }}
-                className="border border-blue-500/40 hover:border-blue-500 rounded-2xl bg-linear-to-b from-blue-950 to-blue-900 p-1 overflow-hidden group transition-colors duration-500 cursor-pointer"
+                className="border border-blue-500/40 hover:border-blue-500 rounded-2xl bg-linear-to-b from-blue-950 to-blue-900 p-1 overflow-hidden group transition-colors duration-500 cursor-pointer card-up"
               >
                 {/* Image */}
                 <div className="w-full aspect-4/2.5 bg-linear-to-l from-blue-700 to-blue-800 rounded-t-xl overflow-hidden">
