@@ -11,7 +11,7 @@ function Contact() {
     <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6'>
 
       {/* Projects heading */}
-      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white my-10 fade-left'>
+      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white my-10'>
         <span>GET IN </span>
         <span className="text-blue-500">TOUCH</span>
       </h1>
