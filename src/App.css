@@ -249,6 +249,19 @@
   }
 }
 
+.fade-zoom {
+  opacity: 0;
+  transform: scale(.9);
+  animation: fadeZoom .6s ease forwards;
+}
+
+@keyframes fadeZoom {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 
 /* Slide Up Animation for Mobile Screens ------------- */
 @keyframes slideUp {
