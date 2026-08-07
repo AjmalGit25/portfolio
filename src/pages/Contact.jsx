@@ -100,7 +100,7 @@ function Contact() {
           </div>
 
 
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-5 mt-8">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-5 mt-8 fade-down">
             {/* Social Links */}
             <div className="flex flex-wrap gap-3">
               <a href="https://github.com/AjmalGit25" target="_blank"
