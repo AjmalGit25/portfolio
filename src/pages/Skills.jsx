@@ -4,8 +4,24 @@ import { GrOracle } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
 import { BsBarChartFill, BsDiagram3Fill } from "react-icons/bs";
 import Footer from "../components/Footer.jsx";
+import { useEffect } from "react";
 
 function Skills() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("show");
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    document.querySelectorAll(".card-up").forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6">
 
@@ -28,12 +44,12 @@ function Skills() {
 
         <div className="space-y-6">
           {/* FRONTEND */}
-          <div className="flex items-center gap-3 justify-center text-[11px] sm:text-[15px]">
+          <div className="flex items-center gap-3 justify-center text-[11px] sm:text-[15px] fade-left">
             <span className="h-px w-8 bg-blue-500"></span>
             <h3 className="text-blue-300 tracking-[0.3em]">FRONTEND</h3>
             <span className="h-px w-8 bg-blue-500"></span>
           </div>
-          <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+          <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4 card-up">
 
             {/* React */}
             <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
@@ -55,12 +71,12 @@ function Skills() {
           </section>
 
           {/* BACKEND */}
-          <div className="mt-10 flex items-center gap-3 justify-center text-[11px] sm:text-[15px]">
+          <div className="mt-10 flex items-center gap-3 justify-center text-[11px] sm:text-[15px] fade-left">
             <span className="h-px w-8 bg-blue-500"></span>
             <h3 className="text-blue-300 tracking-[0.3em]">BACKEND</h3>
             <span className="h-px w-8 bg-blue-500"></span>
           </div>
-          <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+          <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4 card-up">
 
             {/* Nodejs */}
             <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
@@ -82,12 +98,12 @@ function Skills() {
           </section>
 
           {/* DATABASES */}
-          <div className="mt-10 flex items-center gap-3 justify-center text-[11px] sm:text-[15px]">
+          <div className="mt-10 flex items-center gap-3 justify-center text-[11px] sm:text-[15px] fade-left">
             <span className="h-px w-8 bg-blue-500"></span>
             <h3 className="text-blue-300 tracking-[0.3em]">DATABASES</h3>
             <span className="h-px w-8 bg-blue-500"></span>
           </div>
-          <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+          <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4 card-up">
 
             {/* MongoDB */}
             <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
@@ -118,12 +134,12 @@ function Skills() {
           </section>
 
           {/* LANGUAGES */}
-          <div className="mt-10 flex items-center gap-3 justify-center text-[11px] sm:text-[15px]">
+          <div className="mt-10 flex items-center gap-3 justify-center text-[11px] sm:text-[15px] fade-left">
             <span className="h-px w-8 bg-blue-500"></span>
             <h3 className="text-blue-300 tracking-[0.3em]">LANGUAGES</h3>
             <span className="h-px w-8 bg-blue-500"></span>
           </div>
-          <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+          <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4 card-up">
 
             {/* JavaScript */}
             <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
@@ -161,7 +177,7 @@ function Skills() {
           <h3 className="text-white font-bold text-2xl">Core Tools</h3>
         </div>
 
-        <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+        <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4 card-up">
 
           {/* Git */}
           <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
@@ -233,7 +249,7 @@ function Skills() {
           <h3 className="text-white font-bold text-2xl">Familiar</h3>
         </div>
 
-        <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+        <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4 card-up">
 
           {/* Java */}
           <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
@@ -289,7 +305,7 @@ function Skills() {
           <h3 className="text-white font-bold text-2xl">Exploring</h3>
         </div>
 
-        <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+        <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4 card-up">
           {/* Docker */}
           <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
             <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(97, 218, 251, 0.125) 0%, transparent 70%)" }}></div>
