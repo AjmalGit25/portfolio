@@ -214,7 +214,9 @@ function Projects() {
           {/* Projects heading */}
           <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Projects</h1>
 
-          <p className="max-w-3xl text-white/60 mb-10">Explore my projects focused on developing responsive, scalable, and high-performance full-stack web applications with the MERN stack, emphasizing clean UI, secure backend architecture, and seamless user experiences.</p>
+          <p className="max-w-3xl text-white/60 mb-10 fade-left">
+            Explore my projects focused on developing responsive, scalable, and high-performance full-stack web applications with the MERN stack, emphasizing clean UI, secure backend architecture, and seamless user experiences.
+          </p>
 
           {/* Project's container grid */}
           <div
