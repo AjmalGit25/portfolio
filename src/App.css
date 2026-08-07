@@ -136,24 +136,6 @@
   --tw-gradient-to: #022c22 !important;
 }
 
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.nav-slide-up {
-  opacity: 0;
-  animation: slideUp 0.4s ease forwards;
-}
-
 /* Horizontal scrollbar height */
 ::-webkit-scrollbar {
   height: 8px;
@@ -205,4 +187,138 @@
 ::selection {
   background-color: rgb(169, 231, 255);
   color: black;
+}
+
+/* ====================== Page Entrance Animations =========================== */
+
+/* Fade Animations ----------------------------- */
+
+/* Fade Up Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(35px);
+  animation: fadeUp .6s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade Down Animation */
+.fade-down {
+  opacity: 0;
+  transform: translateY(-35px);
+  animation: fadeDown .6s ease forwards;
+}
+
+@keyframes fadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade Left Animation */
+.fade-left {
+  opacity: 0;
+  transform: translateX(-35px);
+  animation: fadeLeft .6s ease forwards;
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade Right Animation */
+.fade-right {
+  opacity: 0;
+  transform: translateX(35px);
+  animation: fadeRight .6s ease forwards;
+}
+
+@keyframes fadeRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* Slide Up Animation for Mobile Screens ------------- */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-slide-up {
+  opacity: 0;
+  animation: slideUp 0.4s ease forwards;
+}
+
+
+/* ===================== Scroll Reveal Animation =========================*/
+
+/* Card Up Scroll Reveal Animation */
+/* .card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+/* Other Scroll Reveal Animation */
+.card-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all .6s ease;
+}
+
+.card-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all .6s ease;
+}
+
+.card-zoom {
+  opacity: 0;
+  transform: scale(.9);
+  transition: all .6s ease;
+}
+
+.card-zoom.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.show {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
 }
