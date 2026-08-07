@@ -23,7 +23,7 @@ function About() {
           "https://alfa-leetcode-api.onrender.com/AjmalAlgo/solved"
         );
 
-        
+
         const data = await response.json();
         console.log("Response:", response);
         console.log("Response data:", data);
@@ -52,11 +52,11 @@ function About() {
       <div className="flex flex-col xl:flex-row items-center justify-center gap-10 mt-3">
         {/* Section 1: About Me */}
         <section className="flex-2">
-          <div>
-            <h1 className='text-5xl sm:text-7xl uppercase font-extrabold text-white mt-5 mb-10'>
-              About <span className='text-blue-500'>Me</span>
-            </h1>
+          <h1 className='text-5xl sm:text-7xl uppercase font-extrabold text-white mt-5 mb-10'>
+            About <span className='text-blue-500'>Me</span>
+          </h1>
 
+          <div className="fade-right">
             <h2 className="text-white text-2xl my-3 font-bold">I'M A
               <span className="text-blue-500"> FULL STACK </span>DEVELOPER
             </h2>
@@ -78,7 +78,7 @@ function About() {
           </div>
 
           {/* Technical Expertise */}
-          <div className="space-y-4">
+          <div className="space-y-4 fade-left">
             <h3 className="mt-10 text-xl font-bold flex items-center gap-2 text-blue-500">
               <FaCode />
               <span>Technical Expertise</span>
@@ -104,7 +104,7 @@ function About() {
         </section>
 
         {/* Section 2: Image */}
-        <section className="xl:self-start xl:mt-10 mb-5 flex-1 ">
+        <section className="xl:self-start xl:mt-10 mb-5 flex-1 fade-up">
           <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-xl overflow-hidden h-100 w-auto object-cover shadow-2xl hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] duration-300 transition-shadow'
