@@ -25,7 +25,7 @@ function Github() {
         setUser(data);
       } catch (err) {
         console.error(err);
-      }finally{
+      } finally {
         setLoading(false);
       }
     };
@@ -42,11 +42,12 @@ function Github() {
         <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
       </div>
 
-      {/* Intro Heading */}
-      <div className='mex-w-5xl mt-2 space-y-5'>
-        <h3 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2'>GitHub</h3>
-        <p className='text-white/80 text-sm sm:text-lg'>Live account overview for Ajmal Hussain with public profile details and repositories.</p>
-      </div>
+      {/* GitHub heading */}
+      <h3 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>GitHub</h3>
+
+      <p className='max-w-3xl text-white/60 mb-10 fade-left'>
+        Just a glimpse of my work and contributions on GitHub, showcasing my coding skills and projects.
+      </p>
 
       {/* Mini Profile Banner (Image, Name, Github's Link) */}
       <div className='bg-blue-950/20 shadow-sky-500/40 shadow-lg border border-blue-500/70 text-white p-4 md:p-5 rounded-xl mt-8 max-w-5xl fade-zoom'>
@@ -79,7 +80,7 @@ function Github() {
                   <div className="flex items-center gap-1">
                     {loading ? <><div className="h-3 w-3 rounded-full border border-white border-t-transparent animate-spin"></div></> : <strong className="text-white/80">{user.followers}</strong>}
                     <span>Followers</span>
-                    </div>
+                  </div>
                 </div>
               </div>
             </div>
