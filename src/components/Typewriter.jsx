@@ -38,7 +38,7 @@ export default function Typewriter() {
   }, [text, isDeleting, index]);
 
   return (
-    <h3 className="text-white text-xl sm:text-2xl font-bold">
+    <h3 className="text-white text-xl sm:text-2xl font-bold fade-down">
       We build{" "}
       <span className="text-blue-500">
         {text}
