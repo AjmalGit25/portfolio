@@ -11,7 +11,7 @@ function Contact() {
     <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6'>
 
       {/* Projects heading */}
-      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white my-10'>
+      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white my-10 fade-left'>
         <span>GET IN </span>
         <span className="text-blue-500">TOUCH</span>
       </h1>
@@ -19,7 +19,7 @@ function Contact() {
       <main className='flex flex-col min-[1300px]:flex-row gap-15'>
         {/* Section 1: Email, Phone, Location */}
         <section className='w-full space-y-6'>
-          <div className="space-y-3">
+          <div className="space-y-3 fade-left">
             <h3 className="text-white text-2xl font-semibold">
               <span>Contact </span>
               <span className="text-blue-500">Me</span>
@@ -30,7 +30,7 @@ function Contact() {
           </div>
 
           {/* Container: Email, Phone, Location */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 fade-up">
             {/* Email */}
             <a href="mailto:reach.ajmal.dev@gmail.com"
               className="group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
@@ -141,7 +141,7 @@ function Contact() {
         </section>
 
         {/* Section 2: Contact Form container */}
-        <section className='w-full'>
+        <section className='w-full fade-right'>
           <div className="relative overflow-hidden bg-blue-800/20 border border-blue-500/40 rounded-xl p-5 hover:border-blue-500/80 transition-colors duration-200">
 
             <div className="space-y-2">
