@@ -30,7 +30,7 @@ function Achievements() {
       <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Achievements</h1>
 
       {/* Achievements paragraph */}
-      <p className="max-w-3xl text-white/60 mb-10">
+      <p className="max-w-3xl text-white/60 mb-10 fade-left">
         Here's a glimpse into my professional journey — showcasing key milestones, awards, and recognitions that highlight my expertise and dedication. A curated collection of professional certifications and academic honors demonstrating technical mastery and a commitment to continuous growth.
       </p>
 
@@ -97,7 +97,7 @@ function Achievements() {
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="bg-blue-950/50 rounded-xl w-lg md:w-xl lg:w-2xl xl:w-4xl h-[70vh] md:h-[80vh] overflow-hidden border border-blue-500/50 relative"
+              className="bg-blue-950/50 rounded-xl w-lg md:w-xl lg:w-2xl xl:w-4xl h-[70vh] md:h-[80vh] overflow-hidden border border-blue-500/50 relative fade-zoom"
             >
               <div className="h-full overflow-y-auto">
 
