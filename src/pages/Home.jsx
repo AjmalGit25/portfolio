@@ -19,7 +19,7 @@ function Home() {
         {/* Section 1: Name */}
         <section className='space-y-6 flex-2'>
 
-          <h1 className='text-4xl sm:text-5xl xl:text-7xl font-black leading-[0.85] mt-6'>
+          <h1 className='text-4xl sm:text-5xl xl:text-7xl font-black leading-[0.85] mt-6 fade-left'>
             <span className='text-white'>Md Ajmal Hussain</span>
             <br />
             <span className='text-blue-500'>Software Developer</span>
@@ -29,7 +29,7 @@ function Home() {
             <span className='text-blue-500'>Web Applications</span>
           </h1>
 
-          <div className='text-base sm:text-lg text-white/80 mt-10'>
+          <div className='text-base sm:text-lg text-white/80 mt-10 fade-right'>
             <p>
               Hi, I'm Ajmal Hussain — a Full Stack <strong>MERN</strong> Developer, currently based in Ahmedabad, India.
             </p>
@@ -47,7 +47,7 @@ function Home() {
           <Typewriter />
 
           {/* Hire & Projects*/}
-          <div className="inline-flex text-[.7em] md:text-sm items-center gap-5 text-center uppercase tracking-[.3em] mt-5">
+          <div className="inline-flex text-[.7em] md:text-sm items-center gap-5 text-center uppercase tracking-[.3em] mt-5 fade-down">
             <Link to="/contact">
               <span className="text bg-blue-300 py-2 px-4 rounded-full hover:bg-blue-400 transition-colors duration-200">Hire Me &rarr;</span>
             </Link>
@@ -58,14 +58,14 @@ function Home() {
           </div>
 
           {/* Tech Stack */}
-          <p className="mt-6 text-[11px] uppercase tracking-[0.3em] text-white/50">
+          <p className="mt-6 text-[11px] uppercase tracking-[0.3em] text-white/50 fade-down">
             React • Tailwind CSS • Bootstrap • Node.js • Express • MongoDB • JavaScript • TypeScript • Problem Solving
           </p>
 
         </section>
 
         {/* Section 2: Image */}
-        <section className='lg:self-start mt-10 flex-1'>
+        <section className='lg:self-start mt-10 flex-1 fade-up'>
           <div className='flex items-center justify-center relative'>
             <img
               className='border border-blue-300 rounded-xl overflow-hidden h-100 w-auto object-cover shadow-2xl hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] duration-300 transition-shadow'
