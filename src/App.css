@@ -183,7 +183,7 @@
 }
 
 
-/* Text Selection */
+/* Text Selection Color - Text color and Text background color */
 ::selection {
   background-color: rgb(169, 231, 255);
   color: black;
