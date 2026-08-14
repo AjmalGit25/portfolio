@@ -127,7 +127,7 @@ function Github() {
           <div className='h-1 w-8 bg-linear-to-l from-blue-700 to-blue-300 rounded-full'></div>
           <h3 className="text-white text-xl md:text-3xl font-bold">Top Repositories</h3>
         </div>
-        <p className="text-white/80 text-sm sm:text-base">Showing Top 9 public repositories</p>
+        <p className="text-white/80 text-sm sm:text-base">Showing Top 6 public repositories</p>
       </div>
 
       {/* GitHub Top Repo container */}
