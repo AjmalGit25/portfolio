@@ -5,18 +5,87 @@ import { FaMedal } from "react-icons/fa6";
 import { RxCross1 } from "react-icons/rx";
 import { FiExternalLink } from "react-icons/fi";
 
-import { useState, useEffect } from "react";
-
+import { useEffect, useState } from "react";
 import achievements from "../data/achievements.js";
 
+function ImageCarousel({ images, title }) {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  return (
+    <div className="">
+      {/* Images */}
+      <div className="overflow-hidden w-full">
+        <div
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{
+            transform: `translateX(-${current * 100}%)`,
+          }}
+        >
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`${title} ${index + 1}`}
+              className="w-full shrink-0 object-contain aspect-4/3"
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Indicators */}
+      <div className="flex justify-center gap-2 bg-blue-950">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`text-lg transition-colors duration-300 ${current === index
+              ? "text-blue-500"
+              : "text-white/30"
+              }`}
+          >
+            ●
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function Achievements() {
   const [selected, setSelected] = useState(null);
+  const [closing, setClosing] = useState(false);
 
   // Prevent background scrolling when modal is open
   useEffect(() => {
     document.body.style.overflow = selected ? "hidden" : "auto";
   }, [selected]);
+
+  // Reset closing state when a new item is selected
+  useEffect(() => {
+    if (selected) setClosing(false);
+  }, [selected]);
+
+  const handleClose = () => {
+    setClosing(true);
+  };
+
+  const modalImages = selected
+    ? Array.isArray(selected.image)
+      ? selected.image
+      : selected.image
+        ? [selected.image]
+        : []
+    : [];
 
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6">
@@ -42,7 +111,7 @@ function Achievements() {
           {achievements.map((item) => (
             <div
               key={item.id}
-              onClick={() => setSelected(item)}
+              onClick={() => { setSelected(item); setClosing(false); }}
               className="relative overflow-hidden rounded-xl border border-blue-500/30 cursor-pointer aspect-[1/1.7] md:aspect-square group hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
 
               {/* Noisy and Gradient style Background */}
@@ -93,27 +162,39 @@ function Achievements() {
         {selected && (
           <div
             className="fixed inset-0 z-20 flex items-center justify-center bg-black/80 backdrop-blur-lg overflow-hidden p-2 border-white"
-            onClick={() => setSelected(null)}
+            onClick={handleClose}
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="bg-blue-950/50 rounded-xl w-lg md:w-xl lg:w-2xl xl:w-4xl h-[70vh] md:h-[80vh] overflow-hidden border border-blue-500/50 relative fade-zoom"
+              onAnimationEnd={() => {
+                if (closing) {
+                  setSelected(null);
+                  setClosing(false);
+                }
+              }}
+              className={`bg-blue-950/50 rounded-xl w-lg md:w-xl lg:w-2xl xl:w-4xl h-[70vh] md:h-[80vh] overflow-hidden border border-blue-500/50 relative ${closing ? "fade-zoomOut" : "fade-zoomIn"}`}
             >
               <div className="h-full overflow-y-auto">
 
                 {/* Close Button */}
                 <button
                   className="absolute right-6 top-6 z-10 h-8 w-8 rounded-full bg-blue-500/20 hover:bg-blue-500/30 backdrop-blur-md border border-blue-500/50 hover:rotate-90 duration-300 transition-all ease-in-out"
-                  onClick={() => setSelected(null)}
+                  onClick={(e) => { e.stopPropagation(); handleClose(); }}
                 >
                   <div className="flex items-center justify-center h-full w-full">
                     <RxCross1 className="text-blue-400" />
                   </div>
                 </button>
 
-                {/* Image */}
+                {/* Image Container */}
                 <div className="w-full bg-neutral-900 flex items-center justify-center overflow-hidden">
-                  <img className="object-contain w-full aspect-4/3" src={selected.image} alt={selected.title} />
+                  {modalImages.length === 1 && (
+                    <img src={modalImages[0]} alt={selected.title} className="object-contain w-full aspect-4/3" />
+                  )}
+
+                  {modalImages.length > 1 && (
+                    <ImageCarousel images={modalImages} title={selected.title} />
+                  )}
                 </div>
 
                 {/* Texts */}
