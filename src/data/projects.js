@@ -60,7 +60,7 @@ const projects = [
 
     features: [
       "Fully responsive design across all devices",
-      "Built-in blue and green theme switching",
+      "Built-in blue and emerald themes switching",
       "Interactive project showcase with image gallery",
       "GitHub API integration for live repository statistics",
       "Automatic LeetCode problem count updates",
