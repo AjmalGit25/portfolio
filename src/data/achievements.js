@@ -17,7 +17,7 @@ const achievements = [
     description:
       "Successfully completed the Full Stack Development Internship at CodeAlpha.",
     year: "2026",
-    image: ["/certificates/cert16_1.jpeg", "/certificates/cert16_2.jpeg", "/certificates/cert16_3.jpeg"],
+    image: ["/certificates/cert16_1.jpeg", "/certificates/cert16_2.jpeg", "/certificates/cert16_3.jpeg", "/certificates/cert16_4.jpeg"],
     verifyUrl: "https://www.codealpha.tech/#/verification?id=CA%2FDF1%2F197033"
   },
   {
