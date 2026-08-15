@@ -217,22 +217,22 @@ function Projects() {
               {/* Project Links */}
               <div className="border border-blue-500/60 bg-blue-950/50 rounded-xl p-5">
                 <h3 className="text-lg md:text-2xl font-bold mb-6">Project Links</h3>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 text-sm font-medium text-white/80">
                   {project.liveUrl !== "#" && (
                     <a
                       href={project.liveUrl} target="_blank"
-                      className="border border-blue-600/50 bg-blue-700 rounded-xl py-3 flex items-center justify-center gap-2 group hover:bg-white  transition-colors duration-200"
+                      className="border border-blue-600/50 bg-blue-700 rounded-xl py-3 flex items-center justify-center gap-2 group hover:bg-white transition-colors duration-300"
                     >
                       <FiExternalLink className="group-hover:text-blue-600" />
-                      <span className="text-lg font-medium text-white/80 group-hover:text-blue-600">Live Demo</span>
+                      <span className=" group-hover:text-blue-600">Live Demo</span>
                     </a>
                   )}
 
                   <a
                     href={project.githubUrl} target="_blank"
-                    className="border border-blue-600/50 bg-linear-to-b to-blue-700 from-blue-950 rounded-xl py-3 flex items-center justify-center gap-2 hover:from-blue-800 hover:to-blue-950 hover:border-blue-600 transition-colors duration-300">
+                    className="border border-blue-600/50 bg-linear-to-b to-blue-700 from-blue-950 rounded-xl py-3 flex items-center justify-center gap-2 hover:from-blue-700 hover:to-blue-950 hover:border-blue-600 hover:text-white transition-colors duration-300">
                     <FaGithub />
-                    <span className="text-lg font-medium text-white/80">Source Code</span>
+                    <span className="">Source Code</span>
                   </a>
                 </div>
               </div>
