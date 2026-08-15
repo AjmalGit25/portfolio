@@ -77,10 +77,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "EASYLAYZEE",
+    title: "EasyLayzee",
 
     description:
-      "EASYLAYZEE is a full-stack MERN e-commerce application for browsing and purchasing snack products. It features dedicated user and admin experiences, secure authentication, product management, shopping cart, order processing, and a responsive interface, providing a complete end-to-end online shopping experience.",
+      "EasyLayzee is a full-stack MERN e-commerce application for browsing and purchasing snack products. It features dedicated user and admin experiences, secure authentication, product management, shopping cart, order processing, and a responsive interface, providing a complete end-to-end online shopping experience.",
 
     images: [easylayzee1, easylayzee2, easylayzee3],
 
