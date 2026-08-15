@@ -29,19 +29,19 @@ function Projects() {
 
   // Scroll Reveal Animation
   useEffect(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) entry.target.classList.add("show");
-          });
-        },
-        { threshold: 0.2 }
-      );
-  
-      document.querySelectorAll(".card-up").forEach((el) => observer.observe(el));
-  
-      return () => observer.disconnect();
-    }, [selected]);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("show");
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    document.querySelectorAll(".card-up").forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [selected]);
 
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6">
@@ -169,7 +169,7 @@ function Projects() {
                       href={project.liveUrl} target="_blank"
                       className="border border-blue-600/50 bg-blue-700 rounded-xl py-3 flex items-center justify-center gap-2 group hover:bg-white  transition-colors duration-200"
                     >
-                      <FiExternalLink className="group-hover:text-blue-600"/>
+                      <FiExternalLink className="group-hover:text-blue-600" />
                       <span className="text-lg font-medium text-white/80 group-hover:text-blue-600">Live Demo</span>
                     </a>
                   )}
@@ -204,15 +204,16 @@ function Projects() {
         </div>
       ) : (
         <div className="space-y-2">
+          <div className="mt-15 sm:mt-5">
+            {/* Dash */}
+            <div
+              className='hidden sm:inline-flex'>
+              <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
+            </div>
 
-          {/* Dash */}
-          <div
-            className='inline-flex mt-10'>
-            <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
+            {/* Projects heading */}
+            <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Projects</h1>
           </div>
-
-          {/* Projects heading */}
-          <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Projects</h1>
 
           <p className="max-w-3xl text-white/60 mb-10 fade-left">
             Explore my projects focused on developing responsive, scalable, and high-performance full-stack web applications with the MERN stack, emphasizing clean UI, secure backend architecture, and seamless user experiences.

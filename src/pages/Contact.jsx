@@ -8,26 +8,27 @@ import { RiSendPlaneFill } from "react-icons/ri";
 
 function Contact() {
   return (
-    <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6'>
+    <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6'>
+
+      {/* Lead Heading */}
+      <div className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60 mt-15 sm:mt-5'>
+        <span className='h-px w-8 bg-blue-500'></span>
+        Contact Me
+        <span className='h-px w-8 bg-blue-500'></span>
+      </div>
 
       {/* Projects heading */}
-      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white my-10'>
+      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-6'>
         <span>GET IN </span>
         <span className="text-blue-500">TOUCH</span>
       </h1>
 
-      <main className='flex flex-col min-[1300px]:flex-row gap-15'>
+      <main className='flex flex-col min-[1300px]:flex-row gap-15 my-10'>
         {/* Section 1: Email, Phone, Location */}
         <section className='w-full space-y-6'>
-          <div className="space-y-3 fade-left">
-            <h3 className="text-white text-2xl font-semibold">
-              <span>Contact </span>
-              <span className="text-blue-500">Me</span>
-            </h3>
-            <p className="text-white/70">
-              Have a question, opportunity, or idea in mind? I'm always open to meaningful conversations and exciting collaborations. Feel free to reach out through email, phone, or by filling out the contact form below. I'll make sure to respond as soon as possible and look forward to connecting with you!
-            </p>
-          </div>
+          <p className="text-white/70">
+            Have a question, opportunity, or idea in mind? I'm always open to meaningful conversations and exciting collaborations. Feel free to reach out through email, phone, or by filling out the contact form below. I'll make sure to respond as soon as possible and look forward to connecting with you!
+          </p>
 
           {/* Container: Email, Phone, Location */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 fade-up">
@@ -197,7 +198,6 @@ function Contact() {
             </form>
           </div>
         </section>
-
       </main>
     </div>
   );

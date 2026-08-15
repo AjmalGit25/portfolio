@@ -6,15 +6,16 @@ import { SiTicktick } from "react-icons/si";
 function Education() {
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6">
+      <div className="mt-15 sm:mt-5">
+        {/* Dash */}
+        <div
+          className='hidden sm:inline-flex'>
+          <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
+        </div>
 
-      {/* Dash */}
-      <div
-        className='inline-flex mt-10'>
-        <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
+        {/* Education heading */}
+        <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Education</h1>
       </div>
-
-      {/* Education heading */}
-      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Education</h1>
 
       <p className="max-w-3xl text-white/60 mb-6 fade-left">A snapshot of my academic background and activities supporting my growth as a developer, underpinning the Ajmal Hussain identity that drives the Ajmal Hussain portfolio, and LeetCode by Ajmal Hussain outcomes. </p>
 

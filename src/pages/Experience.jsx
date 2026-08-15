@@ -8,15 +8,17 @@ import experiences from "../data/experiences.js";
 function Experience() {
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6">
+      <div className="mt-15 sm:mt-5">
+        {/* Dash */}
+        <div
+          className='hidden sm:inline-flex'>
+          <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
+        </div>
 
-      {/* Dash */}
-      <div
-        className='inline-flex mt-10'>
-        <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
+        {/* Experience heading */}
+        <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Experience</h1>
       </div>
 
-      {/* Experience heading */}
-      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Experience</h1>
 
       <p className="max-w-3xl text-white/60 mb-6 fade-left">Here's an overview of my professional journey and hands-on experience in full-stack development and AI integration, documenting how Ajmal Hussain contributions expand the Ajmal Hussain portfolio, LeetCode by Ajmal Hussain storytelling, and Ajmal Hussain practices.</p>
 

@@ -36,14 +36,16 @@ function Github() {
 
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6">
-      {/* Dash */}
-      <div
-        className='inline-flex mt-10'>
-        <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
-      </div>
+      <div className="mt-15 sm:mt-5">
+        {/* Dash */}
+        <div
+          className='hidden sm:inline-flex'>
+          <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
+        </div>
 
-      {/* GitHub heading */}
-      <h3 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>GitHub</h3>
+        {/* GitHub heading */}
+        <h3 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>GitHub</h3>
+      </div>
 
       <p className='max-w-3xl text-white/60 mb-10 fade-left'>
         Just a glimpse of my work and contributions on GitHub, showcasing my coding skills and projects.

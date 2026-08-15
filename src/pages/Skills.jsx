@@ -25,15 +25,16 @@ function Skills() {
 
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6">
+      <div className="mt-15 sm:mt-5">
+        {/* Dash */}
+        <div
+          className='hidden sm:inline-flex'>
+          <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
+        </div>
 
-      {/* Dash */}
-      <div
-        className='inline-flex mt-10'>
-        <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
+        {/* Skills heading */}
+        <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-15'>Skills</h1>
       </div>
-
-      {/* Skills heading */}
-      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-15'>Skills</h1>
 
       {/* Stacks Container */}
       <div className="space-y-4 max-w-5xl">

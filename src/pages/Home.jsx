@@ -8,18 +8,18 @@ function Home() {
 
       {/* Lead Heading */}
       <div
-        className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60 mt-10'>
+        className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60 mt-15 sm:mt-5'>
         <span className='h-px w-8 bg-blue-500'></span>
         Software Developer • Full Stack
         <span className='h-px w-8 bg-blue-500'></span>
       </div>
 
       {/* Name & Image container */}
-      <div className='flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-15 mt-3'>
+      <div className='flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-15 mt-6'>
         {/* Section 1: Name */}
         <section className='space-y-6 flex-2'>
 
-          <h1 className='text-4xl sm:text-5xl xl:text-7xl font-black leading-[0.85] mt-6 fade-left'>
+          <h1 className='text-4xl sm:text-5xl xl:text-7xl font-black leading-[0.85] fade-left'>
             <span className='text-white'>Md Ajmal Hussain</span>
             <br />
             <span className='text-blue-500'>Software Developer</span>

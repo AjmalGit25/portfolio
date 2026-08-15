@@ -39,20 +39,20 @@ function About() {
   }, []);
 
   return (
-    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6">
+    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6">
 
       {/* Lead Heading */}
-      <div className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60 mt-10'>
+      <div className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60 mt-15 sm:mt-5'>
         <span className='h-px w-8 bg-blue-500'></span>
         Software Developer Profile
         <span className='h-px w-8 bg-blue-500'></span>
       </div>
 
       {/* About & Image container */}
-      <div className="flex flex-col xl:flex-row items-center justify-center gap-10 mt-3">
+      <div className="flex flex-col xl:flex-row items-center justify-center gap-10 mt-6">
         {/* Section 1: About Me */}
         <section className="flex-2">
-          <h1 className='text-5xl sm:text-7xl uppercase font-extrabold text-white mt-5 mb-10'>
+          <h1 className='text-5xl sm:text-7xl uppercase font-extrabold text-white'>
             About <span className='text-blue-500'>Me</span>
           </h1>
 

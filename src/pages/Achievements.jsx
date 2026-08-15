@@ -89,17 +89,19 @@ function Achievements() {
 
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6">
-      {/* Dash */}
-      <div
-        className='inline-flex mt-10'>
-        <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
+      <div className="mt-15 sm:mt-5">
+        {/* Dash */}
+        <div
+          className='hidden sm:inline-flex'>
+          <span className='border-2 border-blue-300 h-0 w-20 rounded-full'></span>
+        </div>
+
+        {/* Achievements heading */}
+        <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Achievements</h1>
       </div>
 
-      {/* Achievements heading */}
-      <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Achievements</h1>
-
       {/* Achievements paragraph */}
-      <p className="max-w-3xl text-white/60 mb-10 fade-left">
+      <p className="max-w-3xl text-white/60 mb-15 fade-left">
         Here's a glimpse into my professional journey — showcasing key milestones, awards, and recognitions that highlight my expertise and dedication. A curated collection of professional certifications and academic honors demonstrating technical mastery and a commitment to continuous growth.
       </p>
 
