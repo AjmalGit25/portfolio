@@ -14,18 +14,85 @@ function Projects() {
   const [selected, setSelected] = useState(null);
   const [project, setProject] = useState(null);
   const [selectedImage, setSelectedImage] = useState(0);
+  const [closing, setClosing] = useState(false);
 
-  const nextImage = () => {
-    setSelectedImage(prev =>
-      (prev + 1) % project.images.length
-    );
+  // Reset closing state when a new item is selected
+  useEffect(() => {
+    if (selected) setClosing(false);
+  }, [selected]);
+
+  const handleClose = () => {
+    setClosing(true);
   };
 
-  const previousImage = () => {
-    setSelectedImage(prev =>
-      (prev - 1 + project.images.length) % project.images.length
+  // Image Carousel Component
+  function ImageCarousel({ images, title }) {
+    const [current, setCurrent] = useState(0);
+
+    useEffect(() => {
+      if (images.length <= 1) return;
+
+      const interval = setInterval(() => {
+        setCurrent((prev) => (prev + 1) % images.length);
+      }, 3000);
+
+      return () => clearInterval(interval);
+    }, [images.length]);
+
+    return (
+      <div className="relative">
+        {/* Images */}
+        <div className="overflow-hidden w-full">
+          <div
+            className="flex transition-transform duration-700 ease-in-out"
+            style={{
+              transform: `translateX(-${current * 100}%)`,
+            }}
+          >
+            {images.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`${title} ${index + 1}`}
+                className="w-full shrink-0 object-contain aspect-5/3"
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Indicators */}
+        <div className="flex justify-center gap-2 bg-blue-950">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrent(index)}
+              className={`text-lg transition-colors duration-300 cursor-pointer ${current === index
+                ? "text-blue-500"
+                : "text-white/30"
+                }`}
+            >
+              ●
+            </button>
+          ))}
+        </div>
+
+        {/* Left / Right buttons */}
+        <button
+          className="absolute top-1/2 left-1 text-white/80 backdrop-blur-md brightness-150 p-2 border border-blue-500/30 hover:border-blue-500/80 rounded-full -translate-y-1/2 cursor-pointer"
+          onClick={() => setCurrent((prev) => (prev - 1 + images.length) % images.length)}><FaChevronLeft size={10} color="grey" />
+        </button>
+        <button
+          className="absolute top-1/2 right-1 text-white/80 backdrop-blur-md brightness-150 p-2 border border-blue-500/30 hover:border-blue-500/80 rounded-full -translate-y-1/2 cursor-pointer"
+          onClick={() => setCurrent((prev) => (prev + 1) % images.length)}><FaChevronRight size={10} color="grey" />
+        </button>
+
+        {/* Total Image counts */}
+        <div className="absolute bottom-0.5 right-5 px-4 py-0.5 text-xs font-medium text-gray-300 border border-blue-400/40 rounded-full bg-linear-to-b from-blue-500 via-blue-800 to-blue-950">
+          {current + 1} / {project.images.length}
+        </div>
+      </div>
     );
-  };
+  }
 
   // Scroll Reveal Animation
   useEffect(() => {
@@ -49,13 +116,19 @@ function Projects() {
       {/* Selected Project ===================================================== */}
       {selected ? (
         <div
-          className="pt-15 sm:pt-5 mb-6 fade-zoom"
+          className={`pt-15 sm:pt-5 mb-6 ${closing ? "fade-zoomOut" : "fade-zoomIn"}`}
+          onAnimationEnd={() => {
+            if (closing) {
+              setSelected(null);
+              setClosing(false);
+            }
+          }}
         >
           <ScrollToTop />
           {/* Go Back */}
           <div
             className="w-fit text-blue-200 flex items-center gap-2 cursor-pointer hover:text-blue-500 transition-colors duration-200 group mb-6"
-            onClick={() => setSelected(null)}
+            onClick={() => { handleClose(); }}
           >
             <FaArrowLeft className="group-hover:-translate-x-1 transition-transform duration-200" />
             <span>Back to Projects</span>
@@ -67,27 +140,8 @@ function Projects() {
             <div className="text-white space-y-8">
 
               {/* Image Preview */}
-              <div className="w-full aspect-7/4 bg-neutral-900 border border-blue-500/60 rounded-xl relative">
-                <img
-                  src={project.images[selectedImage]}
-                  alt={project.title}
-                  className="w-full h-full object-contain"
-                />
-
-                {/* Left / Right buttons */}
-                <button
-                  className="absolute top-1/2 left-1 text-white/80 backdrop-blur-md brightness-150 p-2 border border-blue-500/30 hover:border-blue-500/80 rounded-full -translate-y-1/2 cursor-pointer"
-                  onClick={previousImage}><FaChevronLeft size={10} color="grey" />
-                </button>
-                <button
-                  className="absolute top-1/2 right-1 text-white/80 backdrop-blur-md brightness-150 p-2 border border-blue-500/30 hover:border-blue-500/80 rounded-full -translate-y-1/2 cursor-pointer"
-                  onClick={nextImage}><FaChevronRight size={10} color="grey" />
-                </button>
-
-                {/* Total Image counts */}
-                <div className="absolute bottom-4 right-4 text-white/80 text-xs backdrop-blur-md brightness-150 px-3 py-2 rounded-full bg-black">
-                  {selectedImage + 1} / {project.images.length}
-                </div>
+              <div className="overflow-hidden w-full bg-neutral-900 border border-blue-500/60 rounded-xl">
+                <ImageCarousel images={project.images} title={project.title} />
               </div>
 
               {/* Title */}
