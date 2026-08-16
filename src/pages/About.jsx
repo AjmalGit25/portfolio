@@ -410,6 +410,12 @@ function About() {
           className={`fixed inset-0 z-20 flex items-center justify-center bg-black/50 backdrop-blur-sm h-screen ${closing ? "fade-zoomOut" : "fade-zoomIn"}`}
         >
           <img src="./Leet_200.gif" alt="Badge_200" className="w-auto h-50 md:h-80" onClick={(e) => e.stopPropagation()} />
+          <span className="absolute bottom-40 text-amber-300 text-xs sm:text-base">
+            SOLVING PROBLEMS 200+ DAYS IN 2026
+          </span>
+          <span className="absolute top-40 text-transparent font-medium text-xl bg-clip-text bg-linear-to-l from-violet-700 via-blue-700 to-green-700">
+            Congratulations Ajmal Hussain!
+          </span>
         </div>
       )}
 
