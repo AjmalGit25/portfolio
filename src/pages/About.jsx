@@ -15,6 +15,8 @@ function About() {
 
   const [leetcode, setLeetcode] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [selected, setSelected] = useState(false);
+  const [closing, setClosing] = useState(false);
 
   useEffect(() => {
     const fetchLeetcode = async () => {
@@ -23,10 +25,7 @@ function About() {
           "https://alfa-leetcode-api.onrender.com/AjmalAlgo/solved"
         );
 
-
         const data = await response.json();
-        console.log("Response:", response);
-        console.log("Response data:", data);
         setLeetcode(data);
       } catch (error) {
         console.error(error);
@@ -37,6 +36,19 @@ function About() {
 
     fetchLeetcode();
   }, []);
+
+  // Prevent the background page's scrolling (during Modal open)
+  useEffect(() => {
+    if (selected) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selected]);
 
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6">
@@ -185,8 +197,8 @@ function About() {
             <p className="text-white/80">AjmalAlgo • Rank: <span className="text-amber-500">876,709</span></p>
           </div>
 
-          <div className="inline-flex items-center gap-2 border border-blue-500 bg-blue-500/30 p-1.5 px-3 text-amber-500 font-medium rounded-full w-fit">
-            <BiRun />
+          <div onClick={() => setSelected(true)} className="inline-flex items-center gap-2 border border-blue-500 bg-blue-500/30 p-1.5 px-3 text-amber-500 font-medium rounded-full w-fit cursor-pointer">
+            <img src="./Leet_200.gif" alt="Badge_200" className="w-auto h-5" />
             <span>Active Solver</span>
           </div>
         </div>
@@ -384,6 +396,22 @@ function About() {
 
       {/* Footer Text */}
       <Footer />
+
+      {/* Leetcode Badge Modal */}
+      {selected && (
+        <div
+          onAnimationEnd={() => {
+            if (closing) {
+              setSelected(false);
+              setClosing(false);
+            }
+          }}
+          onClick={() => setClosing(true)}
+          className={`fixed inset-0 z-20 flex items-center justify-center bg-black/50 backdrop-blur-sm h-screen ${closing ? "fade-zoomOut" : "fade-zoomIn"}`}
+        >
+          <img src="./Leet_200.gif" alt="Badge_200" className="w-auto h-50 md:h-80" onClick={(e) => e.stopPropagation()} />
+        </div>
+      )}
 
     </div>
   );
