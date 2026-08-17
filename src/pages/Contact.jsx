@@ -131,7 +131,7 @@ function Contact() {
             </div>
 
             {/* Download Resume */}
-            <a href="/resume_ajmal.pdf" download target="_blank"
+            <a href="/ResumeAjmal.pdf" download target="_blank"
               className="w-full sm:w-fit text-white border border-blue-300/50 rounded-full py-1 px-4 shadow-[0_0_5px_rgba(0,0,0,.8)] bg-blue-500 hover:border-blue-300 hover:text-black hover:bg-blue-300 active:scale-95 transition-all duration-300">
               <div className="flex items-center justify-center gap-2">
                 <FiDownload />
