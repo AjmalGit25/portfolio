@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "Backend API for my personal portfolio website",
+  "keywords": [
+    "portfolio",
+    "node",
+    "express",
+    "backend"
+  ],
+  "homepage": "https://github.com/AjmalGit25/portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/AjmalGit25/portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AjmalGit25/portfolio.git"
+  },
+  "license": "ISC",
+  "author": "Md Ajmal Hussain",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
