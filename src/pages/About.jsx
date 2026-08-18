@@ -413,9 +413,11 @@ function About() {
           <span className="absolute bottom-40 text-amber-300 text-xs sm:text-base">
             SOLVING PROBLEMS 200+ DAYS IN 2026
           </span>
-          <span className="absolute top-40 text-transparent font-medium text-xl bg-clip-text bg-linear-to-l from-violet-700 via-blue-700 to-green-700">
-            Congratulations Ajmal Hussain!
-          </span>
+          <h3 className="absolute top-40 font-medium text-xl">
+            <span className="text-orange-500">LeetCode</span>
+            <span className="text-green-500 animate-ping"> • </span>
+            <span className="text-blue-500">AjmalAlgo</span>
+          </h3>
         </div>
       )}
 
