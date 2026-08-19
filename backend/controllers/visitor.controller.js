@@ -1,4 +1,6 @@
 import Visitor from "../models/visitor.model.js";
+import nodemailer from "nodemailer";
+import { sendNewVisitorEmail } from "../services/email.service.js";
 
 export const setVisitor = async (req, res) => {
   const { visitorId } = req.body;
@@ -18,6 +20,8 @@ export const setVisitor = async (req, res) => {
     }
 
     await Visitor.create(visitorData);
+    await sendNewVisitorEmail();
+
     return res.status(200).json({ message: "Visitor data recorded successfully!" });
   }
 
