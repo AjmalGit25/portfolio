@@ -12,7 +12,7 @@ const FRONTEND_URL = process.env.FRONTEND_URL;
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:5173", FRONTEND_URL]
+  origin: FRONTEND_URL
 }));
 
 app.use(express.json());

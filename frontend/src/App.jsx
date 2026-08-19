@@ -27,6 +27,13 @@ function App() {
 
     axios.post(`${BACKEND_URL}/api/v1/visitors`, { visitorId });
 
+    // try {
+    //   const resp = 
+    //   console.log("Visitor recorded!", resp);
+    // } catch (error) {
+    //   console.log("Error: ", error)
+    // }
+
     console.log("Visitor ID:", visitorId);
   }, []);
 
