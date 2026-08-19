@@ -1,10 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "./pages/Sidebar";
 import { RiMenuUnfoldLine, RiMenuFoldLine } from "react-icons/ri";
+import axios from "axios";
+import BACKEND_URL from "../config/api.js";
 
 function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  // Count Unique Visitors mechanism
+  const generateVisitorId = () => {
+    if (crypto.randomUUID) {
+      return crypto.randomUUID();
+    }
+
+    return `${Date.now()}-${Math.random().toString(36).substring(2)}-${Math.random().toString(36).substring(2)}`;
+  };
+
+  useEffect(() => {
+    let visitorId = localStorage.getItem("visitorId");
+
+    if (!visitorId) {
+      visitorId = generateVisitorId();
+      localStorage.setItem("visitorId", visitorId);
+    }
+
+    axios.post(`${BACKEND_URL}/api/v1/visitors`, { visitorId });
+
+    console.log("Visitor ID:", visitorId);
+  }, []);
 
   return (
     <div className="min-h-screen bg-linear-to-l from-blue-800 to-blue-950">

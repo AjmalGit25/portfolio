@@ -1,0 +1,39 @@
+import express from "express";
+import dotenv from "dotenv";
+import connectDatabase from "./config/db.js";
+import visitorRouter from "./routes/visitor.routes.js";
+import cors from "cors";
+
+dotenv.config();
+
+const port = process.env.PORT;
+const FRONTEND_URL = process.env.FRONTEND_URL;
+
+const app = express();
+
+app.use(cors({
+  origin: ["http://localhost:5173", FRONTEND_URL]
+}));
+
+app.use(express.json());
+
+// Routes
+app.use("/api/v1/visitors", visitorRouter);
+
+app.get('/', (req, res) => {
+  res.status(200).send('Portfolio backend server is running 🚀');
+});
+
+const startServer = async () => {
+  try {
+    await connectDatabase();
+
+    app.listen(port, () => {
+      console.log(`Server is listening on http://localhost:${port}`);
+    });
+  } catch (error) {
+    console.error("Failed to start server:", error);
+  }
+};
+
+startServer();
