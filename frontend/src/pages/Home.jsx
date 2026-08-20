@@ -68,6 +68,7 @@ function Home() {
         <section className='lg:self-start mt-10 flex-1 fade-up'>
           <div className='flex items-center justify-center border border-blue-300 rounded-xl overflow-hidden shadow-2xl hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] duration-300 transition-shadow max-w-80 relative'>
             <img
+              draggable={false} onContextMenu={(e) => e.preventDefault()}
               className='w-full h-auto object-contain'
               src="/profiles/home_dp.jpeg" alt="Ajmal's Picture" />
 
