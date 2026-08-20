@@ -18,7 +18,36 @@ const visitorSchema = mongoose.Schema(
     visitCount: {
       type: Number,
       default: 1
-    }
+    },
+    browser: {
+      type: String,
+    },
+    device: {
+      type: String,
+    },
+    deviceType: {
+      type: String,
+    },
+    os: {
+      type: String,
+    },
+    osVersion: {
+      type: String,
+    },
+    ipAddress: {
+      type: String,
+    },
+    location: {
+      country: {
+        type: String,
+      },
+      region: {
+        type: String,
+      },
+      city: {
+        type: String,
+      }
+    },
   }
 );
 
