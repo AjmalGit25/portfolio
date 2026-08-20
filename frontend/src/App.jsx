@@ -26,8 +26,6 @@ function App() {
     }
 
     axios.post(`${BACKEND_URL}/api/v1/visitors`, { visitorId });
-
-    console.log("Visitor ID:", visitorId);
   }, []);
 
   return (
