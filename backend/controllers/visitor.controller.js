@@ -77,7 +77,11 @@ export const setVisitor = async (req, res) => {
 
     console.log("🔥 About to create visitor:", visitorData);
     await Visitor.create(visitorData);
+
+    console.log("🆕 NEW VISITOR CREATED — ABOUT TO SEND EMAIL");
+    console.log("📧 Calling sendNewVisitorEmail...");
     await sendNewVisitorEmail(formattedDate, location, device, os, browser);
+    console.log("📧 sendNewVisitorEmail FINISHED");
 
     return res.status(200).json({ message: "Visitor data recorded successfully!" });
   }
