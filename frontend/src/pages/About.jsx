@@ -1,6 +1,6 @@
 import { SiLeetcode, SiUnstop, SiW3Schools, SiHackerrank, SiDiscord, SiWhatsapp, SiGeeksforgeeks } from "react-icons/si";
 import { BiRun, BiPlay } from "react-icons/bi";
-import { FaGithub, FaTwitter, FaLaptopCode, FaMouse, FaGlobe } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLaptopCode, FaMouse, FaGlobe, FaEye } from "react-icons/fa";
 import { FaLinkedin, FaCode } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -51,7 +51,7 @@ function About() {
   }, [selected]);
 
   return (
-    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6">
+    <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6 overflow-x-hidden">
 
       {/* Lead Heading */}
       <div className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60 mt-15 sm:mt-5'>
@@ -117,25 +117,32 @@ function About() {
 
         {/* Section 2: Image */}
         <section className="xl:self-start xl:mt-10 mb-5 flex-1 fade-up">
-          <div className='flex items-center justify-center relative'>
+          <div className='flex items-center justify-center border border-blue-300 rounded-xl overflow-hidden shadow-2xl hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] duration-300 transition-shadow max-w-80 relative'>
             <img
-              className='border border-blue-300 rounded-xl overflow-hidden h-100 w-auto object-cover shadow-2xl hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] duration-300 transition-shadow'
+              className='w-full h-auto object-contain'
               src="/profiles/about_dp.jpeg" alt="Ajmal's Picture"
             />
 
-            {/* Tag on Pic */}
-            <div className="absolute flex gap-3 p-2 px-3 border rounded-xl bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
-              <div className="flex items-center justify-center p-4 rounded-full bg-blue-300/15">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
-                  className="text-white h-5 w-5">
-                  <path d="m16 18 6-6-6-6"></path>
-                  <path d="m8 6-6 6 6 6"></path>
-                </svg>
-              </div>
+            {/* Tag on Pic - Visitors Count */}
+            <div className="absolute bottom-0 rounded-b-xl w-full">
+              <div className="h-full flex text-white bg-linear-to-r from-blue-950 to-blue-700 ">
 
-              <div>
-                <div className="text-white">Full Stack Developer</div>
-                <div className="text-white/50 text-[0.75em]">React • Node.js • JavaScript</div>
+                {/* Left */}
+                <div className="w-full flex items-center gap-2 p-2">
+                  <div className="bg-white/10 p-1.5 w-fit rounded-full">
+                    <FaEye className="text-blue-400" size={15} />
+                  </div>
+                  <span className="text-sm text-white/80">Unique visitors</span>
+                </div>
+
+                {/* Divider */}
+                <span className="w-px bg-blue-300/50"></span>
+
+                {/* Right */}
+                <div className="w-full flex items-center justify-evenly gap-2 p-2">
+                  <span className="font-bold text-xl">26</span>
+                  <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                </div>
               </div>
             </div>
 
@@ -144,9 +151,9 @@ function About() {
       </div>
 
       {/* Hr Line */}
-      <hr className="my-8 text-blue-500/50 w-full max-w-3xl" />
+      <hr className="my-8 text-blue-500/50 w-full max-w-5xl" />
 
-      <div className="space-y-10 max-w-3xl">
+      <div className="space-y-10 max-w-5xl">
 
         {/* FAQ */}
         <div className="space-y-4">
@@ -179,7 +186,7 @@ function About() {
       </div>
 
       {/* LeetCode profile Container */}
-      <div className="border border-blue-500 bg-linear-to-l from-blue-800 to-blue-950 p-5 rounded-xl mt-10 text-white w-full max-w-3xl">
+      <div className="border border-blue-500 bg-linear-to-l from-blue-800 to-blue-950 p-5 rounded-xl mt-10 text-white max-w-5xl">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
