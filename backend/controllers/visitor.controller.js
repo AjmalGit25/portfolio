@@ -39,6 +39,10 @@ export const setVisitor = async (req, res) => {
       region: locationData.region,
       city: locationData.city,
     };
+
+    const network = locationData.org;
+    const postal = locationData.postal;
+    const timezone = locationData.timezone;
   } catch (error) {
     console.error("Failed to get visitor location:", error);
   }
