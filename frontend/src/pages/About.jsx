@@ -6,6 +6,8 @@ import { AiFillInstagram } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
 import { useEffect, useState } from "react";
+import axios from "axios";
+import BACKEND_URL from "../../config/api.js";
 
 function About() {
   // Page starts from the top
@@ -14,10 +16,13 @@ function About() {
   }, []);
 
   const [leetcode, setLeetcode] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [leetcodeLoading, setLeetcodeLoading] = useState(true);
   const [selected, setSelected] = useState(false);
   const [closing, setClosing] = useState(false);
+  const [visitorLoading, setVisitorLoading] = useState(true);
+  const [visitorCount, setVisitorCount] = useState(1);
 
+  // Leetcode Solved questions fetch
   useEffect(() => {
     const fetchLeetcode = async () => {
       try {
@@ -30,11 +35,27 @@ function About() {
       } catch (error) {
         console.error(error);
       } finally {
-        setLoading(false);
+        setLeetcodeLoading(false);
       }
     }
 
     fetchLeetcode();
+  }, []);
+
+  // Fetch Visitors count
+  useEffect(() => {
+    const fetchVisitor = async () => {
+      try {
+        const response = await axios.get(`${BACKEND_URL}/api/v1/visitors`);
+        setVisitorCount(response.data.uniqueVisitors);
+      } catch (error) {
+        console.log("Fetch failed: ", error);
+      }finally{
+        setVisitorLoading(false);
+      }
+    }
+
+    fetchVisitor();
   }, []);
 
   // Prevent the background page's scrolling (during Modal open)
@@ -129,19 +150,25 @@ function About() {
               <div className="h-full flex text-white bg-linear-to-r from-blue-950 to-blue-700 ">
 
                 {/* Left */}
-                <div className="w-full flex items-center gap-2 p-2">
+                <div className="flex-2 flex items-center gap-2 p-2">
                   <div className="bg-white/10 p-1.5 w-fit rounded-full">
                     <FaEye className="text-blue-400" size={15} />
                   </div>
-                  <span className="text-sm text-white/80">Unique visitors</span>
+                  <span className="text-sm text-white/80 uppercase font-light tracking-wider">
+                    Portfolio visitors
+                  </span>
                 </div>
 
                 {/* Divider */}
                 <span className="w-px bg-blue-300/50"></span>
 
                 {/* Right */}
-                <div className="w-full flex items-center justify-evenly gap-2 p-2">
-                  <span className="font-bold text-xl">26</span>
+                <div className="flex-1 flex items-center justify-evenly gap-2 p-2">
+                  {visitorLoading ? (
+                    <div className="h-5 w-5 border-2 border-t-transparent border-blue-500 rounded-full animate-spin"></div>
+                  ) : (
+                    <span className="font-bold text-xl">{visitorCount}</span>
+                  )}
                   <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
                 </div>
               </div>
@@ -222,7 +249,7 @@ function About() {
             </div>
             <div className="flex flex-col justify-between">
               <div className="flex items-center text-white mb-1 h-8">
-                {loading ? (
+                {leetcodeLoading ? (
                   <div className="flex items-center gap-2">
                     <div className="h-3 w-3 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
                     <span className="text-xs font-normal">Loading...</span>
@@ -245,7 +272,7 @@ function About() {
             </div>
             <div className="flex flex-col justify-between">
               <div className="flex items-center text-white mb-1 h-8">
-                {loading ? (
+                {leetcodeLoading ? (
                   <div className="flex items-center gap-2">
                     <div className="h-3 w-3 border-2 border-green-500 border-t-transparent rounded-full animate-spin"></div>
                     <span className="text-xs font-normal">Loading...</span>
@@ -268,7 +295,7 @@ function About() {
             </div>
             <div className="flex flex-col justify-between">
               <div className="flex items-center text-white mb-1 h-8">
-                {loading ? (
+                {leetcodeLoading ? (
                   <div className="flex items-center gap-2 h-5">
                     <div className="h-3 w-3 border-2 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
                     <span className="text-xs font-normal">Loading...</span>
@@ -291,7 +318,7 @@ function About() {
             </div>
             <div className="flex flex-col justify-between">
               <div className="flex items-center text-white mb-1 h-8">
-                {loading ? (
+                {leetcodeLoading ? (
                   <div className="flex items-center gap-2">
                     <div className="h-3 w-3 border-2 border-red-500 border-t-transparent rounded-full animate-spin"></div>
                     <span className="text-xs font-normal">Loading...</span>
