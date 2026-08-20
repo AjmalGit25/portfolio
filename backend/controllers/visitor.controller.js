@@ -3,7 +3,6 @@ import { sendNewVisitorEmail } from "../services/email.service.js";
 import { UAParser } from "ua-parser-js";
 
 export const setVisitor = async (req, res) => {
-  console.log("🔥🔥🔥 SET VISITOR CONTROLLER HIT 🔥🔥🔥");
   // Generate the date
   const now = new Date();
 
@@ -24,9 +23,6 @@ export const setVisitor = async (req, res) => {
 
   const ipAddress = req.ip;
   let location = {};
-  console.log("req.ip:", req.ip);
-  console.log("req.ips:", req.ips);
-  console.log("X-Forwarded-For:", req.headers["x-forwarded-for"]);
 
   try {
     const response = await fetch(`https://ipinfo.io/${ipAddress}/json?token=${process.env.IPINFO_TOKEN}`);
@@ -39,7 +35,7 @@ export const setVisitor = async (req, res) => {
     console.log("Location API response:", locationData);
 
     location = {
-      country: locationData.country_name,
+      country: locationData.country,
       region: locationData.region,
       city: locationData.city,
     };
@@ -75,13 +71,8 @@ export const setVisitor = async (req, res) => {
     if (device) visitorData.device = device;
     if (deviceType) visitorData.deviceType = deviceType;
 
-    console.log("🔥 About to create visitor:", visitorData);
     await Visitor.create(visitorData);
-
-    console.log("🆕 NEW VISITOR CREATED — ABOUT TO SEND EMAIL");
-    console.log("📧 Calling sendNewVisitorEmail...");
     await sendNewVisitorEmail(formattedDate, location, device, os, browser);
-    console.log("📧 sendNewVisitorEmail FINISHED");
 
     return res.status(200).json({ message: "Visitor data recorded successfully!" });
   }

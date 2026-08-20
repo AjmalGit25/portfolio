@@ -36,11 +36,6 @@ dns.setDefaultResultOrder("ipv4first");     // prefer IPv4 addresses over IPv6 â
 //   }
 // });
 
-/**
- * Send notification for a new visitor.
- * Only sends when `isFirstVisit` is true.
- * Returns an object: { success: boolean, info?, error?, skipped? }
- */
 export const sendNewVisitorEmail = async (
   formattedDate,
   location = {},
