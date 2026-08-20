@@ -23,7 +23,8 @@ export const setVisitor = async (req, res) => {
 
   const ipAddress = req.ip;
   let location = {};
-
+  console.log("req.ip:", req.ip);
+  console.log("req.ips:", req.ips);
   console.log("X-Forwarded-For:", req.headers["x-forwarded-for"]);
 
   try {

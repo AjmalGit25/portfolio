@@ -15,6 +15,7 @@ app.use(cors({
   origin: FRONTEND_URL
 }));
 
+app.set("trust proxy", true);
 app.use(express.json());
 
 // Routes
