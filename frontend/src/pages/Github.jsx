@@ -52,7 +52,7 @@ function Github() {
       </p>
 
       {/* Mini Profile Banner (Image, Name, Github's Link) */}
-      <div className='bg-blue-950/20 shadow-sky-500/40 shadow-lg border border-blue-500/70 text-white p-4 md:p-5 rounded-xl mt-8 max-w-5xl fade-zoom'>
+      <div className='bg-blue-950/20 shadow-[0_0_12px_rgba(50,120,250,0.8)] border border-blue-500/70 text-white p-4 md:p-5 rounded-xl mt-8 max-w-5xl fade-zoom'>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-5">
           <div className="flex flex-col sm:flex-row sm:items-center gap-3">
             {/* Github Profile Picture */}
