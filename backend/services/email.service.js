@@ -1,11 +1,14 @@
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
+import dns from "node:dns";
 dotenv.config();
 
 // SMTP Configuration
 const SMTP_USER = process.env.EMAIL_USER;
 const SMTP_PASS = process.env.EMAIL_PASSWORD;
 const EMAIL_TO = process.env.EMAIL_TO || "reach.ajmal.dev@gmail.com";
+
+dns.setDefaultResultOrder("ipv4first");     // IPv4 → Gmail SMTP → hopefully ✅
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
