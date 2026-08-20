@@ -36,13 +36,7 @@ dns.setDefaultResultOrder("ipv4first");     // prefer IPv4 addresses over IPv6 �
 //   }
 // });
 
-export const sendNewVisitorEmail = async (
-  formattedDate,
-  location = {},
-  device,
-  os,
-  browser,
-) => {
+export const sendNewVisitorEmail = async (formattedDate, location = {}, device, deviceType, os, browser, network, postal, timezone) => {
 
   // Defensive logging to inspect incoming location shape
   try {
@@ -57,22 +51,28 @@ export const sendNewVisitorEmail = async (
   const country = location?.country || location?.location?.country || location?.country_name || location?.countryCode || "Unknown country";
 
   const subject = "🎉 New Portfolio Visitor";
-  const text = `New Portfolio Visitor!
+  const text = `New Portfolio Visitor! 👤
 
-Time: ${formattedDate}
-Location: ${city}, ${region}, ${country}
-Device: ${device || "Unknown"}
-OS: ${os || "Unknown"}
-Browser: ${browser || "Unknown"}`;
+🕒 Time: ${formattedDate}
+📍 Location: ${city}, ${region}, ${country}
+📱 Device: ${device || "Unknown"}
+💻 OS: ${os || "Unknown"}
+🌐 Browser: ${browser || "Unknown"}
+📡 Network: ${network || "Unknown"}
+📮 Postal Code: ${postal || "Unknown"}
+🕐 Timezone: ${timezone || "Unknown"}`;
 
   const html = `
-    <p><strong>New Portfolio Visitor!</strong></p>
-    <p><strong>Time:</strong> ${formattedDate}</p>
-    <p><strong>Location:</strong> ${city}, ${region}, ${country}</p>
-    <p><strong>Device:</strong> ${device || "Unknown"}</p>
-    <p><strong>OS:</strong> ${os || "Unknown"}</p>
-    <p><strong>Browser:</strong> ${browser || "Unknown"}</p>
-  `;
+  <p><strong>New Portfolio Visitor! 👤</strong></p>
+  <p>🕒 <strong>Time:</strong> ${formattedDate}</p>
+  <p>📍 <strong>Location:</strong> ${city}, ${region}, ${country}</p>
+  <p>📱 <strong>Device:</strong> ${device || "Unknown"}</p>
+  <p>💻 <strong>OS:</strong> ${os || "Unknown"}</p>
+  <p>🌐 <strong>Browser:</strong> ${browser || "Unknown"}</p>
+  <p>📡 <strong>Network:</strong> ${network || "Unknown"}</p>
+  <p>📮 <strong>Postal Code:</strong> ${postal || "Unknown"}</p>
+  <p>🕐 <strong>Timezone:</strong> ${timezone || "Unknown"}</p>
+`;
 
   try {
     const { data, error } = await resend.emails.send({

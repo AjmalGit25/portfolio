@@ -59,20 +59,23 @@ export const setVisitor = async (req, res) => {
   if (!visitor) {
     const visitorData = {
       visitorId,
-      browser,
-      os,
-      osVersion,
-      ipAddress,
-      location,
       firstVisit: now,
       lastVisit: now,
       visitCount: 1,
+      ipAddress,
+      location,
+      ...(browser && { browser }),
+      ...(os && { os }),
+      ...(osVersion && { osVersion }),
+      ...(device && { device }),
+      ...(deviceType && { deviceType }),
+      ...(network && { network }),
+      ...(postal && { postal }),
+      ...(timezone && { timezone })
     }
-    if (device) visitorData.device = device;
-    if (deviceType) visitorData.deviceType = deviceType;
 
     await Visitor.create(visitorData);
-    await sendNewVisitorEmail(formattedDate, location, device, os, browser);
+    await sendNewVisitorEmail(formattedDate, location, device, deviceType, os, browser, network, postal, timezone);
 
     return res.status(200).json({ message: "Visitor data recorded successfully!" });
   }

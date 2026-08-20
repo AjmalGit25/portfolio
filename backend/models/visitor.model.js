@@ -48,6 +48,15 @@ const visitorSchema = mongoose.Schema(
         type: String,
       }
     },
+    network:{
+      type: String,
+    },
+    postal: {
+      type: String,
+    },
+    timezone: {
+      type: String,
+    }
   }
 );
 
