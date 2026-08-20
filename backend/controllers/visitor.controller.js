@@ -3,6 +3,7 @@ import { sendNewVisitorEmail } from "../services/email.service.js";
 import { UAParser } from "ua-parser-js";
 
 export const setVisitor = async (req, res) => {
+  console.log("🔥🔥🔥 SET VISITOR CONTROLLER HIT 🔥🔥🔥");
   // Generate the date
   const now = new Date();
 
@@ -74,6 +75,7 @@ export const setVisitor = async (req, res) => {
     if (device) visitorData.device = device;
     if (deviceType) visitorData.deviceType = deviceType;
 
+    console.log("🔥 About to create visitor:", visitorData);
     await Visitor.create(visitorData);
     await sendNewVisitorEmail(formattedDate, location, device, os, browser);
 
