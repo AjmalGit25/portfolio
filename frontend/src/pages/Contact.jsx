@@ -8,7 +8,7 @@ import { RiSendPlaneFill } from "react-icons/ri";
 
 function Contact() {
   return (
-    <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6'>
+    <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6 overflow-x-hidden'>
 
       {/* Lead Heading */}
       <div className='inline-flex items-center gap-3 text-[7px] sm:text-[11px] uppercase tracking-[0.4em] text-white/60 mt-15 sm:mt-5'>
