@@ -23,6 +23,7 @@ export const setVisitor = async (req, res) => {
 
   const ipAddress = req.ip;
   let location = {};
+  let network, postal, timezone;
 
   try {
     const response = await fetch(`https://ipinfo.io/${ipAddress}/json?token=${process.env.IPINFO_TOKEN}`);
@@ -40,9 +41,9 @@ export const setVisitor = async (req, res) => {
       city: locationData.city,
     };
 
-    const network = locationData.org;
-    const postal = locationData.postal;
-    const timezone = locationData.timezone;
+    network = locationData.org;
+    postal = locationData.postal;
+    timezone = locationData.timezone;
   } catch (error) {
     console.error("Failed to get visitor location:", error);
   }
