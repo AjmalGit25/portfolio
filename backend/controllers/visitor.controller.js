@@ -29,7 +29,7 @@ export const setVisitor = async (req, res) => {
   console.log("X-Forwarded-For:", req.headers["x-forwarded-for"]);
 
   try {
-    const response = await fetch(`https://ipapi.co/${ipAddress}/json/`);
+    const response = await fetch(`https://ipinfo.io/${ipAddress}/json?token=${process.env.IPINFO_TOKEN}`);
     if (!response.ok) {
       throw new Error(`Location API failed: ${response.status}`);
     }
