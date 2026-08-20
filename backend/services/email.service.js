@@ -12,7 +12,7 @@ const EMAIL_TO = process.env.EMAIL_TO || "reach.ajmal.dev@gmail.com";
 
 dns.setDefaultResultOrder("ipv4first");     // prefer IPv4 addresses over IPv6 ✅
 
-// const transporter = resend.createTransport({
+// const transporter = nodemailer.createTransport({
 //   host: "smtp.gmail.com",
 //   port: 465,
 //   secure: true,
@@ -44,9 +44,17 @@ export const sendNewVisitorEmail = async (
   browser,
 ) => {
 
-  const city = location?.city || "Unknown city";
-  const region = location?.region || "Unknown region";
-  const country = location?.country || "Unknown country";
+  // Defensive logging to inspect incoming location shape
+  try {
+    console.log("sendNewVisitorEmail - incoming location:", JSON.stringify(location));
+  } catch (e) {
+    console.log("sendNewVisitorEmail - incoming location (non-serializable):", location);
+  }
+
+  // Support multiple possible shapes: { city, region, country } or { location: { city,... } }
+  const city = location?.city || location?.location?.city || location?.city_name || location?.cityName || "Unknown city";
+  const region = location?.region || location?.location?.region || location?.regionName || "Unknown region";
+  const country = location?.country || location?.location?.country || location?.country_name || location?.countryCode || "Unknown country";
 
   const subject = "🎉 New Portfolio Visitor";
   const text = `New Portfolio Visitor!
