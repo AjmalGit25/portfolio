@@ -66,9 +66,9 @@ function Home() {
 
         {/* Section 2: Image */}
         <section className='lg:self-start mt-10 flex-1 fade-up'>
-          <div className='flex items-center justify-center relative'>
+          <div className='flex items-center justify-center border border-blue-300 rounded-xl overflow-hidden shadow-2xl hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] duration-300 transition-shadow max-w-80 relative'>
             <img
-              className='border border-blue-300 rounded-xl overflow-hidden h-100 w-auto object-cover shadow-2xl hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] duration-300 transition-shadow'
+              className='w-full h-auto object-contain'
               src="/profiles/home_dp.jpeg" alt="Ajmal's Picture" />
 
             {/* Tag on Pic */}
@@ -92,7 +92,7 @@ function Home() {
 
       {/* Footer Text */}
       <Footer />
-      
+
     </div>
   );
 }
