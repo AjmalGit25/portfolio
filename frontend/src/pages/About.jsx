@@ -50,7 +50,7 @@ function About() {
         setVisitorCount(response.data.uniqueVisitors);
       } catch (error) {
         console.log("Fetch failed: ", error);
-      }finally{
+      } finally {
         setVisitorLoading(false);
       }
     }
@@ -96,17 +96,13 @@ function About() {
 
             {/* Paragraph container */}
             <div className="space-y-4 text-base sm:text-lg text-white/80">
+              <p>
+                Hi, I'm Ajmal Hussain — a Full Stack MERN Developer specializing in building modern, scalable, and user-friendly web applications using MongoDB, Express.js, React, Node.js.
+              </p>
 
-              <p>I am a Computer Science Engineering student with a strong interest in Full Stack Web Development and Software Engineering.</p>
+              <p>I focus on writing clean, maintainable code and following best development practices. I continuously strengthen my skills through hands-on projects, exploring modern technologies, and improving my understanding of core computer science concepts.</p>
 
-              <p>I have hands-on experience in building applications using the MERN stack (MongoDB, Express.js, React, Node.js), along with modern tools like Tailwind CSS.</p>
-
-              <p>Alongside development, I actively improve my problem-solving skills through Data Structures and Algorithms using C++, which helps me write efficient and optimized code.</p>
-
-              <p>I believe in consistency and continuous learning. I regularly build projects, explore new technologies, and deepen my understanding of core computer science concepts.</p>
-
-              <p>My <strong className="text-blue-300">goal</strong> is to become a skilled software developer, contribute to impactful projects, and grow within the tech industry.</p>
-
+              <p>My <strong className="text-blue-300">goal</strong> is to become a skilled software developer, contribute to impactful projects, and continuously grow as a professional in the tech industry.</p>
             </div>
           </div>
 

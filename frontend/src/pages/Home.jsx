@@ -29,18 +29,19 @@ function Home() {
             <span className='text-blue-500'>Web Applications</span>
           </h1>
 
-          <div className='text-base sm:text-lg text-white/80 mt-10 fade-right'>
+          <div className='text-base sm:text-lg text-white/80 mt-10 space-y-4 fade-right'>
             <p>
-              Hi, I'm Ajmal Hussain — a Full Stack <strong>MERN</strong> Developer, currently based in Ahmedabad, India.
+              I'm Ajmal Hussain — a Full Stack <strong>MERN</strong> Developer focused on building modern, scalable, and reliable complete web applications.
             </p>
 
             <p>
-              I specialize in building modern web applications using React, Node.js, MongoDB, and Tailwind CSS. I focus on creating clean, scalable, and user-friendly solutions while following best development practices.
+              I work across the full development stack, from crafting intuitive React interfaces to designing robust Node.js and MongoDB backends, with a strong focus on clean architecture, performance, and maintainability.
             </p>
 
             <p>
-              Alongside development, I actively strengthen my problem-solving skills through Data Structures and Algorithms using C++.
+              My work combines thoughtful design with robust backend architecture.
             </p>
+
           </div>
 
           {/* Auto-typing effect */}
@@ -59,7 +60,7 @@ function Home() {
 
           {/* Tech Stack */}
           <p className="mt-6 text-[11px] uppercase tracking-[0.3em] text-white/50 fade-down">
-            React • Tailwind CSS • Bootstrap • Node.js • Express • MongoDB • JavaScript • TypeScript • Problem Solving
+            React • Tailwind CSS • Node.js • Express • MongoDB • JavaScript • TypeScript • MySQL • Git & GitHub • SEO • Google Search Console • Problem Solving
           </p>
 
         </section>
@@ -90,10 +91,6 @@ function Home() {
           </div>
         </section>
       </div>
-
-      {/* Footer Text */}
-      <Footer />
-
     </div>
   );
 }
