@@ -179,9 +179,9 @@ function About() {
       </div>
 
       {/* Hr Line */}
-      <hr className="my-8 text-blue-500/50 w-full max-w-5xl" />
+      <hr className="my-8 text-blue-500/50 w-full max-w-4xl" />
 
-      <div className="space-y-10 max-w-5xl">
+      <div className="space-y-10 max-w-4xl">
 
         {/* FAQ */}
         <div className="space-y-4">
@@ -214,7 +214,7 @@ function About() {
       </div>
 
       {/* LeetCode profile Container */}
-      <div className="border border-blue-500 bg-linear-to-l from-blue-800 to-blue-950 p-5 rounded-xl mt-10 text-white max-w-5xl">
+      <div className="border border-blue-500 bg-linear-to-l from-blue-800 to-blue-950 p-5 rounded-xl mt-10 text-white max-w-4xl">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
