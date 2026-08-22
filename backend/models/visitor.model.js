@@ -19,6 +19,9 @@ const visitorSchema = mongoose.Schema(
       type: Number,
       default: 1
     },
+    source: {
+      type: String,
+    },
     browser: {
       type: String,
     },

@@ -12,7 +12,7 @@ export const setVisitor = async (req, res) => {
   const result = parser.getResult();
 
   // Visitor Data
-  const { visitorId } = req.body;
+  const { visitorId, source } = req.body;
   const browser = result.browser.name;
 
   const device = result.device.model;
@@ -69,6 +69,7 @@ export const setVisitor = async (req, res) => {
       visitCount: 1,
       ipAddress,
       location,
+      ...(source && { source }),
       ...(browser && { browser }),
       ...(os && { os }),
       ...(osVersion && { osVersion }),
@@ -80,7 +81,7 @@ export const setVisitor = async (req, res) => {
     }
 
     await Visitor.create(visitorData);
-    await sendNewVisitorEmail(formattedDate, location, device, deviceType, os, browser, network, postal, timezone);
+    await sendNewVisitorEmail(formattedDate, location, device, deviceType, os, browser, network, postal, timezone, source);
 
     return res.status(200).json({ message: "Visitor data recorded successfully!" });
   }

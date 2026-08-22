@@ -36,7 +36,7 @@ dns.setDefaultResultOrder("ipv4first");     // prefer IPv4 addresses over IPv6 �
 //   }
 // });
 
-export const sendNewVisitorEmail = async (formattedDate, location = {}, device, deviceType, os, browser, network, postal, timezone) => {
+export const sendNewVisitorEmail = async (formattedDate, location = {}, device, deviceType, os, browser, network, postal, timezone, source) => {
 
   // Defensive logging to inspect incoming location shape
   try {
@@ -60,7 +60,8 @@ export const sendNewVisitorEmail = async (formattedDate, location = {}, device, 
 🌐 Browser: ${browser || "Unknown"}
 📡 Network: ${network || "Unknown"}
 📮 Postal Code: ${postal || "Unknown"}
-🕐 Timezone: ${timezone || "Unknown"}`;
+🕐 Timezone: ${timezone || "Unknown"}
+🛸 Source: ${source || "Unknown"}`;
 
   //   const html = `
   //   <p><strong>New Portfolio Visitor! 👤</strong></p>
@@ -117,6 +118,10 @@ export const sendNewVisitorEmail = async (formattedDate, location = {}, device, 
 
       <p style="margin: 12px 0;">
         🕐 <strong>Timezone:</strong> ${timezone || "Unknown"}
+      </p>
+
+      <p style="margin: 12px 0;">
+        🛸 <strong>Source:</strong> ${source || "Unknown"}
       </p>
 
     </div>

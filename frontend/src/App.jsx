@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useSearchParams } from "react-router-dom";
 import Sidebar from "./pages/Sidebar";
 import { RiMenuUnfoldLine, RiMenuFoldLine } from "react-icons/ri";
 import axios from "axios";
@@ -7,6 +7,10 @@ import BACKEND_URL from "../config/api.js";
 
 function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchParams] = useSearchParams();
+
+  const source = searchParams.get("ref") || searchParams.get("utm_source")
+  console.log("Referral or UTM Source:", source);
 
   // Count Unique Visitors mechanism
   const generateVisitorId = () => {
@@ -25,7 +29,7 @@ function App() {
       localStorage.setItem("visitorId", visitorId);
     }
 
-    axios.post(`${BACKEND_URL}/api/v1/visitors`, { visitorId });
+    axios.post(`${BACKEND_URL}/api/v1/visitors`, { visitorId, source });
   }, []);
 
   return (
