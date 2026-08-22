@@ -1,6 +1,6 @@
 import { SiLeetcode, SiUnstop, SiW3Schools, SiHackerrank, SiDiscord, SiWhatsapp, SiGeeksforgeeks } from "react-icons/si";
 import { BiRun, BiPlay } from "react-icons/bi";
-import { FaGithub, FaTwitter, FaLaptopCode, FaMouse, FaGlobe, FaEye } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLaptopCode, FaMouse, FaGlobe, FaEye, FaReddit } from "react-icons/fa";
 import { FaLinkedin, FaCode } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -419,6 +419,12 @@ function About() {
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <SiWhatsapp className="group-hover:text-blue-500 duration-300 transition-colors" />
               <span className="group-hover:text-blue-500 duration-300 transition-colors">WhatsApp</span>
+            </a>
+
+            <a href="https://www.reddit.com/user/ajmal62/" target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
+              <FaReddit className="group-hover:text-blue-500 duration-300 transition-colors" />
+              <span className="group-hover:text-blue-500 duration-300 transition-colors">Reddit</span>
             </a>
 
           </div>
