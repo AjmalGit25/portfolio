@@ -100,7 +100,9 @@ function About() {
                 Hi, I'm Ajmal Hussain — a Full Stack MERN Developer specializing in building modern, scalable, and user-friendly web applications using MongoDB, Express.js, React, Node.js.
               </p>
 
-              <p>I focus on writing clean, maintainable code and following best development practices. I continuously strengthen my skills through hands-on projects, exploring modern technologies, and improving my understanding of core computer science concepts.</p>
+              <p>I focus on writing clean, maintainable code and following best development practices.</p>
+
+              <p>I build full-stack web applications with a focus on clean architecture, maintainable code, performance, and intuitive user experiences.</p>
 
               <p>My <strong className="text-blue-300">goal</strong> is to become a skilled software developer, contribute to impactful projects, and continuously grow as a professional in the tech industry.</p>
             </div>

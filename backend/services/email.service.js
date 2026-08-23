@@ -63,18 +63,6 @@ export const sendNewVisitorEmail = async (formattedDate, location = {}, device, 
 🕐 Timezone: ${timezone || "Unknown"}
 🛸 Source: ${source || "Unknown"}`;
 
-  //   const html = `
-  //   <p><strong>New Portfolio Visitor! 👤</strong></p>
-  //   <p>🕒 <strong>Time:</strong> ${formattedDate}</p>
-  //   <p>📍 <strong>Location:</strong> ${city}, ${region}, ${country}</p>
-  //   <p>📱 <strong>Device:</strong> ${device || "Unknown"}</p>
-  //   <p>💻 <strong>OS:</strong> ${os || "Unknown"}</p>
-  //   <p>🌐 <strong>Browser:</strong> ${browser || "Unknown"}</p>
-  //   <p>📡 <strong>Network:</strong> ${network || "Unknown"}</p>
-  //   <p>📮 <strong>Postal Code:</strong> ${postal || "Unknown"}</p>
-  //   <p>🕐 <strong>Timezone:</strong> ${timezone || "Unknown"}</p>
-  // `;
-
   const html = `
   <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 24px; background: #f5f7fa;">
 
