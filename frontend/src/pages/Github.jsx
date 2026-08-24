@@ -1,8 +1,8 @@
 import { GrLocation } from "react-icons/gr";
 import { LuPhone, LuGlobe } from "react-icons/lu";
-import { FiCalendar, FiExternalLink } from "react-icons/fi";
-import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
-import { TbUsers } from "react-icons/tb";
+import { FiCalendar, FiExternalLink, FiUsers, FiUserPlus } from "react-icons/fi";
+import { FaGithub, FaTwitter, FaInstagram, FaRegStar } from "react-icons/fa";
+import { GoRepo } from "react-icons/go";
 import Footer from "../components/Footer.jsx";
 import githubRepo from "../data/githubRepo.js";
 
@@ -32,6 +32,41 @@ function Github() {
 
     fetchUser();
   }, []);
+
+  const gitHubInfo = [
+    {
+      name: "Followers",
+      icon: FiUsers,
+      iconColor: "text-blue-500",
+      count: 53,
+      bgColor: "bg-blue-500/10",
+      borderColor: "border-blue-500/50"
+    },
+    {
+      name: "Following",
+      icon: FiUserPlus,
+      iconColor: "text-purple-400",
+      count: 56,
+      bgColor: "bg-purple-500/10",
+      borderColor: "border-purple-500/50"
+    },
+    {
+      name: "Public Repos",
+      icon: GoRepo,
+      iconColor: "text-teal-500",
+      count: 16,
+      bgColor: "bg-teal-500/10",
+      borderColor: "border-teal-500/50"
+    },
+    {
+      name: "Stars",
+      icon: FaRegStar,
+      iconColor: "text-amber-500",
+      count: 4,
+      bgColor: "bg-amber-500/10",
+      borderColor: "border-amber-500/50"
+    }
+  ];
 
 
   return (
@@ -78,7 +113,7 @@ function Github() {
                   <span>Joined March 29, 2025</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <TbUsers />
+                  <FiUsers />
                   <div className="flex items-center gap-1">
                     {loading ? <><div className="h-3 w-3 rounded-full border border-white border-t-transparent animate-spin"></div></> : <strong className="text-white/80">{user.followers}</strong>}
                     <span>Followers</span>
@@ -96,6 +131,21 @@ function Github() {
             <span className="font-semibold">Visit Profile</span>
           </a>
         </div>
+      </div>
+
+      {/* Basic Information */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-5xl mt-10">
+        {gitHubInfo.map((item) => (
+          <div
+            key={item.name}
+            className={`flex flex-col gap-1 p-4 border ${item.borderColor} ${item.bgColor} rounded-xl`}>
+            <div className="flex items-center gap-1 text-sm">
+              <item.icon size={15} className={`${item.iconColor}`} />
+              <span className="text-white/80">{item.name}</span>
+            </div>
+            <span className="text-white font-bold text-2xl">{item.count}</span>
+          </div>
+        ))}
       </div>
 
       {/* GitHub Status Heading (Text) */}
