@@ -25,29 +25,6 @@ export const setVisitor = async (req, res) => {
   let location = {};
   let network, postal, timezone;
 
-  try {
-    const response = await fetch(`https://ipinfo.io/${ipAddress}/json?token=${process.env.IPINFO_TOKEN}`);
-    if (!response.ok) {
-      throw new Error(`Location API failed: ${response.status}`);
-    }
-    const locationData = await response.json();
-
-    console.log("Location API status:", response.status);
-    console.log("Location API response:", locationData);
-
-    location = {
-      country: locationData.country,
-      region: locationData.region,
-      city: locationData.city,
-    };
-
-    network = locationData.org;
-    postal = locationData.postal;
-    timezone = locationData.timezone;
-  } catch (error) {
-    console.error("Failed to get visitor location:", error);
-  }
-
   // Format date for Email
   const formattedDate = now.toLocaleString("en-IN", {
     day: "2-digit",
@@ -62,6 +39,30 @@ export const setVisitor = async (req, res) => {
   const visitor = await Visitor.findOne({ visitorId });
 
   if (!visitor) {
+    // Fetch data from IP address
+    try {
+      const response = await fetch(`https://ipinfo.io/${ipAddress}/json?token=${process.env.IPINFO_TOKEN}`);
+      if (!response.ok) {
+        throw new Error(`Location API failed: ${response.status}`);
+      }
+      const locationData = await response.json();
+
+      console.log("Location API status:", response.status);
+      console.log("Location API response:", locationData);
+
+      location = {
+        country: locationData.country,
+        region: locationData.region,
+        city: locationData.city,
+      };
+
+      network = locationData.org;
+      postal = locationData.postal;
+      timezone = locationData.timezone;
+    } catch (error) {
+      console.error("Failed to get visitor location:", error);
+    }
+
     const visitorData = {
       visitorId,
       firstVisit: now,
