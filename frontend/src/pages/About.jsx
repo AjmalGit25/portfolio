@@ -179,9 +179,8 @@ function About() {
       {/* Hr Line */}
       <hr className="my-8 text-blue-500/50 w-full max-w-4xl" />
 
+      {/* FAQ */}
       <div className="space-y-10 max-w-4xl">
-
-        {/* FAQ */}
         <div className="space-y-4">
           <h2 className="text-white text-2xl font-bold flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-blue-500">
@@ -227,7 +226,7 @@ function About() {
 
           <div className="flex-2">
             <h1 className="text-4xl font-bold">LeetCode <span className="text-amber-500">Profile</span></h1>
-            <p className="text-white/80">AjmalAlgo • Rank: <span className="text-amber-500">876,709</span></p>
+            <p className="text-white/80">AjmalAlgo • Rank: <span className="text-amber-500">796,171</span></p>
           </div>
 
           <div onClick={() => setSelected(true)} className="inline-flex items-center gap-2 border border-blue-500 bg-blue-500/30 p-1.5 px-3 text-amber-500 font-medium rounded-full w-fit cursor-pointer">
