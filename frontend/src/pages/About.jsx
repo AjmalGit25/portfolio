@@ -3,6 +3,7 @@ import { BiRun, BiPlay } from "react-icons/bi";
 import { FaGithub, FaTwitter, FaLaptopCode, FaMouse, FaGlobe, FaEye, FaReddit } from "react-icons/fa";
 import { FaLinkedin, FaCode } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
+import { RxCross1 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
 import { useEffect, useState } from "react";
@@ -144,21 +145,21 @@ function About() {
             />
 
             {/* Tag on Pic - Visitors Count */}
-            <div className="absolute bottom-0 rounded-b-xl w-full">
-              <div className="h-full flex text-white bg-linear-to-r from-blue-950 to-blue-700 ">
+            <div className="absolute bottom-1 w-full px-2">
+              <div className="flex items-center rounded-full border border-blue-300/50 border-t-blue-100/80 bg-linear-to-b from-blue-700 via-blue-900 to-blue-950 px-2 py-0.5 text-white shadow-[inset_0_1px_2px_rgba(255,255,255,0.35),inset_0_-3px_4px_rgba(0,0,0,0.5),0_4px_8px_rgba(0,0,0,0.4)]">
 
                 {/* Left */}
-                <div className="flex-2 flex items-center gap-2 p-2">
-                  <div className="bg-white/10 p-1.5 w-fit rounded-full">
-                    <FaEye className="text-blue-400" size={15} />
+                <div className="flex-3 flex items-center gap-1 p-2">
+                  <div className="p-1.5 w-fit rounded-full">
+                    <FaEye className="text-blue-500" size={15} />
                   </div>
-                  <span className="text-sm text-white/80 uppercase font-light tracking-wider">
+                  <span className="font-semibold tracking-wide text-shadow-[0_1px_2px_rgba(0,0,0,0.8)] text-blue-100">
                     Portfolio visitors
                   </span>
                 </div>
 
-                {/* Divider */}
-                <span className="w-px bg-blue-300/50"></span>
+                {/* Vertical Divider */}
+                <span className="w-px h-8 bg-linear-to-b from-blue-200/80 via-blue-500 to-blue-700 opacity-60"></span>
 
                 {/* Right */}
                 <div className="flex-1 flex items-center justify-evenly gap-2 p-2">
@@ -435,7 +436,7 @@ function About() {
       {/* Footer Text */}
       <Footer />
 
-      {/* Leetcode Badge Modal */}
+      {/* Leetcode Badge Modal =================== */}
       {selected && (
         <div
           onAnimationEnd={() => {
@@ -448,14 +449,17 @@ function About() {
           className={`fixed inset-0 z-20 flex items-center justify-center bg-black/50 backdrop-blur-sm h-screen ${closing ? "fade-zoomOut" : "fade-zoomIn"}`}
         >
           <img src="./Leet_200.gif" alt="Badge_200" className="w-auto h-50 md:h-80" onClick={(e) => e.stopPropagation()} />
-          <span className="absolute bottom-40 text-amber-300 text-xs sm:text-base">
-            SOLVING PROBLEMS 200+ DAYS IN 2026
-          </span>
           <h3 className="absolute top-40 font-medium text-xl">
             <span className="text-orange-500">LeetCode</span>
             <span className="text-green-500 animate-ping"> • </span>
             <span className="text-blue-500">AjmalAlgo</span>
           </h3>
+          <span className="absolute bottom-40 text-amber-300 text-xs sm:text-base">
+            SOLVING PROBLEMS 200+ DAYS IN 2026
+          </span>
+          <span className="absolute bottom-20 text-blue-300 text-xs sm:text-base border p-1 rounded-full hover:text-blue-500 transition-colors duration-200 cursor-pointer">
+            <RxCross1 size={15} />
+          </span>
         </div>
       )}
 
