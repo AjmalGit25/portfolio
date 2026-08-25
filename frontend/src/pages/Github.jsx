@@ -38,7 +38,7 @@ function Github() {
       name: "Followers",
       icon: FiUsers,
       iconColor: "text-blue-500",
-      count: 53,
+      count: 54,
       bgColor: "bg-blue-500/10",
       borderColor: "border-blue-500/50"
     },
@@ -46,7 +46,7 @@ function Github() {
       name: "Following",
       icon: FiUserPlus,
       iconColor: "text-purple-400",
-      count: 56,
+      count: 54,
       bgColor: "bg-purple-500/10",
       borderColor: "border-purple-500/50"
     },
