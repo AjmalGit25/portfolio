@@ -1,8 +1,9 @@
-import { SiReact, SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiTypescript, SiCplusplus, SiGit, SiGithub, SiVercel, SiRender, SiPostman, SiFigma, SiPython, SiPhp, SiDocker, SiRedux, SiMysql, SiNextdotjs, SiRedis, SiFirebase } from "react-icons/si";
+import { SiReact, SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiTypescript, SiCplusplus, SiGit, SiGithub, SiVercel, SiRender, SiPostman, SiFigma, SiPython, SiPhp, SiDocker, SiRedux, SiMysql, SiNextdotjs, SiRedis, SiFirebase, SiPrisma } from "react-icons/si";
 import { FaNodeJs, FaLinux, FaJava, FaAws } from "react-icons/fa";
 import { GrOracle } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
-import { BsBarChartFill, BsDiagram3Fill } from "react-icons/bs";
+import { BsBarChartFill, BsDiagram3Fill, BsOpenai, BsClaude, } from "react-icons/bs";
+import { BiLogoPostgresql } from "react-icons/bi";
 import Footer from "../components/Footer.jsx";
 import { useEffect } from "react";
 
@@ -309,13 +310,13 @@ function Skills() {
 
         <section className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4 card-up">
           {/* Docker */}
-          <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
+          {/* <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
             <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(97, 218, 251, 0.125) 0%, transparent 70%)" }}></div>
             <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center">
               <SiDocker className="h-10 w-10 text-cyan-300 group-hover:scale-110 duration-200" />
               <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">Docker</span>
             </div>
-          </div>
+          </div> */}
 
           {/* System Design */}
           {/* <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
@@ -323,15 +324,6 @@ function Skills() {
             <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center">
               <BsDiagram3Fill className="h-10 w-10 text-green-400 group-hover:scale-110 duration-200" />
               <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">System Design</span>
-            </div>
-          </div> */}
-
-          {/* Redux */}
-          {/* <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
-            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(255, 122, 255, 0.125) 0%, transparent 70%)" }}></div>
-            <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center">
-              <SiRedux className="h-10 w-10 text-violet-500 group-hover:scale-110 duration-200" />
-              <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">Redux</span>
             </div>
           </div> */}
 
@@ -343,6 +335,52 @@ function Skills() {
               <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">Next.js</span>
             </div>
           </div>
+
+          {/* OpenAI */}
+          <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(220, 222, 221, 0.125) 0%, transparent 70%)" }}></div>
+            <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center">
+              <BsOpenai className="h-10 w-10 text-white group-hover:scale-110 duration-200" />
+              <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">OpenAI</span>
+            </div>
+          </div>
+
+          {/* Claude */}
+          <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(250, 100, 100, 0.225) 0%, transparent 70%)" }}></div>
+            <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center">
+              <BsClaude className="h-10 w-10 text-amber-600 group-hover:scale-110 duration-200" />
+              <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">Claude</span>
+            </div>
+          </div>
+
+          {/* PostgreSQL */}
+          <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(80, 60, 250, 0.525) 0%, transparent 70%)" }}></div>
+            <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center">
+              <BiLogoPostgresql className="h-10 w-10 text-blue-500 group-hover:scale-110 duration-200" />
+              <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">PostgreSQL</span>
+            </div>
+          </div>
+
+          {/* Prisma */}
+          <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(250, 120, 240, 0.125) 0%, transparent 70%)" }}></div>
+            <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center">
+              <SiPrisma className="h-10 w-10 text-purple-500 group-hover:scale-110 duration-200" />
+              <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">Prisma</span>
+            </div>
+          </div>
+
+          {/* Redux */}
+          {/* <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
+            <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(255, 122, 255, 0.125) 0%, transparent 70%)" }}></div>
+            <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center">
+              <SiRedux className="h-10 w-10 text-violet-500 group-hover:scale-110 duration-200" />
+              <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">Redux</span>
+            </div>
+          </div> */}
+
 
           {/* Redis */}
           {/* <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
