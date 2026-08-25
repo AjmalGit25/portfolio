@@ -87,7 +87,7 @@ function Github() {
       </p>
 
       {/* Mini Profile Banner (Image, Name, Github's Link) */}
-      <div className='bg-blue-950/20 shadow-[0_0_12px_rgba(50,120,250,0.8)] border border-blue-500/70 text-white p-4 md:p-5 rounded-xl mt-8 max-w-5xl fade-zoom'>
+      <div className='bg-blue-950/20 shadow-[0_0_12px_rgba(50,120,250,0.8)] border border-blue-500/70 text-white p-4 md:p-5 rounded-xl mt-8 max-w-5xl fade-zoomIn'>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-5">
           <div className="flex flex-col sm:flex-row sm:items-center gap-3">
             {/* Github Profile Picture */}
@@ -134,7 +134,7 @@ function Github() {
       </div>
 
       {/* Basic Information */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-5xl mt-10">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-5xl mt-10 nav-slide-up">
         {gitHubInfo.map((item) => (
           <div
             key={item.name}
