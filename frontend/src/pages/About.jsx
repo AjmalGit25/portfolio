@@ -219,7 +219,7 @@ function About() {
 
           <div className="relative">
             <div className="border border-blue-500 rounded-full overflow-hidden">
-              <img src="/profiles/leet_dp.png" alt="leet's pic"
+              <img src="/profiles/leet_dp.jpeg" alt="leet's pic" draggable={false} onContextMenu={(e) => e.preventDefault()}
                 className="h-18 w-18" />
             </div>
             < SiLeetcode className="text-2xl sm:text-3xl text-amber-500 absolute -bottom-1  sm:-bottom-2 right-0 border-4 border-blue-950 bg-blue-950 rounded-full" />
