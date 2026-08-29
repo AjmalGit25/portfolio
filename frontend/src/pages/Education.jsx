@@ -38,14 +38,15 @@ function Education() {
             <div className="flex items-start justify-between gap-3">
               {/* left */}
               <div>
-                <h3 className="text-sm md:text-2xl text-white font-bold flex items-center gap-1.5">
+                <h3 className="text-lg md:text-2xl text-white font-bold flex items-center gap-1.5">
                   <FaUniversity />
-                  <span>Rai University</span></h3>
+                  <span>Rai University</span>
+                </h3>
                 <div className="text-[0.7em] md:text-sm text-white/50 flex items-center gap-1.5">
                   <FiCalendar />
                   <span>2023 - 2026</span>
                 </div>
-                <p className="mt-1 text-white/70 italic text-sm">Bachelor of Science in Information Technology (B.Sc IT)</p>
+                <p className="mt-1 text-white italic text-sm font-medium">Bachelor of Science in Information Technology (B.Sc IT)</p>
               </div>
 
               {/* right */}
@@ -56,13 +57,13 @@ function Education() {
             <div className="text-sm text-white/80 mt-4 space-y-4">
               <p>Pursuing advanced studies in Computer Science with specialized focus on Full Stack MERN Development. </p>
 
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2.5">
-                  <SiTicktick className="text-green-500 shrink-0 mt-1" />
+              <ul className="space-y-2 grid grid-cols-1 sm:grid-cols-2">
+                <li className="flex items-center gap-2.5">
+                  <span className="shrink-0 h-1.5 w-1.5 bg-blue-500 rounded-full ml-2"></span>
                   <span>Specializing in MERN Stack technologies and applications</span>
                 </li>
-                <li className="flex items-start gap-2.5">
-                  <SiTicktick className="text-green-500 shrink-0 mt-1" />
+                <li className="flex items-center gap-2.5">
+                  <span className="shrink-0 h-1.5 w-1.5 bg-blue-500 rounded-full ml-2"></span>
                   <span>Engaging in practical projects and research work</span>
                 </li>
               </ul>
@@ -85,7 +86,7 @@ function Education() {
             <div className="flex items-start justify-between gap-3">
               {/* left */}
               <div>
-                <h3 className="text-sm md:text-2xl text-white font-bold flex items-center gap-1.5">
+                <h3 className="text-lg md:text-2xl text-white font-bold flex items-center gap-1.5">
                   <FaUniversity />
                   <span>Kisan College</span>
                 </h3>
@@ -93,7 +94,7 @@ function Education() {
                   <FiCalendar />
                   <span>2015 - 2017</span>
                 </div>
-                <p className="mt-1 text-white/70 italic text-sm">Higher Secondary Education (12th Standard)</p>
+                <p className="mt-1 text-white italic text-sm font-medium">Higher Secondary Education (12th Standard)</p>
               </div>
 
               {/* right - Full */}
@@ -104,13 +105,13 @@ function Education() {
             <div className="text-sm text-white/80 mt-4 space-y-4">
               <p>Completed Higher Secondary education with a focus on Science stream, gaining fundamental knowledge in Mathematics and Logical problem-solving which supports my programming journey. </p>
 
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2.5">
-                  <SiTicktick className="text-green-500 shrink-0 mt-1" />
+              <ul className="space-y-2 grid grid-cols-1 sm:grid-cols-2">
+                <li className="flex items-center gap-2.5">
+                  <span className="shrink-0 h-1.5 w-1.5 bg-blue-500 rounded-full ml-2"></span>
                   <span>Developed strong analytical and problem-solving skills</span>
                 </li>
-                <li className="flex items-start gap-2.5">
-                  <SiTicktick className="text-green-500 shrink-0 mt-1" />
+                <li className="flex items-center gap-2.5">
+                  <span className="shrink-0 h-1.5 w-1.5 bg-blue-500 rounded-full ml-2"></span>
                   <span>Participated in science exhibitions and computer learnings</span>
                 </li>
               </ul>
@@ -133,14 +134,14 @@ function Education() {
             <div className="flex items-start justify-between gap-3">
               {/* left */}
               <div>
-                <h3 className="text-sm md:text-2xl text-white font-bold flex items-center gap-1.5">
+                <h3 className="text-lg md:text-2xl text-white font-bold flex items-center gap-1.5">
                   <FaUniversity />
                   <span>Shri Gandhi High School</span></h3>
                 <div className="text-[0.7em] md:text-sm text-white/50 flex items-center gap-1.5">
                   <FiCalendar />
                   <span>2014 - 2015</span>
                 </div>
-                <p className="mt-1 text-white/70 italic text-sm">Matriculation (10th Standard)</p>
+                <p className="mt-1 text-white italic text-sm font-medium">Matriculation (10th Standard)</p>
               </div>
 
               {/* right */}
@@ -151,16 +152,15 @@ function Education() {
             <div className="text-sm text-white/80 mt-4 space-y-4">
               <p>Successfully completed my Matric (10th) education, where I developed a strong academic base and interest in analytical thinking and technology. </p>
 
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2.5">
-                  <SiTicktick className="text-green-500 shrink-0 mt-1" />
-                  <span>Developed strong <strong>discipline, ethics, and positive behavior</strong></span>
+              <ul className="space-y-2 grid grid-cols-1 sm:grid-cols-2">
+                <li className="flex items-center gap-2.5">
+                  <span className="shrink-0 h-1.5 w-1.5 bg-blue-500 rounded-full ml-2"></span>
+                  <span>Developed strong <b>discipline, ethics, and positive behavior</b></span>
                 </li>
-                <li className="flex items-start gap-2.5">
-                  <SiTicktick className="text-green-500 shrink-0 mt-1" />
-                  <span>Built essential <strong>analytical thinking and problem-solving skills</strong></span>
+                <li className="flex items-center gap-2.5">
+                  <span className="shrink-0 h-1.5 w-1.5 bg-blue-500 rounded-full ml-2"></span>
+                  <span>Built essential <b>analytical thinking and problem-solving skills</b></span>
                 </li>
-
               </ul>
             </div>
           </div>
