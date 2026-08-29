@@ -151,7 +151,7 @@ function About() {
                 {/* Left */}
                 <div className="flex-3 flex items-center gap-2 pl-4 bg-linear-to-r from-blue-950 to-blue-700 h-full">
                   <FaEye className="text-blue-500" />
-                  <span className="font-mono tracking-wide text-shadow-[0_1px_2px_rgba(0,0,0,0.8)] text-blue-100">
+                  <span className="font-mono text-xs sm:text-base tracking-wide text-shadow-[0_1px_2px_rgba(0,0,0,0.8)] text-blue-100">
                     Portfolio visitors
                   </span>
                 </div>
