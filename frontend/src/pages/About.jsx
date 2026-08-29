@@ -21,7 +21,7 @@ function About() {
   const [selected, setSelected] = useState(false);
   const [closing, setClosing] = useState(false);
   const [visitorLoading, setVisitorLoading] = useState(true);
-  const [visitorCount, setVisitorCount] = useState(1);
+  const [visitorCount, setVisitorCount] = useState(10);
 
   // Leetcode Solved questions fetch
   useEffect(() => {
@@ -137,42 +137,39 @@ function About() {
 
         {/* Section 2: Image */}
         <section className="xl:self-start xl:mt-10 mb-5 flex-1 fade-up">
-          <div className='flex items-center justify-center border border-blue-300 rounded-xl overflow-hidden shadow-2xl hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] duration-300 transition-shadow max-w-80 relative'>
+          <div className='flex items-center justify-center bg-linear-to-tl from-blue-500 via-blue-950 to-blue-700 border border-blue-300 rounded-xl overflow-hidden shadow-2xl hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] duration-300 transition-shadow aspect-square relative'>
             <img
               draggable={false} onContextMenu={(e) => e.preventDefault()}
-              className='w-full h-auto object-contain bg-blue-700'
+              className='w-full h-auto object-contain'
               src="/profiles/about_dp.png" alt="Ajmal's Picture"
             />
 
             {/* Tag on Pic - Visitors Count */}
             <div className="absolute bottom-1 w-full px-2">
-              <div className="flex items-center rounded-full border border-blue-300/50 border-t-blue-100/80 bg-linear-to-b from-blue-700 via-blue-900 to-blue-950 px-2 py-0.5 text-white shadow-[inset_0_1px_2px_rgba(255,255,255,0.35),inset_0_-3px_4px_rgba(0,0,0,0.5),0_4px_8px_rgba(0,0,0,0.4)]">
+              <div className="flex items-center rounded-full h-12 border border-blue-300 overflow-hidden">
 
                 {/* Left */}
-                <div className="flex-3 flex items-center gap-1 p-2">
-                  <div className="p-1.5 w-fit rounded-full">
-                    <FaEye className="text-blue-500" size={15} />
-                  </div>
-                  <span className="font-semibold tracking-wide text-shadow-[0_1px_2px_rgba(0,0,0,0.8)] text-blue-100">
+                <div className="flex-3 flex items-center gap-2 pl-4 bg-linear-to-r from-blue-950 to-blue-700 h-full">
+                  <FaEye className="text-blue-500" />
+                  <span className="font-mono tracking-wide text-shadow-[0_1px_2px_rgba(0,0,0,0.8)] text-blue-100">
                     Portfolio visitors
                   </span>
                 </div>
 
-                {/* Vertical Divider */}
-                <span className="w-px h-8 bg-linear-to-b from-blue-200/80 via-blue-500 to-blue-700 opacity-60"></span>
-
                 {/* Right */}
-                <div className="flex-1 flex items-center justify-evenly gap-2 p-2">
+                <div className="flex-2 flex items-center justify-evenly bg-blue-950 h-full">
                   {visitorLoading ? (
                     <div className="h-5 w-5 border-2 border-t-transparent border-blue-500 rounded-full animate-spin"></div>
                   ) : (
-                    <span className="font-bold text-xl">{visitorCount}</span>
+                    <span className="font-mono text-xl text-white">{visitorCount}</span>
                   )}
-                  <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                  <div className="relative flex items-center">
+                    <span className="absolute h-2 w-2 rounded-full bg-blue-500"></span>
+                    <span className="absolute h-2 w-2 rounded-full bg-blue-500 animate-ping"></span>
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
         </section>
       </div>
