@@ -141,10 +141,11 @@ function Contact() {
           </div>
         </section>
 
-        {/* Section 2: Contact Form container */}
+        {/* Section 2 */}
         <section className='w-full fade-right'>
-          <div className="relative overflow-hidden bg-blue-800/20 border border-blue-500/40 rounded-xl p-5 hover:border-blue-500/80 transition-colors duration-200">
 
+          {/* Form Container */} 
+          <div className="relative overflow-hidden bg-blue-800/20 border border-blue-500/40 rounded-xl p-5 hover:border-blue-500/80 shadow-[0_0_5px_rgba(10,10,70,0.5)] transition-colors duration-200">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">
                 <span className="text-white">Let's </span>
