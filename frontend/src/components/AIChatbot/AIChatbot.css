@@ -1,0 +1,17 @@
+/* The animation code */
+@keyframes shadowPulse {
+  0% {
+    box-shadow: 0 0 10px rgb(0, 130, 255);
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgb(0, 195, 255);
+  }
+  100% {
+    box-shadow: 0 0 10px rgb(0, 130, 255);
+  }
+}
+
+.ai-chatbot-button {
+  animation: shadowPulse 2s infinite ease;
+}

@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Outlet, useSearchParams } from "react-router-dom";
 import Sidebar from "./pages/Sidebar";
-import { RiMenuUnfoldLine, RiMenuFoldLine } from "react-icons/ri";
+import { RiMenuUnfoldLine, RiMenuFoldLine, RiCloseLargeFill } from "react-icons/ri";
 import axios from "axios";
 import BACKEND_URL from "../config/api.js";
+import AIChatbot from "./components/AIChatbot/AIChatbot.jsx";
 
 function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -33,7 +34,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-linear-to-l from-blue-800 to-blue-950">
+    <div className="min-h-screen bg-linear-to-l from-blue-800 to-blue-950 relative">
       <div className="flex">
 
         {/* Menu Toggle Button for Mobile devices */}
@@ -58,6 +59,9 @@ function App() {
           <Outlet />
         </div>
       </div>
+
+      {/* AIChatbot */}
+      <AIChatbot />
     </div>
   )
 }
