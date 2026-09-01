@@ -7,6 +7,13 @@ import { FiLinkedin, FiDownload } from "react-icons/fi";
 import { RiSendPlaneFill } from "react-icons/ri";
 
 function Contact() {
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.download = "Ajmal_Resume.pdf";
+    link.click();
+  };
+
   return (
     <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6 overflow-x-hidden'>
 
@@ -131,20 +138,20 @@ function Contact() {
             </div>
 
             {/* Download Resume */}
-            <a href="/ResumeAjmal.pdf" download target="_blank"
-              className="w-full sm:w-fit text-white border border-blue-300/50 rounded-full py-1 px-4 shadow-[0_0_5px_rgba(0,0,0,.8)] bg-blue-500 hover:border-blue-300 hover:text-black hover:bg-blue-300 active:scale-95 transition-all duration-300">
+            <button onClick={downloadResume}
+              className="w-full sm:w-fit bg-blue-300 py-1 px-4 rounded-full hover:bg-blue-400 cursor-pointer transition-colors duration-200">
               <div className="flex items-center justify-center gap-2">
                 <FiDownload />
                 <span>Download Resume</span>
               </div>
-            </a>
+            </button>
           </div>
         </section>
 
         {/* Section 2 */}
         <section className='w-full fade-right'>
 
-          {/* Form Container */} 
+          {/* Form Container */}
           <div className="relative overflow-hidden bg-blue-800/20 border border-blue-500/40 rounded-xl p-5 hover:border-blue-500/80 shadow-[0_0_5px_rgba(10,10,70,0.5)] transition-colors duration-200">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">
