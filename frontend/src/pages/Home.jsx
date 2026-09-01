@@ -50,7 +50,7 @@ function Home() {
           {/* Hire & Projects*/}
           <div className="inline-flex text-[.7em] md:text-sm items-center gap-5 text-center uppercase tracking-[.3em] mt-5 fade-down">
             <Link to="/contact">
-              <span className="text bg-blue-300 py-2 px-4 rounded-full hover:bg-blue-400 transition-colors duration-200">Hire Me &rarr;</span>
+              <span className="bg-blue-300 py-2 px-4 rounded-full hover:bg-blue-400 transition-colors duration-200">Hire Me &rarr;</span>
             </Link>
 
             <Link to="/projects">
