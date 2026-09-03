@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import "./AIChatbot.css";
 import { RiMenuUnfoldLine, RiMenuFoldLine, RiCloseLargeFill } from "react-icons/ri";
+import ReactMarkdown from "react-markdown";
 
 export default function AIChatbot() {
   const [botOpen, setBotOpen] = useState(false);
