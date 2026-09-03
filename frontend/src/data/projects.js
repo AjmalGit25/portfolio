@@ -193,114 +193,114 @@ const projects = [
     technicalArchitecture:
       "Built with the MERN stack using React and Vite for the frontend, Express.js and Node.js for the backend, and MongoDB for persistent data storage. JWT-based authentication is implemented using LocalStorage, while Tailwind CSS provides a responsive user interface. Stripe handles secure payment processing, with the frontend deployed on Vercel and the backend hosted on Render."
   },
-  {
-    id: 4,
-    title: "SmartDoc",
+  // {
+  //   id: 4,
+  //   title: "SmartDoc",
 
-    description:
-      "SmartDoc is a full-stack MERN healthcare appointment management system designed to streamline doctor-patient interactions. It enables patients to book appointments efficiently while providing doctors with intelligent scheduling and queue management to reduce waiting times and improve healthcare operations.",
+  //   description:
+  //     "SmartDoc is a full-stack MERN healthcare appointment management system designed to streamline doctor-patient interactions. It enables patients to book appointments efficiently while providing doctors with intelligent scheduling and queue management to reduce waiting times and improve healthcare operations.",
 
-    images: [
-      smartdoc1,
-      smartdoc2,
-      smartdoc3,
-      smartdoc4,
-      smartdoc5,
-      smartdoc6,
-      smartdoc7,
-      smartdoc8
-    ],
+  //   images: [
+  //     smartdoc1,
+  //     smartdoc2,
+  //     smartdoc3,
+  //     smartdoc4,
+  //     smartdoc5,
+  //     smartdoc6,
+  //     smartdoc7,
+  //     smartdoc8
+  //   ],
 
-    tags: [
-      "React",
-      "Vite",
-      "Tailwind CSS",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT Authentication",
-      "REST API",
-      "Axios"
-    ],
+  //   tags: [
+  //     "React",
+  //     "Vite",
+  //     "Tailwind CSS",
+  //     "Node.js",
+  //     "Express.js",
+  //     "MongoDB",
+  //     "JWT Authentication",
+  //     "REST API",
+  //     "Axios"
+  //   ],
 
-    liveUrl: "#",
-    githubUrl: "https://github.com/AjmalGit25/SmartDoc.git",
+  //   liveUrl: "#",
+  //   githubUrl: "https://github.com/AjmalGit25/SmartDoc.git",
 
-    highlights: [
-      "Intelligent appointment scheduling",
-      "Doctor-patient queue management",
-      "Built during Craftathon Hackathon",
-      "Complete MERN stack architecture"
-    ],
+  //   highlights: [
+  //     "Intelligent appointment scheduling",
+  //     "Doctor-patient queue management",
+  //     "Built during Craftathon Hackathon",
+  //     "Complete MERN stack architecture"
+  //   ],
 
-    date: "2026",
-    type: "Full-Stack MERN Application",
-    status: "Hackathon Project",
+  //   date: "2026",
+  //   type: "Full-Stack MERN Application",
+  //   status: "Hackathon Project",
 
-    features: [
-      "Patient registration and authentication",
-      "Doctor authentication and dashboard",
-      "Online appointment booking",
-      "Smart queue management system",
-      "Appointment scheduling and tracking",
-      "Doctor availability management",
-      "Responsive UI with Tailwind CSS",
-      "RESTful API integration with Axios"
-    ],
+  //   features: [
+  //     "Patient registration and authentication",
+  //     "Doctor authentication and dashboard",
+  //     "Online appointment booking",
+  //     "Smart queue management system",
+  //     "Appointment scheduling and tracking",
+  //     "Doctor availability management",
+  //     "Responsive UI with Tailwind CSS",
+  //     "RESTful API integration with Axios"
+  //   ],
 
-    challengesAndSolutions:
-      "Designing an efficient appointment workflow while minimizing patient waiting time was the primary challenge. I structured the application around separate doctor and patient experiences, implemented appointment scheduling and queue management logic, and built reusable React components to keep the interface clean and responsive. Developing both the frontend and backend during a hackathon strengthened my understanding of rapid full-stack development, RESTful API integration, and scalable application architecture.",
+  //   challengesAndSolutions:
+  //     "Designing an efficient appointment workflow while minimizing patient waiting time was the primary challenge. I structured the application around separate doctor and patient experiences, implemented appointment scheduling and queue management logic, and built reusable React components to keep the interface clean and responsive. Developing both the frontend and backend during a hackathon strengthened my understanding of rapid full-stack development, RESTful API integration, and scalable application architecture.",
 
-    technicalArchitecture:
-      "Built using the MERN stack with React and Vite for the frontend, Express.js and Node.js for the backend, and MongoDB for persistent data storage. The application follows a RESTful API architecture for managing authentication, appointments, doctors, and patients. Tailwind CSS provides a responsive, utility-first interface, while Axios handles communication between the frontend and backend."
-  },
-  {
-    id: 5,
-    title: "Smart Parking Solution",
+  //   technicalArchitecture:
+  //     "Built using the MERN stack with React and Vite for the frontend, Express.js and Node.js for the backend, and MongoDB for persistent data storage. The application follows a RESTful API architecture for managing authentication, appointments, doctors, and patients. Tailwind CSS provides a responsive, utility-first interface, while Axios handles communication between the frontend and backend."
+  // },
+  // {
+  //   id: 5,
+  //   title: "Smart Parking Solution",
 
-    description:
-      "A full-stack MERN application for hassle-free, smart vehicle parking management. Users can browse real-time parking slot availability, book slots, check out with auto-calculated fees, and manage their bookings — while admins get a full dashboard with revenue stats and booking oversight.",
+  //   description:
+  //     "A full-stack MERN application for hassle-free, smart vehicle parking management. Users can browse real-time parking slot availability, book slots, check out with auto-calculated fees, and manage their bookings — while admins get a full dashboard with revenue stats and booking oversight.",
 
-    images: [smartpark1, smartpark2, smartpark3, smartpark4],
+  //   images: [smartpark1, smartpark2, smartpark3, smartpark4],
 
-    tags: [
-      "React",
-      "Vite",
-      "Tailwind CSS",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT Authentication",
-      "Axios"
-    ],
+  //   tags: [
+  //     "React",
+  //     "Vite",
+  //     "Tailwind CSS",
+  //     "Node.js",
+  //     "Express.js",
+  //     "MongoDB",
+  //     "JWT Authentication",
+  //     "Axios"
+  //   ],
 
-    liveUrl: "#",
-    githubUrl: "https://github.com/AjmalGit25/smart-parking-solution.git",
+  //   liveUrl: "#",
+  //   githubUrl: "https://github.com/AjmalGit25/smart-parking-solution.git",
 
-    highlights: [
-      "Dashboard to populate 20 slots across 2 floors",
-      "Visual floor-by-floor parking map",
-      "VibeCriminals Hackathon project"
-    ],
+  //   highlights: [
+  //     "Dashboard to populate 20 slots across 2 floors",
+  //     "Visual floor-by-floor parking map",
+  //     "VibeCriminals Hackathon project"
+  //   ],
 
-    date: "2026",
-    type: "Full-Stack Application",
-    status: "Hackathon",
+  //   date: "2026",
+  //   type: "Full-Stack Application",
+  //   status: "Hackathon",
 
-    features: [
-      "Visual floor-by-floor parking map with live slot status (available / occupied / reserved)",
-      "One-click booking with vehicle number registration",
-      "Automatic hourly fee calculation on checkout ($50/hour, minimum 1 hour)",
-      "Role-based access: regular users manage their own bookings; admins oversee everything",
-      "Secure JWT authentication with bcrypt password hashing"
-    ],
+  //   features: [
+  //     "Visual floor-by-floor parking map with live slot status (available / occupied / reserved)",
+  //     "One-click booking with vehicle number registration",
+  //     "Automatic hourly fee calculation on checkout ($50/hour, minimum 1 hour)",
+  //     "Role-based access: regular users manage their own bookings; admins oversee everything",
+  //     "Secure JWT authentication with bcrypt password hashing"
+  //   ],
 
-    challengesAndSolutions:
-      "Urban parking is chaotic. Drivers waste time circling lots looking for free spaces, there's no visibility into availability, and manual management is error-prone. This system solves that with a digital, real-time slot management platform accessible from any browser.",
+  //   challengesAndSolutions:
+  //     "Urban parking is chaotic. Drivers waste time circling lots looking for free spaces, there's no visibility into availability, and manual management is error-prone. This system solves that with a digital, real-time slot management platform accessible from any browser.",
 
-    technicalArchitecture:
-      "Built with the MERN stack using React and Vite for the frontend, Express.js and Node.js for the backend, and MongoDB for persistent data storage. Secure JWT authentication with bcrypt password hashing, JWTs expire after 7 days, while Tailwind CSS provides a responsive user interface."
-  },
+  //   technicalArchitecture:
+  //     "Built with the MERN stack using React and Vite for the frontend, Express.js and Node.js for the backend, and MongoDB for persistent data storage. Secure JWT authentication with bcrypt password hashing, JWTs expire after 7 days, while Tailwind CSS provides a responsive user interface."
+  // },
 ];
 
 export default projects;
