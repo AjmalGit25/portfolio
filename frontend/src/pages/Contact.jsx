@@ -9,7 +9,7 @@ import { RiSendPlaneFill } from "react-icons/ri";
 function Contact() {
   const downloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/resume.pdf";
+    link.href = "/ResumeAjmal.pdf";
     link.download = "Ajmal_Resume.pdf";
     link.click();
   };
