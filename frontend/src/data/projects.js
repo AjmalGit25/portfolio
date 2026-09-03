@@ -37,11 +37,19 @@ const projects = [
       "Vite",
       "Tailwind CSS",
       "JavaScript",
-      "Responsive Design",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "OpenAI",
+      "React Markdown",
+      "Axios",
+      "GitHub API",
+      "ipinfo",
+      "nodemailer",
+      "Resend",
       "Vercel",
       "SEO",
       "Google Search Console",
-      "GitHub API"
     ],
 
     liveUrl: "https://ajmal-hussain.vercel.app",
@@ -60,13 +68,10 @@ const projects = [
 
     features: [
       "Fully responsive design across all devices",
+      "AI-powered chatbot integration with OpenAI",
       "Built-in blue and emerald themes switching",
-      "Interactive project showcase with image gallery",
-      "GitHub API integration for live repository statistics",
-      "Automatic LeetCode problem count updates",
       "Certificate showcase with verification link",
       "SEO optimization with sitemap and metadata",
-      "Smooth animations and modern UI components"
     ],
 
     challengesAndSolutions:
