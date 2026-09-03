@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDatabase from "./config/db.js";
 import visitorRouter from "./routes/visitor.routes.js";
+import aiRouter from "./routes/aiRoutes.js";
 import cors from "cors";
 
 dotenv.config();
@@ -20,6 +21,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/v1/visitors", visitorRouter);
+app.use("/api/v1/ai", aiRouter);
 
 app.get('/', (req, res) => {
   res.status(200).send('Portfolio backend server is running 🚀');
