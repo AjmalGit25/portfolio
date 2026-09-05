@@ -1,6 +1,6 @@
 import openai from "../config/openAI.js";
-import { generateResponse } from "../config/localAI.js";
 import { instructions } from "../data/portfolioContext.js";
+import { generateResponse } from "../config/localAI.js";
 
 export const userMessage = async (req, res) => {
   const { message } = req.body;
