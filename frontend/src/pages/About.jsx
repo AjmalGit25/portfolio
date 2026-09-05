@@ -34,7 +34,7 @@ function About() {
         const data = await response.json();
         setLeetcode(data);
       } catch (error) {
-        console.error(error);
+        console.log(error);
       } finally {
         setLeetcodeLoading(false);
       }

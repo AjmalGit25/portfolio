@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import "./AIChatbot.css";
 import { RiMenuUnfoldLine, RiMenuFoldLine, RiCloseLargeFill } from "react-icons/ri";
 import ReactMarkdown from "react-markdown";
+import BACKEND_URL from "../../../config/api.js";
 import axios from "axios";
 
 export default function AIChatbot() {
@@ -43,9 +44,12 @@ export default function AIChatbot() {
     // Append the AI response message
     let aiResponse;
 
+    console.log("Backend url: ", BACKEND_URL);
+
     try {
-      const response = await axios.post("http://localhost:8000/api/v1/ai/chat", { message: input });
+      const response = await axios.post(`${BACKEND_URL}/api/v1/ai/chat`, { message: input });
       aiResponse = response.data.response;
+      console.log(aiResponse);
     } catch (error) {
       console.log("Something went wrong during AI Response!", error);
     }
@@ -80,7 +84,7 @@ export default function AIChatbot() {
             </button>
             <span>👋 Hey! Ajmal's AI Chat assistant coming soon...</span>
             {/* Triangle arrow pointing down */}
-            <div class="absolute -bottom-[6px] right-6 w-3 h-3 bg-blue-900 border-r border-b border-blue-500/50 rotate-45"></div>
+            <div className="absolute -bottom-[6px] right-6 w-3 h-3 bg-blue-900 border-r border-b border-blue-500/50 rotate-45"></div>
           </div>
         </div>
       )}
@@ -136,7 +140,7 @@ export default function AIChatbot() {
                 </div>
               ) : (
                 // User message
-                <div className='flex justify-end'>
+                <div key={message.id} className='flex justify-end'>
                   <div className='p-2 rounded-t-xl rounded-bl-xl w-60 bg-blue-900 border border-blue-300/50 shadow-[0_3px_5px_rgba(0,0,0,.5)]'>
                     <span>{message.content}</span>
                   </div>

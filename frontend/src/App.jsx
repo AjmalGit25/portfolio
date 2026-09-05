@@ -29,7 +29,7 @@ function App() {
       visitorId = generateVisitorId();
       localStorage.setItem("visitorId", visitorId);
     }
-
+    console.log("Backend url: ", BACKEND_URL);
     axios.post(`${BACKEND_URL}/api/v1/visitors`, { visitorId, source });
   }, []);
 
