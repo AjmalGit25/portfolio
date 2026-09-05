@@ -4,6 +4,7 @@ import { RiMenuUnfoldLine, RiMenuFoldLine, RiCloseLargeFill } from "react-icons/
 import ReactMarkdown from "react-markdown";
 import BACKEND_URL from "../../../config/api.js";
 import axios from "axios";
+import Waiting from "../../components/Waiting.jsx"
 
 export default function AIChatbot() {
   const [tooltipVisible, setTooltipVisible] = useState(false);
@@ -11,6 +12,7 @@ export default function AIChatbot() {
   const [chatOpen, setChatOpen] = useState(false);
   const [input, setInput] = useState("");
   const messagesEndRef = useRef(null);
+  const [chatLoading, setChatLoading] = useState(false);
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -44,12 +46,10 @@ export default function AIChatbot() {
     // Append the AI response message
     let aiResponse;
 
-    console.log("Backend url: ", BACKEND_URL);
-
     try {
+      setChatLoading(true);
       const response = await axios.post(`${BACKEND_URL}/api/v1/ai/chat`, { message: input });
       aiResponse = response.data.response;
-      console.log(aiResponse);
     } catch (error) {
       console.log("Something went wrong during AI Response!", error);
     }
@@ -62,6 +62,7 @@ export default function AIChatbot() {
         content: aiResponse
       };
       setMessages(prev => [...prev, aiMessage]);
+       setChatLoading(false);
     }, 1000);
   }
 
@@ -120,14 +121,26 @@ export default function AIChatbot() {
             <img src="./myFavicon.png" alt="AjmalAI"
               className='h-10 w-10 object-contain border border-blue-300/50 bg-blue-500/50 rounded-full ' />
 
-            <div className='flex flex-col'>
+            <div className='flex items-center justify-between gap-2 w-full'>
+              <div className='flex flex-col gap-0.5'>
               <span className="text-white font-medium text-sm">Ajmal's AI Assistant</span>
-              <span className="text-white/50 text-[11px]">Ask me anything about Ajmal</span>
+              {/* Chat typing */}
+              {chatLoading ? (
+                <span className='text-green-500 text-[11px]'>Typing...</span>
+              ) : (
+                <span className="text-white/50 text-[11px]">Ask me anything about Ajmal</span>
+              )}
+            </div>
+
+            <div className='flex items-center gap-1 border border-green-500/30 bg-green-500/20 px-2 py-0.5 rounded-lg'>
+              <span className='h-1 w-1 shrink-0 rounded-full bg-green-500'></span>
+              <span className='text-green-500 text-[8px] uppercase tracking-wide font-medium'>Online</span>
+            </div>
             </div>
           </div>
 
           {/* middle : Chat Messages */}
-          <div className="text-white text-sm bg-blue-950 max-h-100 overflow-y-auto p-3 space-y-4">
+          <div className="text-white text-sm bg-blue-950 min-h-60 max-h-100 overflow-y-auto p-3 space-y-4">
             {messages.map((message) => (
               // AI message
               message.role === "assistant" ? (
