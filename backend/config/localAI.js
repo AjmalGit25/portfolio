@@ -38,9 +38,36 @@ export const generateResponse = (input) => {
   }
 
   if (
+    query.includes("internship") ||
+    query.includes("intern")
+  ) {
+    return `Ajmal has completed internships in full-stack development at **Codec Technologies**. He's recenetly doing 1-month internship at Zidio Development and currently working on a **Multi-tenant SaaS based Customer feedback AI intelligence system**`;
+  }
+
+  if (
     query.includes("github")
   ) {
     return `You can explore Ajmal's development work through his GitHub projects.`;
+  }
+
+  if (
+    query.includes("farheen") || query.includes("love") || query.includes("relationship") || query.includes("romance")
+  ) {
+    return `Ajmal loves Farheen very much 💖. Ajmal Hussain will always cherish their bond. No day or night goes by without thinking of her.`;
+  }
+
+  if (
+    query.includes("zoya") || query.includes("success") || query.includes("career")
+  ) {
+    return `Wherever Ajmal Hussain is today, it is because of Zoya. She has been a guiding light in his life, helping him navigate challenges and achieve success.`;
+  }
+
+  if (
+    query.includes("pussy") || query.includes("fuck") || query.includes("fucking") || query.includes("fucker") ||
+    query.includes("bitch") || query.includes("asshole") || query.includes("bastard") || query.includes("dick") ||
+    query.includes("shit") || query.includes("slut") || query.includes("whore") || query.includes("prostitute")
+  ) {
+    return `Please keep the conversation respectful. I'm here to answer questions about Ajmal, his skills, projects, experience, and certifications.`;
   }
 
   return `I'm Ajmal's portfolio assistant. You can ask me about his skills, projects, education, certifications, internships, or experience.`;

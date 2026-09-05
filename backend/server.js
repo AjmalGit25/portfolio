@@ -11,7 +11,7 @@ const port = process.env.PORT;
 const FRONTEND_URL = process.env.FRONTEND_URL;
 
 const app = express();
-console.log("Allowed frontend:", FRONTEND_URL);
+
 app.use(cors({
   origin: FRONTEND_URL
 }));
