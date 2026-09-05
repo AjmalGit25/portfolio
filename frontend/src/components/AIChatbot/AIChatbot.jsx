@@ -1,12 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import "./AIChatbot.css";
 import { RiMenuUnfoldLine, RiMenuFoldLine, RiCloseLargeFill } from "react-icons/ri";
 import ReactMarkdown from "react-markdown";
+import axios from "axios";
 
 export default function AIChatbot() {
-  const [botOpen, setBotOpen] = useState(false);
-  const [buttonVisible, setButtonVisible] = useState(false);
   const [tooltipVisible, setTooltipVisible] = useState(false);
+  const [buttonVisible, setButtonVisible] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
+  const [input, setInput] = useState("");
+  const messagesEndRef = useRef(null);
+  const [messages, setMessages] = useState([
+    {
+      id: 1,
+      role: "assistant",
+      content:
+        "Hey there! I'm **Ajmal**'s AI assistant. Ask me anything about his skills, projects, or experience!",
+    },
+  ]);
 
   useEffect(() => {
     const t1 = setTimeout(() => setButtonVisible(true), 500);
@@ -14,26 +25,54 @@ export default function AIChatbot() {
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, []);
 
-  useEffect(() => {
-    const handleAssistant = () => {
-      if (botOpen) {
-        console.log("Chatbot Opened");
-      }
-      else {
-        console.log("Chatbot Closed");
-      }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!input.trim()) return;
+
+    // Append the user's message
+    const userMessage = {
+      id: Date.now(),
+      role: "user",
+      content: input
     };
 
-    handleAssistant();
-  }, [botOpen]);
+    setMessages(prev => [...prev, userMessage]);
+    setInput("");
+
+
+    // Append the AI response message
+    let aiResponse;
+
+    try {
+      const response = await axios.post("http://localhost:8000/api/v1/ai/chat", { message: input });
+      aiResponse = response.data.response;
+    } catch (error) {
+      console.log("Something went wrong during AI Response!", error);
+    }
+
+    // Simulate AI response after a delay
+    setTimeout(() => {
+      const aiMessage = {
+        id: Date.now() + 1,
+        role: "assistant",
+        content: aiResponse
+      };
+      setMessages(prev => [...prev, aiMessage]);
+    }, 1000);
+  }
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }, [messages]);
 
   return (
     <div>
       {/* Floating Tooltip */}
-      {tooltipVisible && !botOpen && buttonVisible && (
+      {tooltipVisible && !chatOpen && (
         <div className="fixed bottom-20 right-4 ai-chatbot-tooltip">
-          <div className="relative bg-blue-900 text-white text-[10px] sm:text-xs px-2 py-2 pr-5 rounded-md shadow-md border border-blue-500/50"
-          >
+          <div className="relative bg-blue-900 text-white text-[10px] sm:text-xs px-2 py-2 pr-5 rounded-md shadow-md border border-blue-500/50">
             <button
               onClick={() => setTooltipVisible(false)}
               className="absolute top-0 right-0  rounded-full w-4 h-4 flex items-center justify-center text-[10px] text-white/80 hover:text-white cursor-pointer"
@@ -47,27 +86,98 @@ export default function AIChatbot() {
       )}
 
       {/* Chatbot Button */}
-      <div
-        onClick={() => setBotOpen(prev => !prev)}
-        className={`fixed bottom-4 right-4 bg-blue-800 rounded-full p-1 cursor-pointer hover:scale-110 transition-all duration-200 delay-100 ${buttonVisible ? 'ai-chatbot-button' : 'translate-x-24 opacity-0'} ${botOpen ? 'w-11 h-11' : 'w-13 h-13'}`}
-      >
+      {buttonVisible && (
+        <div
+          onClick={() => setChatOpen(prev => !prev)}
+          className={`fixed bottom-4 right-4 bg-blue-800 ${chatOpen ? 'w-11 h-11' : 'w-13 h-13'} rounded-full p-1 cursor-pointer hover:scale-105 transition-all duration-300 delay-200 ai-chatbot-button`}
+        >
+          {chatOpen ? (
+            <div className='w-full h-full flex items-center justify-center text-white'>
+              <RiCloseLargeFill size={15} />
+            </div>
+          ) : (
+            <div className='w-full h-full flex items-center justify-center border border-blue-400 rounded-full overflow-hidden'>
+              <img
+                src="/myFavicon.png" alt="Favicon"
+                className='w-full h-auto object-cover'
+              />
+            </div>
+          )}
+        </div>
+      )
+      }
 
-        {botOpen ? (
-          <div
-            className={`w-full h-full flex items-center justify-center text-white`}>
-            <RiCloseLargeFill size={15} />
+      {/* Chatbot Window */}
+      {chatOpen && (
+        <div
+          className={`fixed bottom-20 right-4 w-xs sm:w-md border border-blue-300 rounded-xl overflow-hidden ${chatOpen ? 'fade-zoomIn' : 'fade-zoomOut'}`}>
+          {/* upper */}
+          <div className='flex items-center gap-2 bg-linear-to-t from-blue-900 to-blue-950 border-b border-blue-300 p-3'>
+            <img src="./myFavicon.png" alt="AjmalAI"
+              className='h-10 w-10 object-contain border border-blue-300/50 bg-blue-500/50 rounded-full ' />
+
+            <div className='flex flex-col'>
+              <span className="text-white font-medium text-sm">Ajmal's AI Assistant</span>
+              <span className="text-white/50 text-[11px]">Ask me anything about Ajmal</span>
+            </div>
           </div>
-        ) : (
-          <div className='w-full h-full flex items-center justify-center border border-blue-400 rounded-full overflow-hidden'>
-            <img
-              src="/myFavicon.png" alt="Favicon"
-              className='w-full h-auto object-cover '
-            />
+
+          {/* middle : Chat Messages */}
+          <div className="text-white text-sm bg-blue-950 max-h-100 overflow-y-auto p-3 space-y-4">
+            {messages.map((message) => (
+              // AI message
+              message.role === "assistant" ? (
+                <div key={message.id} className="flex justify-start">
+                  <div className='p-2 rounded-t-xl rounded-br-xl w-60 bg-blue-950 border border-blue-300/50 shadow-[0_3px_5px_rgba(0,0,0,.5)]'>
+                    <ReactMarkdown>
+                      {message.content}
+                    </ReactMarkdown>
+                  </div>
+                </div>
+              ) : (
+                // User message
+                <div className='flex justify-end'>
+                  <div className='p-2 rounded-t-xl rounded-bl-xl w-60 bg-blue-900 border border-blue-300/50 shadow-[0_3px_5px_rgba(0,0,0,.5)]'>
+                    <span>{message.content}</span>
+                  </div>
+                </div>
+              )
+            ))}
+
+            {/* Invisible element at the bottom */}
+            <div ref={messagesEndRef} />
           </div>
-        )}
-      </div>
+
+          {/* bottom */}
+          <div className='bg-linear-to-b from-blue-900 to-blue-950 border-t border-blue-300 p-3'>
+            <form
+              onSubmit={handleSubmit}
+              className='flex items-center justify-between gap-2'
+            >
+              <input type="text" placeholder='Ask about Ajmal...'
+                onChange={(e) => setInput(e.target.value)}
+                value={input}
+                className='
+                flex-1 min-w-0
+                bg-blue-950/60
+                text-white
+                placeholder:text-white/40
+                border border-blue-300/40
+                rounded-lg
+                px-3 py-2
+                outline-none
+                transition-all duration-200
+                focus:border-blue-400'
+              />
+              <button
+                type="submit"
+                className='shrink-0 bg-blue-500 text-white font-medium rounded-lg cursor-pointer px-4 py-2'>
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </div >
   )
 }
-
-// Need help exploring my work?
