@@ -63,7 +63,7 @@ export default function AIChatbot() {
       };
       setMessages(prev => [...prev, aiMessage]);
        setChatLoading(false);
-    }, 1000);
+    }, 500);
   }
 
   useEffect(() => {
