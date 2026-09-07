@@ -345,7 +345,7 @@ function Contact() {
               </div>
 
               {/* Back to Portfolio */}
-              <div className="w-full px-5 py-3">
+              <div className="w-full px-5 py-3 pb-5">
                 <button
                   onClick={() => setEmailSent(null)}
                   className="font-medium text-white bg-linear-to-b from-blue-800 to-blue-950 px-5 py-2 w-full rounded-xl cursor-pointer hover:from-blue-950 hover:to-blue-800 transition-colors duration-200"
