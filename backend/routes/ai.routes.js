@@ -1,5 +1,5 @@
 import express from "express";
-import { userMessage } from "../controllers/aiController.js";
+import { userMessage } from "../controllers/ai.controller.js";
 
 const router = express.Router();
 

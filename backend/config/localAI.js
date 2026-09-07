@@ -45,10 +45,17 @@ export const generateResponse = (input) => {
   }
 
   if (
-    query.includes("github")
+    query.includes("git") || query.includes("github")
   ) {
     return `You can explore Ajmal's development work through his GitHub projects.`;
   }
+
+  if (
+    query.includes("strength") || query.includes("strengths")
+  ) {
+    return `Mahreen's biggest strengths? She can work across the entire stack, writes clean and maintainable code, and picks up new tech super fast. She's genuinely passionate about solving real problems!`;
+  }
+
 
   if (
     query.includes("farheen") || query.includes("love") || query.includes("relationship") || query.includes("romance")

@@ -13,6 +13,8 @@ export default function AIChatbot() {
   const [input, setInput] = useState("");
   const messagesEndRef = useRef(null);
   const [chatLoading, setChatLoading] = useState(false);
+
+  // AI Chat message field
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -131,8 +133,9 @@ export default function AIChatbot() {
                 <span className="text-white/50 text-[11px]">Ask me anything about Ajmal</span>
               )}
             </div>
-
-            <div className='flex items-center gap-1 border border-green-500/30 bg-green-500/20 px-2 py-0.5 rounded-lg'>
+            
+            {/* Online Status */}
+            <div className='flex items-center gap-1 border border-green-500/30 bg-green-500/20 px-2 py-0.5 rounded-full'>
               <span className='h-1 w-1 shrink-0 rounded-full bg-green-500'></span>
               <span className='text-green-500 text-[8px] uppercase tracking-wide font-medium'>Online</span>
             </div>
@@ -145,7 +148,7 @@ export default function AIChatbot() {
               // AI message
               message.role === "assistant" ? (
                 <div key={message.id} className="flex justify-start">
-                  <div className='p-2 rounded-t-xl rounded-br-xl w-60 bg-blue-950 border border-blue-300/50 shadow-[0_3px_5px_rgba(0,0,0,.5)]'>
+                  <div className='p-2 rounded-t-lg rounded-br-lg w-60 bg-blue-950 border border-blue-300/50 shadow-[0_3px_5px_rgba(0,0,0,.5)]'>
                     <ReactMarkdown>
                       {message.content}
                     </ReactMarkdown>
@@ -154,7 +157,7 @@ export default function AIChatbot() {
               ) : (
                 // User message
                 <div key={message.id} className='flex justify-end'>
-                  <div className='p-2 rounded-t-xl rounded-bl-xl w-60 bg-blue-900 border border-blue-300/50 shadow-[0_3px_5px_rgba(0,0,0,.5)]'>
+                  <div className='p-2 rounded-t-lg rounded-bl-lg w-60 bg-blue-900 border border-blue-300/50 shadow-[0_3px_5px_rgba(0,0,0,.5)]'>
                     <span>{message.content}</span>
                   </div>
                 </div>
@@ -188,7 +191,7 @@ export default function AIChatbot() {
               />
               <button
                 type="submit"
-                className='shrink-0 bg-blue-500 text-white font-medium rounded-lg cursor-pointer px-4 py-2'>
+                className='shrink-0 bg-blue-500 hover:bg-blue-500/90 text-white font-medium rounded-lg cursor-pointer px-4 py-2'>
                 Send
               </button>
             </form>
