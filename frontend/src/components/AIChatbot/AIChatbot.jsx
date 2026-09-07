@@ -14,6 +14,21 @@ export default function AIChatbot() {
   const messagesEndRef = useRef(null);
   const [chatLoading, setChatLoading] = useState(false);
 
+
+  // Extra state for handling modal closing animation
+  const [closing, setClosing] = useState(false);
+
+  // To handle the closing of the modal with animation
+  const handleClose = () => {
+    setClosing(true);
+
+    setTimeout(() => {
+      setChatOpen(false);
+      setClosing(false);
+    }, 300); // same duration as animation
+  };
+
+
   // AI Chat message field
   const [messages, setMessages] = useState([
     {
@@ -64,7 +79,7 @@ export default function AIChatbot() {
         content: aiResponse
       };
       setMessages(prev => [...prev, aiMessage]);
-       setChatLoading(false);
+      setChatLoading(false);
     }, 500);
   }
 
@@ -95,11 +110,13 @@ export default function AIChatbot() {
       {/* Chatbot Button */}
       {buttonVisible && (
         <div
-          onClick={() => setChatOpen(prev => !prev)}
+          onClick={() => setChatOpen(true)}
           className={`fixed bottom-4 right-4 bg-blue-800 ${chatOpen ? 'w-11 h-11' : 'w-13 h-13'} rounded-full p-1 cursor-pointer hover:scale-105 transition-all duration-300 delay-200 ai-chatbot-button`}
         >
           {chatOpen ? (
-            <div className='w-full h-full flex items-center justify-center text-white'>
+            <div
+              onClick={handleClose}
+              className='w-full h-full flex items-center justify-center text-white'>
               <RiCloseLargeFill size={15} />
             </div>
           ) : (
@@ -111,13 +128,13 @@ export default function AIChatbot() {
             </div>
           )}
         </div>
-      )
-      }
+      )}
 
       {/* Chatbot Window */}
       {chatOpen && (
         <div
-          className={`fixed bottom-20 right-4 w-xs sm:w-md border border-blue-300 rounded-xl overflow-hidden ${chatOpen ? 'fade-zoomIn' : 'fade-zoomOut'}`}>
+
+          className={`fixed bottom-20 right-4 w-xs sm:w-md border border-blue-300 rounded-xl overflow-hidden ${closing ? 'zoomOut' : 'zoomIn'}`}>
           {/* upper */}
           <div className='flex items-center gap-2 bg-linear-to-t from-blue-900 to-blue-950 border-b border-blue-300 p-3'>
             <img src="./myFavicon.png" alt="AjmalAI"
@@ -125,20 +142,20 @@ export default function AIChatbot() {
 
             <div className='flex items-center justify-between gap-2 w-full'>
               <div className='flex flex-col gap-0.5'>
-              <span className="text-white font-medium text-sm">Ajmal's AI Assistant</span>
-              {/* Chat typing */}
-              {chatLoading ? (
-                <span className='text-green-500 text-[11px]'>Typing...</span>
-              ) : (
-                <span className="text-white/50 text-[11px]">Ask me anything about Ajmal</span>
-              )}
-            </div>
-            
-            {/* Online Status */}
-            <div className='flex items-center gap-1 border border-green-500/30 bg-green-500/20 px-2 py-0.5 rounded-full'>
-              <span className='h-1 w-1 shrink-0 rounded-full bg-green-500'></span>
-              <span className='text-green-500 text-[8px] uppercase tracking-wide font-medium'>Online</span>
-            </div>
+                <span className="text-white font-medium text-sm">Ajmal's AI Assistant</span>
+                {/* Chat typing */}
+                {chatLoading ? (
+                  <span className='text-green-500 text-[11px]'>Typing...</span>
+                ) : (
+                  <span className="text-white/50 text-[11px]">Ask me anything about Ajmal</span>
+                )}
+              </div>
+
+              {/* Online Status */}
+              <div className='flex items-center gap-1 border border-green-500/30 bg-green-500/20 px-2 py-0.5 rounded-full'>
+                <span className='h-1 w-1 shrink-0 rounded-full bg-green-500'></span>
+                <span className='text-green-500 text-[8px] uppercase tracking-wide font-medium'>Online</span>
+              </div>
             </div>
           </div>
 

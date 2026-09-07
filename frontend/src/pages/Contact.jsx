@@ -23,6 +23,19 @@ function Contact() {
   const [emailSent, setEmailSent] = useState(null);
   const [submittedData, setSubmittedData] = useState({});
 
+  // Extra state for handling modal closing animation
+  const [closing, setClosing] = useState(false);
+
+  // To handle the closing of the modal with animation
+  const handleClose = () => {
+    setClosing(true);
+
+    setTimeout(() => {
+      setEmailSent(null);
+      setClosing(false);
+    }, 300); // same duration as animation
+  };
+
   const downloadResume = () => {
     const link = document.createElement("a");
     link.href = "/ResumeAjmal.pdf";
@@ -286,7 +299,7 @@ function Contact() {
       {/* =========== Email Send Confirmation Modal =============== */}
       {emailSent && (
         <div
-          onClick={() => setEmailSent(null)}
+          onClick={handleClose}
           className="fixed inset-0 flex items-center justify-center backdrop-blur-sm z-20"
         >
           <div className="flex items-center justify-center w-full px-6">
@@ -294,7 +307,7 @@ function Contact() {
             {/* Notice Card */}
             <div
               onClick={(e) => { e.stopPropagation() }}
-              className="bg-white border border-blue-500 rounded-xl shadow-[0_0_15px_rgba(200,200,200,.5)] max-w-lg overflow-hidden">
+              className={`bg-white border border-blue-500 rounded-xl shadow-[0_0_15px_rgba(200,200,200,.5)] max-w-lg ${closing ? 'zoomOut' : 'zoomIn'} overflow-hidden`}>
               {/* Upper part */}
               <div className="flex flex-col items-center justify-center gap-3 bg-linear-to-t from-blue-800 to-blue-950 p-5">
                 <span className="shrink-0 text-blue-900 text-2xl bg-white/10 border border-white/20 rounded-full p-2">✉️</span>
@@ -347,7 +360,7 @@ function Contact() {
               {/* Back to Portfolio */}
               <div className="w-full px-5 py-3 pb-5">
                 <button
-                  onClick={() => setEmailSent(null)}
+                  onClick={handleClose}
                   className="font-medium text-white bg-linear-to-b from-blue-800 to-blue-950 px-5 py-2 w-full rounded-xl cursor-pointer hover:from-blue-950 hover:to-blue-800 transition-colors duration-200"
                 >
                   Back to Portfolio

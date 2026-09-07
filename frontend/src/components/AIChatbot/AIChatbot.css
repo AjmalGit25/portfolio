@@ -61,32 +61,44 @@
 }
 
 
-/* ================= Chatbot Chat Animation ==================== */
+/* ================= Chatbot Chat Window Animation ==================== */
 
-
-.ai-message ul {
-  margin: 8px 0;
-  padding-left: 20px;
+@keyframes zoomIn {
+  0% {
+    scale: 80%;
+  }
+  25% {
+    scale: 100%;
+  }
+  50% {
+    scale: 103%;
+  }
+  100% {
+    scale: 100%;
+  }
 }
 
-.ai-message strong {
-  font-weight: 700;
+.zoomIn {
+  animation: zoomIn 0.3s ease-in;
 }
 
-.ai-message p {
-  margin: 8px 0;
+@keyframes zoomOut {
+  0% {
+    scale: 100%;
+  }
+  25% {
+    scale: 103%;
+  }
+  50% {
+    scale: 100%;
+  }
+  100% {
+    scale: 80%;
+  }
+}
+
+.zoomOut {
+  animation: zoomOut 0.3s ease-in;
 }
 
 
-
-.ai-chatbot-container {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  z-index: 1000;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-}
