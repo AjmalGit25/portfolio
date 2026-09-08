@@ -50,8 +50,7 @@ Additionally, he has experience with **Tailwind CSS**, **Bootstrap**, **Figma**,
   }
 
   if (
-    query.includes("internship") ||
-    query.includes("intern")
+    query.includes("internship")
   ) {
     return `Ajmal has completed internships in full-stack development at **Codec Technologies**. He's recenetly doing 1-month internship at Zidio Development and currently working on a **Multi-tenant SaaS based Customer feedback AI intelligence system**`;
   }
@@ -63,9 +62,9 @@ Additionally, he has experience with **Tailwind CSS**, **Bootstrap**, **Figma**,
   }
 
   if (
-    query.includes("strength") || query.includes("strengths")
+    query.includes("strength") 
   ) {
-    return `Mahreen's biggest strengths? She can work across the entire stack, writes clean and maintainable code, and picks up new tech super fast. She's genuinely passionate about solving real problems!`;
+    return `Ajmal's biggest strengths? He can work across the entire stack, writes clean and maintainable code, and picks up new tech super fast. He's genuinely passionate about solving real problems!`;
   }
 
 
