@@ -2,30 +2,42 @@ export const generateResponse = (input) => {
   const query = input.toLowerCase();
 
   if (
-    query.includes("skill") ||
-    query.includes("technology") ||
+    query.includes("skill") || query.includes("learn") ||
+    query.includes("tech") || query.includes("technology") ||
     query.includes("stack")
   ) {
-    return `Ajmal's primary stack includes React, Node.js, Express, MongoDB, TypeScript, Next.js, PostgreSQL and Prisma.`;
+    return `Ajmal's primary stack includes:
+
+- **React.js**
+- **Node.js**
+- **Express**
+- **MongoDB**
+- **TypeScript**
+- **MySQL**
+- **Next.js**
+- **PostgreSQL**
+- **Prisma**
+
+Additionally, he has experience with **Tailwind CSS**, **Bootstrap**, **Figma**, **Power BI**, and more.`;
   }
 
   if (
-    query.includes("project") ||
-    query.includes("projects")
+    query.includes("project") || query.includes("built")
   ) {
-    return `Ajmal has worked on projects including LOOP, a customer feedback intelligence SaaS, and EASYLAYZEE, a MERN-stack e-commerce application.`;
+    return `Ajmal has worked on many Full-Stack projects including:
+- **LOOP**: A multi-tenant AI feedback-intelligence SaaS platform, built with Next.js ecosystem,
+- **EASYLAYZEE**: A Full-Stack MERN E-commerce application,
+- **SkillHarbor**: *Learning Management System (LMS)*`;
   }
 
   if (
-    query.includes("education") ||
-    query.includes("degree")
+    query.includes("education") || query.includes("degree")
   ) {
     return `Ajmal is a final-year B.Sc IT student at Rai University, Ahmedabad.`;
   }
 
   if (
-    query.includes("certificate") ||
-    query.includes("certification")
+    query.includes("certificate") || query.includes("certification")
   ) {
     return `Ajmal has certifications in DSA with C++, Node.js, SQL, Generative AI, Power BI, Figma UI/UX and more.`;
   }
