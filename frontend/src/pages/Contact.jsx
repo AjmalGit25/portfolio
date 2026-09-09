@@ -285,8 +285,8 @@ function Contact() {
               <input type="text" name="_gotcha" style={{ display: "none" }}></input>
 
               {/* Send Button */}
-              <button type="submit"
-                className="flex items-center justify-center gap-3 bg-blue-500 font-medium p-2 px-5 w-full rounded-xl shadow-md cursor-pointer hover:bg-white  hover:shadow-[0_0_10px_rgba(155,155,155,.5)] transition-colors duration-300 group active:scale-98"
+              <button type="submit" disabled={loading}
+                className={`flex items-center justify-center gap-3 bg-blue-500 font-medium p-2 px-5 w-full rounded-xl shadow-md hover:bg-white  hover:shadow-[0_0_10px_rgba(155,155,155,.5)] transition-colors duration-300 group active:scale-98 ${loading ? "cursor-not-allowed opacity-80" : "cursor-pointer"}`}
               >
                 <span className="text-white group-hover:text-slate-800 transition-transform duration-300">{loading ? "Sending..." : "Send Message"}</span>
                 <RiSendPlaneFill className="text-white text-sm animate-pulse group-hover:text-slate-800 group-hover:translate-x-1.5 transition-transform duration-300" size={15} />
