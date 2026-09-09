@@ -12,9 +12,9 @@ export const sendEmail = async (req, res) => {
 
   // 3. Validation
   const userSchema = z.object({
-    fullName: z.string().min(3, "First name must be at least 3 characters long").max(20),
+    fullName: z.string().trim().min(3, "First name must be at least 3 characters long").max(20),
     email: z.email("Please enter a valid email address"),
-    message: z.string().min(10, "Message must be at least 10 characters long")
+    message: z.string().trim().min(10, "Message must be at least 10 characters long")
   });
 
   const parsedData = userSchema.safeParse(req.body);
