@@ -46,6 +46,9 @@ export const userMessage = async (req, res) => {
     res.status(200).json({ message: "GeminiAI answered the query successfully!", response: response.output_text });
   } catch (error) {
     console.log("Something went wrong in GeminiAI", error);
-    res.status(500).json({ message: "Something went wrong in GeminiAI" });
+    if (error.status === 429) {
+      return res.status(429).json({message: "Ajmal's AI assistant has reached its current usage limit. Please try again later. In the meantime, feel free to explore the portfolio! 😊"});
+    }
+    res.status(500).json({ message: "My AI assistant is temporarily unavailable. Please try again later, or feel free to explore the portfolio! 😊" });
   }
 }

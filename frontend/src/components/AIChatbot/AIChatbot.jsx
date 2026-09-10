@@ -71,21 +71,20 @@ export default function AIChatbot() {
       aiResponse = response.data.response;
     } catch (error) {
       console.log("Something went wrong during AI Response!", error);
+      error.response?.data?.message ||
+        "My AI assistant is temporarily unavailable. Please try again later. 😊";
+    } finally {
+      setChatLoading(false);
     }
 
-    // Simulate Local AI (Rule-based chatbot) response after a delay
-    // setTimeout(() => {
-    //   //...
-    // }, 500);
-
-    // Quick Response of LLM
+    // Add AI response to chat
     const aiMessage = {
       id: Date.now() + 1,
       role: "assistant",
       content: aiResponse
     };
     setMessages(prev => [...prev, aiMessage]);
-    setChatLoading(false);
+
   }
 
   useEffect(() => {
