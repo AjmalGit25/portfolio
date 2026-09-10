@@ -26,6 +26,15 @@ say that you don't have enough information rather than guessing.
 - Current Experience: Full Stack Development Intern at Zidio Development
 - Career Preference: Open to Frontend Developer, Backend Developer, and Full Stack Developer positions
 - Relocation: Willing to relocate
+- Languages: English, Hindi, Urdu
+- Marital Status: Unmaried
+- Date of Birth: 10th October 1999
+- Father Name: Md Fakhre Alam
+- Mother Name: Fatma Khatoon
+- Nationality: Indian
+- State/Province: Bihar
+- Phone number: +91 9955578303
+- Most loved girl: Zoya
 
 
 ## Skills
