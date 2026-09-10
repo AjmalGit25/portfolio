@@ -40,10 +40,13 @@ const projects = [
       "Node.js",
       "Express.js",
       "MongoDB",
-      "OpenAI",
+      "Google Gemini API",
+      "gemini-3.5-flash",
       "React Markdown",
       "Axios",
       "GitHub API",
+      "REST API",
+      "LLM API",
       "ipinfo",
       "nodemailer",
       "Resend",
@@ -56,10 +59,10 @@ const projects = [
     githubUrl: "https://github.com/AjmalGit25/portfolio.git",
 
     highlights: [
-      "Modern responsive UI with Tailwind CSS",
-      "Dynamic GitHub & LeetCode statistics integration",
-      "Blue and Green themes switching",
-      "SEO-friendly deployment on Vercel"
+      "Fully Responsive UI Design",
+      "Full Stack Portfolio with MERN",
+      "Real-time GitHub & LeetCode statistics data",
+      "Blue and Green UI Themes",
     ],
 
     date: "2026",
