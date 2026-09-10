@@ -29,7 +29,7 @@ export default function AIChatbot() {
   };
 
 
-  // AI Chat message field
+  // Chat message storage (AI + User messages)
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -45,11 +45,13 @@ export default function AIChatbot() {
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, []);
 
+
+  // Chat Message Submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!input.trim()) return;
 
-    // Append the user's message
+    // Append the User's message
     const userMessage = {
       id: Date.now(),
       role: "user",
@@ -71,16 +73,19 @@ export default function AIChatbot() {
       console.log("Something went wrong during AI Response!", error);
     }
 
-    // Simulate AI response after a delay
-    setTimeout(() => {
-      const aiMessage = {
-        id: Date.now() + 1,
-        role: "assistant",
-        content: aiResponse
-      };
-      setMessages(prev => [...prev, aiMessage]);
-      setChatLoading(false);
-    }, 500);
+    // Simulate Local AI (Rule-based chatbot) response after a delay
+    // setTimeout(() => {
+    //   //...
+    // }, 500);
+
+    // Quick Response of LLM
+    const aiMessage = {
+      id: Date.now() + 1,
+      role: "assistant",
+      content: aiResponse
+    };
+    setMessages(prev => [...prev, aiMessage]);
+    setChatLoading(false);
   }
 
   useEffect(() => {
