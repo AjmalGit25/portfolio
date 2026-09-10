@@ -334,7 +334,7 @@ say that you don't have enough information rather than guessing.
 ## Interests
 
 - Full-stack development
-- AI
+- AI, LLM APIs, and Generative AI
 - DSA Problem Solving
 - Real-time communication
 

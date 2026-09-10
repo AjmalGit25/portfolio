@@ -1,20 +1,25 @@
 import openai from "../config/openAI.js";
+import gemini from "../config/geminiAI.js";
 import { instructions } from "../data/portfolioContext.js";
 import { generateResponse } from "../config/localAI.js";
 
 export const userMessage = async (req, res) => {
   const { message } = req.body;
 
-  try {
-    const response = await generateResponse(message);
-    res.status(200).json({ message: "AI answered the query successfully!", response });
-  } catch (error) {
-    console.log("Something went wrong in AI", error);
-    res.status(500).json({ message: "Something went wrong in AI" });
-  }
+  // ==============  Rule-based Response ==============
+
+  // try {
+  //   const response = await generateResponse(message);
+  //   res.status(200).json({ message: "AI answered the query successfully!", response });
+  // } catch (error) {
+  //   console.log("Something went wrong in AI", error);
+  //   res.status(500).json({ message: "Something went wrong in AI" });
+  // }
 
 
-  // OpenAI ==================================================
+  // =============== LLM powered Response =================
+
+  // OpenAI 
   // try {
   //   const response = await openai.responses.create({
   //     model: "gpt-5.4-mini",
@@ -23,9 +28,24 @@ export const userMessage = async (req, res) => {
   //   });
 
   //   console.log(response.output_text);
-  //   res.status(200).json({ message: "AI answered the query successfully!", response: response.output_text });
+  //   res.status(200).json({ message: "OpenAI answered the query successfully!", response: response.output_text });
   // } catch (error) {
-  //   console.log("Something went wrong in AI", error);
-  //   res.status(500).json({ message: "Something went wrong in AI" });
+  //   console.log("Something went wrong in OpenAI", error);
+  //   res.status(500).json({ message: "Something went wrong in OpenAI" });
   // }
+
+
+  // Google Gemini 
+  try {
+    const response = await gemini.interactions.create({
+      model: "gemini-3.5-flash",
+      system_instruction: instructions,
+      input: message,
+    });
+
+    res.status(200).json({ message: "GeminiAI answered the query successfully!", response: response.output_text });
+  } catch (error) {
+    console.log("Something went wrong in GeminiAI", error);
+    res.status(500).json({ message: "Something went wrong in GeminiAI" });
+  }
 }
