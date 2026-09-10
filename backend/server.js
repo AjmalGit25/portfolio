@@ -1,12 +1,11 @@
 import express from "express";
-import dotenv from "dotenv";
+import "dotenv/config";
+
 import connectDatabase from "./config/db.js";
 import visitorRouter from "./routes/visitor.routes.js";
 import aiRouter from "./routes/ai.routes.js";
 import emailRouter from "./routes/email.routes.js";
 import cors from "cors";
-
-dotenv.config();
 
 const port = process.env.PORT;
 const FRONTEND_URL = process.env.FRONTEND_URL;

@@ -71,7 +71,7 @@ export default function AIChatbot() {
       aiResponse = response.data.response;
     } catch (error) {
       console.log("Something went wrong during AI Response!", error);
-      error.response?.data?.message ||
+      aiResponse = error.response?.data?.message ||
         "My AI assistant is temporarily unavailable. Please try again later. 😊";
     } finally {
       setChatLoading(false);
