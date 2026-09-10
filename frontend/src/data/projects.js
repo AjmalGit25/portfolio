@@ -67,11 +67,11 @@ const projects = [
     status: "Actively Maintained",
 
     features: [
+      "Full Stack MERN Portfolio",
       "Fully responsive design across all devices",
-      "AI-powered chatbot integration with OpenAI",
-      "Built-in blue and emerald themes switching",
+      "LLM powered chatbot with Google Gemini API",
+      "Blue 🔵 and Emerald 🟢 vibrant themes",
       "Certificate showcase with verification link",
-      "SEO optimization with sitemap and metadata",
     ],
 
     challengesAndSolutions:
