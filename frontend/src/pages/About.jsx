@@ -9,6 +9,7 @@ import Footer from "../components/Footer.jsx";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import BACKEND_URL from "../../config/api.js";
+import Counter from "../components/Counter.jsx";
 
 function About() {
   // Page starts from the top
@@ -161,7 +162,11 @@ function About() {
                   {visitorLoading ? (
                     <div className="h-5 w-5 border-2 border-t-transparent border-blue-500 rounded-full animate-spin"></div>
                   ) : (
-                    <span className="font-mono text-xl text-white">{visitorCount}</span>
+                    <Counter 
+                    end={visitorCount} 
+                    duration={1000}
+                    className="text-white text-lg font-mono font-bold"
+                    />
                   )}
                   <div className="relative flex items-center">
                     <span className="absolute h-2 w-2 rounded-full bg-blue-500"></span>
