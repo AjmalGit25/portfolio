@@ -226,8 +226,8 @@ function Contact() {
         <section className='w-full fade-right'>
 
           {/* Form Container */}
-          <div className="relative overflow-hidden bg-blue-800/20 border border-blue-500/40 rounded-xl p-5 hover:border-blue-500/80 shadow-[0_0_5px_rgba(10,10,70,0.5)] transition-colors duration-200">
-            <div className="space-y-2">
+          <div className="relative overflow-hidden bg-blue-800/20 border border-blue-500/40 rounded-xl hover:border-blue-500/80 shadow-[0_0_5px_rgba(10,10,70,0.5)] transition-colors duration-200">
+            <div className="space-y-2 p-5 border-b border-blue-500/40">
               <h3 className="text-2xl font-bold">
                 <span className="text-white">Let's </span>
                 <span className="text-blue-500">Work Together</span>
@@ -238,26 +238,26 @@ function Contact() {
             </div>
 
             {/* Form */}
-            <form onSubmit={handleFormSubmit} className="w-full space-y-4 mb-2">
+            <form onSubmit={handleFormSubmit} className="w-full space-y-4 p-5">
               {/* Name & Email */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-1">
-                  <label htmlFor="fullName" className="text-white/70 block">Your Name</label>
+                  <label htmlFor="fullName" className="text-white/80 font-medium block">Your Name</label>
                   <input
                     type="text" placeholder="John Doe" name="fullName" required
                     onChange={(e) => setFullName(e.target.value)}
                     value={fullName}
-                    className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-2 px-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white"
+                    className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-2 px-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 text-white"
                   />
                   <span className="text-red-400 text-[12px] font-medium">{errors.find((err) => err.field === "fullName")?.message}</span>
                 </div>
                 <div className="space-y-1">
-                  <label htmlFor="email" className="text-white/70 block">Email Address</label>
+                  <label htmlFor="email" className="text-white/80 font-medium block">Email Address</label>
                   <input
                     type="email" placeholder="john@example.com" name="email" required
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
-                    className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-2 px-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white"
+                    className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-2 px-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 text-white"
                   />
                   <span className="text-red-400 text-[12px] font-medium">{errors.find((err) => err.field === "email")?.message}</span>
                 </div>
@@ -265,18 +265,18 @@ function Contact() {
 
               {/* Subject */}
               {/* <div className="space-y-1">
-                <label htmlFor="subject" className="text-white/70 block">Subject</label>
+                <label htmlFor="subject" className="text-white/80 font-medium block">Subject</label>
                 <input type="text" placeholder="How can I help you?" name="subject" required
-                  className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-2 px-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white" />
+                  className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-2 px-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-gray-500 text-black" />
               </div> */}
 
               {/* Your Message */}
               <div className="space-y-1">
-                <label htmlFor="message" className="text-white/70 block">Your Message</label>
+                <label htmlFor="message" className="text-white/80 font-medium block">Your Message</label>
                 <textarea placeholder="Your message..." name="message" rows="5" required
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
-                  className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-2 px-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 caret-white text-white"
+                  className="border border-blue-500/40 bg-blue-400/10 rounded-xl p-2 px-3 w-full outline-none focus:border-blue-500 transition duration-300 placeholder:text-white/40 text-white"
                 />
                 <span className="text-red-400 text-[12px] font-medium">{errors.find((err) => err.field === "message")?.message}</span>
               </div>
@@ -286,12 +286,22 @@ function Contact() {
 
               {/* Send Button */}
               <button type="submit" disabled={loading}
-                className={`flex items-center justify-center gap-3 bg-blue-500 font-medium p-2 px-5 w-full rounded-xl shadow-md hover:bg-white  hover:shadow-[0_0_10px_rgba(155,155,155,.5)] transition-colors duration-300 group active:scale-98 ${loading ? "cursor-not-allowed opacity-80" : "cursor-pointer"}`}
+                className={`flex items-center justify-center gap-3 text-white bg-blue-500 font-medium p-2.5 px-5 w-full rounded-xl shadow-md hover:bg-white transition-colors duration-200 group active:scale-98 ${loading ? "cursor-not-allowed opacity-80" : "cursor-pointer"}`}
               >
-                <span className="text-white group-hover:text-slate-800 transition-transform duration-300">{loading ? "Sending..." : "Send Message"}</span>
-                <RiSendPlaneFill className="text-white text-sm animate-pulse group-hover:text-slate-800 group-hover:translate-x-1.5 transition-transform duration-300" size={15} />
+                <span className="group-hover:text-black transition-transform duration-300">{loading ? "Sending..." : "Send Message"}</span>
+                <RiSendPlaneFill className="group-hover:text-black text-sm animate-pulse group-hover:translate-x-1.5 transition-transform duration-300" size={15} />
               </button>
+
             </form>
+
+            {/* Lower Part */}
+            <div className="px-5 py-3 border-t border-blue-500/40 space-y-1">
+              <p className="text-white/80 text-xs sm:text-sm text-center">
+                This message will be submitted through <strong className="text-blue-500">Ajmal Hussain's Portfolio</strong>
+              </p>
+
+              <p className="text-slate-400 text-[10px] sm:text-xs text-center">© {new Date().getFullYear()} Md Ajmal Hussain</p>
+            </div>
           </div>
         </section>
       </main>
