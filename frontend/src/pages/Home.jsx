@@ -46,8 +46,18 @@ function Home() {
 
           </div>
 
-          {/* Auto-typing effect */}
-          <Typewriter words={words} />
+          {/* Dynamic Contents -------- Auto Typing --------- */}
+          <div className="text-white font-bold text-xl">
+            <h3 className="flex items-center gap-1">We build
+              {/* Auto-typing effect */}
+              <Typewriter
+                words={words}
+                speed={100}
+                className="text-blue-500"
+              />
+              websites
+            </h3>
+          </div>
 
           {/* Hire & Projects*/}
           <div className="inline-flex text-[.7em] md:text-sm items-center gap-5 text-center uppercase tracking-[.3em] mt-5 fade-down">
