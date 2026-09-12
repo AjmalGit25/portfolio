@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
 
 function Home() {
+  const words = ["fast", "secure", "responsive", "reliable"];
+
   return (
     <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6'>
 
@@ -45,7 +47,7 @@ function Home() {
           </div>
 
           {/* Auto-typing effect */}
-          <Typewriter />
+          <Typewriter words={words} />
 
           {/* Hire & Projects*/}
           <div className="inline-flex text-[.7em] md:text-sm items-center gap-5 text-center uppercase tracking-[.3em] mt-5 fade-down">
