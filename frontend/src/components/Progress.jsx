@@ -27,7 +27,7 @@ export default function Progress() {
           <PiGearFineBold className="animate-spin" />
           <p>Compiling System Assets</p>
         </div>
-        <p>{progress}%</p>
+        <p className='text-xl font-black'>{progress}%</p>
       </div>
 
       <div className="w-full h-2 overflow-hidden rounded-2xl bg-gray-700">

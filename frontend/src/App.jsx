@@ -10,7 +10,7 @@ import Intro from "./components/Intro/Intro.jsx";
 function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchParams] = useSearchParams();
-  const [showIntro, setShowIntro] = useState(true);
+  const [showIntro, setShowIntro] = useState(false);
   const [introExit, setIntroExit] = useState(false);
 
 
