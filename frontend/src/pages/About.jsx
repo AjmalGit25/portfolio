@@ -21,7 +21,7 @@ function About() {
   const [selected, setSelected] = useState(false);
   const [closing, setClosing] = useState(false);
   const [visitorLoading, setVisitorLoading] = useState(true);
-  const [visitorCount, setVisitorCount] = useState(10);
+  const [visitorCount, setVisitorCount] = useState(100);
 
   // Leetcode Solved questions fetch
   useEffect(() => {
