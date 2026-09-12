@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function Typewriter() {
-  const words = ["fast", "secure", "responsive", "reliable"];
+export default function Typewriter({ words = [] }) {
 
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
@@ -17,7 +16,7 @@ export default function Typewriter() {
       timeout = setTimeout(() => {
         setText(currentWord.slice(0, text.length + 1));
       }, 150);
-      
+
       if (text === currentWord) {
         // Pause before deleting
         timeout = setTimeout(() => setIsDeleting(true), 1000);
