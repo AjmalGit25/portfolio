@@ -1,10 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
 import "./AIChatbot.css";
-import { RiMenuUnfoldLine, RiMenuFoldLine, RiCloseLargeFill } from "react-icons/ri";
+import { RiMenuUnfoldLine, RiMenuFoldLine, RiCloseLargeFill, RiGeminiFill } from "react-icons/ri";
 import ReactMarkdown from "react-markdown";
 import BACKEND_URL from "../../../config/api.js";
 import axios from "axios";
-import Waiting from "../../components/Waiting.jsx"
 
 export default function AIChatbot() {
   const [tooltipVisible, setTooltipVisible] = useState(false);
@@ -44,6 +43,11 @@ export default function AIChatbot() {
     const t2 = setTimeout(() => setTooltipVisible(true), 1000);
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, []);
+
+  // Hide tooltip after 10 seconds
+  setTimeout(() => {
+    setTooltipVisible(false);
+  }, 10000);
 
 
   // Chat Message Submission
@@ -98,15 +102,17 @@ export default function AIChatbot() {
       {/* Floating Tooltip */}
       {tooltipVisible && !chatOpen && (
         <div className="fixed bottom-20 right-4 ai-chatbot-tooltip">
-          <div className="relative bg-blue-900 text-white text-[10px] sm:text-xs px-2 py-2 pr-5 rounded-md shadow-md border border-blue-500/50">
+          <div className="relative bg-linear-to-t from-blue-950 to-blue-800 text-white text-[12px] px-2 py-2 pr-5 rounded-md shadow-md border border-blue-500/50">
             <button
               onClick={() => setTooltipVisible(false)}
-              className="absolute top-0 right-0  rounded-full w-4 h-4 flex items-center justify-center text-[10px] text-white/80 hover:text-white cursor-pointer"
+              className="absolute top-0 right-0  rounded-full w-4 h-4 flex items-center justify-center text-[8px] text-white/80 hover:text-white cursor-pointer"
             >✕
             </button>
-            <span>👋 Hey! Ajmal's AI Chat assistant coming soon...</span>
+            <div className='flex items-center gap-1'>
+              <span>Hey! Ajmal's AI Chat assistant</span> <RiGeminiFill /> <span>is here</span>
+            </div>
             {/* Triangle arrow pointing down */}
-            <div className="absolute -bottom-[6px] right-6 w-3 h-3 bg-blue-900 border-r border-b border-blue-500/50 rotate-45"></div>
+            <div className="absolute -bottom-[6px] right-6 w-3 h-3 bg-blue-950 border-r border-b border-blue-500/50 rotate-45"></div>
           </div>
         </div>
       )}
@@ -170,7 +176,7 @@ export default function AIChatbot() {
               message.role === "assistant" ? (
                 <div key={message.id} className="flex justify-start">
                   <div className='p-2 rounded-b-lg rounded-tr-lg w-60 bg-sky-950 border border-blue-300/50 shadow-[0_3px_5px_rgba(0,0,0,.5)] relative'>
-                  <div className='absolute top-0.5 -left-1 bg-sky-950 border border-blue-300/50 border-t-transparent border-r-transparent w-2 h-2 rotate-45'></div>
+                    <div className='absolute top-0.5 -left-1 bg-sky-950 border border-blue-300/50 border-t-transparent border-r-transparent w-2 h-2 rotate-45'></div>
                     <ReactMarkdown>
                       {message.content}
                     </ReactMarkdown>
@@ -212,8 +218,9 @@ export default function AIChatbot() {
                 focus:border-blue-400'
               />
               <button
+                disabled={chatLoading}
                 type="submit"
-                className='shrink-0 bg-blue-500 hover:bg-blue-500/90 text-white font-medium rounded-lg cursor-pointer px-4 py-2'>
+                className={`shrink-0 bg-blue-500 text-white font-medium rounded-lg px-4 py-2 ${chatLoading ? 'cursor-not-allowed bg-blue-500/50' : 'hover:bg-blue-500/90 cursor-pointer'}`}>
                 Send
               </button>
             </form>
