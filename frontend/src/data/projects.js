@@ -44,6 +44,7 @@ const projects = [
       "gemini-3.5-flash",
       "React Markdown",
       "Axios",
+      "Zod",
       "GitHub API",
       "REST API",
       "LLM API",
@@ -74,7 +75,7 @@ const projects = [
       "Fully responsive design across all devices",
       "LLM powered chatbot with Google Gemini API",
       "Blue 🔵 and Emerald 🟢 vibrant themes",
-      "Certificate showcase with verification link",
+      "Animations — Counter, Scroll-reveal, Enterance",
     ],
 
     challengesAndSolutions:
