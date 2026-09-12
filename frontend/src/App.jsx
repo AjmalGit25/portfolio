@@ -5,15 +5,49 @@ import { RiMenuUnfoldLine, RiMenuFoldLine, RiCloseLargeFill } from "react-icons/
 import axios from "axios";
 import BACKEND_URL from "../config/api.js";
 import AIChatbot from "./components/AIChatbot/AIChatbot.jsx";
+import Intro from "./components/Intro/Intro.jsx";
 
 function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchParams] = useSearchParams();
+  const [showIntro, setShowIntro] = useState(true);
+  const [introExit, setIntroExit] = useState(false);
 
+
+  // ================== Intro Page Showing mechanism ===================
+
+  // Set Session Storage to show the intro page only once per session
+  useEffect(() => {
+    const hasVisited = sessionStorage.getItem("hasVisited");
+
+    if (!hasVisited) {
+      setShowIntro(true);
+      sessionStorage.setItem("hasVisited", "true");
+    }
+  }, []);
+
+  // Handle Intro Exit Animation
+  useEffect(() => {
+    if (!showIntro) return;
+
+    const timer = setTimeout(() => {
+      setIntroExit(true);
+
+      setTimeout(() => {
+        setShowIntro(false);
+      }, 1000); // same as duration-1000
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [showIntro]);
+
+  // ================= Count Unique Visitors mechanism ==================
+
+  // Check for referral or UTM source in the URL
   const source = searchParams.get("ref") || searchParams.get("utm_source")
   console.log("Referral or UTM Source:", source);
 
-  // Count Unique Visitors mechanism
+  // Generate Unique Visitor Id
   const generateVisitorId = () => {
     if (crypto.randomUUID) {
       return crypto.randomUUID();
@@ -22,6 +56,7 @@ function App() {
     return `${Date.now()}-${Math.random().toString(36).substring(2)}-${Math.random().toString(36).substring(2)}`;
   };
 
+  // Set Visitor Id & Make the API call to Express Backend
   useEffect(() => {
     let visitorId = localStorage.getItem("visitorId");
 
@@ -34,35 +69,43 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-linear-to-l from-blue-800 to-blue-950 relative">
-      <div className="flex">
+    <>
+      {/* Intro Page */}
+      {showIntro && (
+        <Intro exit={introExit} />
+      )}
 
-        {/* Menu Toggle Button for Mobile devices */}
-        <button
-          onClick={() => setMobileOpen(prev => !prev)}
-          className="fixed -left-2 top-3 z-50 sm:hidden bg-blue-500 text-white border border-blue-300 py-2 px-2 pl-4 rounded-md inline-flex items-center gap-2">
-          {mobileOpen ? <RiMenuFoldLine /> : <RiMenuUnfoldLine />}
-          <span className="h-3 w-3 bg-blue-300 rounded-full animate-ping"></span>
-          <span className="h-2 w-2 bg-blue-700 -ml-4.5 rounded-full"></span>
-          <span className="h-px w-5 bg-blue-700 -ml-2"></span>
-          <span className="text-sm">menu</span>
-        </button>
+      {/* Portfolio */}
+      <div className="min-h-screen bg-linear-to-l from-blue-800 to-blue-950 relative">
+        <div className="flex">
 
-        {/* Sidebar for Desktop */}
-        <Sidebar
-          isMobileOpen={mobileOpen}
-          onClose={() => setMobileOpen(false)}
-        />
+          {/* Menu Toggle Button for Mobile devices */}
+          <button
+            onClick={() => setMobileOpen(prev => !prev)}
+            className="fixed -left-2 top-3 z-50 sm:hidden bg-blue-500 text-white border border-blue-300 py-2 px-2 pl-4 rounded-md inline-flex items-center gap-2">
+            {mobileOpen ? <RiMenuFoldLine /> : <RiMenuUnfoldLine />}
+            <span className="h-3 w-3 bg-blue-300 rounded-full animate-ping"></span>
+            <span className="h-2 w-2 bg-blue-700 -ml-4.5 rounded-full"></span>
+            <span className="h-px w-5 bg-blue-700 -ml-2"></span>
+            <span className="text-sm">menu</span>
+          </button>
 
-        {/* Render child pages */}
-        <div className="flex-1">
-          <Outlet />
+          {/* Sidebar for Desktop */}
+          <Sidebar
+            isMobileOpen={mobileOpen}
+            onClose={() => setMobileOpen(false)}
+          />
+
+          {/* Render child pages */}
+          <div className="flex-1">
+            <Outlet />
+          </div>
         </div>
-      </div>
 
-      {/* AIChatbot */}
-      <AIChatbot />
-    </div>
+        {/* AIChatbot */}
+        <AIChatbot />
+      </div>
+    </>
   )
 }
 
