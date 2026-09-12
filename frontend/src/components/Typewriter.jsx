@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function Typewriter({ words = [] }) {
+export default function Typewriter({ words = [], speed = 150, className = "" }) {
 
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
@@ -15,7 +15,7 @@ export default function Typewriter({ words = [] }) {
       // Typing
       timeout = setTimeout(() => {
         setText(currentWord.slice(0, text.length + 1));
-      }, 150);
+      }, speed);
 
       if (text === currentWord) {
         // Pause before deleting
@@ -37,13 +37,9 @@ export default function Typewriter({ words = [] }) {
   }, [text, isDeleting, index]);
 
   return (
-    <h3 className="text-white text-xl sm:text-2xl font-bold fade-down">
-      We build{" "}
-      <span className="text-blue-500">
-        {text}
-      </span>{" "}
-      {/* <span className="font-thin text-lg">| </span> */}
-      websites.
-    </h3>
+    <p className={className}>
+      {text}
+      <span className={`${className} animate-ping`}>|</span>
+    </p>
   );
 }
