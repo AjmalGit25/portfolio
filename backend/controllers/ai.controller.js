@@ -41,7 +41,7 @@ export const userMessage = async (req, res) => {
   // Google Gemini 
   try {
     const response = await gemini.interactions.create({
-      model: "gemini-3.5-flash",
+      model: "gemini-3.1-flash-lite",
       system_instruction: instructions,
       input: message,
     });
