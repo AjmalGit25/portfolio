@@ -34,7 +34,8 @@ say that you don't have enough information rather than guessing.
 - Nationality: Indian
 - State/Province: Bihar
 - Phone number: +91 9955578303
-- Most loved girl: Zoya
+- ❤️ Most loved girl: Zoya — loves truly, from the heart
+- Most materialistic girl: Farheen — fame-and-money-driven
 
 
 ## Skills
