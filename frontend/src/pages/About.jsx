@@ -419,12 +419,6 @@ function About() {
               <span className="group-hover:text-blue-500 duration-300 transition-colors">Discord</span>
             </a>
 
-            <a href="https://wa.me/919955578303?text=Hi%20Ajmal!%20I%20came%20across%20your%20portfolio%20and%20was%20impressed%20by%20your%20work.%20I'd%20love%20to%20connect%20regarding%20an%20opportunity/collaboration.%20Looking%20forward%20to%20hearing%20from%20you!" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-              <SiWhatsapp className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors">WhatsApp</span>
-            </a>
-
             <a href="https://www.reddit.com/user/ajmal62/" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
               <FaReddit className="group-hover:text-blue-500 duration-300 transition-colors" />
