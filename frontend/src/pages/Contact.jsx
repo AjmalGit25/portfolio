@@ -163,7 +163,8 @@ function Contact() {
 
             {/* Whatsapp */}
             <a
-              href="https://wa.me/919955578303?text=Hi%20Ajmal!%20I%20came%20across%20your%20portfolio%20and%20was%20impressed%20by%20your%20work.%20I'd%20love%20to%20connect%20regarding%20an%20opportunity/collaboration.%20Looking%20forward%20to%20hearing%20from%20you!"
+              href="https://wa.me/919955578303?text=Hi%20Ajmal!%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect%20regarding%20a%20potential%20opportunity%20or%20collaboration.%20Looking%20forward%20to%20hearing%20from%20you!"
+
               target="_blank"
               rel="noopener noreferrer"
               className="group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
