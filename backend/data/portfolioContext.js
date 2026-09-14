@@ -19,6 +19,7 @@ say that you don't have enough information rather than guessing.
 # About Ajmal
 
 - Full Name: Md Ajmal Hussain
+- Pronouns: He/Him
 - Professional Role: Full Stack Software Developer
 - Education: B.Sc. Information Technology from Rai University, Ahmedabad
 - Tech Stack: MERN Stack with the Next.js ecosystem
@@ -35,7 +36,7 @@ say that you don't have enough information rather than guessing.
 - State/Province: Bihar
 - Phone number: +91 9955578303
 - ❤️ Most loved girl: Zoya — loves truly, from the heart
-- Most materialistic girl: Farheen — fame-and-money-driven
+- Materialistic one: Farheen — fame-and-money-driven
 
 
 ## Skills
