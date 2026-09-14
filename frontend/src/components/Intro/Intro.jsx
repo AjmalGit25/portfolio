@@ -32,7 +32,7 @@ export default function Intro({ exit }) {
 
         {/* Middle Part */}
         <div className="flex flex-col justify-between gap-20 h-full pb-10">
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex items-center gap-2 ml-[10%] sm:ml-[30%]">
             <img
               src="./myFavicon.png" alt="Ajmal"
               className="h-12 sm:h-20 aspect-square object-cover bg-linear-to-t from-blue-500 to-black border rounded-full p-0.5 slideLeft"

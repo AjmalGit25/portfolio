@@ -22,6 +22,7 @@ export default function Progress() {
 
   return (
     <div className={`flex flex-col gap-2`}>
+      {/* Status Counter */}
       <div className='flex items-center justify-between text-xs sm:text-base font-mono font-bold uppercase'>
         <div className='flex items-center gap-2'>
           <PiGearFineBold className="animate-spin" />
@@ -30,7 +31,8 @@ export default function Progress() {
         <p className='text-xl font-black'>{progress}%</p>
       </div>
 
-      <div className="w-full h-2 overflow-hidden rounded-2xl bg-gray-700">
+      {/* Progress Bar */}
+      <div className="w-full h-2 sm:h-4 overflow-hidden rounded-2xl bg-gray-700">
         <div
           className="h-full bg-linear-to-r from-blue-500 via-blue-700 to-blue-500 rounded-full"
           style={{ width: `${progress}%` }}

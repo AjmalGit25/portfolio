@@ -76,6 +76,7 @@ const projects = [
       "LLM powered chatbot with Google Gemini API",
       "Blue 🔵 and Emerald 🟢 vibrant themes",
       "Animations — Counter, Scroll-reveal, Enterance",
+      "gemini-3.5-flash LLM API integration for AI Chatbot",
     ],
 
     challengesAndSolutions:
