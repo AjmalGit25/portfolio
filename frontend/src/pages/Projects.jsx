@@ -113,7 +113,7 @@ function Projects() {
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6">
 
-      {/* Selected Project ===================================================== */}
+      {/* Selected Project Description ===================================== */}
       {selected ? (
         <div
           className={`pt-15 sm:pt-5 mb-6 ${closing ? "fade-zoomOut" : "fade-zoomIn"}`}
@@ -170,7 +170,7 @@ function Projects() {
               {/* Description */}
               <div className="space-y-3">
                 <h3 className="text-xl md:text-2xl font-bold">Project Overview</h3>
-                <p className="text-white/80">{project.description}</p>
+                <p className="text-white/80 whitespace-pre-line">{project.description}</p>
               </div>
 
               {/* Features */}
@@ -254,7 +254,6 @@ function Projects() {
               </div>
             </div>
           </div>
-
         </div>
       ) : (
         <div className="space-y-2">
@@ -334,12 +333,8 @@ function Projects() {
               </div>
             ))}
           </div>
-
-          {/* Footer Text =================================================== */}
-          <Footer />
         </div>
       )}
-
     </div>
   );
 }
