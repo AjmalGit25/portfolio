@@ -203,6 +203,68 @@ const projects = [
     technicalArchitecture:
       "Built with the MERN stack using React and Vite for the frontend, Express.js and Node.js for the backend, and MongoDB for persistent data storage. JWT-based authentication is implemented using LocalStorage, while Tailwind CSS provides a responsive user interface. Stripe handles secure payment processing, with the frontend deployed on Vercel and the backend hosted on Render."
   },
+
+  {
+    id: 4,
+    title: "Project LOOP — AI Customer Feedback Intelligence Platform",
+
+    description:
+      "Project LOOP is an AI-powered customer feedback intelligence platform that enables businesses to collect, organize, and analyze customer feedback from multiple channels in one centralized system. Leveraging advanced AI capabilities, it automatically classifies sentiment, identifies recurring themes, detects emerging trends, and generates actionable insights to help organizations understand customer needs more effectively.\n\nBuilt as a secure, multi-tenant SaaS application, the platform features role-based access control, interactive analytics dashboards, AI-powered question answering, and automated Voice-of-Customer reports. Project LOOP empowers product, support, and leadership teams to make faster, data-driven decisions by transforming raw customer feedback into meaningful business intelligence.",
+
+    images: [smartdoc6],
+
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Claude AI",
+      "NextAuth",
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Zod",
+      "Recharts",
+      "Vercel"
+    ],
+
+    liveUrl: "https://loop-azure-two.vercel.app/",
+    githubUrl: "https://github.com/AjmalGit25/LOOP",
+
+    highlights: [
+      "AI-powered customer feedback classification and analysis",
+      "Multi-tenant SaaS architecture with role-based access control",
+      "Semantic feedback search and AI-powered question answering",
+      "Automated Voice-of-Customer reports and trend insights"
+    ],
+
+    date: "2026",
+    type: "AI-Powered Full-Stack SaaS Application",
+    status: "Completed",
+
+    features: [
+      "Multi-tenant workspace and organization management",
+      "User authentication and role-based access control",
+      "Customer feedback collection and centralized management",
+      "AI-powered sentiment classification",
+      "Automatic feedback theme clustering",
+      "Trend analysis and emerging issue detection",
+      "Interactive analytics and feedback dashboards",
+      "Semantic search using embeddings",
+      "AI-powered question answering with grounded feedback retrieval",
+      "Automated Voice-of-Customer report generation",
+      "Feedback ingestion and data processing pipeline",
+      "Responsive interface built with React and Tailwind CSS"
+    ],
+
+    challengesAndSolutions:
+      "One of the main challenges was transforming large amounts of unstructured customer feedback into useful and reliable insights. I addressed this by building an AI-powered processing pipeline for sentiment classification, theme identification, trend detection, and semantic retrieval. Another challenge was ensuring that AI-generated answers remained grounded in the actual feedback data, which was handled through embedding-based retrieval before generating responses. I also implemented multi-tenant data isolation and role-based access control to ensure that users could securely access only the data belonging to their organization.",
+
+    technicalArchitecture:
+      "Project LOOP follows a full-stack SaaS architecture with React and Vite on the frontend and Node.js with Express.js on the backend. MongoDB is used for persistent storage of organizations, users, feedback, themes, analytics, and generated reports. JWT-based authentication and role-based authorization secure the application and maintain tenant-level data isolation. The AI pipeline processes incoming feedback for sentiment, theme, and trend analysis, while embeddings enable semantic retrieval for the AI question-answering system. Automated Voice-of-Customer reports are generated from pre-computed analytics and AI-generated narratives. The frontend is deployed on Vercel and the backend is hosted on Render."
+  },
   // {
   //   id: 4,
   //   title: "SmartDoc",
