@@ -6,7 +6,7 @@ function Home() {
   const words = ["fast", "secure", "responsive", "reliable"];
 
   return (
-    <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50  p-4 md:p-6'>
+    <div className='max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6'>
 
       {/* Lead Heading */}
       <div
@@ -17,7 +17,7 @@ function Home() {
       </div>
 
       {/* Name & Image container */}
-      <div className='flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-15 mt-6'>
+      <div className='flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-15 my-6'>
         {/* Section 1: Name */}
         <section className='space-y-6 flex-2'>
 
@@ -83,10 +83,10 @@ function Home() {
             <img
               draggable={false} onContextMenu={(e) => e.preventDefault()}
               className='w-full h-auto object-cover'
-              src="/profiles/home_dp.png" alt="Ajmal's Pic" />
+              src="/profiles/home_dp_sep.png" alt="Ajmal's Pic" />
 
             {/* Tag on Pic */}
-            <div className="absolute flex gap-3 p-2 px-3 border rounded-xl bg-transparent backdrop-blur-sm border-blue-300 bottom-5">
+            <div className="absolute flex gap-3 p-2 px-4 border rounded-xl bg-transparent backdrop-blur-sm border-blue-300 bottom-5 inset-x-5 overflow-hidden">
               <div className="flex items-center justify-center p-4 rounded-full bg-blue-300/15">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
                   className="text-white h-5 w-5">
@@ -96,8 +96,12 @@ function Home() {
               </div>
 
               <div>
-                <div className="text-white">Full Stack Developer</div>
-                <div className="text-white/50 text-[0.75em]">React • Node.js • JavaScript</div>
+                <div className="text-white font-medium">Full Stack Developer</div>
+                <div className=" overflow-hidden">
+                  <div className="whitespace-nowrap animate-marquee text-white/50 text-[0.75em]">
+                    React.js • Next.js • Node.js • Express • MongoDB • PostgreSQL • Prisma • JavaScript • REST APIs • LLM APIs
+                  </div>
+                </div>
               </div>
             </div>
           </div>
