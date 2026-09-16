@@ -36,7 +36,7 @@ function App() {
       setTimeout(() => {
         setShowIntro(false);
       }, 1000); // same as duration-1000
-    }, 2000);
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, [showIntro]);
