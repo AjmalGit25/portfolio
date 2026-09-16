@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function WorldClock() {
+function AnalogClock() {
   const [time, setTime] = useState(new Date());
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
@@ -102,4 +102,4 @@ function WorldClock() {
   );
 }
 
-export default WorldClock;
+export default AnalogClock;
