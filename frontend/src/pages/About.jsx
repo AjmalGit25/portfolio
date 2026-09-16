@@ -138,15 +138,15 @@ function About() {
 
         {/* Section 2: Image */}
         <section className="xl:self-start xl:mt-10 mb-5 flex-1 fade-up">
-          <div className='flex items-center justify-center bg-linear-to-tl from-blue-500 via-blue-950 to-blue-700 border border-blue-300 rounded-xl overflow-hidden shadow-2xl hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] duration-300 transition-shadow aspect-square relative'>
+          <div className='flex items-center justify-center bg-linear-to-tl from-blue-500 via-blue-950 to-blue-700 border border-blue-300 rounded-xl overflow-hidden shadow-2xl hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] duration-300 transition-shadow aspect-4/5 relative'>
             <img
               draggable={false} onContextMenu={(e) => e.preventDefault()}
               className='w-full h-auto object-contain'
-              src="/profiles/about_dp.png" alt="Ajmal's Picture"
+              src="/profiles/home_dp_sep.png" alt="Ajmal's Picture"
             />
 
             {/* Tag on Pic - Visitors Count */}
-            <div className="absolute bottom-1 w-full px-2">
+            <div className="absolute bottom-3 w-full px-2">
               <div className="flex items-center rounded-full h-12 border border-blue-300 overflow-hidden">
 
                 {/* Left */}
