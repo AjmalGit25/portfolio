@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
 import "./AIChatbot.css";
 import { RiMenuUnfoldLine, RiMenuFoldLine, RiCloseLargeFill, RiGeminiFill } from "react-icons/ri";
-import ReactMarkdown from "react-markdown";
 import BACKEND_URL from "../../../config/api.js";
 import axios from "axios";
+import OneTimeTypewriter from "../OneTimeTypewriter.jsx";
 
 export default function AIChatbot() {
   const [tooltipVisible, setTooltipVisible] = useState(false);
@@ -175,17 +175,15 @@ export default function AIChatbot() {
               // AI message
               message.role === "assistant" ? (
                 <div key={message.id} className="flex justify-start">
-                  <div className='p-2 rounded-b-lg rounded-tr-lg w-60 bg-sky-950 border border-blue-300/50 shadow-[0_3px_5px_rgba(0,0,0,.5)] relative'>
-                    <div className='absolute top-0.5 -left-1 bg-sky-950 border border-blue-300/50 border-t-transparent border-r-transparent w-2 h-2 rotate-45'></div>
-                    <ReactMarkdown>
-                      {message.content}
-                    </ReactMarkdown>
+                  <div className='p-2 rounded-b-lg rounded-tr-lg w-60 bg-linear-to-b from-sky-900 to-sky-950 border border-blue-300/50 shadow-[0_3px_5px_rgba(0,0,0,.5)] relative'>
+                    <div className='absolute top-0.5 -left-1 bg-sky-900 border border-blue-300/50 border-t-transparent border-r-transparent w-2 h-2 rotate-45'></div>
+                    <OneTimeTypewriter text={message.content} speed={10} />
                   </div>
                 </div>
               ) : (
                 // User message
                 <div key={message.id} className='flex justify-end'>
-                  <div className='p-2 rounded-t-lg rounded-bl-lg w-60 bg-blue-900 border border-blue-300/50 shadow-[0_3px_5px_rgba(0,0,0,.5)]'>
+                  <div className='p-2 rounded-t-lg rounded-bl-lg w-60 bg-linear-to-b from-blue-900 to-blue-950 border border-blue-300/50 shadow-[0_3px_5px_rgba(0,0,0,.5)]'>
                     <span>{message.content}</span>
                   </div>
                 </div>

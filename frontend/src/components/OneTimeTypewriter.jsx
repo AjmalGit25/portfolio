@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
 
 export default function OneTimeTypewriter({ text = "", speed = 50, className = "" }) {
   const [display, setDisplay] = useState("");
@@ -18,5 +19,5 @@ export default function OneTimeTypewriter({ text = "", speed = 50, className = "
     return () => clearInterval(id);
   }, [text, speed]);
 
-  return <p className={className}>{display}</p>;
+  return <p className={className}><ReactMarkdown>{display}</ReactMarkdown></p>;
 }
