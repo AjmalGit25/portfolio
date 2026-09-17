@@ -28,13 +28,13 @@ export default function Progress() {
           <PiGearFineBold className="animate-spin" />
           <p>Compiling System Assets</p>
         </div>
-        <p className='text-xl font-black'>{progress}%</p>
+        <p className={`text-xl font-black transition-colors duration-300 delay-200 ${progress === 100 ? "text-blue-500" : "text-white/80"}`}>{progress}%</p>
       </div>
 
       {/* Progress Bar */}
       <div className="w-full h-2 sm:h-4 overflow-hidden rounded-2xl bg-gray-700">
         <div
-          className={`h-full rounded-full transition-colors duration-300 ${progress === 100 ? "bg-blue-600" : "bg-green-600"}`}
+          className={`h-full rounded-full transition-colors duration-300 delay-200 ${progress === 100 ? "bg-blue-600" : "bg-white/80"}`}
           style={{ width: `${progress}%` }}
         />
       </div>
