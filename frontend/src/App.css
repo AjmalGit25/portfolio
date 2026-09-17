@@ -201,7 +201,7 @@
     transform: translateX(0);
   }
 
-  95% {
+  80% {
     transform: translateX(-100%);
   }
 
@@ -211,7 +211,7 @@
 }
 
 .animate-marquee {
-  animation: marquee 15s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 
 /* ====================== Page Entrance Animations =========================== */
