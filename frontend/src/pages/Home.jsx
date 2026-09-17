@@ -87,7 +87,7 @@ function Home() {
               src="/profiles/home_dp_sep.png" alt="Ajmal's Pic" />
 
             {/* Tag on Pic */}
-            <div className="absolute bottom-5 inset-x-5 flex items-center gap-3 p-4 border border-blue-500/30 rounded-xl bg-black/40 backdrop-blur-md overflow-hidden">
+            <div className="absolute bottom-5 inset-x-5 flex items-center gap-3 p-3 md:p-4 border border-blue-500/30 rounded-xl bg-black/40 backdrop-blur-md overflow-hidden">
               {/* Left side : Icon */}
               <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10">
                 <div className="absolute inset-0 rounded-xl bg-blue-500/10 blur-md" />
