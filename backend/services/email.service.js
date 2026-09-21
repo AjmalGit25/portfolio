@@ -1,16 +1,15 @@
-import { Resend } from "resend";
-import dotenv from "dotenv";
+import { Resend } from "resend";            // Email API
 import dns from "node:dns";
-dotenv.config();
-
-// SMTP Configuration
-// const SMTP_USER = process.env.EMAIL_USER;
-// const SMTP_PASS = process.env.EMAIL_PASSWORD;
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const EMAIL_TO = process.env.EMAIL_TO || "reach.ajmal.dev@gmail.com";
 
 dns.setDefaultResultOrder("ipv4first");     // prefer IPv4 addresses over IPv6 âœ…
+
+
+// SMTP Configuration
+// const SMTP_USER = process.env.EMAIL_USER;
+// const SMTP_PASS = process.env.EMAIL_PASSWORD;
 
 // const transporter = nodemailer.createTransport({
 //   host: "smtp.gmail.com",
@@ -35,6 +34,9 @@ dns.setDefaultResultOrder("ipv4first");     // prefer IPv4 addresses over IPv6 â
 //     console.log("SMTP server is ready!");
 //   }
 // });
+
+
+// ====================== Send New Visitor Email ==========================
 
 export const sendNewVisitorEmail = async (formattedDate, location = {}, device, deviceType, os, browser, network, postal, timezone, source) => {
 
@@ -132,6 +134,9 @@ export const sendNewVisitorEmail = async (formattedDate, location = {}, device, 
     return { success: false, error: err };
   }
 };
+
+
+// ====================== Send Form Data (Contact Form Submission) ==========================
 
 export const sendFormDataEmail = async (formData = {}) => {
   const { fullName, email, message } = formData;
