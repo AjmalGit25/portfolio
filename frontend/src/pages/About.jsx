@@ -229,7 +229,7 @@ function About() {
 
           <div className="flex-2">
             <h1 className="text-4xl font-bold">LeetCode <span className="text-amber-500">Profile</span></h1>
-            <p className="text-white/80">AjmalAlgo • Rank: <span className="text-amber-500">727,946</span></p>
+            <p className="text-white/80">AjmalAlgo • Rank: <span className="text-amber-500">715,044</span></p>
           </div>
 
           <div onClick={() => setSelected(true)} className="inline-flex items-center gap-2 border border-blue-500 bg-blue-500/30 p-1.5 px-3 text-amber-500 font-medium rounded-full w-fit cursor-pointer">
