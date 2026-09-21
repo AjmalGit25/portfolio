@@ -132,7 +132,7 @@ say that you don't have enough information rather than guessing.
 - Duration: 1 Month
 - Period: August 2026 - September 2026
 - Work: Full-stack web development
-- Technologies: Next.js, TypeScript, PostgreSQL, Prisma
+- Technologies: React.js, Next.js, Node.js, Express.js, TypeScript, MongoDB, PostgreSQL, Prisma, Tailwind CSS
 
 ### Codec Technologies
 - Role: MERN Development Intern
