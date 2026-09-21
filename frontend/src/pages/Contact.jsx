@@ -8,7 +8,6 @@ import { RiSendPlaneFill } from "react-icons/ri";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import BACKEND_URL from "../../config/api.js";
-import Clock from "../components/Clock.jsx";
 
 function Contact() {
   const [loading, setLoading] = useState(false);
@@ -222,9 +221,6 @@ function Contact() {
               </div>
             </button>
           </div>
-
-          {/* Clock */}
-          <Clock/>
         </section>
 
         {/* Section 2 */}
