@@ -16,7 +16,7 @@ app.use(cors({
   origin: FRONTEND_URL
 }));
 
-app.set("trust proxy", true);
+app.set("trust proxy", true);       // Trust the proxy to get the correct client IP address
 app.use(express.json());
 
 // Routes
