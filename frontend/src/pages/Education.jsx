@@ -17,7 +17,7 @@ function Education() {
         <h1 className='text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-2 mb-5'>Education</h1>
       </div>
 
-      <p className="max-w-3xl text-white/60 mb-6 fade-left">A snapshot of my academic background and activities supporting my growth as a developer, underpinning the Ajmal Hussain identity that drives the Ajmal Hussain portfolio, and LeetCode by Ajmal Hussain outcomes. </p>
+      <p className="max-w-3xl text-white/60 mb-6 fade-left">A snapshot of my academic background and activities supporting my growth as a developer, underpinning the Ajmal Hussain identity that drives the Ajmal Hussain portfolio. </p>
 
 
       {/* Education Container */}
