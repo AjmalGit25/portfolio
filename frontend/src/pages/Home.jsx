@@ -84,7 +84,7 @@ function Home() {
             <img
               draggable={false} onContextMenu={(e) => e.preventDefault()}
               className='w-full max-w-xl h-auto object-cover'
-              src="/profiles/home_dp_sep.png" alt="Ajmal's Pic" />
+              src="/profiles/dp1.png" alt="Ajmal's Pic" />
 
             {/* Tag on Pic */}
             <div className="absolute bottom-5 inset-x-5 flex items-center gap-3 p-3 md:p-4 border border-blue-500/30 rounded-xl bg-black/40 backdrop-blur-md overflow-hidden">
