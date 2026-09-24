@@ -177,7 +177,10 @@ export default function AIChatbot() {
                 <div key={message.id} className="flex justify-start">
                   <div className='p-2 rounded-b-lg rounded-tr-lg w-60 bg-linear-to-b from-sky-900 to-sky-950 border border-blue-300/50 shadow-[0_3px_5px_rgba(0,0,0,.5)] relative'>
                     <div className='absolute top-0.5 -left-1 bg-sky-900 border border-blue-300/50 border-t-transparent border-r-transparent w-2 h-2 rotate-45'></div>
-                    <OneTimeTypewriter text={message.content} speed={10} />
+                    <OneTimeTypewriter
+                      text={message.content} speed={10} messageId={message.id}
+                      className="text-white text-shadow-2xs text-shadow-black"
+                    />
                   </div>
                 </div>
               ) : (

@@ -1,23 +1,37 @@
 import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
-export default function OneTimeTypewriter({ text = "", speed = 50, className = "" }) {
-  const [display, setDisplay] = useState("");
+const typedMessages = new Set();      // mount/unmount: Typing problem fix
+
+export default function OneTimeTypewriter({ text = "", speed = 50, messageId, className = "" }) {
+
+  const [displayedText, setDisplayedText] = useState(
+    typedMessages.has(messageId) ? text : ""
+  );
 
   useEffect(() => {
-    let i = 0;
+    // Already typed → don't animate again
+    if (typedMessages.has(messageId)) {
+      setDisplayedText(text);
+      return;
+    }
 
-    const id = setInterval(() => {
-      setDisplay(text.slice(0, i + 1));
-      i++;
+    let idx = 0;
 
-      if (i === text.length) {
-        clearInterval(id);
+    const interval = setInterval(() => {
+      setDisplayedText(text.slice(0, idx + 1));
+      idx++;
+
+      if (idx === text.length) {
+        clearInterval(interval);
+
+        // Mark this message as typed
+        typedMessages.add(messageId);
       }
     }, speed);
 
-    return () => clearInterval(id);
-  }, [text, speed]);
+    return () => clearInterval(interval);
+  }, [messageId, text, speed]);
 
-  return <p className={className}><ReactMarkdown>{display}</ReactMarkdown></p>;
+  return <p className={className}><ReactMarkdown>{displayedText}</ReactMarkdown></p>;
 }
