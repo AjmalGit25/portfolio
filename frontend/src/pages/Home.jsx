@@ -110,7 +110,7 @@ function Home() {
                   <span className="text-[12px] text-white/60">Building scalable & modern web experiences</span>
                   {/* Technologies */}
                   <span className="text-[10px] text-white/50 whitespace-nowrap animate-marquee">
-                    React.js • Next.js • Node.js • Express • MongoDB • PostgreSQL • Prisma • JavaScript • REST APIs • LLM APIs
+                    React.js • Next.js • Node.js • Express • MongoDB • PostgreSQL • Prisma • JavaScript • REST APIs • LLM APIs • Git & GitHub • Deployment & SEO
                   </span>
                 </div>
               </div>

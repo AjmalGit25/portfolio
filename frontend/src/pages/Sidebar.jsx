@@ -16,21 +16,20 @@ import { IoColorPaletteOutline } from "react-icons/io5";
 
 function ThemePicker({ onPick }) {
   const { theme, setTheme } = useTheme();
-  
+
   return (
     <div className="flex flex-col gap-1.5 mt-1">
       {themes.map(t => (
         <button key={t.id} onClick={() => { setTheme(t.id); onPick?.(); }}
-          className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors ${
-            theme === t.id ? "bg-blue-900 text-white" : "text-white/70 hover:bg-blue-900/50"
-          }`}>
+          className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors ${theme === t.id ? "bg-blue-900 text-white" : "text-white/70 hover:bg-blue-900"
+            }`}>
           <span className="flex gap-1">
             {t.colors.map(c => (
               <span key={c} style={{ background: c }}
                 className="w-3 h-3 rounded-full border border-white/20" />
             ))}
           </span>
-          {t.label}
+          <span className="hidden lg:inline">{t.label}</span>
         </button>
       ))}
     </div>
@@ -55,7 +54,7 @@ function Sidebar({ isMobileOpen, onClose }) {
     // Modal | Sidebar Modal for Mobile devices
     <>
       {isMobileOpen && (
-        <div onClick={onClose} className="fixed inset-0 z-30 sm:hidden flex flex-col items-center justify-center bg-black/80 backdrop-blur-md">
+        <div onClick={onClose} className="sm:hidden fixed inset-0 z-30 flex flex-col items-center justify-center bg-black/80 backdrop-blur-md">
           <div
             onClick={e => e.stopPropagation()}
             className="flex flex-col items-center gap-2"
@@ -81,7 +80,7 @@ function Sidebar({ isMobileOpen, onClose }) {
               </NavLink>
             ))}
 
-            {/* Change Theme */}
+            {/* Change Theme Links */}
             <div className="mt-4 flex flex-col items-center">
               <button onClick={() => setMobileThemeOpen(p => !p)}
                 className="flex items-center gap-2 text-white/70 border border-blue-500/50 px-4 py-2 rounded-lg text-sm hover:bg-blue-900/40 transition-colors">
@@ -94,22 +93,22 @@ function Sidebar({ isMobileOpen, onClose }) {
         </div>
       )}
 
-      {/* Sidebar for Laptop, Desktop */}
-      <aside className="fixed left-5 top-5 bottom-5 z-30 w-fit hidden sm:block">
+      {/* Sidebar for Desktop */}
+      <aside className="hidden sm:block fixed left-5 top-5 bottom-5 z-30 w-fit">
         {/* Visible Sidebar */}
-        <div className="h-full w-fit rounded-xl bg-transparent backdrop-blur-lg border border-blue-500 p-2 flex flex-col">
+        <div className="h-full w-fit rounded-xl bg-transparent backdrop-blur-lg border border-blue-500 flex flex-col">
 
           {/* Menu */}
-          <div className="flex items-center gap-4 mb-6 max-lg:justify-center max-lg:mt-3">
+          <div className="flex items-center justify-center gap-4 mb-5 mt-3">
             <h1 className='flex items-center gap-2 font-bold text-4xl text-white mt-2 mb-4'>
-              <HiMenuAlt2 />
+              <HiMenuAlt2 size={30} />
               <span className="hidden lg:block">Menu</span>
             </h1>
           </div>
 
-          {/* Vertical scroller */}
-          <div className="flex-1 overflow-y-auto pr-2 -mr-2 w-fit">
-            <ul className="text-white/80 flex flex-col gap-y-3">
+          {/* Navlinks */}
+          <div className="flex-1 overflow-y-auto w-fit px-2">
+            <ul className="text-white/80 flex flex-col gap-3">
 
               {[{ to: "/", icon: <BiHome />, label: "Home" },
               { to: "/about", icon: <RiContactsLine />, label: "About" },
@@ -121,17 +120,19 @@ function Sidebar({ isMobileOpen, onClose }) {
               { to: "/achievements", icon: <FiAward />, label: "Achievements" },
               { to: "/contact", icon: <MdChatBubbleOutline />, label: "Contact" },
               ].map(({ to, icon, label }) => (
-                <NavLink key={to} to={to} end={to === "/"}
+                <NavLink
+                  key={to} to={to} end={to === "/"}
                   className={({ isActive }) =>
-                    `relative flex items-center gap-3 px-4 py-2 rounded-md transition-colors duration-300 ${isActive ? "bg-blue-900 text-white" : "text-white/80 hover:bg-blue-900"
-                    }`
-                  }>
+                    `relative flex items-center gap-3 px-4 py-2 rounded-md transition-colors duration-300 
+                     ${isActive ? "bg-linear-to-l from-blue-900 to-blue-800 text-white shadow-md" : "text-white/80 hover:bg-blue-900"
+                    }`}
+                >
                   {({ isActive }) => (
                     <>
                       {icon}
                       <span className="hidden lg:block">{label}</span>
                       {isActive && (
-                        <span className="absolute right-2 h-1.5 w-1.5 rounded-full bg-blue-400" />
+                        <span className="shrink-0 absolute right-1.5 h-1.5 w-1.5 rounded-full bg-blue-400" />
                       )}
                     </>
                   )}
@@ -142,18 +143,18 @@ function Sidebar({ isMobileOpen, onClose }) {
 
 
           {/* Change Theme Button */}
-          <div className="pt-3 pb-1 border-t border-blue-400/30">
+          <div className="border-t border-blue-400/40 py-2 mx-2 lg:mx-4">
             <button onClick={() => setThemeOpen(p => !p)}
-              className="w-full flex items-center gap-2 justify-center px-3 py-1.5 rounded-md text-sm text-white/70 hover:bg-blue-900/50 transition-colors">
-              <IoColorPaletteOutline />
+              className="w-full flex items-center gap-2 justify-center px-3 py-1.5 rounded-md text-sm text-white/70 hover:bg-blue-900 transition-colors">
+              <IoColorPaletteOutline size={15} />
               <span className="hidden lg:block">Change Theme</span>
             </button>
             {themeOpen && <ThemePicker onPick={() => setThemeOpen(false)} />}
           </div>
 
           {/* Github, LinkedIn, Leetcode */}
-          <div className="mb-2 pt-3 border-t border-blue-400/70">
-            <div className="flex items-center justify-center gap-6 max-lg:flex-col max-lg:px-3 py-2">
+          <div className="mb-3 border-t border-blue-400/40 py-2 mx-2 lg:mx-4">
+            <div className="flex items-center justify-evenly gap-6 max-lg:flex-col py-2">
               <a href="https://github.com/AjmalGit25" target="_blank" className="text-blue-300 hover:text-blue-100">
                 <LuGithub />
               </a>

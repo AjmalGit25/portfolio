@@ -136,50 +136,51 @@
   --tw-gradient-to: #022c22 !important;
 }
 
-/* Horizontal scrollbar height */
+/* ============== Scrollbar Styling ====================== */
 ::-webkit-scrollbar {
+  /* Horizontal Scrollbar Height*/
   height: 8px;
-  /* for horizontal */
+
+  /* Vertical Scrollbar Width */
   width: 8px;
-  /* for vertical */
 }
 
-/* Scrollbar colors via CSS variables — set on :root so pseudo-elements can read them */
+/* Scrollbar Colors via CSS variables — set on :root so pseudo-elements can read them */
+
+/* Default Scrollbar */
 :root {
-  --sb-track: #000;
-  --sb-thumb: #01b3ff;
-  --sb-thumb-hover: #01b3ffb4;
+  --scrollbar-track: #000;
+  --scrollbar-thumb: #01b3ff;
+  --scrollbar-thumb-hover: #01b3ffb4;
 }
 
+/* Scrollbar during Blue Theme */
 :root:has([data-theme="blue"]) {
-  --sb-track: #000;
-  --sb-thumb: #01b3ff;
-  --sb-thumb-hover: #01b3ffb4;
+  --scrollbar-track: #000;
+  --scrollbar-thumb: #01b3ff;
+  --scrollbar-thumb-hover: #01b3ffb4;
 }
 
+/* Scrollbar during Emerald Theme */
 :root:has([data-theme="emerald"]) {
-  --sb-track: #000;
-  --sb-thumb: #09d18f;
-  --sb-thumb-hover: #19aa7c;
+  --scrollbar-track: #000;
+  --scrollbar-thumb: #09d18f;
+  --scrollbar-thumb-hover: #19aa7c;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--sb-track);
+  background: var(--scrollbar-track);
 }
 
-/* ::-webkit-scrollbar-track {
-  background: transparent;
-} */
-
 ::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb);
+  background: var(--scrollbar-thumb);
   border-radius: 10px;
-  border: 2px solid var(--sb-track);
+  border: 2px solid var(--scrollbar-track);
   background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--sb-thumb-hover);
+  background: var(--scrollbar-thumb-hover);
 }
 
 
@@ -201,17 +202,17 @@
     transform: translateX(0);
   }
 
-  80% {
-    transform: translateX(-100%);
+  90% {
+    transform: translateX(-200%);
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
 }
 
 .animate-marquee {
-  animation: marquee 10s linear infinite;
+  animation: marquee 15s linear infinite;
 }
 
 /* ====================== Page Entrance Animations =========================== */
@@ -310,12 +311,15 @@
   0% {
     scale: 80%;
   }
+
   25% {
     scale: 100%;
   }
+
   50% {
     scale: 103%;
   }
+
   100% {
     scale: 100%;
   }
@@ -329,12 +333,15 @@
   0% {
     scale: 100%;
   }
+
   25% {
     scale: 103%;
   }
+
   50% {
     scale: 100%;
   }
+
   100% {
     scale: 80%;
   }

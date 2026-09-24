@@ -79,10 +79,11 @@ function App() {
       <div className="min-h-screen bg-linear-to-l from-blue-800 to-blue-950 relative">
         <div className="flex">
 
-          {/* Menu Toggle Button for Mobile devices */}
+
+          {/* Menu Toggle Button for Mobile devices: Fixed @ Top-Left corner */}
           <button
             onClick={() => setMobileOpen(prev => !prev)}
-            className="fixed -left-2 top-3 z-50 sm:hidden bg-blue-500 text-white border border-blue-300 py-2 px-2 pl-4 rounded-md inline-flex items-center gap-2">
+            className="sm:hidden fixed -left-2 top-3 z-50 bg-blue-500 text-white border border-blue-300 py-2 px-2 pl-4 rounded-md inline-flex items-center gap-2">
             {mobileOpen ? <RiMenuFoldLine /> : <RiMenuUnfoldLine />}
             <span className="h-3 w-3 bg-blue-300 rounded-full animate-ping"></span>
             <span className="h-2 w-2 bg-blue-700 -ml-4.5 rounded-full"></span>
@@ -90,7 +91,8 @@ function App() {
             <span className="text-sm">menu</span>
           </button>
 
-          {/* Sidebar for Desktop */}
+
+          {/* Sidebar for Desktop: Left side of every Page */}
           <Sidebar
             isMobileOpen={mobileOpen}
             onClose={() => setMobileOpen(false)}
@@ -102,7 +104,7 @@ function App() {
           </div>
         </div>
 
-        {/* AIChatbot */}
+        {/* AIChatbot in Every page */}
         <AIChatbot />
       </div>
     </>
