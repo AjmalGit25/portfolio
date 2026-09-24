@@ -35,6 +35,7 @@ say that you don't have enough information rather than guessing.
 - Nationality: Indian
 - State/Province: Bihar
 - Phone number: +91 9955578303
+- Business email: reach.ajmal.dev@gmail.com
 - ❤️ Most loved girl: Zoya — loves truly, from the heart
 - Materialistic one: Farheen — fame-and-money-driven
 
