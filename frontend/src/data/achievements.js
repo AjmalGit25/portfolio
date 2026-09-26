@@ -1,6 +1,16 @@
 // JSON data for achievements
 const achievements = [
   {
+    id: 18,
+    title: "Web Development Internship",
+    platform: "Zidio Development",
+    description:
+      "Successfully completed the Web Development Internship at Zidio Development, and  successfully acquired valuable knowledge and practical skills relevant to the program objectives, built the production grade application with AI features and deployed the project.",
+    year: "2026",
+    image: ["/certificates/cert18_1.jpg", "/certificates/cert18_2.jpg", "/certificates/cert18_3.jpg"],
+    verifyUrl: "https://zidio.in/verify/ZID-V-2F9966E6B82D"
+  },
+  {
     id: 17,
     title: "MERN Stack Developer Internship",
     platform: "Codec Technologies",
