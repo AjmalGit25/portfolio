@@ -1,8 +1,9 @@
 import { GoPerson } from "react-icons/go";
 import { FaBuilding } from "react-icons/fa";
-import { FiCalendar } from "react-icons/fi";
+import { FiCalendar, FiExternalLink } from "react-icons/fi";
 import { FaRegSquareCheck } from "react-icons/fa6";
 import { MdOutlineWorkHistory } from "react-icons/md";
+import ReactMarkdown from "react-markdown";
 import experiences from "../data/experiences.js";
 
 function Experience() {
@@ -62,12 +63,27 @@ function Experience() {
 
                 <ul className="space-y-2">
                   {experience.outcomes.map((outcome, idx) => (
-                    <div className="flex items-center gap-2">
+                    <div key={idx} className="flex items-center gap-2">
                       <FaRegSquareCheck className="text-blue-500 shrink-0" />
-                      <li key={idx} className="">{outcome}</li>
+                      <ReactMarkdown>{outcome}</ReactMarkdown>
                     </div>
                   ))}
                 </ul>
+
+                {experience.platformProfile && (
+                  <div className="flex justify-center sm:justify-end">
+                    <a
+                      href={experience.platformProfile}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-full lg:w-fit inline-flex items-center justify-center gap-2 bg-linear-to-r from-blue-700 to-cyan-600 text-white font-semibold px-4 py-2 rounded-full shadow-lg hover:scale-103 transform transition-transform duration-200"
+                      aria-label="View platform profile"
+                    >
+                      <FiExternalLink />
+                      <span>View Profile</span>
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>

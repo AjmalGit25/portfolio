@@ -132,12 +132,14 @@ say that you don't have enough information rather than guessing.
 ## Experience
 
 ### Zidio Development
-- Role: Full Stack Web Developer Intern
+- Role: Web Development Internship
 - Type: Internship
 - Duration: 1 Month
 - Period: August 2026 - September 2026
 - Work: Full-stack web development
 - Technologies: React.js, Next.js, Node.js, Express.js, TypeScript, MongoDB, PostgreSQL, Prisma, Tailwind CSS
+- Platform Public Profile link: https://zidio.in/p/6a7eea1d388c22d1687e64d7
+
 
 ### Codec Technologies
 - Role: MERN Development Intern
@@ -236,6 +238,7 @@ say that you don't have enough information rather than guessing.
 - Organized by: Innomatics Research Labs
 - Year: 2026
 - Description: Successfully participated in the Two Days Gen AI Launchpad Workshop conducted by Innomatics Research Labs.
+
 
 ### Technical Certifications
 
