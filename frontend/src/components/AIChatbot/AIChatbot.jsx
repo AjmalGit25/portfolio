@@ -143,7 +143,6 @@ export default function AIChatbot() {
       {/* Chatbot Window */}
       {chatOpen && (
         <div
-
           className={`fixed bottom-20 right-4 w-xs sm:w-md border border-blue-300 rounded-xl overflow-hidden ${closing ? 'zoomOut' : 'zoomIn'}`}>
           {/* upper */}
           <div className='flex items-center gap-2 bg-linear-to-t from-blue-900 to-blue-950 border-b border-blue-300 p-3'>
@@ -170,7 +169,7 @@ export default function AIChatbot() {
           </div>
 
           {/* middle : Chat Messages */}
-          <div className="text-white text-sm bg-blue-950 min-h-60 max-h-100 overflow-y-auto p-3 space-y-4">
+          <div className="text-white text-sm bg-blue-950 min-h-60 max-h-100 2xl:max-h-150 overflow-y-auto p-3 space-y-4">
             {messages.map((message) => (
               // AI message
               message.role === "assistant" ? (
@@ -228,6 +227,6 @@ export default function AIChatbot() {
           </div>
         </div>
       )}
-    </div >
+    </div>
   )
 }
