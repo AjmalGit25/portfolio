@@ -21,7 +21,7 @@ say that you don't have enough information rather than guessing.
 - Full Name: Md Ajmal Hussain
 - Pronouns: He/Him
 - Professional Role: Full Stack Software Developer
-- Education: B.Sc. Information Technology from Rai University, Ahmedabad
+- Education: B.Sc. in Information Technology — Rai University, Ahmedabad (Bachelor's Degree, Completed)
 - Tech Stack: MERN Stack with the Next.js ecosystem
 - Current Location: Ahmedabad, Gujarat, India
 - Current Experience: Full Stack Development Intern at Zidio Development
@@ -53,6 +53,7 @@ say that you don't have enough information rather than guessing.
 ### Backend
 - Node.js
 - Express.js
+- Next.js
 - REST APIs
 
 ### Database
@@ -106,23 +107,26 @@ say that you don't have enough information rather than guessing.
 
 ## Education
 
-### Undergraduate
+### Graduate
 - Degree: B.Sc Information Technology
 - University: Rai University
 - Marks: 8.42 CGPA
 - Year: June 2026
+- Status: Completed
 
 ### 12th Standard
 - Stream: Intermediate of Science
 - College: Kisan College
 - Percentage: 58%
 - Year: June 2017
+- Status: Completed
 
 ### 10th Standard
 - Qualification: Matriculation
 - School: Shree Gandhi High School
 - Percentage: 74%
 - Year: June 2015
+- Status: Completed
 
 
 ## Experience
