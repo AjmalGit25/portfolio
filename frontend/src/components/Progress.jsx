@@ -32,7 +32,7 @@ export default function Progress() {
       </div>
 
       {/* Progress Bar */}
-      <div className="w-full h-2 sm:h-4 overflow-hidden rounded-2xl bg-gray-700">
+      <div className="w-full h-2 overflow-hidden rounded-2xl bg-gray-700">
         <div
           className={`h-full rounded-full transition-colors duration-300 delay-200 ${progress === 100 ? "bg-blue-600" : "bg-white/80"}`}
           style={{ width: `${progress}%` }}
