@@ -76,7 +76,7 @@ function Experience() {
                       href={experience.platformProfile}
                       target="_blank"
                       rel="noreferrer"
-                      className="w-full lg:w-fit inline-flex items-center justify-center gap-2 bg-linear-to-r from-blue-700 to-cyan-600 text-white font-semibold px-4 py-2 rounded-full shadow-lg hover:scale-103 transform transition-transform duration-200"
+                      className="w-full lg:w-fit inline-flex items-center justify-center gap-2 bg-linear-to-r from-blue-700 to-cyan-600 hover:to-blue-700 hover:from-cyan-600 text-white font-semibold px-4 py-2 rounded-full shadow-lg transform transition-colors duration-200"
                       aria-label="View platform profile"
                     >
                       <FiExternalLink />

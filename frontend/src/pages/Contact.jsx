@@ -3,8 +3,9 @@ import { LuPhone, LuGlobe } from "react-icons/lu";
 import { GrLocation } from "react-icons/gr";
 import { SiLeetcode, SiWhatsapp } from "react-icons/si";
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
-import { FiLinkedin, FiDownload } from "react-icons/fi";
+import { FiLinkedin, FiDownload, FiExternalLink } from "react-icons/fi";
 import { RiSendPlaneFill } from "react-icons/ri";
+import { MdWork } from "react-icons/md";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import BACKEND_URL from "../../config/api.js";
@@ -108,7 +109,7 @@ function Contact() {
         {/* Section 1: Email, Phone, Location */}
         <section className='w-full space-y-6'>
           <p className="text-white/70">
-            Have a question, opportunity, or idea in mind? I'm always open to meaningful conversations and exciting collaborations. Feel free to reach out through email, phone, or by filling out the contact form below. I'll make sure to respond as soon as possible and look forward to connecting with you!
+            Have a question, opportunity, or idea in mind? I'm always open to meaningful conversations and exciting collaborations. Feel free to reach out through email, phone, or by filling out the contact form below. I'll make sure to respond as soon as possible and look forward to connect with you!
           </p>
 
           {/* Container: Email, Phone, Location */}
@@ -183,8 +184,8 @@ function Contact() {
           </div>
 
 
+          {/* Social Links & Resume */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-5 mt-8 fade-down">
-            {/* Social Links */}
             <div className="flex flex-wrap gap-3">
               <a href="https://github.com/AjmalGit25" target="_blank"
                 className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
@@ -220,6 +221,36 @@ function Contact() {
                 <span>Download Resume</span>
               </div>
             </button>
+          </div>
+
+          {/* Public Profiles */}
+          <div className="space-y-4 pt-6">
+            <h3 className="inline-flex items-center gap-2 text-white text-2xl font-bold tracking-tighter">
+              <span>Public</span>
+              <span className="text-blue-500">Profiles</span>
+              <span className='h-px w-8 bg-blue-500'></span>
+            </h3>
+
+            <div className="space-y-5">
+              <a href="https://jobbricks.com/view-public-profile/1tc1wb" target="_blank"
+                className="group flex items-center justify-between flex-wrap text-white/80 font-medium bg-linear-to-r from-blue-700 to-cyan-600 px-4 py-2 rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-colors duration-200"
+              >
+                <div className="flex items-center gap-2">
+                  <MdWork />
+                  <span>JobBricks</span>
+                </div>
+                <FiExternalLink className="group-hover:translate-x-1 transition-transform duration-200" />
+              </a>
+              <a href="https://zidio.in/p/6a7eea1d388c22d1687e64d7" target="_blank"
+                className="group flex items-center justify-between flex-wrap text-white/80 font-medium bg-linear-to-r from-blue-700 to-cyan-600 px-4 py-2 rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-colors duration-200"
+              >
+                <div className="flex items-center gap-2">
+                  <MdWork />
+                  <span>Zidio Development</span>
+                </div>
+                <FiExternalLink className="group-hover:translate-x-1 transition-transform duration-200" />
+              </a>
+            </div>
           </div>
         </section>
 
