@@ -14,7 +14,10 @@ import Counter from "../components/Counter.jsx";
 function About() {
   // Page starts from the top
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   const [leetcode, setLeetcode] = useState(null);
@@ -72,6 +75,46 @@ function About() {
       document.body.style.overflow = "";
     };
   }, [selected]);
+
+  // Coding Platforms
+  const codingPlatforms = [
+    {
+      title: "GitHub",
+      icon: <FaGithub />,
+      url: "https://github.com/AjmalGit25",
+      bgColor: "bg-slate-950"
+    },
+    {
+      title: "LeetCode",
+      icon: <SiLeetcode />,
+      url: "https://leetcode.com/u/AjmalAlgo",
+      bgColor: "bg-orange-500"
+    },
+    {
+      title: "GeeksforGeeks",
+      icon: <SiGeeksforgeeks />,
+      url: "https://www.geeksforgeeks.org/profile/ajmal786",
+      bgColor: "bg-green-700"
+    },
+    {
+      title: "unstop",
+      icon: <SiUnstop />,
+      url: "https://unstop.com/u/mdhus70693",
+      bgColor: "bg-blue-500"
+    },
+    {
+      title: "W3Schools",
+      icon: <SiW3Schools />,
+      url: "https://www.w3profile.com/AjmalW3",
+      bgColor: "bg-green-500"
+    },
+    {
+      title: "HackerRank",
+      icon: <SiHackerrank />,
+      url: "https://www.hackerrank.com/profile/ajmalashrafi2016",
+      bgColor: "bg-emerald-600"
+    },
+  ]
 
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6 overflow-x-hidden">
@@ -229,8 +272,8 @@ function About() {
 
           <div className="flex-2">
             <h1 className="text-4xl font-bold">LeetCode <span className="text-amber-500">Profile</span></h1>
-            <p className="text-white/80">AjmalAlgo • Rank: <span className="text-amber-500">
-              709,105</span></p>
+            <p className="text-white/80">AjmalAlgo • Rank: <span className="text-amber-500">699,769</span>
+            </p>
           </div>
 
           <div onClick={() => setSelected(true)} className="inline-flex items-center gap-2 border border-blue-500 bg-blue-500/30 p-1.5 px-3 text-amber-500 font-medium rounded-full w-fit cursor-pointer">
@@ -340,63 +383,32 @@ function About() {
         <hr className="my-10 text-blue-500/50" />
 
         <div className="space-y-4">
-          <h4 className="font-bold text-xl md:text-left flex items-center justify-center gap-2">
-            <span><FaMouse /></span>
+          <h4 className="font-bold text-xl md:text-left flex items-center justify-center gap-2 mb-5">
+            <FaMouse size="1rem" />
             <span>Tech Platforms</span>
           </h4>
 
           {/* Professional Coding Platform Links */}
           <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white">
-            {/* -----------Sample----------- */}
-            {/* <a href="https://github.com/AjmalGit25" target="_blank"
-            className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-            <FaGithub className="group-hover:text-blue-500 duration-300 transition-colors" />
-            <span className="group-hover:text-blue-500 duration-300 transition-colors" >GitHub</span>
-          </a> */}
-
-            <a href="https://github.com/AjmalGit25" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black hover:bg-black/60">
-              <FaGithub />
-              <span className="font-semibold">GitHub</span>
-            </a>
-
-            <a href="https://leetcode.com/u/AjmalAlgo" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-500/80 transition-colors duration-200">
-              <SiLeetcode />
-              <span className="font-semibold">LeetCode</span>
-            </a>
-
-            <a href="https://www.geeksforgeeks.org/profile/ajmal786" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-700 hover:bg-green-700/80 transition-colors duration-200">
-              <SiGeeksforgeeks />
-              <span className="font-semibold">GeeksforGeeks</span>
-            </a>
-
-            <a href="https://unstop.com/u/mdhus70693" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-500 hover:bg-blue-500/80 transition-colors duration-200">
-              <SiUnstop />
-              <span className="font-semibold">unstop</span>
-            </a>
-
-            <a href="https://www.w3profile.com/AjmalW3" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-500 hover:bg-green-500/80 transition-colors duration-200">
-              <SiW3Schools />
-              <span className="font-semibold">W3Schools</span>
-            </a>
-
-            <a href="https://www.hackerrank.com/profile/ajmalashrafi2016" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-600/80 transition-colors duration-200">
-              <SiHackerrank />
-              <span className="font-semibold">HackerRank</span>
-            </a>
-
+            {codingPlatforms.map((codingPlatform, idx) => (
+              <a
+                key={idx}
+                href={codingPlatform.url}
+                className={`${codingPlatform.bgColor} px-3 py-1.5 rounded-lg hover:opacity-90`}
+              >
+                <div className="flex items-center gap-2 font-medium">
+                  <span>{codingPlatform.icon}</span>
+                  <span>{codingPlatform.title}</span>
+                </div>
+              </a>
+            ))}
           </div>
 
           {/* Hr Line */}
           <hr className="my-10 text-blue-500/50" />
 
-          <h4 className="font-bold text-xl md:text-left flex items-center justify-center gap-2">
-            <span><FaGlobe /></span>
+          <h4 className="font-bold text-xl md:text-left flex items-center justify-center gap-2 mb-5">
+            <FaGlobe size="1rem" />
             <span>Connect With Me</span>
           </h4>
 
