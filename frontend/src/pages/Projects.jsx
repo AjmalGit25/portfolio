@@ -116,7 +116,7 @@ function Projects() {
       {/* Selected Project (Modal) ===================================== */}
       {selected ? (
         <div
-          className={`${closing ? "fade-zoomOut" : "fade-zoomIn"} relative`}
+          className={`${closing ? "fade-zoomOut" : "fade-zoomIn"} pt-15 sm:pt-0`}
           onAnimationEnd={() => {
             if (closing) {
               setSelected(null);
@@ -127,7 +127,7 @@ function Projects() {
           <ScrollToTop />
           {/* Go Back */}
           <div
-            className="w-fit text-blue-200 flex items-center gap-2 cursor-pointer bg-black/5 backdrop-blur-lg backdrop-brightness-100 border border-blue-500/20 rounded-full px-3 py-1.5 hover:text-white hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(100,100,200,0.25)] transition-colors duration-200 group mb-6 sticky top-6 z-20"
+            className="w-fit text-blue-200 flex items-center gap-2 cursor-pointer bg-linear-to-r from-blue-900 to-blue-950 border border-blue-500/20 rounded-full px-3 py-1.5 shadow-md hover:text-white hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(100,100,200,0.25)] transition-colors duration-200 group mb-6 sticky top-15 sm:top-6 z-5"
             onClick={() => { handleClose(); }}
           >
             <FaArrowLeft className="group-hover:-translate-x-1 transition-transform duration-200" />
