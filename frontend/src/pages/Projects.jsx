@@ -113,10 +113,10 @@ function Projects() {
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6">
 
-      {/* Selected Project Description ===================================== */}
+      {/* Selected Project (Modal) ===================================== */}
       {selected ? (
         <div
-          className={`pt-15 sm:pt-5 mb-6 ${closing ? "fade-zoomOut" : "fade-zoomIn"}`}
+          className={`${closing ? "fade-zoomOut" : "fade-zoomIn"} relative`}
           onAnimationEnd={() => {
             if (closing) {
               setSelected(null);
@@ -127,7 +127,7 @@ function Projects() {
           <ScrollToTop />
           {/* Go Back */}
           <div
-            className="w-fit text-blue-200 flex items-center gap-2 cursor-pointer hover:text-blue-500 transition-colors duration-200 group mb-6"
+            className="w-fit text-blue-200 flex items-center gap-2 cursor-pointer bg-black/5 backdrop-blur-lg backdrop-brightness-100 border border-blue-500/20 rounded-full px-3 py-1.5 hover:text-white hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(100,100,200,0.25)] transition-colors duration-200 group mb-6 sticky top-6 z-20"
             onClick={() => { handleClose(); }}
           >
             <FaArrowLeft className="group-hover:-translate-x-1 transition-transform duration-200" />
@@ -200,7 +200,7 @@ function Projects() {
             </div>
 
             {/* Right column */}
-            <div className="text-white space-y-6">
+            <div className="text-white space-y-6 lg:sticky lg:top-15 lg:self-start">
               {/* Technologies (Tags) */}
               <div className="border border-blue-500/60 bg-blue-950/50 rounded-xl p-5">
                 <h3 className="text-lg md:text-2xl font-bold mb-6">Technologies</h3>
@@ -272,7 +272,7 @@ function Projects() {
             Explore my projects focused on developing responsive, scalable, and high-performance full-stack web applications with the MERN stack, emphasizing clean UI, secure backend architecture, and seamless user experiences.
           </p>
 
-          {/* Project's container grid */}
+          {/* Project's grid */}
           <div
             className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-10'
           >
