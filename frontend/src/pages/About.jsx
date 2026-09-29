@@ -10,15 +10,16 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import BACKEND_URL from "../../config/api.js";
 import Counter from "../components/Counter.jsx";
+import { leetCodeUIs, codingPlatforms, socialPlatforms } from "../data/about.js";
 
 function About() {
   // Page starts from the top
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  // }, []);
 
   const [leetcode, setLeetcode] = useState(null);
   const [leetcodeLoading, setLeetcodeLoading] = useState(true);
@@ -62,70 +63,6 @@ function About() {
 
     fetchVisitor();
   }, []);
-
-  // Coding Platforms
-  const codingPlatforms = [
-    {
-      title: "GitHub",
-      icon: <FaGithub />,
-      url: "https://github.com/AjmalGit25",
-      bgColor: "bg-slate-950"
-    },
-    {
-      title: "LeetCode",
-      icon: <SiLeetcode />,
-      url: "https://leetcode.com/u/AjmalAlgo",
-      bgColor: "bg-orange-500"
-    },
-    {
-      title: "GeeksforGeeks",
-      icon: <SiGeeksforgeeks />,
-      url: "https://www.geeksforgeeks.org/profile/ajmal786",
-      bgColor: "bg-green-700"
-    },
-    {
-      title: "unstop",
-      icon: <SiUnstop />,
-      url: "https://unstop.com/u/mdhus70693",
-      bgColor: "bg-blue-500"
-    },
-    {
-      title: "W3Schools",
-      icon: <SiW3Schools />,
-      url: "https://www.w3profile.com/AjmalW3",
-      bgColor: "bg-green-500"
-    },
-    {
-      title: "HackerRank",
-      icon: <SiHackerrank />,
-      url: "https://www.hackerrank.com/profile/ajmalashrafi2016",
-      bgColor: "bg-emerald-600"
-    },
-  ];
-
-  // Social Platforms
-  const socialPlatforms = [
-    {
-      title: "LinkedIn",
-      icon: <FaLinkedin />,
-      url: "https://linkedin.com/in/ajmal-hussain92",
-    },
-    {
-      title: "Instagram",
-      icon: <AiFillInstagram />,
-      url: "https://www.instagram.com/asyncajmal",
-    },
-    {
-      title: "Discord",
-      icon: <SiGeeksforgeeks />,
-      url: "https://discord.com/users/1341100335086833725",
-    },
-    {
-      title: "Reddit",
-      icon: <FaReddit />,
-      url: "https://www.reddit.com/user/ajmal62/",
-    }
-  ];
 
   // Prevent the background page's scrolling (during Modal open)
   useEffect(() => {
@@ -309,98 +246,33 @@ function About() {
         {/* Count Boxes */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
 
-          {/* Total */}
-          <div className="border border-blue-500/40 bg-blue-700/20 rounded-xl p-3 md:p-4 lg:p-5 hover:border-blue-500/80 transition-all duration-300 group">
-            <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
-              <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-blue-500 rounded-full"></div>
-              <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Total</span>
-            </div>
-            <div className="flex flex-col justify-between">
-              <div className="flex items-center text-white mb-1 h-8">
-                {leetcodeLoading ? (
-                  <div className="flex items-center gap-2">
-                    <div className="h-3 w-3 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-                    <span className="text-xs font-normal">Loading...</span>
-                  </div>
-                ) : (
-                  <span className="text-lg md:text-xl lg:text-2xl font-extrabold">
-                    {leetcode?.solvedProblem}
-                  </span>
-                )}
+          {leetCodeUIs.map((leetCodeUI, idx) => (
+            <div
+              key={idx}
+              className={`border ${leetCodeUI.borderColor} ${leetCodeUI.bgColor} rounded-xl p-3 md:p-4 lg:p-5 hover:${leetCodeUI.borderHoverColor} hover:${leetCodeUI.bgHoverColor} transition-all duration-300 group`}
+            >
+              <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
+                <div className={`h-1.5 w-1.5 md:h-2 md:w-2 ${leetCodeUI.indicatorColor} rounded-full`}></div>
+                <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">{leetCodeUI.title}</span>
               </div>
-              <div className="text-[0.65rem] md:text-xs text-blue-500">Problems</div>
-            </div>
-          </div>
 
-          {/* Easy */}
-          <div className="border border-white/10 bg-blue-800/10 rounded-xl p-3 md:p-4 lg:p-5 hover:border-green-500/50 hover:bg-green-500/10 transition-all duration-300 group">
-            <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
-              <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-green-500 rounded-full"></div>
-              <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Easy</span>
-            </div>
-            <div className="flex flex-col justify-between">
-              <div className="flex items-center text-white mb-1 h-8">
-                {leetcodeLoading ? (
-                  <div className="flex items-center gap-2">
-                    <div className="h-3 w-3 border-2 border-green-500 border-t-transparent rounded-full animate-spin"></div>
-                    <span className="text-xs font-normal">Loading...</span>
-                  </div>
-                ) : (
-                  <span className="text-lg md:text-xl lg:text-2xl font-extrabold">
-                    {leetcode?.easySolved}
-                  </span>
-                )}
+              <div className="flex flex-col justify-between">
+                <div className="flex items-center text-white mb-1 h-8">
+                  {leetcodeLoading ? (
+                    <div className="flex items-center gap-2">
+                      <div className="h-3 w-3 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                      <span className="text-xs font-normal">Loading...</span>
+                    </div>
+                  ) : (
+                    <span className="text-lg md:text-xl lg:text-2xl font-extrabold">
+                      {leetcode?.[leetCodeUI.valueKey] ?? 0}
+                    </span>
+                  )}
+                </div>
+                <div className="text-[0.65rem] md:text-xs text-blue-500">{leetCodeUI.status}</div>
               </div>
-              <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
             </div>
-          </div>
-
-          {/* Medium */}
-          <div className="border border-white/10 bg-blue-800/10 rounded-xl p-3 md:p-4 lg:p-5 hover:border-yellow-500/50 hover:bg-yellow-500/10 transition-all duration-300 group">
-            <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
-              <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-amber-500 rounded-full"></div>
-              <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Medium</span>
-            </div>
-            <div className="flex flex-col justify-between">
-              <div className="flex items-center text-white mb-1 h-8">
-                {leetcodeLoading ? (
-                  <div className="flex items-center gap-2 h-5">
-                    <div className="h-3 w-3 border-2 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
-                    <span className="text-xs font-normal">Loading...</span>
-                  </div>
-                ) : (
-                  <span className="text-lg md:text-xl lg:text-2xl font-extrabold">
-                    {leetcode?.mediumSolved}
-                  </span>
-                )}
-              </div>
-              <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
-            </div>
-          </div>
-
-          {/* Hard */}
-          <div className="border border-white/10 bg-blue-800/10 rounded-xl p-3 md:p-4 lg:p-5 hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300 group">
-            <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
-              <div className="h-1.5 w-1.5 md:h-2 md:w-2 bg-red-500 rounded-full"></div>
-              <span className="text-[0.6rem] md:text-xs text-white/70 uppercase md:tracking-[0.4em] font-medium">Hard</span>
-            </div>
-            <div className="flex flex-col justify-between">
-              <div className="flex items-center text-white mb-1 h-8">
-                {leetcodeLoading ? (
-                  <div className="flex items-center gap-2">
-                    <div className="h-3 w-3 border-2 border-red-500 border-t-transparent rounded-full animate-spin"></div>
-                    <span className="text-xs font-normal">Loading...</span>
-                  </div>
-                ) : (
-                  <span className="text-lg md:text-xl lg:text-2xl font-extrabold">
-                    {leetcode?.hardSolved}
-                  </span>
-                )}
-              </div>
-              <div className="text-[0.65rem] md:text-xs text-white/60">Solved</div>
-            </div>
-          </div>
-
+          ))}
         </div>
 
         {/* Hr Line */}
@@ -414,18 +286,21 @@ function About() {
 
           {/* Professional Coding Platform Links */}
           <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white">
-            {codingPlatforms.map((codingPlatform, idx) => (
-              <a
-                key={idx}
-                href={codingPlatform.url} target="_blank" rel="noopener noreferrer"
-                className={`${codingPlatform.bgColor} px-3 py-1.5 rounded-lg hover:opacity-90`}
-              >
-                <div className="flex items-center gap-2 font-medium">
-                  <span>{codingPlatform.icon}</span>
-                  <span>{codingPlatform.title}</span>
-                </div>
-              </a>
-            ))}
+            {codingPlatforms.map((codingPlatform, idx) => {
+              const Icon = codingPlatform.icon;
+              return (
+                <a
+                  key={idx}
+                  href={codingPlatform.url} target="_blank" rel="noopener noreferrer"
+                  className={`${codingPlatform.bgColor} px-3 py-1.5 rounded-lg hover:opacity-90`}
+                >
+                  <div className="flex items-center gap-2 font-medium">
+                    <Icon />
+                    <span>{codingPlatform.title}</span>
+                  </div>
+                </a>
+              )
+            })}
           </div>
 
           {/* Hr Line */}
@@ -439,16 +314,17 @@ function About() {
           {/* Social/Contact Platform Links */}
           <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white/80">
 
-            {socialPlatforms.map((socialPlatform, idx) => (
-              <a href={socialPlatform.url} target="_blank" rel="noopener noreferrer"
-                key={idx}
-                className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-                <span className="group-hover:text-blue-500 duration-300 transition-colors"> {socialPlatform.icon}
-                </span>
-                <span className="group-hover:text-blue-500 duration-300 transition-colors" >{socialPlatform.title}</span>
-              </a>
-            ))}
-
+            {socialPlatforms.map((socialPlatform, idx) => {
+              const Icon = socialPlatform.icon;
+              return (
+                <a href={socialPlatform.url} target="_blank" rel="noopener noreferrer"
+                  key={idx}
+                  className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
+                  <Icon className="group-hover:text-blue-500 duration-300 transition-colors" />
+                  <span className="group-hover:text-blue-500 duration-300 transition-colors" >{socialPlatform.title}</span>
+                </a>
+              )
+            })}
           </div>
         </div>
       </div>
@@ -482,7 +358,6 @@ function About() {
           </span>
         </div>
       )}
-
     </div>
   );
 }
