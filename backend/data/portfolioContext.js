@@ -194,7 +194,6 @@ say that you don't have enough information rather than guessing.
 
 
 
-
 ## Achievements
 
 ### Internships & Practical Experience
@@ -348,6 +347,19 @@ say that you don't have enough information rather than guessing.
   - Participated in the Effective Communication course offered through Skill India Digital.
   - Verification: https://courses.skillindiadigital.gov.in/api/custom_api/view_certificate/705deb3d412745c3b4d3ac2aacb54959
 
+
+
+## Coding Platforms
+
+- **LeetCode** — [Ajmal's Profile](https://leetcode.com/u/AjmalAlgo)
+  - Achievements: 3 Badges
+  - Skills: C++, JavaScript, Node.js, SQL
+  - Problems Solved: 300+ (Easy, Medium, Hard)
+  - Global Ranking: 699,769
+
+- **HackerRank** — [Ajmal's Profile](https://www.hackerrank.com/profile/ajmalashrafi2016)
+  - Achievements: 2 Badges (3 Star Silver Badge in C Language, 1 Star Bronze Badge in C++ Language)
+  - Skills: C++, JavaScript, Node.js, SQL
 
 
 ## Interests
