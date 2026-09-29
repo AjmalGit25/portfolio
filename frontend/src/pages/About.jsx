@@ -63,19 +63,6 @@ function About() {
     fetchVisitor();
   }, []);
 
-  // Prevent the background page's scrolling (during Modal open)
-  useEffect(() => {
-    if (selected) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [selected]);
-
   // Coding Platforms
   const codingPlatforms = [
     {
@@ -114,7 +101,44 @@ function About() {
       url: "https://www.hackerrank.com/profile/ajmalashrafi2016",
       bgColor: "bg-emerald-600"
     },
-  ]
+  ];
+
+  // Social Platforms
+  const socialPlatforms = [
+    {
+      title: "LinkedIn",
+      icon: <FaLinkedin />,
+      url: "https://linkedin.com/in/ajmal-hussain92",
+    },
+    {
+      title: "Instagram",
+      icon: <AiFillInstagram />,
+      url: "https://www.instagram.com/asyncajmal",
+    },
+    {
+      title: "Discord",
+      icon: <SiGeeksforgeeks />,
+      url: "https://discord.com/users/1341100335086833725",
+    },
+    {
+      title: "Reddit",
+      icon: <FaReddit />,
+      url: "https://www.reddit.com/user/ajmal62/",
+    }
+  ];
+
+  // Prevent the background page's scrolling (during Modal open)
+  useEffect(() => {
+    if (selected) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selected]);
 
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6 overflow-x-hidden">
@@ -414,29 +438,16 @@ function About() {
 
           {/* Social/Contact Platform Links */}
           <div className="flex md:items-start md:justify-start items-center justify-center flex-wrap gap-3 text-white/80">
-            <a href="https://linkedin.com/in/ajmal-hussain92" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-              <FaLinkedin className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors" >LinkedIn</span>
-            </a>
 
-            <a href="https://www.instagram.com/asyncajmal" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-              <AiFillInstagram className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors">Instagram</span>
-            </a>
-
-            <a href="https://discord.com/users/1341100335086833725" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-              <SiDiscord className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors">Discord</span>
-            </a>
-
-            <a href="https://www.reddit.com/user/ajmal62/" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
-              <FaReddit className="group-hover:text-blue-500 duration-300 transition-colors" />
-              <span className="group-hover:text-blue-500 duration-300 transition-colors">Reddit</span>
-            </a>
+            {socialPlatforms.map((socialPlatform, idx) => (
+              <a href={socialPlatform.url} target="_blank" rel="noopener noreferrer"
+                key={idx}
+                className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-lg hover:border-blue-500/80 hover:bg-blue-500/20 transition-all duration-300 group">
+                <span className="group-hover:text-blue-500 duration-300 transition-colors"> {socialPlatform.icon}
+                </span>
+                <span className="group-hover:text-blue-500 duration-300 transition-colors" >{socialPlatform.title}</span>
+              </a>
+            ))}
 
           </div>
         </div>
