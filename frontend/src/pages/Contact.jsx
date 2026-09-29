@@ -222,36 +222,6 @@ function Contact() {
               </div>
             </button>
           </div>
-
-          {/* Public Profiles */}
-          <div className="space-y-4 pt-6">
-            <h3 className="inline-flex items-center gap-2 text-white text-2xl font-bold tracking-tighter">
-              <span>Public</span>
-              <span className="text-blue-500">Profiles</span>
-              <span className='h-px w-8 bg-blue-500'></span>
-            </h3>
-
-            <div className="space-y-5">
-              <a href="https://jobbricks.com/view-public-profile/1tc1wb" target="_blank"
-                className="group flex items-center justify-between flex-wrap text-white/80 font-medium bg-linear-to-r from-blue-700 to-cyan-600 px-4 py-2 rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-colors duration-200"
-              >
-                <div className="flex items-center gap-2">
-                  <MdWork />
-                  <span>JobBricks</span>
-                </div>
-                <FiExternalLink className="group-hover:translate-x-1 transition-transform duration-200" />
-              </a>
-              <a href="https://zidio.in/p/6a7eea1d388c22d1687e64d7" target="_blank"
-                className="group flex items-center justify-between flex-wrap text-white/80 font-medium bg-linear-to-r from-blue-700 to-cyan-600 px-4 py-2 rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-colors duration-200"
-              >
-                <div className="flex items-center gap-2">
-                  <MdWork />
-                  <span>Zidio Development</span>
-                </div>
-                <FiExternalLink className="group-hover:translate-x-1 transition-transform duration-200" />
-              </a>
-            </div>
-          </div>
         </section>
 
         {/* Section 2 */}
