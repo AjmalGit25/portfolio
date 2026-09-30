@@ -428,13 +428,13 @@ function Skills() {
           </div> */}
 
           {/* AWS */}
-          {/* <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
+          <div className="group relative overflow-hidden rounded-lg bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-blue-500 p-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-300/20">
             <div className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-md" style={{ background: "radial-gradient(circle, rgba(200, 200, 28, 0.125) 0%, transparent 70%)" }}></div>
             <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center">
               <FaAws className="h-10 w-10 text-amber-500 group-hover:scale-110 duration-200" />
               <span className="text-sm md:text-base font-semibold text-white/90 group-hover:text-white transition-colors">AWS</span>
             </div>
-          </div> */}
+          </div>
 
         </section>
       </div>
