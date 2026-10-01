@@ -250,7 +250,7 @@ function About() {
           {leetCodeUIs.map((leetCodeUI, idx) => (
             <div
               key={idx}
-              className={`border ${leetCodeUI.borderColor} ${leetCodeUI.bgColor} rounded-xl p-3 md:p-4 lg:p-5 hover:${leetCodeUI.borderHoverColor} hover:${leetCodeUI.bgHoverColor} transition-all duration-300 group`}
+              className={`border ${leetCodeUI.borderColor} ${leetCodeUI.bgColor} ${leetCodeUI.borderHoverColor} ${leetCodeUI.bgHoverColor} rounded-xl p-3 md:p-4 lg:p-5 transition-all duration-300 group`}
             >
               <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
                 <div className={`h-1.5 w-1.5 md:h-2 md:w-2 ${leetCodeUI.indicatorColor} rounded-full`}></div>
@@ -266,7 +266,7 @@ function About() {
                     </div>
                   ) : (
                     <span className="text-lg md:text-xl lg:text-2xl font-extrabold">
-                      {leetcode?.[leetCodeUI.valueKey] ?? <PiSmileySadLight/>}
+                      {leetcode?.[leetCodeUI.valueKey] ?? <PiSmileySadLight />}
                     </span>
                   )}
                 </div>
