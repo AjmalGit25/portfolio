@@ -14,12 +14,12 @@ import { leetCodeUIs, codingPlatforms, socialPlatforms } from "../data/about.js"
 
 function About() {
   // Page starts from the top
-  // useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, []);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   const [leetcode, setLeetcode] = useState(null);
   const [leetcodeLoading, setLeetcodeLoading] = useState(true);
