@@ -88,7 +88,6 @@ export default function AIChatbot() {
       content: aiResponse
     };
     setMessages(prev => [...prev, aiMessage]);
-
   }
 
   useEffect(() => {
@@ -101,7 +100,7 @@ export default function AIChatbot() {
     <div>
       {/* Floating Tooltip */}
       {tooltipVisible && !chatOpen && (
-        <div className="fixed bottom-20 right-4 ai-chatbot-tooltip">
+        <div className="fixed bottom-20 right-4 md:bottom-25 md:right-6 ai-chatbot-tooltip">
           <div className="relative bg-blue-900 text-white text-[12px] px-2 py-2 pr-5 rounded-md shadow-md border border-blue-500/50">
             <button
               onClick={() => setTooltipVisible(false)}
@@ -121,7 +120,7 @@ export default function AIChatbot() {
       {buttonVisible && (
         <div
           onClick={() => setChatOpen(true)}
-          className={`fixed bottom-4 right-4 bg-blue-800 ${chatOpen ? 'w-11 h-11' : 'w-13 h-13'} rounded-full p-1 cursor-pointer hover:scale-105 transition-all duration-300 delay-200 ai-chatbot-button`}
+          className={`fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-blue-800 ${chatOpen ? 'w-11 h-11' : 'w-13 h-13'} rounded-full p-1 cursor-pointer hover:scale-105 transition-all duration-300 delay-200 ai-chatbot-button`}
         >
           {chatOpen ? (
             <div
@@ -143,7 +142,7 @@ export default function AIChatbot() {
       {/* Chatbot Window */}
       {chatOpen && (
         <div
-          className={`fixed bottom-20 right-4 w-xs sm:w-md border border-blue-300 rounded-xl overflow-hidden ${closing ? 'zoomOut' : 'zoomIn'}`}>
+          className={`fixed bottom-20 right-4 md:bottom-25 md:right-6 w-xs sm:w-md border border-blue-300 rounded-xl overflow-hidden ${closing ? 'zoomOut' : 'zoomIn'}`}>
           {/* upper */}
           <div className='flex items-center gap-2 bg-linear-to-t from-blue-900 to-blue-950 border-b border-blue-300 p-3'>
             <img src="./myFavicon.png" alt="AjmalAI"
