@@ -1,12 +1,5 @@
-import { SiReact, SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiTypescript, SiCplusplus, SiGit, SiGithub, SiVercel, SiRender, SiPostman, SiFigma, SiPython, SiPhp, SiDocker, SiRedux, SiMysql, SiNextdotjs, SiRedis, SiFirebase, SiPrisma, SiGooglegemini, SiWebrtc } from "react-icons/si";
-import { FaNodeJs, FaLinux, FaJava, FaAws, FaDatabase, FaBrain } from "react-icons/fa";
-import { GrOracle } from "react-icons/gr";
-import { VscVscode } from "react-icons/vsc";
-import { BsBarChartFill, BsDiagram3Fill, BsOpenai, BsClaude, } from "react-icons/bs";
-import { BiLogoPostgresql } from "react-icons/bi";
-import Footer from "../components/Footer.jsx";
 import { useEffect } from "react";
-
+import Footer from "../components/Footer.jsx";
 import { coreStack, cloudAndDevOps, coreTools, familiarSkills, exploringSkills } from "../data/skills.js";
 
 function Skills() {
