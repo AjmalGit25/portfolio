@@ -1,9 +1,6 @@
-import { SiLeetcode, SiUnstop, SiW3Schools, SiHackerrank, SiDiscord, SiWhatsapp, SiGeeksforgeeks } from "react-icons/si";
+import { SiLeetcode } from "react-icons/si";
 import { BiRun, BiPlay } from "react-icons/bi";
-import { FaGithub, FaTwitter, FaLaptopCode, FaMouse, FaGlobe, FaEye, FaReddit } from "react-icons/fa";
-import { PiSmileySadLight } from "react-icons/pi";
-import { FaLinkedin, FaCode } from "react-icons/fa6";
-import { AiFillInstagram } from "react-icons/ai";
+import { FaCode, FaEye, FaMouse, FaGlobe } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
@@ -226,7 +223,9 @@ function About() {
 
           <div className="relative">
             <div className="border border-blue-500 rounded-full overflow-hidden">
-              <img src="/profiles/leet_dp.jpeg" alt="leet's pic" draggable={false} onContextMenu={(e) => e.preventDefault()}
+              <img
+                src="https://assets.leetcode.com/users/AjmalAlgo/avatar_1787704616.png" alt="leet's pic"
+                draggable={false} onContextMenu={(e) => e.preventDefault()}
                 className="h-18 w-18" />
             </div>
             < SiLeetcode className="text-2xl sm:text-3xl text-amber-500 absolute -bottom-1  sm:-bottom-2 right-0 border-4 border-blue-950 bg-blue-950 rounded-full" />
@@ -234,7 +233,7 @@ function About() {
 
           <div className="flex-2">
             <h1 className="text-4xl font-bold">LeetCode <span className="text-amber-500">Profile</span></h1>
-            <p className="text-white/80">AjmalAlgo • Rank: <span className="text-amber-500">699,769</span>
+            <p className="text-white/80">AjmalAlgo • Rank: <span className="text-amber-500">697,016</span>
             </p>
           </div>
 
@@ -347,9 +346,11 @@ function About() {
         >
           <img src="./Leet_200.gif" alt="Badge_200" className="w-auto h-50 md:h-80" onClick={(e) => e.stopPropagation()} />
           <h3 className="absolute top-40 font-medium text-xl">
-            <span className="text-orange-500">LeetCode</span>
-            <span className="text-green-500 animate-ping"> • </span>
-            <span className="text-blue-500">AjmalAlgo</span>
+            <div className="flex items-center gap-2">
+              <SiLeetcode className="text-orange-500" />
+              <span className="text-orange-500">LeetCode:</span>
+              <span className="text-blue-500">AjmalAlgo</span>
+            </div>
           </h3>
           <span className="absolute bottom-40 text-amber-300 text-xs sm:text-base">
             SOLVING PROBLEMS 200+ DAYS IN 2026
