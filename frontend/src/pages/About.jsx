@@ -1,6 +1,7 @@
 import { SiLeetcode, SiUnstop, SiW3Schools, SiHackerrank, SiDiscord, SiWhatsapp, SiGeeksforgeeks } from "react-icons/si";
 import { BiRun, BiPlay } from "react-icons/bi";
 import { FaGithub, FaTwitter, FaLaptopCode, FaMouse, FaGlobe, FaEye, FaReddit } from "react-icons/fa";
+import { PiSmileySadLight } from "react-icons/pi";
 import { FaLinkedin, FaCode } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
@@ -265,7 +266,7 @@ function About() {
                     </div>
                   ) : (
                     <span className="text-lg md:text-xl lg:text-2xl font-extrabold">
-                      {leetcode?.[leetCodeUI.valueKey] ?? 0}
+                      {leetcode?.[leetCodeUI.valueKey] ?? <PiSmileySadLight/>}
                     </span>
                   )}
                 </div>
