@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import "./AIChatbot.css";
-import { RiMenuUnfoldLine, RiMenuFoldLine, RiCloseLargeFill, RiGeminiFill } from "react-icons/ri";
+import { RiMenuUnfoldLine, RiMenuFoldLine, RiCloseLargeFill, RiGeminiFill, RiRobot2Fill } from "react-icons/ri";
 import BACKEND_URL from "../../../config/api.js";
 import axios from "axios";
 import OneTimeTypewriter from "../OneTimeTypewriter.jsx";
@@ -150,7 +150,7 @@ export default function AIChatbot() {
 
             <div className='flex items-center justify-between gap-2 w-full'>
               <div className='flex flex-col gap-0.5'>
-                <span className="text-white font-medium text-sm">Ajmal's AI Assistant</span>
+                <span className="text-white font-medium text-sm inline-flex items-center gap-2">Ajmal's AI Assistant <RiRobot2Fill /></span>
                 {/* Chat typing */}
                 {chatLoading ? (
                   <span className='text-green-500 text-[11px]'>Typing...</span>
