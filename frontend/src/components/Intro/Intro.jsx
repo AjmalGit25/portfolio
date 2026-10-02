@@ -69,7 +69,7 @@ export default function Intro({ exit }) {
 
             <div className="flex flex-col items-center gap-2">
               <div className="relative">
-                <img src="https://assets.leetcode.com/users/AjmalAlgo/avatar_1787704616.png" alt="Ajmal"
+                <img src="https://assets.leetcode.com/users/AjmalAlgo/avatar_1790843321.png" alt="Ajmal"
                   className="h-12 sm:h-20 aspect-square object-cover border-y-2 border-y-blue-500 border-x-2 border-x-blue-300 rounded-full"
                 />
                 <div className="absolute -bottom-1 -right-1 bg-white rounded-full p-1 border-2 border-blue-900">
