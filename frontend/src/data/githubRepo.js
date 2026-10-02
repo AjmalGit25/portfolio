@@ -19,12 +19,12 @@ const githubRepo = [
   },
   {
     id: 3,
-    title: "smart-parking-solution",
+    title: "LOOP",
     description:
-      "This is a 'smart-parking-solution' system with a better solution and hassle-free vehicle parking with smart management.",
-    languages: "JavaScript",
+      "A multi-tenant AI feedback-intelligence SaaS platform that transforms customer feedback into actionable insights.",
+    languages: "TypeScript",
     stars: 0,
-    url: "https://github.com/AjmalGit25/smart-parking-solution",
+    url: "https://github.com/AjmalGit25/LOOP",
   },
   {
     id: 4,
