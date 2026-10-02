@@ -2,6 +2,7 @@ import { SiLeetcode } from "react-icons/si";
 import { BiRun, BiPlay } from "react-icons/bi";
 import { FaCode, FaEye, FaMouse, FaGlobe } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
+import { PiSmileySadLight } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
 import { useEffect, useState } from "react";
