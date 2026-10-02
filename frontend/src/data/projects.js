@@ -122,12 +122,8 @@ const projects = [
     features: [
       "Role-based user and admin authentication",
       "JWT authentication with secure HttpOnly cookies",
-      "Product catalog with category filtering and search",
-      "Shopping cart and checkout workflow",
       "Order placement and order history",
       "Admin product, order, and user management",
-      "Image upload and management with Cloudinary",
-      "Responsive UI built with Tailwind CSS",
       "Interactive product carousel using Swiper",
       "Real-time toast notifications for user feedback",
       "RESTful API integration using Axios"
