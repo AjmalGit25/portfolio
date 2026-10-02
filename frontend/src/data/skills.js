@@ -1,4 +1,4 @@
-import { SiReact, SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiTypescript, SiCplusplus, SiGit, SiGithub, SiVercel, SiRender, SiNetlify, SiPostman, SiFigma, SiPython, SiPhp, SiDocker, SiRedux, SiMysql, SiNextdotjs, SiRedis, SiFirebase, SiPrisma, SiGooglegemini, SiWebrtc } from "react-icons/si";
+import { SiReact, SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiTypescript, SiCplusplus, SiGit, SiGithub, SiVercel, SiRender, SiNetlify, SiPostman, SiFigma, SiPython, SiPhp, SiDocker, SiRedux, SiMysql, SiNextdotjs, SiRedis, SiFirebase, SiPrisma, SiGooglegemini, SiWebrtc, SiCloudinary } from "react-icons/si";
 import { FaNodeJs, FaLinux, FaJava, FaAws, FaDatabase, FaBrain } from "react-icons/fa";
 import { GrOracle } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
@@ -108,7 +108,13 @@ const cloudAndDevOps = [
     title: "Netlify",
     icon: SiNetlify,
     iconColor: "text-teal-500",
-    glowColor: "rgba(23, 228, 221, 0.225)"
+    glowColor: "rgba(73, 228, 221, 0.225)"
+  },
+  {
+    title: "Cloudinary",
+    icon: SiCloudinary,
+    iconColor: "text-blue-600",
+    glowColor: "rgba(73, 78, 221, 0.225)"
   },
 ];
 
