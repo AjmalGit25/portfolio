@@ -35,6 +35,30 @@ export const setVisitor = async (req, res) => {
     hour12: true,
   });
 
+  // Ignore automated browsers, bots, and crawlers =============================
+  const suspiciousPatterns = [
+    "headless",
+    "bot",
+    "crawler",
+    "spider",
+    "slurp",
+    "curl",
+    "wget",
+    "python-requests",
+    "axios",
+    "scrapy",
+    "playwright",
+    "puppeteer"
+  ];
+
+  const isAutomated = suspiciousPatterns.some(pattern =>
+    userAgent.toLowerCase().includes(pattern)
+  );
+
+  if (isAutomated) {
+    return res.status(400).json({ message: "Automated browser ignored." });
+  }
+
   // Check if the visitor already exists
   const visitor = await Visitor.findOne({ visitorId });
 
@@ -81,30 +105,6 @@ export const setVisitor = async (req, res) => {
       ...(timezone && { timezone })
     }
 
-    // Ignore automated browsers, bots, and crawlers =============================
-    const suspiciousPatterns = [
-      "headless",
-      "bot",
-      "crawler",
-      "spider",
-      "slurp",
-      "curl",
-      "wget",
-      "python-requests",
-      "axios",
-      "scrapy",
-      "playwright",
-      "puppeteer"
-    ];
-
-    const isAutomated = suspiciousPatterns.some(pattern =>
-      userAgent.toLowerCase().includes(pattern)
-    );
-
-    if (isAutomated) {
-      return res.status(400).json({ message: "Automated browser ignored." });
-    }
-    
     await Visitor.create(visitorData);
     await sendNewVisitorEmail(formattedDate, location, device, deviceType, os, browser, network, postal, timezone, source);
 
