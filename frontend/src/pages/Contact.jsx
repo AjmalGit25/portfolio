@@ -1,14 +1,9 @@
-import { HiOutlineMail } from "react-icons/hi";
-import { LuPhone, LuGlobe } from "react-icons/lu";
-import { GrLocation } from "react-icons/gr";
-import { SiLeetcode, SiWhatsapp } from "react-icons/si";
-import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
-import { FiLinkedin, FiDownload, FiExternalLink } from "react-icons/fi";
+import { FiDownload } from "react-icons/fi";
 import { RiSendPlaneFill } from "react-icons/ri";
-import { MdWork } from "react-icons/md";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import BACKEND_URL from "../../config/api.js";
+import { contactData, socialLinks } from "../data/contact.js";
 
 function Contact() {
   const [loading, setLoading] = useState(false);
@@ -112,105 +107,50 @@ function Contact() {
             Have a question, opportunity, or idea in mind? I'm always open to meaningful conversations and exciting collaborations. Feel free to reach out through email, phone, or by filling out the contact form below. I'll make sure to respond as soon as possible and look forward to connect with you!
           </p>
 
-          {/* Container: Email, Phone, Location */}
+          {/* -------------------- Contacts -------------------- */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 fade-up">
-            {/* Email */}
-            <a href="mailto:reach.ajmal.dev@gmail.com"
-              className="group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
 
-              <div className="flex items-center justify-between">
-                <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg group-hover:text-white transition-colors duration-300"><HiOutlineMail />
-                </span>
-                <span className="hidden group-hover:inline">
-                  <RiSendPlaneFill className="text-blue-500 text-xl" />
-                </span>
-              </div>
+            {contactData.map((contact, idx) => {
+              const Icon = contact.icon;
 
-              <span className="text-white font-bold">Email</span>
-              <span className="text-white/60">reach.ajmal.dev@gmail.com</span>
-            </a>
+              return (
+                <a
+                  key={idx}
+                  href={contact.href}
+                  className="group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
 
-            {/* Phone */}
-            <a href="tel:+919955578303"
-              className="group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg group-hover:text-white transition-colors duration-300">
+                      <Icon />
+                    </span>
+                    <span className="hidden group-hover:inline">
+                      <RiSendPlaneFill className="text-blue-500 text-xl" />
+                    </span>
+                  </div>
 
-              <div className="flex items-center justify-between">
-                <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg group-hover:text-white transition-colors duration-300"><LuPhone />
-                </span>
-                <span className="hidden group-hover:inline">
-                  <RiSendPlaneFill className="text-blue-500 text-xl" />
-                </span>
-              </div>
-
-              <span className="text-white font-bold">Phone</span>
-              <span className="text-white/60">+91 9955578303</span>
-            </a>
-
-            {/* Location */}
-            <a href="https://www.google.com/maps?q=Ahmedabad" target="_blank" rel="noopener noreferrer"
-              className="group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
-
-              <div className="flex items-center justify-between">
-                <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg group-hover:text-white transition-colors duration-300"><GrLocation />
-                </span>
-                <span className="hidden group-hover:inline">
-                  <RiSendPlaneFill className="text-blue-500 text-xl" />
-                </span>
-              </div>
-
-              <span className="text-white font-bold">Location</span>
-              <span className="text-white/60">Ahmedabad, Gujarat, India</span>
-            </a>
-
-            {/* Whatsapp */}
-            <a
-              href="https://wa.me/919955578303?text=Hi%20Ajmal!%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect%20regarding%20a%20potential%20opportunity%20or%20collaboration.%20Looking%20forward%20to%20hearing%20from%20you!"
-
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
-
-              <div className="flex items-center justify-between">
-                <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg group-hover:text-white transition-colors duration-300"><SiWhatsapp />
-                </span>
-                <span className="hidden group-hover:inline">
-                  <RiSendPlaneFill className="text-blue-500 text-xl" />
-                </span>
-              </div>
-
-              <span className="text-white font-bold">WhatsApp</span>
-              <span className="text-white/60 line-clamp-1">Hi Ajmal! I came across your portfolio and was impressed by your work.</span>
-            </a>
+                  <span className="text-white font-bold">{contact.title}</span>
+                  <span className="text-white/60 line-clamp-1">{contact.text}</span>
+                </a>
+              )
+            })}
           </div>
 
 
-          {/* Social Links & Resume */}
+          {/* -------------------- Social Links & Resume -------------------- */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-5 mt-8 fade-down">
             <div className="flex flex-wrap gap-3">
-              <a href="https://github.com/AjmalGit25" target="_blank"
-                className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
-                <FaGithub />
-              </a>
-              <a href="https://linkedin.com/in/ajmal-hussain92" target="_blank"
-                className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
-                <FiLinkedin />
-              </a>
-              <a href="https://www.instagram.com/asyncajmal" target="_blank"
-                className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
-                <FaInstagram />
-              </a>
-              <a href="https://leetcode.com/u/AjmalAlgo" target="_blank"
-                className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
-                <SiLeetcode />
-              </a>
-              <a href="https://twitter.com" target="_blank"
-                className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
-                <FaTwitter />
-              </a>
-              <a href="https://ajmal-hussain.vercel.app" target="_blank"
-                className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
-                <LuGlobe />
-              </a>
+              {socialLinks.map((link, idx) => {
+                const Icon = link.icon;
+
+                return (
+                  <a
+                    key={idx}
+                    href={link.href} target="_blank"
+                    className="text-white/60 border border-blue-300/20 rounded-full p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-115 hover:rotate-20 transition-transform duration-300">
+                    <Icon />
+                  </a>
+                )
+              })}
             </div>
 
             {/* Download Resume */}
