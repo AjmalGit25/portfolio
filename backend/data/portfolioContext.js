@@ -301,8 +301,6 @@ say that you don't have enough information rather than guessing.
 - Certificate Verification: https://courses.skillindiadigital.gov.in/api/custom_api/view_certificate/705deb3d412745c3b4d3ac2aacb54959
 
 
-
-
 ## Certifications
 
 ### Programming & Development
@@ -349,7 +347,7 @@ say that you don't have enough information rather than guessing.
 
 
 
-## Coding Platforms Profiles
+## Coding Platform Profiles
 
 - **LeetCode**
 - Profile url: https://leetcode.com/u/AjmalAlgo
@@ -363,12 +361,24 @@ say that you don't have enough information rather than guessing.
   - Skills: C++, JavaScript, Node.js, SQL
 
 
+
+## Social Media Profiles
+
+- **LinkedIn**: https://linkedin.com/in/ajmal-hussain92
+- **Discord**: https://discord.com/users/1341100335086833725
+- **Instagram**: https://www.instagram.com/asyncajmal
+- **WhatsApp**: +91 9955578303
+- **Reddit**: https://www.reddit.com/user/ajmal62
+
+
+
 ## Interests
 
 - Full-stack development
-- AI, LLM APIs, and Generative AI
+- AI, LLM APIs, RAG
 - DSA Problem Solving
 - Real-time communication
+- Frontend, Backend, or Full Stack Developer position
 
 
   `;
