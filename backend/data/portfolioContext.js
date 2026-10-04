@@ -349,15 +349,16 @@ say that you don't have enough information rather than guessing.
 
 
 
-## Coding Platforms
+## Coding Platforms Profiles
 
-- **LeetCode** — [Ajmal's Profile](https://leetcode.com/u/AjmalAlgo)
-  - Achievements: 3 Badges
-  - Skills: C++, JavaScript, Node.js, SQL
-  - Problems Solved: 300+ (Easy, Medium, Hard)
-  - Global Ranking: 699,769
+- **LeetCode**
+- Profile url: https://leetcode.com/u/AjmalAlgo
+- Achievements: 3 Badges (50 Days Badge, 100 Days Badge, 200 Days Badge)
+- Problems Solved: 200+ (Across Easy, Medium, Hard)
+- Global Ranking: 694,332
 
-- **HackerRank** — [Ajmal's Profile](https://www.hackerrank.com/profile/ajmalashrafi2016)
+- **HackerRank**
+  - Profile url: https://www.hackerrank.com/profile/ajmalashrafi2016
   - Achievements: 2 Badges (3 Star Silver Badge in C Language, 1 Star Bronze Badge in C++ Language)
   - Skills: C++, JavaScript, Node.js, SQL
 
