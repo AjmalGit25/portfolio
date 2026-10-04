@@ -1,6 +1,6 @@
 import { SiLeetcode } from "react-icons/si";
 import { BiRun, BiPlay } from "react-icons/bi";
-import { FaCode, FaEye, FaMouse, FaGlobe } from "react-icons/fa";
+import { FaCode, FaEye, FaMouse, FaGlobe, FaRegQuestionCircle } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 import { PiSmileySadLight } from "react-icons/pi";
 import { Link } from "react-router-dom";
@@ -94,7 +94,7 @@ function About() {
             About <span className='text-blue-500'>Me</span>
           </h1>
 
-          <div className="fade-right">
+          <div className="fade-right mt-10">
             <h2 className="text-white text-2xl my-3 font-bold">I'M A
               <span className="text-blue-500"> FULL STACK </span>DEVELOPER
             </h2>
@@ -189,12 +189,8 @@ function About() {
       <div className="space-y-10 max-w-4xl">
         <div className="space-y-4">
           <h2 className="text-white text-2xl font-bold flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-blue-500">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-              <path d="M12 17h.01"></path>
-            </svg>
-            Frequently Asked Questions
+            <FaRegQuestionCircle className="text-blue-500"/>
+            <span>Frequently Asked Questions (FAQs)</span>
           </h2>
 
           <div className="space-y-4 text-white">
@@ -265,7 +261,7 @@ function About() {
                       <span className="text-xs font-normal">Loading...</span>
                     </div>
                   ) : (
-                    <span className="text-lg md:text-xl lg:text-2xl font-extrabold">
+                    <span className="text-lg md:text-xl lg:text-2xl font-bold">
                       {leetcode?.[leetCodeUI.valueKey] ?? <PiSmileySadLight />}
                     </span>
                   )}
