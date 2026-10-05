@@ -1,3 +1,7 @@
+import { FiUsers, FiUserPlus } from "react-icons/fi";
+import { FaRegStar } from "react-icons/fa";
+import { GoRepo } from "react-icons/go";
+
 const githubRepo = [
   {
     id: 1,
@@ -12,7 +16,7 @@ const githubRepo = [
     id: 2,
     title: "EasyLayzee",
     description:
-      "EasyLayzee is a full-stack MERN e-commerce web application designed for browsing and purchasing snack products such as wafers and chips. The project includes separate user and admin experiences, making it suitable for both customers and store administrators. The user experience allows customers to explore the product catalog, add items to their cart, and complete purchases securely. On the other hand, the admin experience provides store administrators with tools to manage inventory, process orders, and monitor sales performance. This project demonstrates proficiency in full-stack development using the MERN stack (MongoDB, Express.js, React.js, Node.js) and showcases the ability to create a functional e-commerce platform with distinct user roles.",
+      "A full-stack MERN e-commerce web application designed for browsing and purchasing snack products such as wafers and chips.",
     languages: "JavaScript",
     stars: 0,
     url: "https://github.com/AjmalGit25/EasyLayzee",
@@ -53,6 +57,41 @@ const githubRepo = [
     stars: 0,
     url: "https://github.com/AjmalGit25/SkillHarbor",
   },
-]
+];
 
-export default githubRepo;
+const gitHubInfo = [
+    {
+      name: "Followers",
+      icon: FiUsers,
+      iconColor: "text-blue-500",
+      count: 60,
+      bgColor: "bg-blue-500/10",
+      borderColor: "border-blue-500/50"
+    },
+    {
+      name: "Following",
+      icon: FiUserPlus,
+      iconColor: "text-purple-400",
+      count: 55,
+      bgColor: "bg-purple-500/10",
+      borderColor: "border-purple-500/50"
+    },
+    {
+      name: "Public Repos",
+      icon: GoRepo,
+      iconColor: "text-teal-500",
+      count: 18,
+      bgColor: "bg-teal-500/10",
+      borderColor: "border-teal-500/50"
+    },
+    {
+      name: "Stars",
+      icon: FaRegStar,
+      iconColor: "text-amber-500",
+      count: 4,
+      bgColor: "bg-amber-500/10",
+      borderColor: "border-amber-500/50"
+    }
+  ];
+
+export { githubRepo, gitHubInfo };

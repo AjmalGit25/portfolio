@@ -1,11 +1,9 @@
 import { GrLocation } from "react-icons/gr";
 import { LuPhone, LuGlobe } from "react-icons/lu";
 import { FiCalendar, FiExternalLink, FiUsers, FiUserPlus } from "react-icons/fi";
-import { FaGithub, FaTwitter, FaInstagram, FaRegStar } from "react-icons/fa";
-import { GoRepo } from "react-icons/go";
+import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 import Footer from "../components/Footer.jsx";
-import githubRepo from "../data/githubRepo.js";
-
+import {gitHubInfo, githubRepo} from "../data/github.js";
 import { useEffect, useState } from "react";
 
 function Github() {
@@ -33,41 +31,6 @@ function Github() {
     fetchUser();
   }, []);
 
-  const gitHubInfo = [
-    {
-      name: "Followers",
-      icon: FiUsers,
-      iconColor: "text-blue-500",
-      count: 54,
-      bgColor: "bg-blue-500/10",
-      borderColor: "border-blue-500/50"
-    },
-    {
-      name: "Following",
-      icon: FiUserPlus,
-      iconColor: "text-purple-400",
-      count: 54,
-      bgColor: "bg-purple-500/10",
-      borderColor: "border-purple-500/50"
-    },
-    {
-      name: "Public Repos",
-      icon: GoRepo,
-      iconColor: "text-teal-500",
-      count: 16,
-      bgColor: "bg-teal-500/10",
-      borderColor: "border-teal-500/50"
-    },
-    {
-      name: "Stars",
-      icon: FaRegStar,
-      iconColor: "text-amber-500",
-      count: 4,
-      bgColor: "bg-amber-500/10",
-      borderColor: "border-amber-500/50"
-    }
-  ];
-
 
   return (
     <div className="max-w-7xl sm:ml-20 md:ml-20 lg:ml-50 p-4 md:p-6">
@@ -92,7 +55,7 @@ function Github() {
           <div className="flex flex-col sm:flex-row sm:items-center gap-3">
             {/* Github Profile Picture */}
             <img src="/profiles/github_dp.jpeg" alt="Github's Profile Picture"
-              className='w-20 h-20 rounded-full object-contain border border-blue-500/50 self-center' />
+              className='w-20 h-20 rounded-full object-contain border-2 border-blue-400/80 self-center shadow-[0_0_10px_rgba(50,120,250,0.8)]' />
 
             {/* Name-Info container */}
             <div className="space-y-3">
@@ -121,7 +84,6 @@ function Github() {
                 </div>
               </div>
             </div>
-
           </div>
 
           {/* Button (right side, link) */}
@@ -223,7 +185,5 @@ function Github() {
     </div >
   );
 }
-
-
 
 export default Github;
