@@ -111,7 +111,7 @@ export default function AIChatbot() {
               <span>Hey! Ajmal's AI Chat assistant</span> <RiGeminiFill /> <span>is here</span>
             </div>
             {/* Triangle arrow pointing down */}
-            <div className="absolute -bottom-[6px] right-6 w-3 h-3 bg-blue-900 border-r border-b border-blue-500/50 rotate-45"></div>
+            <div className="absolute -bottom-1.5 right-6 w-3 h-3 bg-blue-900 border-r border-b border-blue-500/50 rotate-45"></div>
           </div>
         </div>
       )}
@@ -219,7 +219,7 @@ export default function AIChatbot() {
               <button
                 disabled={chatLoading}
                 type="submit"
-                className={`shrink-0 bg-blue-500 text-white font-medium rounded-lg px-4 py-2 ${chatLoading ? 'cursor-not-allowed bg-blue-500/50' : 'hover:bg-blue-500/90 cursor-pointer'}`}>
+                className={`shrink-0 bg-blue-500 text-white font-medium rounded-lg px-4 py-2 border border-blue-300/40 shadow-md shadow-blue-500/30 transition-all duration-300 active:scale-95 ${chatLoading ? 'bg-blue-900 cursor-not-allowed' : 'hover:bg-blue-500/80 cursor-pointer'}`}>
                 Send
               </button>
             </form>
