@@ -220,7 +220,7 @@ function About() {
 
           <div className="flex-2">
             <h1 className="text-4xl font-bold">LeetCode <span className="text-amber-500">Profile</span></h1>
-            <p className="text-white/80">AjmalAlgo • Rank: <span className="text-amber-500">697,016</span>
+            <p className="text-white/80">AjmalAlgo • Rank: <span className="text-amber-500">680,769</span>
             </p>
           </div>
 
