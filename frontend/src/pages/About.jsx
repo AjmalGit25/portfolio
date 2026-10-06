@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import BACKEND_URL from "../../config/api.js";
 import Counter from "../components/Counter.jsx";
-import { leetCodeUIs, codingPlatforms, socialPlatforms } from "../data/about.js";
+import { leetCodeUIs, codingPlatforms, socialPlatforms, technicalExpertise } from "../data/about.js";
 
 function About() {
   // Page starts from the top
@@ -120,21 +120,11 @@ function About() {
               <span>Technical Expertise</span>
             </h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/80">
-              <li className="flex items-start gap-1">
-                <BiPlay className="text-blue-500 mt-1 shrink-0" />
-                <strong>Frontend:</strong> React.js, Next.js, JavaScript, Tailwind CSS</li>
-              <li className="flex items-start gap-1">
-                <BiPlay className="text-blue-500 mt-1 shrink-0" />
-                <strong>Backend:</strong> Node.js, Express, MongoDB, MySQL</li>
-              <li className="flex items-start gap-1">
-                <BiPlay className="text-blue-500 mt-1 shrink-0" />
-                <strong>DevOps:</strong> Docker, AWS, CI/CD, Git</li>
-              <li className="flex items-start gap-1">
-                <BiPlay className="text-blue-500 mt-1 shrink-0" />
-                <strong>Tools:</strong> Postman, VS Code, Figma</li>
-              <li className="flex items-start gap-1">
-                <BiPlay className="text-blue-500 mt-1 shrink-0" />
-                <strong>Languages:</strong> C++, JavaScript</li>
+              {technicalExpertise.map((expertise, idx) => (
+                <li key={idx} className="flex items-start gap-1">
+                  <BiPlay className="text-blue-500 mt-1 shrink-0" />
+                  <strong>{expertise.title}: </strong>{expertise.contents}</li>
+              ))}
             </ul>
           </div>
         </section>
@@ -189,7 +179,7 @@ function About() {
       <div className="space-y-10 max-w-4xl">
         <div className="space-y-4">
           <h2 className="text-white text-2xl font-bold flex items-center gap-2">
-            <FaRegQuestionCircle className="text-blue-500"/>
+            <FaRegQuestionCircle className="text-blue-500" />
             <span>Frequently Asked Questions (FAQs)</span>
           </h2>
 

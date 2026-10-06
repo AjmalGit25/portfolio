@@ -1,5 +1,4 @@
 import { SiLeetcode, SiUnstop, SiW3Schools, SiHackerrank, SiDiscord, SiWhatsapp, SiGeeksforgeeks } from "react-icons/si";
-import { BiRun, BiPlay } from "react-icons/bi";
 import { FaGithub, FaTwitter, FaLaptopCode, FaMouse, FaGlobe, FaEye, FaReddit } from "react-icons/fa";
 import { FaLinkedin, FaCode } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
@@ -113,8 +112,32 @@ const socialPlatforms = [
   }
 ];
 
+const technicalExpertise = [
+  {
+    title: "Frontend",
+    contents: "React.js, Next.js, JavaScript, Tailwind CSS"
+  },
+  {
+    title: "Backend",
+    contents: "Node.js, Express, MongoDB, PostgreSQL, MySQL"
+  },
+  {
+    title: "DevOps",
+    contents: "Git, GitHub, AWS, CI/CD, Vercel, Render"
+  },
+  {
+    title: "Tools",
+    contents: "Postman, VS Code, Figma"
+  },
+  {
+    title: "Languages",
+    contents: "C++, JavaScript"
+  },
+];
+
 export {
   leetCodeUIs,
   codingPlatforms,
-  socialPlatforms
+  socialPlatforms,
+  technicalExpertise
 };
