@@ -115,7 +115,7 @@ function Projects() {
 
       <div className='absolute inset-0 overflow-hidden px-4 md:px-6 pointer-events-none z-0'>
           <div
-            className='absolute -top-40 right-60 w-96 h-96 bg-linear-to-br from-blue-500/30 to-cyan-500/30 rounded-full blur-3xl animate-pulse'
+            className='absolute -top-30 left-72 w-96 h-96 bg-linear-to-br from-blue-500/30 to-cyan-500/30 rounded-full blur-3xl animate-pulse'
             style={{ transform: "translate(-1.48942px, 6.10778px) translateY(0px)", transition: "transform 0.3s ease-out", animationDelay: "0s" }}
           ></div>
           <div
@@ -126,7 +126,7 @@ function Projects() {
             className='absolute bottom-0 left-1/2 w-96 h-96 bg-linear-to-t from-teal-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'
             style={{ animationDelay: "2s" }}
           ></div>
-          <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[64px_64px]'></div>
+          <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[64px_64px]'></div>
         </div>
 
       {/* Selected Project (Modal) ===================================== */}
