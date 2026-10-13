@@ -153,7 +153,7 @@ export default function AIChatbot() {
                 <span className="text-white font-medium text-sm inline-flex items-center gap-2">Ajmal's AI Assistant <RiRobot2Fill /></span>
                 {/* Chat typing */}
                 {chatLoading ? (
-                  <span className='text-green-500 text-[11px]'>Typing...</span>
+                  <span className='text-green-500 text-[11px] font-medium'>Typing...</span>
                 ) : (
                   <span className="text-white/50 text-[11px]">Ask me anything about Ajmal</span>
                 )}
