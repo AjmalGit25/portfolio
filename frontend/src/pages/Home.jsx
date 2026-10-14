@@ -61,13 +61,13 @@ function Home() {
           </div>
 
           {/* Hire & Projects*/}
-          <div className="inline-flex text-[.7em] md:text-sm items-center gap-5 text-center uppercase tracking-[.3em] mt-5 fade-down">
-            <Link to="/contact">
-              <span className="bg-blue-300 py-2 px-4 rounded-full hover:bg-blue-400 transition-colors duration-200">Hire Me &rarr;</span>
+          <div className="flex items-center gap-5 text-[.7em] md:text-sm text-center uppercase tracking-[.3em] mt-5 fade-down">
+            <Link to="/contact" className="bg-blue-300 py-2 px-4 rounded-full hover:bg-blue-400 transition-colors duration-200">
+              <span >Hire Me &rarr;</span>
             </Link>
 
-            <Link to="/projects">
-              ✨ <span className="text-white/60 hover:text-white transition-colors duration-200">View Projects</span>
+            <Link to="/projects" className="text-white/60 hover:text-white py-1.5 px-4 rounded-full border border-blue-300/50 hover:border-blue-300 transition-colors duration-200">
+              <span>View Projects</span>
             </Link>
           </div>
 
