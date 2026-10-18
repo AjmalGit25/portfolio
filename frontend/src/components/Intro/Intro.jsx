@@ -42,10 +42,11 @@ export default function Intro({ exit }) {
             {welcome && <OneTimeTypewriter text="Welcome to my portfolio" speed={20} className={`text-xl sm:text-3xl`} />}
           </div>
 
+          {/* Linkedin */}
           <div className="flex items-center justify-evenly gap-2">
             <div className="flex flex-col items-center gap-2">
               <div className="relative">
-                <img src="https://media.licdn.com/dms/image/v2/D4D03AQGycly-UxMmPA/profile-displayphoto-crop_800_800/B4DaCr_qz_J4AI-/0/1789591991789?e=1791417600&v=beta&t=nkdiAr_mBTBM3JU1p13rm2-wz7y5RVO1zqPEJhVVuag" alt="Ajmal"
+                <img src="/profiles/lkdn_dp.jpeg" alt="Ajmal"
                   className="h-12 sm:h-20 aspect-square object-cover border-y-2 border-y-blue-500 border-x-2 border-x-blue-300 rounded-full"
                 />
                 <div className="absolute -bottom-1 -right-1 bg-white rounded-full p-1 border-2 border-blue-900">
@@ -55,9 +56,10 @@ export default function Intro({ exit }) {
               <span className="text-sm text-transparent bg-clip-text bg-linear-to-r from-blue-300 to-blue-600 font-medium">ajmal-hussain92</span>
             </div>
 
+            {/* GitHub */}
             <div className="flex flex-col items-center gap-2">
               <div className="relative">
-                <img src="https://avatars.githubusercontent.com/u/205396557?v=4" alt="Ajmal"
+                <img src="/profiles/github_dp.jpeg" alt="Ajmal"
                   className="h-12 sm:h-20 aspect-square object-cover border-y-2 border-y-blue-500 border-x-2 border-x-blue-300 rounded-full"
                 />
                 <div className="absolute -bottom-1 -right-1 bg-white rounded-full p-1 border-2 border-blue-900">
@@ -67,6 +69,7 @@ export default function Intro({ exit }) {
               <span className="text-sm text-transparent bg-clip-text bg-linear-to-r from-blue-300 to-blue-600 font-medium">AjmalGit25</span>
             </div>
 
+            {/* Leetcode */}
             <div className="flex flex-col items-center gap-2">
               <div className="relative">
                 <img src="https://assets.leetcode.com/users/AjmalAlgo/avatar_1790843321.png" alt="Ajmal"
