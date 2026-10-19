@@ -117,7 +117,7 @@ function Contact() {
                 <a
                   key={idx}
                   href={contact.href}
-                  className="group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
+                  className="shine-effect group flex flex-col p-5 border border-blue-500/30 rounded-xl bg-blue-500/10 hover:border-blue-500/70 hover:bg-blue-500/30 hover:-translate-y-2 transition-all duration-300 space-y-2">
 
                   <div className="flex items-center justify-between">
                     <span className="text-blue-500 text-2xl bg-blue-500/20 h-10 w-10 inline-flex items-center justify-center rounded-lg group-hover:text-white transition-colors duration-300">

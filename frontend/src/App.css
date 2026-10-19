@@ -411,3 +411,43 @@
   opacity: 1;
   transform: translate(0, 0) scale(1);
 }
+
+/* ================= shine effect, light sweep, or shimmer hover effect ================= */
+
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.shine-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+
+  background: linear-gradient(
+    70deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.04) 25%,
+    rgba(255, 255, 255, 0.28) 50%,
+    rgba(255, 255, 255, 0.04) 75%,
+    transparent 100%
+  );
+
+  transition: left 700ms ease-in-out;
+}
+
+.shine-effect:hover::before {
+  left: 125%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shine-effect::before {
+    transition: none;
+  }
+}

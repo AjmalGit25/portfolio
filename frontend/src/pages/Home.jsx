@@ -66,7 +66,7 @@ function Home() {
               <span >Hire Me &rarr;</span>
             </Link>
 
-            <Link to="/projects" className="text-white/60 hover:text-white py-1.5 px-4 rounded-full border border-blue-300/50 hover:border-blue-300 transition-colors duration-200">
+            <Link to="/projects" className="shine-effect text-white/60 hover:text-white py-1.5 px-4 rounded-full border border-blue-300/50 hover:border-blue-300 transition-colors duration-200">
               <span>View Projects</span>
             </Link>
           </div>

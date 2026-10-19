@@ -211,7 +211,7 @@ function About() {
           <div className="relative">
             <div className="border border-blue-500 rounded-full overflow-hidden">
               <img
-                src="https://assets.leetcode.com/users/AjmalAlgo/avatar_1790843321.png" alt="leet's pic"
+                src="https://assets.leetcode.com/users/AjmalAlgo/avatar_1790843321.png" alt="leet DP"
                 draggable={false} onContextMenu={(e) => e.preventDefault()}
                 className="h-18 w-18" />
             </div>
