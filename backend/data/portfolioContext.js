@@ -304,6 +304,10 @@ say that you don't have enough information rather than guessing.
 ## Certifications
 
 ### Programming & Development
+- **GfG 160 - 160 Days of Problem Solving** — GeeksforGeeks (2026)
+  - Successfully completed the 160 Days of Problem Solving challenge on GeeksforGeeks.
+  - Verification: https://www.geeksforgeeks.org/certificate/4d8535105fec2d5c7faa011944b7d634
+
 - **DSA with C++** — ChaiCode (2026)
   - Excellence Certificate for mastering Data Structures and Algorithms with C++.
   - Verification: https://courses.chaicode.com/learn/certificate/11786731-230407
