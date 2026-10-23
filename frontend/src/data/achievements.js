@@ -1,6 +1,16 @@
 // JSON data for achievements
 const achievements = [
   {
+    id: 19,
+    title: "GfG 160 - 160 Days of Problem Solving",
+    platform: "GeeksforGeeks",
+    description:
+      "Successfully completed the 160 Days of Problem Solving challenge on GeeksforGeeks.",
+    year: "2026",
+    image: ["/certificates/cert19.jpg"],
+    verifyUrl: "https://www.geeksforgeeks.org/certificate/4d8535105fec2d5c7faa011944b7d634?utm_source=socials&utm_medium=cc_link"
+  },
+  {
     id: 18,
     title: "Web Development Internship",
     platform: "Zidio Development",
