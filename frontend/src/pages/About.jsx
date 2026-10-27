@@ -135,7 +135,7 @@ function About() {
             <img
               draggable={false} onContextMenu={(e) => e.preventDefault()}
               className='w-full max-w-xl h-auto object-contain'
-              src="/profiles/dp2.png" alt="Ajmal's Picture"
+              src="/profiles/dp4.png" alt="Ajmal's Picture"
             />
 
             {/* Tag on Pic - Visitors Count */}
