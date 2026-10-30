@@ -62,8 +62,8 @@ function Home() {
 
           {/* Hire & Projects*/}
           <div className="flex items-center gap-5 text-[.7em] md:text-sm text-center uppercase tracking-[.3em] mt-5 fade-down">
-            <Link to="/contact" className="bg-blue-300 py-2 px-4 rounded-full hover:bg-blue-400 transition-colors duration-200">
-              <span >Hire Me &rarr;</span>
+            <Link to="/contact" className="quick-glow bg-blue-300 py-2 px-4 rounded-full hover:bg-blue-400 hover:text-white transition-colors duration-200">
+              <span>Hire Me &rarr;</span>
             </Link>
 
             <Link to="/projects" className="shine-effect text-white/60 hover:text-white py-1.5 px-4 rounded-full border border-blue-300/50 hover:border-blue-300 transition-colors duration-200">

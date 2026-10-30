@@ -169,7 +169,7 @@ function Achievements() {
                     <a
                       href={selected.verifyUrl}
                       target="_blank"
-                      className="group flex items-center gap-4 justify-center text-black font-extrabold uppercase tracking-wider p-5 bg-blue-400 rounded-xl hover:bg-white shadow-lg hover:shadow-white/30 transition-all duration-100 delay-100 md:w-fit">
+                      className="quick-glow group flex items-center gap-4 justify-center text-black font-extrabold uppercase tracking-wider p-5 bg-blue-400 rounded-xl hover:bg-white hover:shadow-[0_0_20px_rgba(0,100,255,0.8)] transition-all duration-100 delay-100 md:w-fit">
                       <span>Verify Certificate</span>
                       <FiExternalLink className="group-hover:translate-x-0.5 duration-200 transition-transform" />
                     </a>
