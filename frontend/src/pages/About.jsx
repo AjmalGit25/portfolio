@@ -1,6 +1,5 @@
 import { SiLeetcode } from "react-icons/si";
-import { BiRun, BiPlay } from "react-icons/bi";
-import { FaCode, FaEye, FaMouse, FaGlobe, FaRegQuestionCircle } from "react-icons/fa";
+import { FaCode, FaEye, FaMouse, FaGlobe, FaRegQuestionCircle, FaTerminal } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 import { PiSmileySadLight } from "react-icons/pi";
 import { Link } from "react-router-dom";
@@ -122,7 +121,7 @@ function About() {
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/80">
               {technicalExpertise.map((expertise, idx) => (
                 <li key={idx} className="flex items-start gap-1">
-                  <BiPlay className="text-blue-500 mt-1 shrink-0" />
+                  <FaTerminal size={12} className="text-blue-500 mt-1.5 shrink-0 " />
                   <strong>{expertise.title}: </strong>{expertise.contents}</li>
               ))}
             </ul>
