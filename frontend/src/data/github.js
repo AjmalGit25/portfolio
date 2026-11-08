@@ -64,7 +64,7 @@ const gitHubInfo = [
       name: "Followers",
       icon: FiUsers,
       iconColor: "text-blue-500",
-      count: 60,
+      count: 65,
       bgColor: "bg-blue-500/10",
       borderColor: "border-blue-500/50"
     },
@@ -72,7 +72,7 @@ const gitHubInfo = [
       name: "Following",
       icon: FiUserPlus,
       iconColor: "text-purple-400",
-      count: 55,
+      count: 60,
       bgColor: "bg-purple-500/10",
       borderColor: "border-purple-500/50"
     },
@@ -80,7 +80,7 @@ const gitHubInfo = [
       name: "Public Repos",
       icon: GoRepo,
       iconColor: "text-teal-500",
-      count: 18,
+      count: 19,
       bgColor: "bg-teal-500/10",
       borderColor: "border-teal-500/50"
     },
