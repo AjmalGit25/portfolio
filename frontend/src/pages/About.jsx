@@ -334,7 +334,7 @@ function About() {
           <h3 className="absolute top-40 font-medium text-xl">
             <div className="flex items-center gap-2">
               <SiLeetcode className="text-orange-500" />
-              <span className="text-orange-500">LeetCode:</span>
+              <span className="text-orange-500">LeetCode @ </span>
               <span className="text-blue-500">AjmalAlgo</span>
             </div>
           </h3>
