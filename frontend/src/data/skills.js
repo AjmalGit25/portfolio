@@ -1,5 +1,5 @@
 import { SiReact, SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiTypescript, SiCplusplus, SiGit, SiGithub, SiVercel, SiRender, SiNetlify, SiPostman, SiFigma, SiPython, SiPhp, SiDocker, SiRedux, SiMysql, SiNextdotjs, SiRedis, SiFirebase, SiPrisma, SiGooglegemini, SiWebrtc, SiCloudinary } from "react-icons/si";
-import { FaNodeJs, FaLinux, FaJava, FaAws, FaDatabase, FaBrain } from "react-icons/fa";
+import { FaNodeJs, FaLinux, FaJava, FaAws, FaDatabase, FaBrain, FaRust } from "react-icons/fa";
 import { GrOracle } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
 import { BsBarChartFill, BsDiagram3Fill, BsOpenai, BsClaude, } from "react-icons/bs";
@@ -232,6 +232,12 @@ const exploringSkills = [
     icon: FaAws,
     iconColor: "text-amber-500",
     glowColor: "rgba(200, 200, 28, 0.225)"
+  },
+  {
+    title: "Rust",
+    icon: FaRust,
+    iconColor: "text-orange-500",
+    glowColor: "rgba(255, 122, 151, 0.225)"
   },
 ]
 
