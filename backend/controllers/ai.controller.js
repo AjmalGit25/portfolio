@@ -19,7 +19,7 @@ export const userMessage = async (req, res) => {
 
   // =============== LLM powered Response =================
 
-  // OpenAI 
+  // OpenAI --------------------------------------------------
   // try {
   //   const response = await openai.responses.create({
   //     model: "gpt-5.4-mini",
@@ -38,7 +38,7 @@ export const userMessage = async (req, res) => {
   // }
 
 
-  // Google Gemini 
+  // Google Gemini -------------------------------------------
   try {
     const response = await gemini.interactions.create({
       model: "gemini-3.1-flash-lite",
