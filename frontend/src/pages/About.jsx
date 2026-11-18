@@ -12,12 +12,12 @@ import { leetCodeUIs, codingPlatforms, socialPlatforms, technicalExpertise } fro
 
 function About() {
   // Page starts from the top
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  // }, []);
 
   const [leetcode, setLeetcode] = useState(null);
   const [leetcodeLoading, setLeetcodeLoading] = useState(true);
@@ -130,39 +130,48 @@ function About() {
 
         {/* Section 2: Image */}
         <section className="xl:self-start xl:mt-10 mb-5 flex-1 fade-up">
-          <div className='flex items-center justify-center bg-linear-to-tl from-blue-500 via-blue-950 to-blue-700 border border-blue-300 rounded-xl overflow-hidden shadow-2xl hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] duration-300 transition-shadow aspect-4/5 relative'>
-            <img
-              draggable={false} onContextMenu={(e) => e.preventDefault()}
-              className='w-full max-w-xl h-auto object-contain'
-              src="/profiles/dp4.png" alt="Ajmal's Picture"
+          <div className="relative aspect-4/5 rounded-xl p-[2px] overflow-hidden">
+            {/* Animated light strip */}
+            <div className="absolute -inset-full animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0_300deg,#60a5fa_330deg,#fff_350deg,transparent_360deg)]"
             />
+            <div className="absolute -inset-full [animation-delay:-2.5s] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0_300deg,#60a5fa_330deg,#fff_350deg,transparent_360deg)]"
+            />
+            <div className='flex items-center justify-center bg-linear-to-tl from-blue-500 via-blue-950 to-blue-700 rounded-xl overflow-hidden hover:shadow-[0px_0px_25px_rgba(50,100,255,1)] aspect-4/5 relative duration-300 transition-all'>
 
-            {/* Tag on Pic - Visitors Count */}
-            <div className="absolute bottom-3 w-full p-2 px-4">
-              <div className="flex items-center rounded-full h-12 border border-blue-300 overflow-hidden">
+              {/* Inner shadow overlay */}
+              <div className="pointer-events-none absolute inset-0 z-10 rounded-xl" style={{ boxShadow: "inset 0 0 30px 20px rgba(50,100,255,1.0)" }}></div>
+              <img
+                draggable={false} onContextMenu={(e) => e.preventDefault()}
+                className='w-full max-w-xl h-auto object-contain relative z-0'
+                src="/profiles/dp5.png" alt="Ajmal's Picture"
+              />
+              {/* Tag on Pic - Visitors Count */}
+              <div className="absolute bottom-3 w-full p-2 px-4 z-20">
+                <div className="flex items-center rounded-full h-12 border border-blue-300 overflow-hidden">
 
-                {/* Left */}
-                <div className="flex-3 flex items-center gap-2 pl-4 bg-linear-to-r from-blue-950 to-blue-700 h-full">
-                  <FaEye className="text-blue-500" />
-                  <span className="font-mono text-xs sm:text-base tracking-wide text-shadow-[0_1px_2px_rgba(0,0,0,0.8)] text-blue-100">
-                    Portfolio visitors
-                  </span>
-                </div>
+                  {/* Left */}
+                  <div className="flex-3 flex items-center gap-2 pl-4 bg-linear-to-r from-blue-950 to-blue-700 h-full">
+                    <FaEye className="text-blue-500" />
+                    <span className="font-mono text-xs sm:text-base tracking-wide text-shadow-[0_1px_2px_rgba(0,0,0,0.8)] text-blue-100">
+                      Portfolio visitors
+                    </span>
+                  </div>
 
-                {/* Right */}
-                <div className="flex-1 flex items-center justify-between bg-blue-950 h-full pr-5 px-2">
-                  {visitorLoading ? (
-                    <div className="h-5 w-5 border-2 border-t-transparent border-blue-500 rounded-full animate-spin"></div>
-                  ) : (
-                    <Counter
-                      end={visitorCount}
-                      duration={1000}
-                      className="text-white text-lg font-mono font-bold"
-                    />
-                  )}
-                  <div className="relative flex items-center">
-                    <span className="absolute h-2 w-2 rounded-full bg-blue-500"></span>
-                    <span className="absolute h-2 w-2 rounded-full bg-blue-500 animate-ping"></span>
+                  {/* Right */}
+                  <div className="flex-1 flex items-center justify-between bg-blue-950 h-full pr-5 px-2">
+                    {visitorLoading ? (
+                      <div className="h-5 w-5 border-2 border-t-transparent border-blue-500 rounded-full animate-spin"></div>
+                    ) : (
+                      <Counter
+                        end={visitorCount}
+                        duration={1000}
+                        className="text-white text-lg font-mono font-bold"
+                      />
+                    )}
+                    <div className="relative flex items-center">
+                      <span className="absolute h-2 w-2 rounded-full bg-blue-500"></span>
+                      <span className="absolute h-2 w-2 rounded-full bg-blue-500 animate-ping"></span>
+                    </div>
                   </div>
                 </div>
               </div>
